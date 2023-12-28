@@ -1,0 +1,12 @@
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\bin\Debug\testing.exe.config
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\bin\Debug\testing.exe
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\bin\Debug\testing.pdb
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.csproj.AssemblyReference.cache
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.Form1.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.Form2.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.Properties.Resources.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.csproj.GenerateResource.cache
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.csproj.CoreCompileInputs.cache
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.exe
+C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\testing\obj\Debug\testing.pdb

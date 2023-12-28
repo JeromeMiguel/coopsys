@@ -36,9 +36,13 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtAge = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTIN = new MetroFramework.Controls.MetroTextBox();
+            this.txtAddress = new MetroFramework.Controls.MetroTextBox();
+            this.txtCpNum = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.cboSex = new MetroFramework.Controls.MetroComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtStallAddress = new MetroFramework.Controls.MetroTextBox();
             this.txtBusPlateNo = new MetroFramework.Controls.MetroTextBox();
             this.txtBusName = new MetroFramework.Controls.MetroTextBox();
             this.chkFee = new MetroFramework.Controls.MetroCheckBox();
@@ -46,10 +50,6 @@
             this.cboMemType = new MetroFramework.Controls.MetroComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtAddress = new MetroFramework.Controls.MetroTextBox();
-            this.txtTIN = new MetroFramework.Controls.MetroTextBox();
-            this.txtCpNum = new MetroFramework.Controls.MetroTextBox();
-            this.txtStallAddress = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtAge)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -162,9 +162,9 @@
             this.txtBday.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.txtBday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtBday.Location = new System.Drawing.Point(852, 108);
-            this.txtBday.MinimumSize = new System.Drawing.Size(0, 29);
+            this.txtBday.MinimumSize = new System.Drawing.Size(0, 30);
             this.txtBday.Name = "txtBday";
-            this.txtBday.Size = new System.Drawing.Size(135, 29);
+            this.txtBday.Size = new System.Drawing.Size(135, 30);
             this.txtBday.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtBday.TabIndex = 4;
             this.txtBday.ValueChanged += new System.EventHandler(this.txtBday_ValueChanged);
@@ -174,7 +174,7 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(852, 86);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(58, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(60, 20);
             this.metroLabel1.TabIndex = 4;
             this.metroLabel1.Text = "Birthday";
             // 
@@ -183,7 +183,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(852, 143);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(34, 20);
             this.metroLabel2.TabIndex = 5;
             this.metroLabel2.Text = "Age";
             // 
@@ -195,7 +195,7 @@
             this.txtAge.InterceptArrowKeys = false;
             this.txtAge.Location = new System.Drawing.Point(852, 162);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(53, 27);
+            this.txtAge.Size = new System.Drawing.Size(53, 32);
             this.txtAge.TabIndex = 5;
             // 
             // groupBox1
@@ -221,25 +221,128 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Member Personal Information";
             // 
+            // txtTIN
+            // 
+            // 
+            // 
+            // 
+            this.txtTIN.CustomButton.Image = null;
+            this.txtTIN.CustomButton.Location = new System.Drawing.Point(195, 1);
+            this.txtTIN.CustomButton.Name = "";
+            this.txtTIN.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtTIN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTIN.CustomButton.TabIndex = 1;
+            this.txtTIN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTIN.CustomButton.UseSelectable = true;
+            this.txtTIN.CustomButton.Visible = false;
+            this.txtTIN.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtTIN.Lines = new string[0];
+            this.txtTIN.Location = new System.Drawing.Point(597, 55);
+            this.txtTIN.MaxLength = 32767;
+            this.txtTIN.Name = "txtTIN";
+            this.txtTIN.PasswordChar = '\0';
+            this.txtTIN.PromptText = "TIN";
+            this.txtTIN.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTIN.SelectedText = "";
+            this.txtTIN.SelectionLength = 0;
+            this.txtTIN.SelectionStart = 0;
+            this.txtTIN.ShortcutsEnabled = true;
+            this.txtTIN.Size = new System.Drawing.Size(221, 27);
+            this.txtTIN.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtTIN.TabIndex = 12;
+            this.txtTIN.UseSelectable = true;
+            this.txtTIN.WaterMark = "TIN";
+            this.txtTIN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTIN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtAddress
+            // 
+            // 
+            // 
+            // 
+            this.txtAddress.CustomButton.Image = null;
+            this.txtAddress.CustomButton.Location = new System.Drawing.Point(85, 2);
+            this.txtAddress.CustomButton.Name = "";
+            this.txtAddress.CustomButton.Size = new System.Drawing.Size(129, 129);
+            this.txtAddress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtAddress.CustomButton.TabIndex = 1;
+            this.txtAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtAddress.CustomButton.UseSelectable = true;
+            this.txtAddress.CustomButton.Visible = false;
+            this.txtAddress.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtAddress.Lines = new string[0];
+            this.txtAddress.Location = new System.Drawing.Point(349, 55);
+            this.txtAddress.MaxLength = 32767;
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.PasswordChar = '\0';
+            this.txtAddress.PromptText = "Complete Address";
+            this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtAddress.SelectedText = "";
+            this.txtAddress.SelectionLength = 0;
+            this.txtAddress.SelectionStart = 0;
+            this.txtAddress.ShortcutsEnabled = true;
+            this.txtAddress.Size = new System.Drawing.Size(217, 134);
+            this.txtAddress.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtAddress.TabIndex = 11;
+            this.txtAddress.UseSelectable = true;
+            this.txtAddress.WaterMark = "Complete Address";
+            this.txtAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtCpNum
+            // 
+            // 
+            // 
+            // 
+            this.txtCpNum.CustomButton.Image = null;
+            this.txtCpNum.CustomButton.Location = new System.Drawing.Point(195, 1);
+            this.txtCpNum.CustomButton.Name = "";
+            this.txtCpNum.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtCpNum.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCpNum.CustomButton.TabIndex = 1;
+            this.txtCpNum.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCpNum.CustomButton.UseSelectable = true;
+            this.txtCpNum.CustomButton.Visible = false;
+            this.txtCpNum.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtCpNum.Lines = new string[0];
+            this.txtCpNum.Location = new System.Drawing.Point(597, 108);
+            this.txtCpNum.MaxLength = 32767;
+            this.txtCpNum.Name = "txtCpNum";
+            this.txtCpNum.PasswordChar = '\0';
+            this.txtCpNum.PromptText = "Cellphone Number";
+            this.txtCpNum.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCpNum.SelectedText = "";
+            this.txtCpNum.SelectionLength = 0;
+            this.txtCpNum.SelectionStart = 0;
+            this.txtCpNum.ShortcutsEnabled = true;
+            this.txtCpNum.Size = new System.Drawing.Size(221, 27);
+            this.txtCpNum.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtCpNum.TabIndex = 13;
+            this.txtCpNum.UseSelectable = true;
+            this.txtCpNum.WaterMark = "Cellphone Number";
+            this.txtCpNum.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCpNum.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(852, 31);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(29, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(30, 20);
             this.metroLabel5.TabIndex = 10;
             this.metroLabel5.Text = "Sex";
             // 
             // cboSex
             // 
             this.cboSex.FormattingEnabled = true;
-            this.cboSex.ItemHeight = 23;
+            this.cboSex.ItemHeight = 24;
             this.cboSex.Items.AddRange(new object[] {
             "Female",
             "Male"});
             this.cboSex.Location = new System.Drawing.Point(852, 53);
             this.cboSex.Name = "cboSex";
-            this.cboSex.Size = new System.Drawing.Size(135, 29);
+            this.cboSex.Size = new System.Drawing.Size(135, 30);
             this.cboSex.Style = MetroFramework.MetroColorStyle.Purple;
             this.cboSex.TabIndex = 3;
             this.cboSex.UseSelectable = true;
@@ -256,10 +359,45 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F);
             this.groupBox2.Location = new System.Drawing.Point(23, 322);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(790, 145);
+            this.groupBox2.Size = new System.Drawing.Size(790, 149);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Membership";
+            // 
+            // txtStallAddress
+            // 
+            // 
+            // 
+            // 
+            this.txtStallAddress.CustomButton.Image = null;
+            this.txtStallAddress.CustomButton.Location = new System.Drawing.Point(149, 2);
+            this.txtStallAddress.CustomButton.Name = "";
+            this.txtStallAddress.CustomButton.Size = new System.Drawing.Size(65, 65);
+            this.txtStallAddress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtStallAddress.CustomButton.TabIndex = 1;
+            this.txtStallAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtStallAddress.CustomButton.UseSelectable = true;
+            this.txtStallAddress.CustomButton.Visible = false;
+            this.txtStallAddress.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtStallAddress.Lines = new string[0];
+            this.txtStallAddress.Location = new System.Drawing.Point(543, 51);
+            this.txtStallAddress.MaxLength = 32767;
+            this.txtStallAddress.Multiline = true;
+            this.txtStallAddress.Name = "txtStallAddress";
+            this.txtStallAddress.PasswordChar = '\0';
+            this.txtStallAddress.PromptText = "Stall Address";
+            this.txtStallAddress.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtStallAddress.SelectedText = "";
+            this.txtStallAddress.SelectionLength = 0;
+            this.txtStallAddress.SelectionStart = 0;
+            this.txtStallAddress.ShortcutsEnabled = true;
+            this.txtStallAddress.Size = new System.Drawing.Size(217, 70);
+            this.txtStallAddress.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtStallAddress.TabIndex = 14;
+            this.txtStallAddress.UseSelectable = true;
+            this.txtStallAddress.WaterMark = "Stall Address";
+            this.txtStallAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtStallAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtBusPlateNo
             // 
@@ -336,7 +474,7 @@
             this.chkFee.AutoSize = true;
             this.chkFee.Location = new System.Drawing.Point(39, 94);
             this.chkFee.Name = "chkFee";
-            this.chkFee.Size = new System.Drawing.Size(135, 15);
+            this.chkFee.Size = new System.Drawing.Size(148, 17);
             this.chkFee.Style = MetroFramework.MetroColorStyle.Purple;
             this.chkFee.TabIndex = 9;
             this.chkFee.Text = "Paid membership fee";
@@ -347,20 +485,20 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(39, 29);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(91, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(96, 20);
             this.metroLabel3.TabIndex = 8;
             this.metroLabel3.Text = "Member Type";
             // 
             // cboMemType
             // 
             this.cboMemType.FormattingEnabled = true;
-            this.cboMemType.ItemHeight = 23;
+            this.cboMemType.ItemHeight = 24;
             this.cboMemType.Items.AddRange(new object[] {
             "Associate",
             "Regular"});
             this.cboMemType.Location = new System.Drawing.Point(39, 51);
             this.cboMemType.Name = "cboMemType";
-            this.cboMemType.Size = new System.Drawing.Size(135, 29);
+            this.cboMemType.Size = new System.Drawing.Size(135, 30);
             this.cboMemType.Style = MetroFramework.MetroColorStyle.Purple;
             this.cboMemType.TabIndex = 6;
             this.cboMemType.UseSelectable = true;
@@ -400,147 +538,9 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtAddress
-            // 
-            // 
-            // 
-            // 
-            this.txtAddress.CustomButton.Image = null;
-            this.txtAddress.CustomButton.Location = new System.Drawing.Point(85, 2);
-            this.txtAddress.CustomButton.Name = "";
-            this.txtAddress.CustomButton.Size = new System.Drawing.Size(129, 129);
-            this.txtAddress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtAddress.CustomButton.TabIndex = 1;
-            this.txtAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtAddress.CustomButton.UseSelectable = true;
-            this.txtAddress.CustomButton.Visible = false;
-            this.txtAddress.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtAddress.Lines = new string[0];
-            this.txtAddress.Location = new System.Drawing.Point(349, 55);
-            this.txtAddress.MaxLength = 32767;
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PromptText = "Complete Address";
-            this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.SelectionLength = 0;
-            this.txtAddress.SelectionStart = 0;
-            this.txtAddress.ShortcutsEnabled = true;
-            this.txtAddress.Size = new System.Drawing.Size(217, 134);
-            this.txtAddress.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtAddress.TabIndex = 11;
-            this.txtAddress.UseSelectable = true;
-            this.txtAddress.WaterMark = "Complete Address";
-            this.txtAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtTIN
-            // 
-            // 
-            // 
-            // 
-            this.txtTIN.CustomButton.Image = null;
-            this.txtTIN.CustomButton.Location = new System.Drawing.Point(195, 1);
-            this.txtTIN.CustomButton.Name = "";
-            this.txtTIN.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtTIN.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtTIN.CustomButton.TabIndex = 1;
-            this.txtTIN.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtTIN.CustomButton.UseSelectable = true;
-            this.txtTIN.CustomButton.Visible = false;
-            this.txtTIN.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtTIN.Lines = new string[0];
-            this.txtTIN.Location = new System.Drawing.Point(597, 55);
-            this.txtTIN.MaxLength = 32767;
-            this.txtTIN.Name = "txtTIN";
-            this.txtTIN.PasswordChar = '\0';
-            this.txtTIN.PromptText = "TIN";
-            this.txtTIN.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtTIN.SelectedText = "";
-            this.txtTIN.SelectionLength = 0;
-            this.txtTIN.SelectionStart = 0;
-            this.txtTIN.ShortcutsEnabled = true;
-            this.txtTIN.Size = new System.Drawing.Size(221, 27);
-            this.txtTIN.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtTIN.TabIndex = 12;
-            this.txtTIN.UseSelectable = true;
-            this.txtTIN.WaterMark = "TIN";
-            this.txtTIN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtTIN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtCpNum
-            // 
-            // 
-            // 
-            // 
-            this.txtCpNum.CustomButton.Image = null;
-            this.txtCpNum.CustomButton.Location = new System.Drawing.Point(195, 1);
-            this.txtCpNum.CustomButton.Name = "";
-            this.txtCpNum.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtCpNum.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtCpNum.CustomButton.TabIndex = 1;
-            this.txtCpNum.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCpNum.CustomButton.UseSelectable = true;
-            this.txtCpNum.CustomButton.Visible = false;
-            this.txtCpNum.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtCpNum.Lines = new string[0];
-            this.txtCpNum.Location = new System.Drawing.Point(597, 108);
-            this.txtCpNum.MaxLength = 32767;
-            this.txtCpNum.Name = "txtCpNum";
-            this.txtCpNum.PasswordChar = '\0';
-            this.txtCpNum.PromptText = "Cellphone Number";
-            this.txtCpNum.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCpNum.SelectedText = "";
-            this.txtCpNum.SelectionLength = 0;
-            this.txtCpNum.SelectionStart = 0;
-            this.txtCpNum.ShortcutsEnabled = true;
-            this.txtCpNum.Size = new System.Drawing.Size(221, 27);
-            this.txtCpNum.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtCpNum.TabIndex = 13;
-            this.txtCpNum.UseSelectable = true;
-            this.txtCpNum.WaterMark = "Cellphone Number";
-            this.txtCpNum.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCpNum.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtStallAddress
-            // 
-            // 
-            // 
-            // 
-            this.txtStallAddress.CustomButton.Image = null;
-            this.txtStallAddress.CustomButton.Location = new System.Drawing.Point(149, 2);
-            this.txtStallAddress.CustomButton.Name = "";
-            this.txtStallAddress.CustomButton.Size = new System.Drawing.Size(65, 65);
-            this.txtStallAddress.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtStallAddress.CustomButton.TabIndex = 1;
-            this.txtStallAddress.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtStallAddress.CustomButton.UseSelectable = true;
-            this.txtStallAddress.CustomButton.Visible = false;
-            this.txtStallAddress.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtStallAddress.Lines = new string[0];
-            this.txtStallAddress.Location = new System.Drawing.Point(543, 51);
-            this.txtStallAddress.MaxLength = 32767;
-            this.txtStallAddress.Multiline = true;
-            this.txtStallAddress.Name = "txtStallAddress";
-            this.txtStallAddress.PasswordChar = '\0';
-            this.txtStallAddress.PromptText = "Stall Address";
-            this.txtStallAddress.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtStallAddress.SelectedText = "";
-            this.txtStallAddress.SelectionLength = 0;
-            this.txtStallAddress.SelectionStart = 0;
-            this.txtStallAddress.ShortcutsEnabled = true;
-            this.txtStallAddress.Size = new System.Drawing.Size(217, 70);
-            this.txtStallAddress.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtStallAddress.TabIndex = 14;
-            this.txtStallAddress.UseSelectable = true;
-            this.txtStallAddress.WaterMark = "Stall Address";
-            this.txtStallAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtStallAddress.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // frmMember
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 491);
             this.Controls.Add(this.btnCancel);
