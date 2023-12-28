@@ -42,10 +42,11 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(344, 75);
+            this.btnSave.Location = new System.Drawing.Point(459, 92);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(76, 27);
-            this.btnSave.TabIndex = 20;
+            this.btnSave.Size = new System.Drawing.Size(101, 33);
+            this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -56,9 +57,10 @@
             // 
             // 
             this.txtPenalty.CustomButton.Image = null;
-            this.txtPenalty.CustomButton.Location = new System.Drawing.Point(193, 1);
+            this.txtPenalty.CustomButton.Location = new System.Drawing.Point(347, 1);
+            this.txtPenalty.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPenalty.CustomButton.Name = "";
-            this.txtPenalty.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtPenalty.CustomButton.Size = new System.Drawing.Size(41, 38);
             this.txtPenalty.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPenalty.CustomButton.TabIndex = 1;
             this.txtPenalty.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -66,7 +68,8 @@
             this.txtPenalty.CustomButton.Visible = false;
             this.txtPenalty.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtPenalty.Lines = new string[0];
-            this.txtPenalty.Location = new System.Drawing.Point(119, 75);
+            this.txtPenalty.Location = new System.Drawing.Point(159, 92);
+            this.txtPenalty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPenalty.MaxLength = 32767;
             this.txtPenalty.Name = "txtPenalty";
             this.txtPenalty.PasswordChar = '\0';
@@ -75,9 +78,9 @@
             this.txtPenalty.SelectionLength = 0;
             this.txtPenalty.SelectionStart = 0;
             this.txtPenalty.ShortcutsEnabled = true;
-            this.txtPenalty.Size = new System.Drawing.Size(219, 27);
+            this.txtPenalty.Size = new System.Drawing.Size(292, 33);
             this.txtPenalty.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtPenalty.TabIndex = 18;
+            this.txtPenalty.TabIndex = 1;
             this.txtPenalty.UseSelectable = true;
             this.txtPenalty.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPenalty.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -86,23 +89,26 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(28, 78);
+            this.metroLabel4.Location = new System.Drawing.Point(37, 96);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(61, 20);
             this.metroLabel4.TabIndex = 19;
             this.metroLabel4.Text = "Amount:";
             // 
             // frmPenalty
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 136);
+            this.ClientSize = new System.Drawing.Size(604, 167);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPenalty);
             this.Controls.Add(this.metroLabel4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPenalty";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

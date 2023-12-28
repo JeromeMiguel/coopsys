@@ -88,6 +88,28 @@ namespace coopsys
             }
         }
 
+        public void OnFormLoad()
+        {
+            string query = "select loan.loanID, member.memberID, " +
+                "concat(loanmonth,'/', loanday, '/', loanyear) as 'LOAN DATE', " +
+                "concat(firstname, lastname) as NAME, " +
+                "loan.loanamount as 'LOAN AMOUNT', " +
+                "loan.balance as 'BALANCE', " +
+                "loan.loanpenalty as 'PENALTY', " +
+                "loan.duedate as 'DUE DATE' " +
+                "from member inner join loan " +
+                "on member.memberID = loan.memberID " +
+                "where loan.balance > 0 or loan.loanpenalty > 0;";
+
+            SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
+                "if(memtype=1, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
+                "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member;");
+
+            btnDue.Text = "(" + dc.fnDataTableCollection(query, conn).Rows.Count.ToString() + ") Due for Payment";
+            cboMemType.SelectedIndex = 0;
+            grdMembers.ClearSelection();
+        }
+
         private void OpenLoanForm()
         {
             if (!(grdMembers.SelectedRows.Count == 0))
@@ -97,7 +119,7 @@ namespace coopsys
                 mname = grdMembers.SelectedCells[2].Value.ToString();
                 lname = grdMembers.SelectedCells[3].Value.ToString();
                 age = int.Parse(grdMembers.SelectedCells[6].Value.ToString());
-                frmLoan loan = new frmLoan(conn, memberID, fname, mname, lname, age);
+                frmLoan loan = new frmLoan(this, conn, memberID, fname, mname, lname, age);
                 loan.ShowDialog();
             }
             else
@@ -117,13 +139,8 @@ namespace coopsys
 
         private void btnDue_Click(object sender, EventArgs e)
         {
-            frmDueForPayment dueForPayment = new frmDueForPayment(conn);
+            frmDueForPayment dueForPayment = new frmDueForPayment(this, conn);
             dueForPayment.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void grdMembers_DataSourceChanged(object sender, EventArgs e)
@@ -131,7 +148,7 @@ namespace coopsys
             if(grdMembers.Rows.Count > 0)
             {
                 grdMembers.Rows[0].Selected = true;
-                btnEdit.Enabled = true;    
+                btnEdit.Enabled = true;
                 btnLoan.Enabled = true;
             }
             else
@@ -198,24 +215,7 @@ namespace coopsys
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            string query = "select loan.loanID, member.memberID, " +
-                "concat(loanmonth,'/', loanday, '/', loanyear) as 'LOAN DATE', " +
-                "concat(firstname, lastname) as NAME, " +
-                "loan.loanamount as 'LOAN AMOUNT', " +
-                "loan.balance as 'BALANCE', " +
-                "loan.loanpenalty as 'PENALTY', " +
-                "loan.duedate as 'DUE DATE' " +
-                "from member inner join loan " +
-                "on member.memberID = loan.memberID " +
-                "where loan.balance > 0 or loan.loanpenalty > 0;";
-            
-            SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                "if(memtype=1, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
-                "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member;");
-
-            btnDue.Text = "("+dc.fnDataTableCollection(query, conn).Rows.Count.ToString()+") Due for Payment";
-            cboMemType.SelectedIndex = 0;
-            grdMembers.ClearSelection();
+            OnFormLoad();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

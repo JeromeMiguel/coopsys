@@ -83,7 +83,7 @@
             this.txtFname.ShortcutsEnabled = true;
             this.txtFname.Size = new System.Drawing.Size(278, 27);
             this.txtFname.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtFname.TabIndex = 0;
+            this.txtFname.TabIndex = 1;
             this.txtFname.UseSelectable = true;
             this.txtFname.WaterMark = "First Name";
             this.txtFname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -117,7 +117,7 @@
             this.txtMname.ShortcutsEnabled = true;
             this.txtMname.Size = new System.Drawing.Size(278, 27);
             this.txtMname.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtMname.TabIndex = 1;
+            this.txtMname.TabIndex = 2;
             this.txtMname.UseSelectable = true;
             this.txtMname.WaterMark = "MIddle Name";
             this.txtMname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -151,7 +151,7 @@
             this.txtLname.ShortcutsEnabled = true;
             this.txtLname.Size = new System.Drawing.Size(278, 27);
             this.txtLname.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtLname.TabIndex = 2;
+            this.txtLname.TabIndex = 3;
             this.txtLname.UseSelectable = true;
             this.txtLname.WaterMark = "Last Name";
             this.txtLname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -166,7 +166,7 @@
             this.txtBday.Name = "txtBday";
             this.txtBday.Size = new System.Drawing.Size(135, 30);
             this.txtBday.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBday.TabIndex = 4;
+            this.txtBday.TabIndex = 8;
             this.txtBday.ValueChanged += new System.EventHandler(this.txtBday_ValueChanged);
             // 
             // metroLabel1
@@ -196,7 +196,7 @@
             this.txtAge.Location = new System.Drawing.Point(852, 162);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(53, 32);
-            this.txtAge.TabIndex = 5;
+            this.txtAge.TabIndex = 8;
             // 
             // groupBox1
             // 
@@ -249,7 +249,7 @@
             this.txtTIN.ShortcutsEnabled = true;
             this.txtTIN.Size = new System.Drawing.Size(221, 27);
             this.txtTIN.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtTIN.TabIndex = 12;
+            this.txtTIN.TabIndex = 5;
             this.txtTIN.UseSelectable = true;
             this.txtTIN.WaterMark = "TIN";
             this.txtTIN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -284,7 +284,7 @@
             this.txtAddress.ShortcutsEnabled = true;
             this.txtAddress.Size = new System.Drawing.Size(217, 134);
             this.txtAddress.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtAddress.TabIndex = 11;
+            this.txtAddress.TabIndex = 4;
             this.txtAddress.UseSelectable = true;
             this.txtAddress.WaterMark = "Complete Address";
             this.txtAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -318,7 +318,7 @@
             this.txtCpNum.ShortcutsEnabled = true;
             this.txtCpNum.Size = new System.Drawing.Size(221, 27);
             this.txtCpNum.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtCpNum.TabIndex = 13;
+            this.txtCpNum.TabIndex = 6;
             this.txtCpNum.UseSelectable = true;
             this.txtCpNum.WaterMark = "Cellphone Number";
             this.txtCpNum.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -344,7 +344,7 @@
             this.cboSex.Name = "cboSex";
             this.cboSex.Size = new System.Drawing.Size(135, 30);
             this.cboSex.Style = MetroFramework.MetroColorStyle.Purple;
-            this.cboSex.TabIndex = 3;
+            this.cboSex.TabIndex = 7;
             this.cboSex.UseSelectable = true;
             // 
             // groupBox2
@@ -393,7 +393,7 @@
             this.txtStallAddress.ShortcutsEnabled = true;
             this.txtStallAddress.Size = new System.Drawing.Size(217, 70);
             this.txtStallAddress.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtStallAddress.TabIndex = 14;
+            this.txtStallAddress.TabIndex = 12;
             this.txtStallAddress.UseSelectable = true;
             this.txtStallAddress.WaterMark = "Stall Address";
             this.txtStallAddress.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -428,7 +428,7 @@
             this.txtBusPlateNo.ShortcutsEnabled = true;
             this.txtBusPlateNo.Size = new System.Drawing.Size(257, 27);
             this.txtBusPlateNo.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBusPlateNo.TabIndex = 8;
+            this.txtBusPlateNo.TabIndex = 11;
             this.txtBusPlateNo.UseSelectable = true;
             this.txtBusPlateNo.WaterMark = "Business Plate Number";
             this.txtBusPlateNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -463,7 +463,7 @@
             this.txtBusName.ShortcutsEnabled = true;
             this.txtBusName.Size = new System.Drawing.Size(257, 27);
             this.txtBusName.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBusName.TabIndex = 7;
+            this.txtBusName.TabIndex = 11;
             this.txtBusName.UseSelectable = true;
             this.txtBusName.WaterMark = "Business Name";
             this.txtBusName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -476,7 +476,7 @@
             this.chkFee.Name = "chkFee";
             this.chkFee.Size = new System.Drawing.Size(148, 17);
             this.chkFee.Style = MetroFramework.MetroColorStyle.Purple;
-            this.chkFee.TabIndex = 9;
+            this.chkFee.TabIndex = 10;
             this.chkFee.Text = "Paid membership fee";
             this.chkFee.UseSelectable = true;
             // 
@@ -500,7 +500,7 @@
             this.cboMemType.Name = "cboMemType";
             this.cboMemType.Size = new System.Drawing.Size(135, 30);
             this.cboMemType.Style = MetroFramework.MetroColorStyle.Purple;
-            this.cboMemType.TabIndex = 6;
+            this.cboMemType.TabIndex = 9;
             this.cboMemType.UseSelectable = true;
             this.cboMemType.SelectedIndexChanged += new System.EventHandler(this.cboMemType_SelectedIndexChanged);
             // 
@@ -516,7 +516,7 @@
             this.btnSave.Location = new System.Drawing.Point(828, 351);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(223, 44);
-            this.btnSave.TabIndex = 10;
+            this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -533,7 +533,7 @@
             this.btnCancel.Location = new System.Drawing.Point(828, 416);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(223, 44);
-            this.btnCancel.TabIndex = 11;
+            this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);

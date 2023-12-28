@@ -65,7 +65,7 @@
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(135, 30);
             this.txtDate.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtDate.TabIndex = 5;
+            this.txtDate.TabIndex = 1;
             // 
             // metroLabel1
             // 
@@ -139,7 +139,7 @@
             this.txtFee.ShortcutsEnabled = true;
             this.txtFee.Size = new System.Drawing.Size(135, 27);
             this.txtFee.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtFee.TabIndex = 7;
+            this.txtFee.TabIndex = 6;
             this.txtFee.UseSelectable = true;
             this.txtFee.WaterMark = "Loan Fee";
             this.txtFee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -174,7 +174,7 @@
             this.txtAmount.ShortcutsEnabled = true;
             this.txtAmount.Size = new System.Drawing.Size(135, 27);
             this.txtAmount.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtAmount.TabIndex = 8;
+            this.txtAmount.TabIndex = 4;
             this.txtAmount.UseSelectable = true;
             this.txtAmount.WaterMark = "Amount";
             this.txtAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -233,7 +233,7 @@
             this.grdLoans.RowTemplate.Height = 24;
             this.grdLoans.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdLoans.Size = new System.Drawing.Size(753, 305);
-            this.grdLoans.TabIndex = 17;
+            this.grdLoans.TabIndex = 12;
             this.grdLoans.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdLoans_CellMouseClick);
             // 
             // btnCancel
@@ -248,7 +248,7 @@
             this.btnCancel.Location = new System.Drawing.Point(166, 392);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(135, 28);
-            this.btnCancel.TabIndex = 19;
+            this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -265,7 +265,7 @@
             this.btnSave.Location = new System.Drawing.Point(23, 392);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(135, 28);
-            this.btnSave.TabIndex = 18;
+            this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -309,7 +309,7 @@
             this.txtTerm.ShortcutsEnabled = true;
             this.txtTerm.Size = new System.Drawing.Size(135, 27);
             this.txtTerm.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtTerm.TabIndex = 22;
+            this.txtTerm.TabIndex = 5;
             this.txtTerm.UseSelectable = true;
             this.txtTerm.WaterMark = "Term (days)";
             this.txtTerm.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -329,7 +329,7 @@
             this.cboLoans.Name = "cboLoans";
             this.cboLoans.Size = new System.Drawing.Size(162, 30);
             this.cboLoans.Style = MetroFramework.MetroColorStyle.Purple;
-            this.cboLoans.TabIndex = 23;
+            this.cboLoans.TabIndex = 13;
             this.cboLoans.UseSelectable = true;
             this.cboLoans.SelectedIndexChanged += new System.EventHandler(this.cboLoans_SelectedIndexChanged);
             // 
@@ -416,7 +416,7 @@
             this.txtInsurance.ShortcutsEnabled = true;
             this.txtInsurance.Size = new System.Drawing.Size(135, 27);
             this.txtInsurance.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtInsurance.TabIndex = 24;
+            this.txtInsurance.TabIndex = 7;
             this.txtInsurance.UseSelectable = true;
             this.txtInsurance.WaterMark = "Insurance";
             this.txtInsurance.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -451,7 +451,7 @@
             this.txtCapitalShare.ShortcutsEnabled = true;
             this.txtCapitalShare.Size = new System.Drawing.Size(276, 27);
             this.txtCapitalShare.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtCapitalShare.TabIndex = 25;
+            this.txtCapitalShare.TabIndex = 8;
             this.txtCapitalShare.UseSelectable = true;
             this.txtCapitalShare.WaterMark = "Capital Share (optional)";
             this.txtCapitalShare.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -486,6 +486,8 @@
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Member Loan";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLoan_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLoan_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.grdLoans)).EndInit();
             this.contextMenuStripDataRow.ResumeLayout(false);
             this.ResumeLayout(false);

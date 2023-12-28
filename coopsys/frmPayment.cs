@@ -61,40 +61,47 @@ namespace coopsys
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            balance = balance - (double.Parse(txtPaymentAmount.Text));
-            dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `balance` = " + balance + " WHERE(`loanID` = " + loanid + " and `memberid` = " + memberid + ");", conn);
-
-            int day = txtDate.Value.Day;
-            int month = txtDate.Value.Month;
-            int year = txtDate.Value.Year;
-
-            if(!chkCheck.Checked)
+            if(balance < double.Parse(txtPaymentAmount.Text))
             {
-                dc.fnExecuteQuery("INSERT INTO `coop`.`payment` (`payday`, `paymonth`, `payyear`, `payamount`, `loanid`) " +
-                    "VALUES (" + day + ", " + month + ", " + year + ", " + double.Parse(txtPaymentAmount.Text) + ", " + loanid + ");\r\n", conn);
-                dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `balance` = " + balance + " WHERE (`loanID` = "+loanid+");\r\n", conn);
+                MessageBox.Show(this, "Payment should not exceed the loan unpaid balance.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                dc.fnExecuteQuery("INSERT INTO `coop`.`payment` (`payday`, `paymonth`, `payyear`, `payamount`, `checkno`, `loanid`) " +
-                    "VALUES (" + day + ", " + month + ", " + year + ", " + double.Parse(txtPaymentAmount.Text) + ", '" + txtCheckNo.Text + "', " + loanid + ");\r\n", conn);
-                dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `balance` = " + balance + " WHERE (`loanID` = " + loanid + ");\r\n", conn);
+                balance = balance - (double.Parse(txtPaymentAmount.Text));
+                dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `balance` = " + balance + " WHERE(`loanID` = " + loanid + " and `memberid` = " + memberid + ");", conn);
 
+                int day = txtDate.Value.Day;
+                int month = txtDate.Value.Month;
+                int year = txtDate.Value.Year;
+
+                if (!chkCheck.Checked)
+                {
+                    dc.fnExecuteQuery("INSERT INTO `coop`.`payment` (`payday`, `paymonth`, `payyear`, `payamount`, `loanid`) " +
+                        "VALUES (" + day + ", " + month + ", " + year + ", " + double.Parse(txtPaymentAmount.Text) + ", " + loanid + ");\r\n", conn);
+                    dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `balance` = " + balance + " WHERE (`loanID` = " + loanid + ");\r\n", conn);
+                }
+                else
+                {
+                    dc.fnExecuteQuery("INSERT INTO `coop`.`payment` (`payday`, `paymonth`, `payyear`, `payamount`, `checkno`, `loanid`) " +
+                        "VALUES (" + day + ", " + month + ", " + year + ", " + double.Parse(txtPaymentAmount.Text) + ", '" + txtCheckNo.Text + "', " + loanid + ");\r\n", conn);
+                    dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `balance` = " + balance + " WHERE (`loanID` = " + loanid + ");\r\n", conn);
+
+                }
+                MessageBox.Show(this, "The following tasks were executed successfully:\n" +
+                    "1. Payment on loan.\n" +
+                    "2. Update on running balance.\n" +
+                    "Click OK to continue.", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (fromDuePayment)
+                {
+                    dueForPayment.LoadDueList();
+                }
+                else
+                {
+                    formLoan.LoadLoanList(cboLoansIndex);
+                }
+                this.Dispose();
             }
-            MessageBox.Show(this, "The following tasks were executed successfully:\n" +
-                "1. Payment on loan.\n" +
-                "2. Update on running balance.\n" +
-                "Click OK to continue.", "Success", 
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if(fromDuePayment)
-            {
-                dueForPayment.LoadDueList();
-            }
-            else
-            {
-                formLoan.LoadLoanList(cboLoansIndex);
-            }
-            this.Dispose();
         }
 
         private void chkCheck_CheckedChanged(object sender, EventArgs e)

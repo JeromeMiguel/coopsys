@@ -43,10 +43,10 @@
             // 
             // 
             this.txtCapitalShare.CustomButton.Image = null;
-            this.txtCapitalShare.CustomButton.Location = new System.Drawing.Point(347, 1);
-            this.txtCapitalShare.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCapitalShare.CustomButton.Location = new System.Drawing.Point(260, 1);
+            this.txtCapitalShare.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtCapitalShare.CustomButton.Name = "";
-            this.txtCapitalShare.CustomButton.Size = new System.Drawing.Size(41, 38);
+            this.txtCapitalShare.CustomButton.Size = new System.Drawing.Size(31, 31);
             this.txtCapitalShare.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCapitalShare.CustomButton.TabIndex = 1;
             this.txtCapitalShare.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -55,7 +55,7 @@
             this.txtCapitalShare.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtCapitalShare.Lines = new string[0];
             this.txtCapitalShare.Location = new System.Drawing.Point(152, 164);
-            this.txtCapitalShare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCapitalShare.Margin = new System.Windows.Forms.Padding(4);
             this.txtCapitalShare.MaxLength = 32767;
             this.txtCapitalShare.Name = "txtCapitalShare";
             this.txtCapitalShare.PasswordChar = '\0';
@@ -66,7 +66,7 @@
             this.txtCapitalShare.ShortcutsEnabled = true;
             this.txtCapitalShare.Size = new System.Drawing.Size(292, 33);
             this.txtCapitalShare.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtCapitalShare.TabIndex = 14;
+            this.txtCapitalShare.TabIndex = 2;
             this.txtCapitalShare.UseSelectable = true;
             this.txtCapitalShare.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCapitalShare.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -92,10 +92,10 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(452, 164);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(101, 33);
-            this.btnSave.TabIndex = 17;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.tipRequired.SetToolTip(this.btnSave, "Please enter the capital share amount.");
             this.btnSave.UseVisualStyleBackColor = false;
@@ -116,12 +116,12 @@
             this.txtDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtDate.Location = new System.Drawing.Point(153, 113);
-            this.txtDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtDate.MinimumSize = new System.Drawing.Size(0, 30);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(179, 30);
             this.txtDate.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtDate.TabIndex = 19;
+            this.txtDate.TabIndex = 1;
             // 
             // tipRequired
             // 
@@ -140,7 +140,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCapitalShare);
             this.Controls.Add(this.metroLabel4);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
