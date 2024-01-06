@@ -45,10 +45,8 @@ namespace coopsys
                 if (cboMemType.SelectedIndex == 0)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
-                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
-                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                        "bus_barangay, bus_municipality_city from coop.member;");
+                        "if(memtype=0, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
+                        "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member;");
                 }
                 else if (cboMemType.SelectedIndex == 1)
                 {
@@ -147,8 +145,8 @@ namespace coopsys
 
         private void tsmiReportsMembers_Click(object sender, EventArgs e)
         {
-            frmReportMembers reportMembers = new frmReportMembers(conn);
-            reportMembers.ShowDialog();
+           frmReportMembers reportMembers = new frmReportMembers(conn);
+           reportMembers.ShowDialog();
         }
 
         private void tsmiReportsDividentPatronage_Click(object sender, EventArgs e)
