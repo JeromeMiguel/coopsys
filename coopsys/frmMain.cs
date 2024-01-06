@@ -143,6 +143,16 @@ namespace coopsys
             dueForPayment.ShowDialog();
         }
 
+        private void tsmiReportsMembers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiReportsDividentPatronage_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void grdMembers_DataSourceChanged(object sender, EventArgs e)
         {
             if(grdMembers.Rows.Count > 0)
