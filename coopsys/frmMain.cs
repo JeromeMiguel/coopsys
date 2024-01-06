@@ -45,20 +45,26 @@ namespace coopsys
                 if (cboMemType.SelectedIndex == 0)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
-                        "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member;");
+                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
+                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
+                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                        "bus_barangay, bus_municipality_city from coop.member;");
                 }
                 else if (cboMemType.SelectedIndex == 1)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
-                        "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member where memtype=0;");
+                          "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
+                          "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
+                          "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                          "bus_barangay, bus_municipality_city from coop.member where memtype=0;");
                 }
                 else if (cboMemType.SelectedIndex == 2)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
-                        "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member where memtype=1;");
+                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
+                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
+                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                        "bus_barangay, bus_municipality_city from coop.member where memtype=1;");
                 }
             }
             else
@@ -66,23 +72,28 @@ namespace coopsys
                 if (cboMemType.SelectedIndex == 0)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
-                        "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member " +
-                        "where lastname like '%" + txtSearch.Text + "%'");
+                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
+                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
+                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                        "bus_barangay, bus_municipality_city from coop.member where lastname like '%" + txtSearch.Text + "%'");
                 }
                 else if (cboMemType.SelectedIndex == 1)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
-                        "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member " +
-                        "where lastname '%" + txtSearch.Text + "%' and memtype = 0;");
+                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
+                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
+                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                        "bus_barangay, bus_municipality_city from coop.member where lastname like '%" + txtSearch.Text + "%'" +
+                        "and memtype = 0;");
                 }
                 else if (cboMemType.SelectedIndex == 2)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, \"Associate\", \"Regular\") as 'MEMBER TYPE', " +
-                        "birthday, age, sex, memfee, memtype, memstatus, busname, busplateno, address, tin, cpnum, stalladdress from coop.member " +
-                        "where lastname like '%" + txtSearch.Text + "%' and memtype = 1;");
+                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
+                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
+                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                        "bus_barangay, bus_municipality_city from coop.member where lastname like '%" + txtSearch.Text + "%'" +
+                        "and memtype = 1;");
                 }
                 grdMembers.ClearSelection();
             }
@@ -145,12 +156,14 @@ namespace coopsys
 
         private void tsmiReportsMembers_Click(object sender, EventArgs e)
         {
-
+           frmReportMembers reportMembers = new frmReportMembers(conn);
+           reportMembers.ShowDialog();
         }
 
         private void tsmiReportsDividentPatronage_Click(object sender, EventArgs e)
         {
-
+            frmReportDividentPatronage reportMembers = new frmReportDividentPatronage(conn);
+            reportMembers.ShowDialog();
         }
 
         private void grdMembers_DataSourceChanged(object sender, EventArgs e)
