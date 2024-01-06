@@ -240,6 +240,12 @@
     <Compile Include="frmAddCapitalShare.Designer.cs">
       <DependentUpon>frmAddCapitalShare.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCheckNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckNo.Designer.cs">
+      <DependentUpon>frmCheckNo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDueForPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddCapitalShare.resx">
       <DependentUpon>frmAddCapitalShare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckNo.resx">
+      <DependentUpon>frmCheckNo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDueForPayment.resx">
       <DependentUpon>frmDueForPayment.cs</DependentUpon>

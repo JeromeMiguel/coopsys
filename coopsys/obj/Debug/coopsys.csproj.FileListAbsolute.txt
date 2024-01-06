@@ -273,21 +273,4 @@ C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.CopyComplete
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.exe
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.pdb
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.csproj.AssemblyReference.cache
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmAddCapitalShare.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmDueForPayment.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmLoan.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmLogin.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmMain.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmMember.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmPatronage.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmPayment.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmPenalty.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmReportDividentPatronage.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmReportMembers.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.frmViewMemberShares.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.Properties.Resources.resources
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.csproj.GenerateResource.cache
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.csproj.CoreCompileInputs.cache
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.exe
-C:\Users\Jerard\source\repos\coopsys\coopsys\obj\Debug\coopsys.pdb
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmCheckNo.resources

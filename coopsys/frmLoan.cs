@@ -22,6 +22,7 @@ namespace coopsys
         DataTable totalShare = new DataTable();
         DataCollection dc = new DataCollection();
         frmMain main;
+        frmCheckNo checkno;
         private int memberID, day, month, year, loanID, age;
         private double penaltyAmt, balance;
         private string duedate;
@@ -200,10 +201,16 @@ namespace coopsys
                     DateTime datetime = txtDate.Value.AddDays(double.Parse(txtTerm.Text));
                     if(string.IsNullOrWhiteSpace(txtCapitalShare.Text))
                     {
-                        dc.fnExecuteQuery("INSERT INTO `coop`.`loan` " +
-                        "(`loanday`, `loanmonth`, `loanyear`, `loanfee`, `loanterm`, `loanamount`, `loaninterest`, `loancomputed`, `duedate`, `balance`, `memberid`) " +
-                        "VALUES (" + txtDate.Value.Day + ", " + txtDate.Value.Month + ", " + txtDate.Value.Year + ", " + double.Parse(txtFee.Text) + ", " + double.Parse(txtTerm.Text) + ", " +
-                        double.Parse(txtAmount.Text) + ", " + (double.Parse(txtAmount.Text) * .01) + ", " + Math.Round(double.Parse(txtLoanable.Text), 2) + ", '" + datetime.ToString("MM/dd/yyyy") + "', " + double.Parse(txtLoanable.Text) + ", " + memberID + ");", conn);
+                        //dc.fnExecuteQuery("INSERT INTO `coop`.`loan` " +
+                        //"(`loanday`, `loanmonth`, `loanyear`, `loanfee`, `loanterm`, `loanamount`, `loaninterest`, `loancomputed`, `duedate`, `balance`, `memberid`) " +
+                        //"VALUES (" + txtDate.Value.Day + ", " + txtDate.Value.Month + ", " + txtDate.Value.Year + ", " + double.Parse(txtFee.Text) + ", " + double.Parse(txtTerm.Text) + ", " +
+                        //double.Parse(txtAmount.Text) + ", " + (double.Parse(txtAmount.Text) * .01) + ", " + Math.Round(double.Parse(txtLoanable.Text), 2) + ", '" + datetime.ToString("MM/dd/yyyy") + "', " + double.Parse(txtLoanable.Text) + ", " + memberID + ");", conn);
+
+                        //dc.fnExecuteQuery("INSERT INTO `coop`.`loan` (``loanday`,`loanmonth`,`loanyear`,`loanfee`,`loanterm`,`loanamount`,`loaninterest`,`loancomputed`,`totaldeduction`,`duedate`,`balance`,`memberid`,`checkno`)" +
+                        //    "VALUES("+txtDate.Value.Day+","+txtDate.Value.Month+","+txtDate.Value.Year+","+serviceFee+","+terms+","+amount+","+interestTerms+","+loanableAmount+","+totaldeduction+ ",'"+datetime.ToString("MM/dd/yyyy")+"',"+loanableAmount+","+memberID+",<{checkno: }>);");
+
+                        string query = "INSERT INTO `coop`.`loan` (``loanday`,`loanmonth`,`loanyear`,`loanfee`,`loanterm`,`loanamount`,`loaninterest`,`loancomputed`,`totaldeduction`,`duedate`,`balance`,`memberid`,`checkno`)" +
+                            "VALUES(" + txtDate.Value.Day + "," + txtDate.Value.Month + "," + txtDate.Value.Year + "," + serviceFee + "," + terms + "," + amount + "," + interestTerms + "," + loanableAmount + "," + totaldeduction + ",'" + datetime.ToString("MM/dd/yyyy") + "'," + loanableAmount + "," + memberID + ",";
 
                         grdLoans.DataSource = null;
                         txtLoanable.Clear();
@@ -212,8 +219,7 @@ namespace coopsys
                         txtFee.Clear();
                         txtInsurance.Clear();
                         txtCapitalShare.Clear();
-                        MessageBox.Show(this, "Record saved successfully.\nClick OK to proceed.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadLoanList(1);
+                        checkno = new frmCheckNo(this, query, conn);
                     }
                     else
                     {
