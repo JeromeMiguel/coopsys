@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.grdMembers = new MetroFramework.Controls.MetroGrid();
@@ -40,8 +40,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnLogout = new System.Windows.Forms.ToolStripButton();
             this.btnReports = new System.Windows.Forms.ToolStripDropDownButton();
-            this.report1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.report2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReportsMembers = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReportsDividentPatronage = new System.Windows.Forms.ToolStripMenuItem();
             this.report3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.report4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblDate = new System.Windows.Forms.ToolStripLabel();
@@ -118,24 +118,24 @@
             this.grdMembers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdMembers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdMembers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdMembers.ColumnHeadersHeight = 29;
             this.grdMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LavenderBlush;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdMembers.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LavenderBlush;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdMembers.DefaultCellStyle = dataGridViewCellStyle5;
             this.grdMembers.EnableHeadersVisualStyles = false;
             this.grdMembers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdMembers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -145,14 +145,14 @@
             this.grdMembers.Name = "grdMembers";
             this.grdMembers.ReadOnly = true;
             this.grdMembers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdMembers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMembers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grdMembers.RowHeadersVisible = false;
             this.grdMembers.RowHeadersWidth = 51;
             this.grdMembers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -215,8 +215,8 @@
             this.btnReports.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnReports.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.btnReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.report1ToolStripMenuItem,
-            this.report2ToolStripMenuItem,
+            this.tsmiReportsMembers,
+            this.tsmiReportsDividentPatronage,
             this.report3ToolStripMenuItem,
             this.report4ToolStripMenuItem});
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
@@ -225,28 +225,30 @@
             this.btnReports.Size = new System.Drawing.Size(74, 24);
             this.btnReports.Text = "Reports";
             // 
-            // report1ToolStripMenuItem
+            // tsmiReportsMembers
             // 
-            this.report1ToolStripMenuItem.Name = "report1ToolStripMenuItem";
-            this.report1ToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
-            this.report1ToolStripMenuItem.Text = "Report 1";
+            this.tsmiReportsMembers.Name = "tsmiReportsMembers";
+            this.tsmiReportsMembers.Size = new System.Drawing.Size(224, 26);
+            this.tsmiReportsMembers.Text = "Members";
+            this.tsmiReportsMembers.Click += new System.EventHandler(this.tsmiReportsMembers_Click);
             // 
-            // report2ToolStripMenuItem
+            // tsmiReportsDividentPatronage
             // 
-            this.report2ToolStripMenuItem.Name = "report2ToolStripMenuItem";
-            this.report2ToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
-            this.report2ToolStripMenuItem.Text = "Report 2";
+            this.tsmiReportsDividentPatronage.Name = "tsmiReportsDividentPatronage";
+            this.tsmiReportsDividentPatronage.Size = new System.Drawing.Size(224, 26);
+            this.tsmiReportsDividentPatronage.Text = "Divident Patronage";
+            this.tsmiReportsDividentPatronage.Click += new System.EventHandler(this.tsmiReportsDividentPatronage_Click);
             // 
             // report3ToolStripMenuItem
             // 
             this.report3ToolStripMenuItem.Name = "report3ToolStripMenuItem";
-            this.report3ToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.report3ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.report3ToolStripMenuItem.Text = "Report 3";
             // 
             // report4ToolStripMenuItem
             // 
             this.report4ToolStripMenuItem.Name = "report4ToolStripMenuItem";
-            this.report4ToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.report4ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.report4ToolStripMenuItem.Text = "Report 4";
             // 
             // lblDate
@@ -482,8 +484,8 @@
         private System.Windows.Forms.ToolStripButton btnLogout;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripDropDownButton btnReports;
-        private System.Windows.Forms.ToolStripMenuItem report1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem report2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReportsMembers;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReportsDividentPatronage;
         private System.Windows.Forms.ToolStripMenuItem report3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem report4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;

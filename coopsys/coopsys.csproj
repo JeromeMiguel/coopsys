@@ -222,6 +222,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmReportDividentPatronage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportDividentPatronage.Designer.cs">
+      <DependentUpon>frmReportDividentPatronage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportMembers.Designer.cs">
+      <DependentUpon>frmReportMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddCapitalShare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +322,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPenalty.resx">
       <DependentUpon>frmPenalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDividentPatronage.resx">
+      <DependentUpon>frmReportDividentPatronage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportMembers.resx">
+      <DependentUpon>frmReportMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewMemberShares.resx">
       <DependentUpon>frmViewMemberShares.cs</DependentUpon>
