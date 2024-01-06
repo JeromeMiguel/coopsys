@@ -23,6 +23,7 @@ namespace coopsys
         DataCollection dc = new DataCollection();
         private int memberID, capitalShareID;
         private double capitalShareAmount;
+        private string date;
 
         public frmViewMemberShares()
         {
@@ -61,19 +62,19 @@ namespace coopsys
         {
             grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, csamount as 'AMOUNT', " +
                 "concat(CASE month " +
-                    "WHEN 1 then 'Janaury' " +
-                    "WHEN 2 then 'February' " +
-                    "WHEN 3 then 'March' " +
-                    "WHEN 4 then 'April' " +
-                    "WHEN 5 then 'May' " +
-                    "WHEN 6 then 'June' " +
-                    "WHEN 7 then 'July' " +
-                    "WHEN 8 then 'August' " +
-                    "WHEN 9 then 'September' " +
-                    "WHEN 10 then 'October' " +
-                    "WHEN 11 then 'November' " +
-                    "ELSE 'DECEMBER' " +
-                    "END, ' ', day, ', ', year) as 'DATE' "+
+                    "WHEN 1 then '01' " +
+                    "WHEN 2 then '02' " +
+                    "WHEN 3 then '03' " +
+                    "WHEN 4 then '04' " +
+                    "WHEN 5 then '05' " +
+                    "WHEN 6 then '06' " +
+                    "WHEN 7 then '07' " +
+                    "WHEN 8 then '08' " +
+                    "WHEN 9 then '09' " +
+                    "WHEN 10 then '10' " +
+                    "WHEN 11 then '11' " +
+                    "ELSE '12' " +
+                    "END, '/', day, '/', year) as 'DATE' "+
                 "from capitalshare " +
                 "where memberID=" + memberID + ";", conn);
 
@@ -112,20 +113,20 @@ namespace coopsys
         {
             grdShares.DataSource = null;
             grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, csamount as 'AMOUNT'," +
-                "\r\nCASE month" +
-                "\r\nWHEN 1 then 'Janaury'" +
-                "\r\nWHEN 2 then 'February'" +
-                "\r\nWHEN 3 then 'March'" +
-                "\r\nWHEN 4 then 'April'" +
-                "\r\nWHEN 5 then 'May'" +
-                "\r\nWHEN 6 then 'June'" +
-                "\r\nWHEN 7 then 'July'" +
-                "\r\nWHEN 8 then 'August'" +
-                "\r\nWHEN 9 then 'September'" +
-                "\r\nWHEN 10 then 'October'" +
-                "\r\nWHEN 11 then 'November'" +
-                "\r\nELSE 'DECEMBER'" +
-                "\r\nEND AS 'MONTH', year as 'YEAR'" +
+                "concat(CASE month " +
+                    "WHEN 1 then '01' " +
+                    "WHEN 2 then '02' " +
+                    "WHEN 3 then '03' " +
+                    "WHEN 4 then '04' " +
+                    "WHEN 5 then '05' " +
+                    "WHEN 6 then '06' " +
+                    "WHEN 7 then '07' " +
+                    "WHEN 8 then '08' " +
+                    "WHEN 9 then '09' " +
+                    "WHEN 10 then '10' " +
+                    "WHEN 11 then '11' " +
+                    "ELSE '12' " +
+                    "END, '/', day, '/', year) as 'DATE' " +
                 "from capitalshare " +
                 "where memberID=" + memberID + " and month=" + (cboMonth.SelectedIndex + 1) + " and year=" + Int32.Parse(cboYear.Text) + ";", conn);
 
@@ -161,7 +162,8 @@ namespace coopsys
         {
             capitalShareID = Int32.Parse(grdShares.SelectedCells[0].Value.ToString());
             capitalShareAmount = double.Parse(grdShares.SelectedCells[1].Value.ToString());
-            frmAddCapitalShare editCapitalShare = new frmAddCapitalShare(this, conn, memberID, capitalShareID, capitalShareAmount, false);
+            date = grdShares.SelectedCells[2].Value.ToString();
+            frmAddCapitalShare editCapitalShare = new frmAddCapitalShare(this, conn, memberID, capitalShareID, capitalShareAmount, false, date);
             editCapitalShare.ShowDialog();
         }
 

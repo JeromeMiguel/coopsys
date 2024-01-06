@@ -40,7 +40,10 @@ namespace coopsys
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `loanpenalty` = "+double.Parse(txtPenalty.Text)+" WHERE(`loanID` = "+loanid+" and `memberid` = "+memberID+");", conn);
+            //loan penalty status = 1 (unpaid)
+            //loan penalty status = 2 (paid)
+            dc.fnExecuteQuery("insert into penalty(loanpenaltyamount, loanpenaltystatus, loanpenaltydateadded) " +
+                "values(" + double.Parse(txtPenalty.Text) + ", 1, " + DateTime.Now.ToString("MM/dd/yyyy") + ");", conn);
             MessageBox.Show(this, "Penalty value saved to loan record.\nClick OK to exit the window.", "Penalty", MessageBoxButtons.OK, MessageBoxIcon.Information);
             formLoan.LoadLoanList(cboLoansIndex);
             this.Dispose();

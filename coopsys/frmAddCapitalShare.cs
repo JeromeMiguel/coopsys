@@ -36,7 +36,7 @@ namespace coopsys
             addShare = _addShare;
         }
 
-        public frmAddCapitalShare(frmViewMemberShares _viewMemberShares, MySqlConnection _conn, int _memberID, int _capitalShareID, double _capitalShareAmount, bool _addShare)
+        public frmAddCapitalShare(frmViewMemberShares _viewMemberShares, MySqlConnection _conn, int _memberID, int _capitalShareID, double _capitalShareAmount, bool _addShare, string _date)
         {
             InitializeComponent();
             viewMemberShares = _viewMemberShares;
@@ -45,6 +45,7 @@ namespace coopsys
             txtCapitalShare.Text = _capitalShareAmount.ToString();
             conn = _conn;
             addShare = _addShare;
+            txtDate.Text = _date;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

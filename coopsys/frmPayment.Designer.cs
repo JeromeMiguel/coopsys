@@ -56,7 +56,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(101, 33);
-            this.btnSave.TabIndex = 23;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -90,7 +90,7 @@
             this.txtPaymentAmount.ShortcutsEnabled = true;
             this.txtPaymentAmount.Size = new System.Drawing.Size(292, 33);
             this.txtPaymentAmount.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtPaymentAmount.TabIndex = 21;
+            this.txtPaymentAmount.TabIndex = 4;
             this.txtPaymentAmount.UseSelectable = true;
             this.txtPaymentAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPaymentAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -183,7 +183,7 @@
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(135, 30);
             this.txtDate.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtDate.TabIndex = 30;
+            this.txtDate.TabIndex = 1;
             // 
             // chkCheck
             // 
@@ -194,7 +194,7 @@
             this.chkCheck.Name = "chkCheck";
             this.chkCheck.Size = new System.Drawing.Size(122, 20);
             this.chkCheck.Style = MetroFramework.MetroColorStyle.Purple;
-            this.chkCheck.TabIndex = 32;
+            this.chkCheck.TabIndex = 2;
             this.chkCheck.Text = "Check payment";
             this.chkCheck.UseSelectable = true;
             this.chkCheck.CheckedChanged += new System.EventHandler(this.chkCheck_CheckedChanged);
@@ -205,7 +205,7 @@
             // 
             // 
             this.txtCheckNo.CustomButton.Image = null;
-            this.txtCheckNo.CustomButton.Location = new System.Drawing.Point(260, 1);
+            this.txtCheckNo.CustomButton.Location = new System.Drawing.Point(369, 1);
             this.txtCheckNo.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtCheckNo.CustomButton.Name = "";
             this.txtCheckNo.CustomButton.Size = new System.Drawing.Size(31, 31);
@@ -229,7 +229,7 @@
             this.txtCheckNo.ShortcutsEnabled = true;
             this.txtCheckNo.Size = new System.Drawing.Size(401, 33);
             this.txtCheckNo.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtCheckNo.TabIndex = 33;
+            this.txtCheckNo.TabIndex = 3;
             this.txtCheckNo.UseSelectable = true;
             this.txtCheckNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCheckNo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

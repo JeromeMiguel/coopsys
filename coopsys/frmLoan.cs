@@ -21,18 +21,22 @@ namespace coopsys
         DataTable dt = new DataTable();
         DataTable totalShare = new DataTable();
         DataCollection dc = new DataCollection();
+        frmMain main;
         private int memberID, day, month, year, loanID, age;
         private double penaltyAmt, balance;
         private string duedate;
+
+        private double amount, interestAmount, terms, interestTerms, serviceFee, insurance, loanableAmount, totaldeduction;
 
         public frmLoan()
         {
             InitializeComponent();
         }
 
-        public frmLoan(MySqlConnection _conn, int _memberid, string _fname, string _mname, string _lname, int _age)
+        public frmLoan(frmMain _main, MySqlConnection _conn, int _memberid, string _fname, string _mname, string _lname, int _age)
         {
             InitializeComponent();
+            main = _main;
             lblmemname.Text = _lname + ", " + _fname + " " + _mname;
             conn = _conn;
             age = _age;
@@ -45,14 +49,14 @@ namespace coopsys
         {
             if (!string.IsNullOrEmpty(txtAmount.Text) && !string.IsNullOrEmpty(txtFee.Text) && !string.IsNullOrEmpty(txtTerm.Text) && !string.IsNullOrEmpty(txtInsurance.Text))
             {
-                double amount = double.Parse(txtAmount.Text);
-                double interestAmount = double.Parse(txtAmount.Text) * .01;
-                double terms = double.Parse(txtTerm.Text) / 30;
-                double interestTerms = interestAmount * terms;
-                double serviceFee = double.Parse(txtFee.Text);
-                double insurance = double.Parse(txtInsurance.Text);
-                
-                double loanableAmount;
+                amount = double.Parse(txtAmount.Text);
+                interestAmount = double.Parse(txtAmount.Text) * .01;
+                terms = double.Parse(txtTerm.Text) / 30;
+                interestTerms = interestAmount * terms;
+                serviceFee = double.Parse(txtFee.Text);
+                insurance = double.Parse(txtInsurance.Text);
+                totaldeduction = interestTerms + serviceFee + insurance + double.Parse(txtCapitalShare.Text);
+
                 if (!string.IsNullOrWhiteSpace(txtAmount.Text) && 
                     !string.IsNullOrWhiteSpace(txtFee.Text) && 
                     !string.IsNullOrWhiteSpace(txtTerm.Text) && 
@@ -64,7 +68,7 @@ namespace coopsys
                     }
                     else
                     {
-                        loanableAmount = amount - (interestTerms + serviceFee + insurance + double.Parse(txtCapitalShare.Text));
+                        loanableAmount = amount - totaldeduction;
                     }
                     txtLoanable.Text = Math.Round(loanableAmount, 2).ToString();
                 }
@@ -83,8 +87,9 @@ namespace coopsys
                 "\r\nconcat(loanmonth, " +
                 "'/', loanday,  '/', loanyear) as 'DATE', " +
                 "loanamount as 'AMOUNT', balance as 'BALANCE', duedate as 'DUE', " +
-                "loanpenalty as 'PENALTY' " +
-                "from loan where memberid=" + memberID + ";", conn);
+                "loanpenaltyamount as 'PENALTY' " +
+                "from loan left join penalty on loan.loanpenalty=penalty.loanpenalty " +
+                "where memberid= " + memberID + ";", conn);
             }
             else if(loanstatus == 1)
             {
@@ -92,8 +97,9 @@ namespace coopsys
                 "\r\nconcat(loanmonth, " +
                 "'/', loanday,  '/', loanyear) as 'DATE', " +
                 "loanamount as 'AMOUNT', balance as 'BALANCE', duedate as 'DUE', " +
-                "loanpenalty as 'PENALTY' " +
-                "from loan where memberid=" + memberID + " and balance >= 0;", conn);
+                "loanpenaltyamount as 'PENALTY' " +
+                "from loan left join penalty on loan.loanpenalty=penalty.loanpenalty " +
+                "where memberid= " + memberID + " and balance > 0;", conn);
             }
             else if(loanstatus == 2)
             {
@@ -101,8 +107,9 @@ namespace coopsys
                 "\r\nconcat(loanmonth, " +
                 "'/', loanday,  '/', loanyear) as 'DATE', " +
                 "loanamount as 'AMOUNT', balance as 'BALANCE', duedate as 'DUE', " +
-                "loanpenalty as 'PENALTY' " +
-                "from loan where memberid=" + memberID + " and balance = 0;", conn);
+                "loanpenaltyamount as 'PENALTY' " +
+                "from loan left join penalty on loan.loanpenalty=penalty.loanpenalty " +
+                "where memberid= " + memberID + " and balance = 0;", conn);
             }
 
             grdLoans.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -172,6 +179,16 @@ namespace coopsys
             LoadLoanList(cboLoans.SelectedIndex);
         }
 
+        private void frmLoan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            main.OnFormLoad();
+        }
+
+        private void frmLoan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             ComputeLoanableAmount();
@@ -184,9 +201,9 @@ namespace coopsys
                     if(string.IsNullOrWhiteSpace(txtCapitalShare.Text))
                     {
                         dc.fnExecuteQuery("INSERT INTO `coop`.`loan` " +
-                        "(`loanday`, `loanmonth`, `loanyear`, `loanfee`, `loanterm`, `loanamount`, `loaninterest`, `loancomputed`, `loanpenalty`, `duedate`, `balance`, `memberid`) " +
+                        "(`loanday`, `loanmonth`, `loanyear`, `loanfee`, `loanterm`, `loanamount`, `loaninterest`, `loancomputed`, `duedate`, `balance`, `memberid`) " +
                         "VALUES (" + txtDate.Value.Day + ", " + txtDate.Value.Month + ", " + txtDate.Value.Year + ", " + double.Parse(txtFee.Text) + ", " + double.Parse(txtTerm.Text) + ", " +
-                        double.Parse(txtAmount.Text) + ", " + (double.Parse(txtAmount.Text) * .01) + ", " + Math.Round(double.Parse(txtLoanable.Text), 2) + ", '0', '" + datetime.ToString("MM/dd/yyyy") + "', " + double.Parse(txtLoanable.Text) + ", " + memberID + ");", conn);
+                        double.Parse(txtAmount.Text) + ", " + (double.Parse(txtAmount.Text) * .01) + ", " + Math.Round(double.Parse(txtLoanable.Text), 2) + ", '" + datetime.ToString("MM/dd/yyyy") + "', " + double.Parse(txtLoanable.Text) + ", " + memberID + ");", conn);
 
                         grdLoans.DataSource = null;
                         txtLoanable.Clear();
@@ -201,9 +218,9 @@ namespace coopsys
                     else
                     {
                         dc.fnExecuteQuery("INSERT INTO `coop`.`loan` " +
-                        "(`loanday`, `loanmonth`, `loanyear`, `loanfee`, `loanterm`, `loanamount`, `loaninterest`,`loancomputed`, `loanpenalty`, `duedate`, `balance`, `memberid`) " +
+                        "(`loanday`, `loanmonth`, `loanyear`, `loanfee`, `loanterm`, `loanamount`, `loaninterest`,`loancomputed`, `duedate`, `balance`, `memberid`) " +
                         "VALUES (" + txtDate.Value.Day + ", " + txtDate.Value.Month + ", " + txtDate.Value.Year + ", " + double.Parse(txtFee.Text) + ", " + double.Parse(txtTerm.Text) + ", " +
-                        double.Parse(txtAmount.Text) + ", " + (double.Parse(txtAmount.Text) * .01) + ", " + Math.Round(double.Parse(txtLoanable.Text), 2) + ", '0', '" + datetime.ToString("MM/dd/yyyy") + "', " + double.Parse(txtLoanable.Text) + ", " + memberID + ");", conn);
+                        double.Parse(txtAmount.Text) + ", " + (double.Parse(txtAmount.Text) * .01) + ", " + Math.Round(double.Parse(txtLoanable.Text), 2) + ", '" + datetime.ToString("MM/dd/yyyy") + "', " + double.Parse(txtLoanable.Text) + ", " + memberID + ");", conn);
 
                         dc.fnExecuteQuery("INSERT INTO `coop`.`capitalshare` (`csamount`, `day`, `month`, `year`, `memberID`) " +
                         "VALUES (" + double.Parse(txtCapitalShare.Text) + ", " + Int32.Parse(txtDate.Value.Day.ToString()) + ", " +
@@ -271,7 +288,7 @@ namespace coopsys
         private void removePenaltyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loanID = Int32.Parse(grdLoans.SelectedCells[0].Value.ToString());
-            dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `loanpenalty` = '0' WHERE(`loanID` = " + loanID + " and `memberid` = " + memberID + ");", conn);
+            dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `loanpenalty` = NULL WHERE(`loanID` = " + loanID + " and `memberid` = " + memberID + ");", conn);
             MessageBox.Show(this, "Penalty for this loan was successfully removed.\nClick OK to continue.", "Penalty", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadLoanList(1);
         }

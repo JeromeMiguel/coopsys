@@ -99,7 +99,7 @@
             this.txtSearch.ShortcutsEnabled = true;
             this.txtSearch.Size = new System.Drawing.Size(345, 33);
             this.txtSearch.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtSearch.TabIndex = 3;
+            this.txtSearch.TabIndex = 1;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.UseSelectable = true;
             this.txtSearch.WaterMark = "Search a member...";
@@ -159,7 +159,7 @@
             this.grdMembers.RowTemplate.Height = 24;
             this.grdMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdMembers.Size = new System.Drawing.Size(1159, 443);
-            this.grdMembers.TabIndex = 15;
+            this.grdMembers.TabIndex = 2;
             this.grdMembers.DataSourceChanged += new System.EventHandler(this.grdMembers_DataSourceChanged);
             this.grdMembers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdMembers_CellDoubleClick);
             this.grdMembers.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdMembers_CellMouseClick);
@@ -363,7 +363,7 @@
             this.cboMemType.Name = "cboMemType";
             this.cboMemType.Size = new System.Drawing.Size(179, 30);
             this.cboMemType.Style = MetroFramework.MetroColorStyle.Purple;
-            this.cboMemType.TabIndex = 25;
+            this.cboMemType.TabIndex = 7;
             this.cboMemType.UseSelectable = true;
             this.cboMemType.SelectedIndexChanged += new System.EventHandler(this.cboMemType_SelectedIndexChanged);
             // 
@@ -386,7 +386,7 @@
             this.btnDue.Margin = new System.Windows.Forms.Padding(4);
             this.btnDue.Name = "btnDue";
             this.btnDue.Size = new System.Drawing.Size(197, 31);
-            this.btnDue.TabIndex = 27;
+            this.btnDue.TabIndex = 4;
             this.btnDue.Text = "Due for Payment";
             this.btnDue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDue.UseVisualStyleBackColor = true;
@@ -402,7 +402,7 @@
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(76, 31);
-            this.btnEdit.TabIndex = 24;
+            this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Edit";
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -418,7 +418,7 @@
             this.btnLoan.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoan.Name = "btnLoan";
             this.btnLoan.Size = new System.Drawing.Size(183, 31);
-            this.btnLoan.TabIndex = 22;
+            this.btnLoan.TabIndex = 3;
             this.btnLoan.Text = "Loans and Payment";
             this.btnLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLoan.UseVisualStyleBackColor = true;
@@ -433,7 +433,7 @@
             this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMember.Name = "btnAddMember";
             this.btnAddMember.Size = new System.Drawing.Size(144, 31);
-            this.btnAddMember.TabIndex = 28;
+            this.btnAddMember.TabIndex = 6;
             this.btnAddMember.Text = "Add Member";
             this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddMember.UseVisualStyleBackColor = true;

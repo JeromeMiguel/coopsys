@@ -66,8 +66,8 @@
             this.grdMembers.EnableHeadersVisualStyles = false;
             this.grdMembers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdMembers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdMembers.Location = new System.Drawing.Point(22, 78);
-            this.grdMembers.Margin = new System.Windows.Forms.Padding(2);
+            this.grdMembers.Location = new System.Drawing.Point(29, 96);
+            this.grdMembers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grdMembers.MultiSelect = false;
             this.grdMembers.Name = "grdMembers";
             this.grdMembers.ReadOnly = true;
@@ -85,24 +85,28 @@
             this.grdMembers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdMembers.RowTemplate.Height = 24;
             this.grdMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdMembers.Size = new System.Drawing.Size(1054, 391);
+            this.grdMembers.Size = new System.Drawing.Size(1405, 481);
             this.grdMembers.TabIndex = 16;
             this.grdMembers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdMembers_CellDoubleClick);
             // 
             // frmDueForPayment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 488);
+            this.ClientSize = new System.Drawing.Size(1464, 601);
             this.Controls.Add(this.grdMembers);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDueForPayment";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Due Loans";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDueForPayment_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDueForPayment_FormClosed);
             this.Load += new System.EventHandler(this.frmDueForPayment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdMembers)).EndInit();
             this.ResumeLayout(false);

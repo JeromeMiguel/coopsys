@@ -43,10 +43,10 @@
             // 
             // 
             this.txtUname.CustomButton.Image = null;
-            this.txtUname.CustomButton.Location = new System.Drawing.Point(459, 1);
+            this.txtUname.CustomButton.Location = new System.Drawing.Point(344, 1);
             this.txtUname.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUname.CustomButton.Name = "";
-            this.txtUname.CustomButton.Size = new System.Drawing.Size(41, 38);
+            this.txtUname.CustomButton.Size = new System.Drawing.Size(31, 31);
             this.txtUname.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtUname.CustomButton.TabIndex = 1;
             this.txtUname.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -67,7 +67,7 @@
             this.txtUname.ShortcutsEnabled = true;
             this.txtUname.Size = new System.Drawing.Size(376, 33);
             this.txtUname.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtUname.TabIndex = 2;
+            this.txtUname.TabIndex = 1;
             this.txtUname.UseSelectable = true;
             this.txtUname.WaterMark = "Username";
             this.txtUname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -79,10 +79,10 @@
             // 
             // 
             this.txtPassword.CustomButton.Image = null;
-            this.txtPassword.CustomButton.Location = new System.Drawing.Point(459, 1);
+            this.txtPassword.CustomButton.Location = new System.Drawing.Point(344, 1);
             this.txtPassword.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.CustomButton.Name = "";
-            this.txtPassword.CustomButton.Size = new System.Drawing.Size(41, 38);
+            this.txtPassword.CustomButton.Size = new System.Drawing.Size(31, 31);
             this.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPassword.CustomButton.TabIndex = 1;
             this.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -103,7 +103,7 @@
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(376, 33);
             this.txtPassword.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSelectable = true;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.WaterMark = "Password";
@@ -123,7 +123,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(376, 36);
-            this.btnLogin.TabIndex = 12;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "L&ogin";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -132,7 +132,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(24, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(355, 319);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

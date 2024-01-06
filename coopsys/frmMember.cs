@@ -85,7 +85,7 @@ namespace coopsys
                 dc.fnExecuteQuery("INSERT INTO `coop`.`member` (`firstname`, `middlename`, `lastname`, `sex`, " +
                     "`birthday`, `age`, `memfee`, `memtype`, `memstatus`, `busname`, `busplateno`, `address`, `tin`, `cpnum`, `stalladdress`) " +
                     "VALUES ('" + txtFname.Text + "', '" + txtMname.Text + "', '" + txtLname.Text + "', " + sex + ", " +
-                    "'" + txtBday.Value.ToString("MM.dd.yyyy") + "', " + txtAge.Value + ", " + memfee + ", " + memtype + ", " + memstatus + "," +
+                    "'" + txtBday.Value.ToString("yyyy-MM-dd") + "', " + txtAge.Value + ", " + memfee + ", " + memtype + ", " + memstatus + "," +
                     "'" + txtBusName.Text + "', '" + txtBusPlateNo.Text + "', '"+txtAddress.Text+"', '"+txtTIN.Text+"', '"+txtCpNum.Text+"', '"+txtStallAddress.Text+"')", conn);
 
                 DialogResult dialog = MessageBox.Show(this, "Member has been successfully added.\nAdd another member?",
@@ -127,7 +127,7 @@ namespace coopsys
                 memstatus = 1; //1 = active; 0 = inactive
 
                 dc.fnExecuteQuery("UPDATE `coop`.`member` SET `firstname` = '" + txtFname.Text + "', `middlename` = '" + txtMname.Text + "', " +
-                    "`lastname` = '" + txtLname.Text + "', `sex` = " + sex + ", `birthday` = '" + txtBday.Value.ToString("MM.dd.yyyy") + "', " +
+                    "`lastname` = '" + txtLname.Text + "', `sex` = " + sex + ", `birthday` = '" + txtBday.Value.ToString("yyyy-MM-dd") + "', " +
                     "`age` = " + txtAge.Value + ", `memfee` = " + memfee + ", `memtype` = " + memtype + ", `memstatus` = " + memstatus + ", " +
                     "`busname` = '" + txtBusName.Text + "', `busplateno` = '" + txtBusPlateNo.Text + "', `address` = '"+txtAddress.Text+"', " +
                     "`tin` = '"+txtTIN.Text+"', `cpnum` = '"+txtCpNum.Text+"', `stalladdress` = '"+txtStallAddress.Text+"' " +

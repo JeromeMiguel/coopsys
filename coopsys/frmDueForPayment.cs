@@ -13,6 +13,7 @@ using calypso;
 using calypso.DataAccess;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
+using System.ComponentModel.Composition.Primitives;
 
 namespace coopsys
 {
@@ -22,12 +23,14 @@ namespace coopsys
         DataCollection dc = new DataCollection();
         DataGridTableStyle tableStyle = new DataGridTableStyle();
         MySqlConnection conn;
+        frmMain main;
         private int loanID, memberID;
         private double balance, penalty;
         private string duedate;
 
-        public frmDueForPayment(MySqlConnection _conn)
+        public frmDueForPayment(frmMain _main, MySqlConnection _conn)
         {
+            main = _main;
             conn = _conn;
             InitializeComponent();
         }
@@ -36,7 +39,7 @@ namespace coopsys
         {
             string query = "select loan.loanID, member.memberID, " +
                 "concat(loanmonth,'/', loanday, '/', loanyear) as 'LOAN DATE', " +
-                "concat(firstname, lastname) as NAME, " +
+                "concat(firstname, ' ', lastname) as NAME, " +
                 "loan.loanamount as 'LOAN AMOUNT', " +
                 "loan.balance as 'BALANCE', " +
                 "loan.loanpenalty as 'PENALTY', " +
@@ -59,6 +62,16 @@ namespace coopsys
                 grdMembers.Columns[0].Visible = false;
                 grdMembers.Columns[1].Visible = false;
             }
+        }
+
+        private void frmDueForPayment_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            main.OnFormLoad();
+        }
+
+        private void frmDueForPayment_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
         }
 
         private void frmDueForPayment_Load(object sender, EventArgs e)
