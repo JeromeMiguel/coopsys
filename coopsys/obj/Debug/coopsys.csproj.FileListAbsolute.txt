@@ -273,3 +273,4 @@ C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.CopyComplete
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.exe
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.pdb
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmCheckNo.resources
