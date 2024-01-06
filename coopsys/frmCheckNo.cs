@@ -23,18 +23,21 @@ namespace coopsys
         DataTable totalShare = new DataTable();
         DataCollection dc = new DataCollection();
         string query;
+        int loanIndex;
         
-        public frmCheckNo(frmLoan _loan, string _query, MySqlConnection _conn)
+        public frmCheckNo(frmLoan _loan, string _query, MySqlConnection _conn, int _loanIndex)
         {
             InitializeComponent();
             loan = _loan;
             query = _query;
             conn = _conn;
+            loanIndex = _loanIndex;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             dc.fnExecuteQuery(query+txtCheckNo.Text);
+            loan.LoadLoanList(loanIndex);
         }
     }
 }
