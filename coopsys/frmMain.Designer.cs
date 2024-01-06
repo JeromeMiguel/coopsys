@@ -40,8 +40,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnLogout = new System.Windows.Forms.ToolStripButton();
             this.btnReports = new System.Windows.Forms.ToolStripDropDownButton();
-            this.report1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.report2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReportsMembers = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReportsDividentPatronage = new System.Windows.Forms.ToolStripMenuItem();
             this.report3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.report4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblDate = new System.Windows.Forms.ToolStripLabel();
@@ -215,8 +215,8 @@
             this.btnReports.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnReports.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.btnReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.report1ToolStripMenuItem,
-            this.report2ToolStripMenuItem,
+            this.tsmiReportsMembers,
+            this.tsmiReportsDividentPatronage,
             this.report3ToolStripMenuItem,
             this.report4ToolStripMenuItem});
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
@@ -225,28 +225,30 @@
             this.btnReports.Size = new System.Drawing.Size(74, 24);
             this.btnReports.Text = "Reports";
             // 
-            // report1ToolStripMenuItem
+            // tsmiReportsMembers
             // 
-            this.report1ToolStripMenuItem.Name = "report1ToolStripMenuItem";
-            this.report1ToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
-            this.report1ToolStripMenuItem.Text = "Report 1";
+            this.tsmiReportsMembers.Name = "tsmiReportsMembers";
+            this.tsmiReportsMembers.Size = new System.Drawing.Size(224, 26);
+            this.tsmiReportsMembers.Text = "Members";
+            this.tsmiReportsMembers.Click += new System.EventHandler(this.tsmiReportsMembers_Click);
             // 
-            // report2ToolStripMenuItem
+            // tsmiReportsDividentPatronage
             // 
-            this.report2ToolStripMenuItem.Name = "report2ToolStripMenuItem";
-            this.report2ToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
-            this.report2ToolStripMenuItem.Text = "Report 2";
+            this.tsmiReportsDividentPatronage.Name = "tsmiReportsDividentPatronage";
+            this.tsmiReportsDividentPatronage.Size = new System.Drawing.Size(224, 26);
+            this.tsmiReportsDividentPatronage.Text = "Divident Patronage";
+            this.tsmiReportsDividentPatronage.Click += new System.EventHandler(this.tsmiReportsDividentPatronage_Click);
             // 
             // report3ToolStripMenuItem
             // 
             this.report3ToolStripMenuItem.Name = "report3ToolStripMenuItem";
-            this.report3ToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.report3ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.report3ToolStripMenuItem.Text = "Report 3";
             // 
             // report4ToolStripMenuItem
             // 
             this.report4ToolStripMenuItem.Name = "report4ToolStripMenuItem";
-            this.report4ToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.report4ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.report4ToolStripMenuItem.Text = "Report 4";
             // 
             // lblDate
@@ -482,8 +484,8 @@
         private System.Windows.Forms.ToolStripButton btnLogout;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripDropDownButton btnReports;
-        private System.Windows.Forms.ToolStripMenuItem report1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem report2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReportsMembers;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReportsDividentPatronage;
         private System.Windows.Forms.ToolStripMenuItem report3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem report4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
