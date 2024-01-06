@@ -219,7 +219,7 @@ namespace coopsys
                         txtFee.Clear();
                         txtInsurance.Clear();
                         txtCapitalShare.Clear();
-                        checkno = new frmCheckNo(this, query, conn);
+                        checkno = new frmCheckNo(this, query, conn, cboLoans.SelectedIndex);
                     }
                     else
                     {
