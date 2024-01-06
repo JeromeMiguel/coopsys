@@ -26,6 +26,8 @@ namespace coopsys
         private double penaltyAmt, balance;
         private string duedate;
 
+        private double amount, interestAmount, terms, interestTerms, serviceFee, insurance, loanableAmount, totaldeduction;
+
         public frmLoan()
         {
             InitializeComponent();
@@ -47,14 +49,14 @@ namespace coopsys
         {
             if (!string.IsNullOrEmpty(txtAmount.Text) && !string.IsNullOrEmpty(txtFee.Text) && !string.IsNullOrEmpty(txtTerm.Text) && !string.IsNullOrEmpty(txtInsurance.Text))
             {
-                double amount = double.Parse(txtAmount.Text);
-                double interestAmount = double.Parse(txtAmount.Text) * .01;
-                double terms = double.Parse(txtTerm.Text) / 30;
-                double interestTerms = interestAmount * terms;
-                double serviceFee = double.Parse(txtFee.Text);
-                double insurance = double.Parse(txtInsurance.Text);
-                
-                double loanableAmount;
+                amount = double.Parse(txtAmount.Text);
+                interestAmount = double.Parse(txtAmount.Text) * .01;
+                terms = double.Parse(txtTerm.Text) / 30;
+                interestTerms = interestAmount * terms;
+                serviceFee = double.Parse(txtFee.Text);
+                insurance = double.Parse(txtInsurance.Text);
+                totaldeduction = interestTerms + serviceFee + insurance + double.Parse(txtCapitalShare.Text);
+
                 if (!string.IsNullOrWhiteSpace(txtAmount.Text) && 
                     !string.IsNullOrWhiteSpace(txtFee.Text) && 
                     !string.IsNullOrWhiteSpace(txtTerm.Text) && 
@@ -66,7 +68,7 @@ namespace coopsys
                     }
                     else
                     {
-                        loanableAmount = amount - (interestTerms + serviceFee + insurance + double.Parse(txtCapitalShare.Text));
+                        loanableAmount = amount - totaldeduction;
                     }
                     txtLoanable.Text = Math.Round(loanableAmount, 2).ToString();
                 }
