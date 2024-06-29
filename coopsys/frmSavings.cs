@@ -18,7 +18,7 @@ namespace coopsys
     {
         MySqlConnection conn;
         DataCollection dc = new DataCollection();
-        private string fname, mname, lname, accountNum, date;
+        private string fname, mname, lname, accountNum;
         private int memberID;
 
         public frmSavings(MySqlConnection _conn, int _memberID, string _fname, string _mname, string _lname)
@@ -30,17 +30,16 @@ namespace coopsys
             lname= _lname;
             memberID = _memberID;
             accountNum = dc.fnReturnStringValue("SELECT LAST_INSERT_ID() as 'ID';", "ID", conn);
-            date = DateTime.Now.ToString("dd-MM-yyyy");
 
 
             txtAccount.Text = accountNum;
             txtName.Text = ""+fname+" "+mname+" "+lname+"";
-            txtDate.Text = date;
+            txtDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            dc.fnExecuteQuery("INSERT INTO `coop`.`savings` (`created_at`, `memberID`) VALUES ('" + date + "', " + memberID + ");", conn);
+            dc.fnExecuteQuery("INSERT INTO `coop`.`savings` (`created_at`, `memberID`) VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', " + memberID + ");", conn);
 
             MessageBox.Show(this, "Savings Account for \"+fname+\" \"+mname+\" \"+lname+\" has been created successfully",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

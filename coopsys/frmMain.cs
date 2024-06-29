@@ -183,10 +183,29 @@ namespace coopsys
         private void savingsAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             memberID = Int32.Parse(grdMembers.SelectedCells[0].Value.ToString());
+            fname = grdMembers.SelectedCells[1].Value.ToString();
+            mname = grdMembers.SelectedCells[2].Value.ToString();
+            lname = grdMembers.SelectedCells[3].Value.ToString();
 
-            
-            frmViewSavings form = new frmViewSavings(conn, memberID);
-            form.ShowDialog();
+            string savingsAccExists=dc.fnReturnStringValue("SELECT IF( EXISTS( SELECT savingsID FROM coop.savings WHERE `memberID` =  "+memberID+" ), 1, 0) AS \"AccountExists\";", "AccountExists", conn);
+
+            if (savingsAccExists == "0")
+            {
+                DialogResult savingsDialog = MessageBox.Show(this, "This User has no registered Savings Account\nDo you want to create a Savings Account?",
+                     "Account Does Not Exist", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (savingsDialog == DialogResult.Yes)
+                {
+                    frmSavings form = new frmSavings(conn, memberID, fname, mname, lname);
+                    form.ShowDialog();
+                }
+            }
+            else
+            {
+
+                frmViewSavings form = new frmViewSavings(conn, memberID);
+                form.ShowDialog();
+            }
         }
 
         private void printCertificateToolStripMenuItem_Click(object sender, EventArgs e)
