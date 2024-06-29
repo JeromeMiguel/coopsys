@@ -175,6 +175,20 @@ namespace coopsys
             report.ShowDialog();
         }
 
+        private void tipTools_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void savingsAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            memberID = Int32.Parse(grdMembers.SelectedCells[0].Value.ToString());
+
+            
+            frmViewSavings form = new frmViewSavings(conn, memberID);
+            form.ShowDialog();
+        }
+
         private void printCertificateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             memberID = Int32.Parse(grdMembers.SelectedCells[0].Value.ToString());

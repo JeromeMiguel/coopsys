@@ -158,39 +158,40 @@ namespace coopsys
                     " '"+txtPosition.Text+"', '" + txtCpNum.Text + "', '" + mtxtTin.Text + "', '" + txtHouseNo.Text + "', '" + txtStreet.Text + "', '" + cboBarangay.Text + "', " +
                     "'" + txtMunicipalityCity.Text + "', " + memfee + ", " + memtype + ", " + memstatus + ", '" + txtBusName.Text + "', '" + txtBusPlateNo.Text + "', " +
                     "'" + txtBusBldgNo.Text + "', '" + txtBusStreet.Text + "', '" + txtBusBarangay.Text + "', '" + txtBusMunicipalityCity.Text + "', '"+txtAccountNumber.Text+"');", conn);
-                
-                DialogResult dialog = MessageBox.Show(this, "Member has been successfully added.\nAdd another member?",
-                    "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                
+
+
+                DialogResult savingsDialog = MessageBox.Show(this, "Member has been successfully added.\nDo you want to create a Savings Account?",
+                  "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                memberID = int.Parse(dc.fnReturnStringValue("SELECT LAST_INSERT_ID() as 'ID';", "ID",conn));
+
+              
                 defaults.totalMember = defaults.totalMember + 1;
                 account_number = "MTM-" + defaults.year + "-" + string.Format("{0:000000}", defaults.totalMember + 1) + "";
                 txtAccountNumber.Text = account_number;
 
+                if (savingsDialog == DialogResult.Yes) {
+                    frmSavings form = new frmSavings(conn, memberID, txtFname.Text, txtMname.Text, txtLname.Text);
+                    form.ShowDialog();
+
+                    clear();
+                }
+              
+                DialogResult dialog = MessageBox.Show(this, "Member has been successfully added.\nAdd another member?",
+                "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
                 if (dialog.Equals(DialogResult.Yes))
                 {
-                    txtFname.Clear();
-                    txtMname.Clear();
-                    txtLname.Clear();
-                    mtxtTin.Clear();
-                    txtCpNum.Clear();
-                    txtHouseNo.Clear();
-                    txtStreet.Clear();
-                    cboBarangay.SelectedIndex = 0;
-                    txtBusMunicipalityCity.Clear();
-                    txtBusName.Clear();
-                    txtBusPlateNo.Clear();
-                    txtPosition.Clear();
-                    txtBusBldgNo.Clear();
-                    txtBusStreet.Clear();
-                    txtBusBarangay.Clear();
-                    txtBusMunicipalityCity.Clear();
-                    chkFee.Checked = false;
+                    clear();
                 }
                 else
                 {
                     this.Close();
                     this.Dispose();
                 }
+                
+              
+              
             }
         }
 
@@ -333,5 +334,26 @@ namespace coopsys
             this.Close();
             this.Dispose();
         }  
+
+        private void clear()
+        {
+            txtFname.Clear();
+            txtMname.Clear();
+            txtLname.Clear();
+            mtxtTin.Clear();
+            txtCpNum.Clear();
+            txtHouseNo.Clear();
+            txtStreet.Clear();
+            cboBarangay.SelectedIndex = 0;
+            txtBusMunicipalityCity.Clear();
+            txtBusName.Clear();
+            txtBusPlateNo.Clear();
+            txtPosition.Clear();
+            txtBusBldgNo.Clear();
+            txtBusStreet.Clear();
+            txtBusBarangay.Clear();
+            txtBusMunicipalityCity.Clear();
+            chkFee.Checked = false;
+        }
     }
 }

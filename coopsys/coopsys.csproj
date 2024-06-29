@@ -424,6 +424,12 @@
     <Compile Include="frmReportPastDueLoan.Designer.cs">
       <DependentUpon>frmReportPastDueLoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSavings.Designer.cs">
+      <DependentUpon>frmSavings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSetPenalty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +447,12 @@
     </Compile>
     <Compile Include="frmViewMemberShares.Designer.cs">
       <DependentUpon>frmViewMemberShares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewSavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewSavings.Designer.cs">
+      <DependentUpon>frmViewSavings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgressLoader.cs">
@@ -507,6 +519,9 @@
     <EmbeddedResource Include="frmReportPastDueLoan.resx">
       <DependentUpon>frmReportPastDueLoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSavings.resx">
+      <DependentUpon>frmSavings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSetPenalty.resx">
       <DependentUpon>frmSetPenalty.cs</DependentUpon>
     </EmbeddedResource>
@@ -521,6 +536,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewMemberShares.resx">
       <DependentUpon>frmViewMemberShares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewSavings.resx">
+      <DependentUpon>frmViewSavings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressLoader.resx">
       <DependentUpon>ProgressLoader.cs</DependentUpon>

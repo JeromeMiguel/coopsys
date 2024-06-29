@@ -61,6 +61,7 @@
             this.capitalShareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSharesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printCertificateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.savingsAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cboMemType = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -202,7 +203,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 20, 1, 20);
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(1161, 67);
+            this.toolStrip1.Size = new System.Drawing.Size(1164, 67);
             this.toolStrip1.TabIndex = 14;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -338,6 +339,7 @@
             // tipTools
             // 
             this.tipTools.IsBalloon = true;
+            this.tipTools.Popup += new System.Windows.Forms.PopupEventHandler(this.tipTools_Popup);
             // 
             // btnSearchMem
             // 
@@ -368,9 +370,10 @@
             this.contextMenuStripDataRow.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStripDataRow.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.capitalShareToolStripMenuItem,
+            this.savingsAccountToolStripMenuItem,
             this.chaToolStripMenuItem});
             this.contextMenuStripDataRow.Name = "contextMenuStripDataRow";
-            this.contextMenuStripDataRow.Size = new System.Drawing.Size(231, 80);
+            this.contextMenuStripDataRow.Size = new System.Drawing.Size(231, 104);
             // 
             // capitalShareToolStripMenuItem
             // 
@@ -394,6 +397,13 @@
             this.printCertificateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.printCertificateToolStripMenuItem.Text = "Print certificate";
             this.printCertificateToolStripMenuItem.Click += new System.EventHandler(this.printCertificateToolStripMenuItem_Click);
+            // 
+            // savingsAccountToolStripMenuItem
+            // 
+            this.savingsAccountToolStripMenuItem.Name = "savingsAccountToolStripMenuItem";
+            this.savingsAccountToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
+            this.savingsAccountToolStripMenuItem.Text = "Savings Account";
+            this.savingsAccountToolStripMenuItem.Click += new System.EventHandler(this.savingsAccountToolStripMenuItem_Click);
             // 
             // chaToolStripMenuItem
             // 
@@ -521,7 +531,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 785);
+            this.ClientSize = new System.Drawing.Size(1204, 795);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.cboMemStat);
             this.Controls.Add(this.btnAddMember);
@@ -596,5 +606,6 @@
         private System.Windows.Forms.ToolStripDropDownButton btnBackup;
         private System.Windows.Forms.ToolStripMenuItem sqlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem finalReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem savingsAccountToolStripMenuItem;
     }
 }
