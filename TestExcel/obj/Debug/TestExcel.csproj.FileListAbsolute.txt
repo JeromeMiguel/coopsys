@@ -101,3 +101,112 @@ C:\Users\Jerard\source\repos\coopsys\TestExcel\bin\Debug\System.Threading.Tasks.
 C:\Users\Jerard\source\repos\coopsys\TestExcel\obj\Debug\TestExcel.csproj.SuggestedBindingRedirects.cache
 C:\Users\Jerard\source\repos\coopsys\TestExcel\obj\Debug\TestExcel.exe.config
 C:\Users\Jerard\source\repos\coopsys\TestExcel\obj\Debug\TestExcel.csproj.CopyComplete
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\TestExcel.exe.config
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\TestExcel.exe
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\TestExcel.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\BitMiracle.LibTiff.NET.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\BouncyCastle.Crypto.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Google.Protobuf.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Abstractions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Drawing.Common.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Logger.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Shared.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronXL.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\K4os.Compression.LZ4.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\K4os.Compression.LZ4.Streams.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\K4os.Hash.xxHash.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\MetroFramework.Design.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\MetroFramework.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\MetroFramework.Fonts.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Primitives.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\MySql.Data.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\SixLabors.Fonts.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\SixLabors.ImageSharp.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\SixLabors.ImageSharp.Drawing.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Buffers.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Configuration.ConfigurationManager.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.IO.Pipelines.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Memory.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Numerics.Vectors.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Security.AccessControl.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Security.Permissions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Security.Principal.Windows.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Text.Encoding.CodePages.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Text.Encodings.Web.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Text.Json.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Threading.Tasks.Extensions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\ZstdSharp.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\BitMiracle.LibTiff.NET.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\BouncyCastle.Crypto.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\calypso.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\calypso.dll.config
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Google.Protobuf.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Google.Protobuf.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Abstractions.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Drawing.Common.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Drawing.Common.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Logger.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronSoftware.Shared.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronXL.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\IronXL.dll.config
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\K4os.Compression.LZ4.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\K4os.Compression.LZ4.Streams.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\K4os.Hash.xxHash.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\Microsoft.Extensions.Primitives.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\MySql.Data.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\SixLabors.Fonts.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\SixLabors.ImageSharp.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\SixLabors.ImageSharp.Drawing.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Buffers.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Configuration.ConfigurationManager.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.IO.Pipelines.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Memory.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Numerics.Vectors.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Security.AccessControl.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Security.Permissions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Security.Principal.Windows.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Text.Encoding.CodePages.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Text.Encodings.Web.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Text.Json.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\bin\Debug\System.Threading.Tasks.Extensions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.AssemblyReference.cache
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.SuggestedBindingRedirects.cache
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.exe.config
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.FrmTestExcel.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.Properties.Resources.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.GenerateResource.cache
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.CoreCompileInputs.cache
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.CopyComplete
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.exe
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.pdb
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.AssemblyReference.cache
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.exe.config
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.FrmTestExcel.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.Properties.Resources.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.GenerateResource.cache
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\TestExcel\obj\Debug\TestExcel.csproj.CoreCompileInputs.cache

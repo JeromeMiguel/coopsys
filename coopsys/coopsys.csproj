@@ -14,6 +14,22 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Jerome Miguel\Desktop\pub\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +50,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>coopsys.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0ACDCB83D02BAC06DC7EFB3658C003ED9BEB7F23</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>coopsys_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BitMiracle.LibTiff.NET, Version=2.4.649.0, Culture=neutral, PublicKeyToken=53879b3e20e7a7d6, processorArchitecture=MSIL">
       <HintPath>..\packages\BitMiracle.LibTiff.NET.2.4.649\lib\net40\BitMiracle.LibTiff.NET.dll</HintPath>
@@ -44,6 +75,15 @@
     <Reference Include="calypso, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Library\calypso\calypso\bin\Debug\calypso.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.102.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.102.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
@@ -62,6 +102,9 @@
     </Reference>
     <Reference Include="IronXL, Version=2023.12.19.0, Culture=neutral, PublicKeyToken=0f5804b6690bad1e, processorArchitecture=MSIL">
       <HintPath>..\packages\IronXL.Excel.2023.12.19\lib\netstandard2.0\IronXL.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony, Version=1.0.11.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Irony.NetCore.1.0.11\lib\net461\Irony.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -114,8 +157,19 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.6.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.3.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlBackup.NET.2.3.8\lib\netstandard2.0\MySqlBackup.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
@@ -146,6 +200,9 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.IO.Packaging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.6.0.0\lib\net461\System.IO.Packaging.dll</HintPath>
+    </Reference>
     <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
     </Reference>
@@ -154,6 +211,11 @@
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -185,6 +247,11 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
     </Reference>
@@ -201,6 +268,11 @@
     <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -214,20 +286,65 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="XLParser, Version=1.5.2.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\XLParser.1.5.2\lib\net461\XLParser.dll</HintPath>
+    </Reference>
     <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsDefaults.cs" />
+    <Compile Include="frmBackupSql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackupSql.Designer.cs">
+      <DependentUpon>frmBackupSql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeMemStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeMemStatus.Designer.cs">
+      <DependentUpon>frmChangeMemStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCollateral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCollateral.Designer.cs">
+      <DependentUpon>frmCollateral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinalReport.Designer.cs">
+      <DependentUpon>frmFinalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintDialog.Designer.cs">
+      <DependentUpon>frmPrintDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportDividentPatronage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReportDividentPatronage.Designer.cs">
       <DependentUpon>frmReportDividentPatronage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportInterestOnCapitalShare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportInterestOnCapitalShare.Designer.cs">
+      <DependentUpon>frmReportInterestOnCapitalShare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportLoanReleases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportLoanReleases.Designer.cs">
+      <DependentUpon>frmReportLoanReleases.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReportMembers.cs">
       <SubType>Form</SubType>
@@ -289,11 +406,35 @@
     <Compile Include="frmPayment.Designer.cs">
       <DependentUpon>frmPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPenalty.cs">
+    <Compile Include="frmReportOnScheduleOfSales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPenalty.Designer.cs">
-      <DependentUpon>frmPenalty.cs</DependentUpon>
+    <Compile Include="frmReportOnScheduleOfSales.Designer.cs">
+      <DependentUpon>frmReportOnScheduleOfSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportOnScheduleOfShareCapital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportOnScheduleOfShareCapital.Designer.cs">
+      <DependentUpon>frmReportOnScheduleOfShareCapital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportPastDueLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportPastDueLoan.Designer.cs">
+      <DependentUpon>frmReportPastDueLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetPenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetPenalty.Designer.cs">
+      <DependentUpon>frmSetPenalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestDateSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestDateSeries.Designer.cs">
+      <DependentUpon>frmTestDateSeries.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewMemberShares.cs">
       <SubType>Form</SubType>
@@ -302,15 +443,33 @@
       <DependentUpon>frmViewMemberShares.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressLoader.Designer.cs">
+      <DependentUpon>ProgressLoader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddCapitalShare.resx">
       <DependentUpon>frmAddCapitalShare.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBackupSql.resx">
+      <DependentUpon>frmBackupSql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeMemStatus.resx">
+      <DependentUpon>frmChangeMemStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCheckNo.resx">
       <DependentUpon>frmCheckNo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCollateral.resx">
+      <DependentUpon>frmCollateral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDueForPayment.resx">
       <DependentUpon>frmDueForPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinalReport.resx">
+      <DependentUpon>frmFinalReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoan.resx">
       <DependentUpon>frmLoan.cs</DependentUpon>
@@ -330,8 +489,26 @@
     <EmbeddedResource Include="frmPayment.resx">
       <DependentUpon>frmPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPenalty.resx">
-      <DependentUpon>frmPenalty.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrintDialog.resx">
+      <DependentUpon>frmPrintDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportInterestOnCapitalShare.resx">
+      <DependentUpon>frmReportInterestOnCapitalShare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportLoanReleases.resx">
+      <DependentUpon>frmReportLoanReleases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportOnScheduleOfSales.resx">
+      <DependentUpon>frmReportOnScheduleOfSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportOnScheduleOfShareCapital.resx">
+      <DependentUpon>frmReportOnScheduleOfShareCapital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportPastDueLoan.resx">
+      <DependentUpon>frmReportPastDueLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetPenalty.resx">
+      <DependentUpon>frmSetPenalty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportDividentPatronage.resx">
       <DependentUpon>frmReportDividentPatronage.cs</DependentUpon>
@@ -339,8 +516,14 @@
     <EmbeddedResource Include="frmReportMembers.resx">
       <DependentUpon>frmReportMembers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTestDateSeries.resx">
+      <DependentUpon>frmTestDateSeries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmViewMemberShares.resx">
       <DependentUpon>frmViewMemberShares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressLoader.resx">
+      <DependentUpon>ProgressLoader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -352,6 +535,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="coopsys_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -368,6 +552,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\due.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loan_iconBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />

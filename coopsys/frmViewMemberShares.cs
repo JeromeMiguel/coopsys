@@ -21,9 +21,9 @@ namespace coopsys
         DataTable dt = new DataTable();
         DataTable totalShare = new DataTable();
         DataCollection dc = new DataCollection();
-        private int memberID, capitalShareID;
+        private int memberID, capitalShareID, remarks;
         private double capitalShareAmount;
-        private string date;
+        private string date, orNum;
 
         public frmViewMemberShares()
         {
@@ -60,7 +60,7 @@ namespace coopsys
 
         public void LoadCapitalShares()
         {
-            grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, csamount as 'AMOUNT', " +
+            grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, format(csamount,2) as 'AMOUNT', " +
                 "concat(CASE month " +
                     "WHEN 1 then '01' " +
                     "WHEN 2 then '02' " +
@@ -74,14 +74,15 @@ namespace coopsys
                     "WHEN 10 then '10' " +
                     "WHEN 11 then '11' " +
                     "ELSE '12' " +
-                    "END, '/', day, '/', year) as 'DATE' "+
+                    "END, '/', if(day<10,concat(0,day),day), '/', year) as 'DATE', if(unclaimed=1, 'Unclaimed','') as 'REMARKS', " +
+                    "cs_or_num as 'OR No.' " +
                 "from capitalshare " +
-                "where memberID=" + memberID + ";", conn);
+                "where memberID=" + memberID + " order by year desc, month desc, day desc;", conn);
 
             try
             {
                 dt = dc.fnDataTableCollection("select distinct year from capitalshare;", conn);
-                totalShare = dc.fnDataTableCollection("select cast(sum(csamount) as UNSIGNED) as 'total' " +
+                totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
                 "from capitalshare where memberID=" + memberID + " and year=" + cboYear.Text + ";");
                 lbltotalshares.Text = "Total share as of " + cboYear.Text + ": ₱" + totalShare.Rows[0][0].ToString();
                 cboYear.DataSource = dt;
@@ -93,6 +94,10 @@ namespace coopsys
             }
             catch { }
             grdShares.Columns[0].Visible = false;
+            foreach (DataGridViewRow row in grdShares.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+            }
         }
 
         private void frmViewMemberShares_Load(object sender, EventArgs e)
@@ -112,7 +117,7 @@ namespace coopsys
         private void btnFilter_Click(object sender, EventArgs e)
         {
             grdShares.DataSource = null;
-            grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, csamount as 'AMOUNT'," +
+            grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, format(csamount,2) as 'AMOUNT'," +
                 "concat(CASE month " +
                     "WHEN 1 then '01' " +
                     "WHEN 2 then '02' " +
@@ -126,14 +131,16 @@ namespace coopsys
                     "WHEN 10 then '10' " +
                     "WHEN 11 then '11' " +
                     "ELSE '12' " +
-                    "END, '/', day, '/', year) as 'DATE' " +
+                    "END, '/', if(day<10,concat(0,day),day), '/', year) as 'DATE', if(unclaimed=1, 'Unclaimed','') as 'REMARKS', " +
+                    "cs_or_num as 'OR No.' " +
                 "from capitalshare " +
-                "where memberID=" + memberID + " and month=" + (cboMonth.SelectedIndex + 1) + " and year=" + Int32.Parse(cboYear.Text) + ";", conn);
+                "where memberID=" + memberID + " and month=" + (cboMonth.SelectedIndex + 1) + " and year=" + Int32.Parse(cboYear.Text) + " " +
+                "order by year desc, month desc, day desc;", conn);
 
             try
             {
                 dt = dc.fnDataTableCollection("select distinct year from capitalshare;", conn);
-                totalShare = dc.fnDataTableCollection("select cast(sum(csamount) as UNSIGNED) as 'total' " +
+                totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
                 "from capitalshare where memberID=" + memberID + " and year=" + cboYear.Text + ";");
                 lbltotalshares.Text = "Total share as of " + cboYear.Text + ": ₱" + totalShare.Rows[0][0].ToString();
                 cboYear.DataSource = dt;
@@ -163,7 +170,9 @@ namespace coopsys
             capitalShareID = Int32.Parse(grdShares.SelectedCells[0].Value.ToString());
             capitalShareAmount = double.Parse(grdShares.SelectedCells[1].Value.ToString());
             date = grdShares.SelectedCells[2].Value.ToString();
-            frmAddCapitalShare editCapitalShare = new frmAddCapitalShare(this, conn, memberID, capitalShareID, capitalShareAmount, false, date);
+            remarks =int.Parse(grdShares.SelectedCells[3].Value.ToString() == "Unclaimed" ? "1":"0");
+            orNum = grdShares.SelectedCells[4].Value.ToString();
+            frmAddCapitalShare editCapitalShare = new frmAddCapitalShare(this, conn, memberID, capitalShareID, capitalShareAmount, false, date, remarks, orNum);
             editCapitalShare.ShowDialog();
         }
 
@@ -176,6 +185,14 @@ namespace coopsys
             {
                 dc.fnExecuteQuery("delete from capitalshare where csID=" + capitalShareID + "", conn);
                 LoadCapitalShares();
+            }
+        }
+
+        private void grdShares_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            foreach (DataGridViewRow row in grdShares.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
             }
         }
 

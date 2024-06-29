@@ -161,6 +161,127 @@ C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\coopsys\bin\De
 C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\coopsys\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\coopsys\bin\Debug\System.Text.Json.xml
 C:\Users\Jerome Miguel\Documents\Projects\Coop\coopsystem\coopsys\coopsys\bin\Debug\System.ValueTuple.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.exe.config
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.exe
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\BitMiracle.LibTiff.NET.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\BouncyCastle.Crypto.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\calypso.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Google.Protobuf.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Abstractions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Drawing.Common.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Logger.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Shared.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronXL.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Compression.LZ4.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Compression.LZ4.Streams.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Hash.xxHash.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\MetroFramework.Design.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\MetroFramework.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\MetroFramework.Fonts.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Primitives.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\MySql.Data.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\SixLabors.Fonts.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\SixLabors.ImageSharp.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\SixLabors.ImageSharp.Drawing.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Buffers.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Configuration.ConfigurationManager.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.IO.Pipelines.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Memory.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Numerics.Vectors.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Security.AccessControl.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Security.Permissions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Security.Principal.Windows.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Text.Encoding.CodePages.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Text.Encodings.Web.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Text.Json.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Threading.Tasks.Extensions.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.ValueTuple.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ZstdSharp.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\BitMiracle.LibTiff.NET.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\BouncyCastle.Crypto.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\calypso.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\calypso.dll.config
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Google.Protobuf.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Google.Protobuf.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Abstractions.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Drawing.Common.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Drawing.Common.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Logger.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Shared.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronXL.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronXL.dll.config
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Compression.LZ4.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Compression.LZ4.Streams.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Hash.xxHash.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Microsoft.Extensions.Primitives.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\MySql.Data.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\SixLabors.Fonts.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\SixLabors.ImageSharp.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\SixLabors.ImageSharp.Drawing.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Buffers.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Configuration.ConfigurationManager.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.IO.Pipelines.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Memory.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Numerics.Vectors.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Security.AccessControl.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Security.Permissions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Security.Principal.Windows.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Text.Encoding.CodePages.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Text.Encodings.Web.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Text.Json.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.Threading.Tasks.Extensions.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.ValueTuple.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.AssemblyReference.cache
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmAddCapitalShare.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmCheckNo.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmDueForPayment.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmLoan.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmLogin.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmMain.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmMember.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPatronage.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPayment.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportDividentPatronage.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportMembers.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmViewMemberShares.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.Properties.Resources.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.GenerateResource.cache
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.CoreCompileInputs.cache
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.CopyComplete
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.exe
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.pdb
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmTestDateSeries.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmSetPenalty.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmChangeMemStatus.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportLoanReleases.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportOnScheduleOfShareCapital.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportInterestOnCapitalShare.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.ProgressLoader.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.exe.config
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.exe
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.pdb
@@ -258,6 +379,8 @@ C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.ValueTuple.xml
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.AssemblyReference.cache
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmAddCapitalShare.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmChangeMemStatus.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmCheckNo.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmDueForPayment.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmLoan.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmLogin.resources
@@ -265,14 +388,62 @@ C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmMember.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPatronage.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPayment.resources
-C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPenalty.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportInterestOnCapitalShare.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportLoanReleases.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportOnScheduleOfShareCapital.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmSetPenalty.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportDividentPatronage.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportMembers.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmTestDateSeries.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmViewMemberShares.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.ProgressLoader.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.Properties.Resources.resources
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.GenerateResource.cache
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.CoreCompileInputs.cache
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.CopyComplete
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.exe
 C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.pdb
-C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmCheckNo.resources
-C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportDividentPatronage.resources
-C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportMembers.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmCollateral.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmCollateral.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportPastDueLoan.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportPastDueLoan.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportOnScheduleOfSales.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportOnScheduleOfSales.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.exe.manifest
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.application
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.exe.manifest
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.application
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ClosedXML.dll
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ExcelNumberFormat.dll
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Irony.dll
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.IO.Packaging.dll
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\XLParser.dll
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ClosedXML.xml
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ExcelNumberFormat.xml
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.IO.Packaging.xml
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\MySqlBackup.dll
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmBackupSql.resources
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.ResolveComReference.cache
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmFinalReport.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.exe.manifest
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.application
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ClosedXML.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\DocumentFormat.OpenXml.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ExcelNumberFormat.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Irony.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\MySqlBackup.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.IO.Packaging.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\XLParser.dll
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ClosedXML.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\DocumentFormat.OpenXml.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ExcelNumberFormat.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\System.IO.Packaging.xml
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.csproj.ResolveComReference.cache
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmBackupSql.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmFinalReport.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.exe.manifest
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.application
+C:\Users\Jerome Miguel\Documents\Projects\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPrintDialog.resources
+\\LAPTOP-RIJPAEAM\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPrintDialog.resources

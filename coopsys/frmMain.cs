@@ -22,105 +22,186 @@ namespace coopsys
         Database db = new Database();
         DataCollection dc = new DataCollection();
         DataGridTableStyle tableStyle = new DataGridTableStyle();
+        clsDefaults defaults = new clsDefaults();
         MySqlConnection conn;
-        DateTime date, time;
-        private int memberID, age, sex, memfee, memtype, memstatus;
-        private string fname, mname, lname, bday, busname, busplateno, address, tin, cpnum, stalladdress;
 
-        public frmMain()
+        DateTime date, time;
+        private int memberID, sex, memfee, memtype, memstatus;
+        private string fname, mname, lname, bday, position, busname, busplateno, address, tin, cpnum, stalladdress, 
+            houseno, street, barangay, municipality_city, bus_bldgno, bus_street, bus_barangay, bus_municipality_city, account_number;
+
+        public frmMain(MySqlConnection _conn)
         {
             InitializeComponent();
-            db._serverAddress = "localhost";
-            db._databaseName = "coop";
-            db._serverPort = "3500";
-            db._serverUID = "JeromeMiguel";
-            db._serverPWD = "@migzcastle";
-            conn = db.InitializeConnection();
-        }
+            conn = _conn;
 
-        private void SearchMemberLoadGrid()
-        {
-            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            string cert_total = "0", member_total = "0";
+
+            cert_total = dc.fnReturnStringValue("select count(cert_id) as R from certificate", "R", conn);
+            member_total = dc.fnReturnStringValue("select count(memberid) as R from member", "R", conn);
+            defaults.certificateTotal = int.Parse(cert_total);
+            defaults.totalMember = int.Parse(member_total);
+
+            int defaultYear = int.Parse(dc.fnReturnStringValue("select year from defaults", "year", conn));
+            int systemYear = int.Parse(lblDate.Text = DateTime.Now.ToString("yyyy"));
+
+            if (int.Parse(dc.fnReturnStringValue("select exists (select * from defaults) as R", "R", conn)) == 1)
             {
-                if (cboMemType.SelectedIndex == 0)
+                if (systemYear > defaultYear)
                 {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
-                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
-                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                        "bus_barangay, bus_municipality_city from coop.member;");
+                    dc.fnExecuteQuery("update defaults set `year` = " + systemYear + "," +
+                    "`cert_count`=" + cert_total + "," +
+                    "`member_count`=" + member_total + "", conn);
                 }
-                else if (cboMemType.SelectedIndex == 1)
+                else
                 {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                          "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
-                          "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
-                          "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                          "bus_barangay, bus_municipality_city from coop.member where memtype=0;");
-                }
-                else if (cboMemType.SelectedIndex == 2)
-                {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
-                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
-                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                        "bus_barangay, bus_municipality_city from coop.member where memtype=1;");
+                    dc.fnExecuteQuery("update defaults set" +
+                    "`cert_count`=" + cert_total + "," +
+                    "`member_count`=" + member_total + "", conn);
                 }
             }
             else
             {
+                dc.fnExecuteQuery("INSERT INTO `coop`.`defaults`" +
+                    "(`year`,`cert_count`,`member_count`)" +
+                    "VALUES(" + System.DateTime.Today.Year + "," +
+                    ""+cert_total+"," +
+                    ""+member_total+");", conn);
+            }
+            defaults.year = int.Parse(dc.fnReturnStringValue("select year from defaults", "year", conn));
+        }
+
+        private void SearchMemberLoadGrid(int _memStatVal)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                //control statement without search key
                 if (cboMemType.SelectedIndex == 0)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
-                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
-                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                        "bus_barangay, bus_municipality_city from coop.member where lastname like '%" + txtSearch.Text + "%'");
+                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
+                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memstatus = "+_memStatVal+";");
                 }
                 else if (cboMemType.SelectedIndex == 1)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
-                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
-                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                        "bus_barangay, bus_municipality_city from coop.member where lastname like '%" + txtSearch.Text + "%'" +
+                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
+                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memtype=0 and memstatus = " + _memStatVal+";");
+                }
+                else if (cboMemType.SelectedIndex == 2)
+                {
+                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
+                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
+                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memtype=1 and memstatus = " + _memStatVal+";");
+                }
+            }
+            else
+            {
+                //control statement with search key
+                if (cboMemType.SelectedIndex == 0)
+                {
+                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
+                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
+                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where lastname like '%" + txtSearch.Text + "%' and memstatus = "+_memStatVal+" ");
+                }
+                else if (cboMemType.SelectedIndex == 1)
+                {
+                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
+                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
+                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where lastname like '%" + txtSearch.Text + "%' and memstatus = "+_memStatVal+" " +
                         "and memtype = 0;");
                 }
                 else if (cboMemType.SelectedIndex == 2)
                 {
                     SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                        "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
-                        "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
-                        "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                        "bus_barangay, bus_municipality_city from coop.member where lastname like '%" + txtSearch.Text + "%'" +
+                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
+                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
+                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where lastname like '%" + txtSearch.Text + "%' and memstatus = "+_memStatVal+" " +
                         "and memtype = 1;");
                 }
                 grdMembers.ClearSelection();
             }
         }
 
+        private void tsmiScheduleOfCapitalShare_Click(object sender, EventArgs e)
+        {
+            frmReportOnScheduleOfShareCapital scheduleOfShareCapital = new frmReportOnScheduleOfShareCapital(conn);
+            scheduleOfShareCapital.ShowDialog();
+        }
+
+        private void tsmiScheduleOfLoanReleases_Click(object sender, EventArgs e)
+        {
+            frmReportLoanReleases scheduleOfLoanRelease = new frmReportLoanReleases(conn); 
+            scheduleOfLoanRelease.ShowDialog();
+        }
+
+        private void tsmInterestOnCapitalShare_Click(object sender, EventArgs e)
+        {
+            frmReportInterestOnCapitalShare interestOnCapitalShare = new frmReportInterestOnCapitalShare(conn);
+            interestOnCapitalShare.ShowDialog();
+        }
+
+        private void grdMembers_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            OnFormLoad();
+        }
+
+        private void scheduleOfPastDueLoansToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportPastDueLoan dueLoan = new frmReportPastDueLoan(conn); 
+            dueLoan.ShowDialog();
+        }
+
+        private void scheduleOfSalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportOnScheduleOfSales schedule = new frmReportOnScheduleOfSales(conn);
+            schedule.ShowDialog();
+        }
+
+        private void sqlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBackupSql sql = new frmBackupSql(conn);
+            sql.ShowDialog();
+        }
+
+        private void finalReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFinalReport report = new frmFinalReport(conn);
+            report.ShowDialog();
+        }
+
+        private void printCertificateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            memberID = Int32.Parse(grdMembers.SelectedCells[0].Value.ToString());
+            fname = grdMembers.SelectedCells[1].Value.ToString();
+            mname = grdMembers.SelectedCells[2].Value.ToString();
+            lname = grdMembers.SelectedCells[3].Value.ToString();
+
+            frmPrintDialog print = new frmPrintDialog(conn, fname, mname, lname, memberID);
+            print.ShowDialog();
+        }
+
         public void OnFormLoad()
         {
-            //string query = "select loan.loanID, member.memberID, " +
-            //    "concat(loanmonth,'/', loanday, '/', loanyear) as 'LOAN DATE', " +
-            //    "concat(firstname, lastname) as NAME, " +
-            //    "loan.loanamount as 'LOAN AMOUNT', " +
-            //    "loan.balance as 'BALANCE', " +
-            //    "loan.loanpenalty as 'PENALTY', " +
-            //    "loan.duedate as 'DUE DATE' " +
-            //    "from member inner join loan " +
-            //    "on member.memberID = loan.memberID " +
-            //    "where loan.balance > 0 or loan.loanpenalty > 0;";
+            string query = "SELECT COUNT(loan.loanID) " +
+                "from loan inner join member on member.memberid = loan.memberid " +
+                "left join penalty on loan.loanid = penalty.loanid " +
+                "where ((balance > 0 or penaltyamount > 0) or penaltystatus = 0) and memstatus = 0;";
 
-            SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE', " +
-                       "position, sex, birthday,  cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee, memtype, memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city from coop.member;");
-
-            //btnDue.Text = "("+dc.fnDataTableCollection(query, conn).Rows.Count.ToString()+") Due for Payment";
+            btnDue.Text = "(" + dc.fnDataTableCollection(query, conn).Rows[0][0].ToString() + ") Due for Payment";
             cboMemType.SelectedIndex = 0;
+            cboMemStat.SelectedIndex = 0;
             grdMembers.ClearSelection();
+
+            foreach (DataGridViewRow row in grdMembers.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+            }
         }
 
         private void OpenLoanForm()
@@ -131,8 +212,7 @@ namespace coopsys
                 fname = grdMembers.SelectedCells[1].Value.ToString();
                 mname = grdMembers.SelectedCells[2].Value.ToString();
                 lname = grdMembers.SelectedCells[3].Value.ToString();
-                age = int.Parse(grdMembers.SelectedCells[6].Value.ToString());
-                frmLoan loan = new frmLoan(this, conn, memberID, fname, mname, lname, age);
+                frmLoan loan = new frmLoan(this, conn, memberID, fname, mname, lname);
                 loan.ShowDialog();
             }
             else
@@ -204,11 +284,11 @@ namespace coopsys
 
         private void viewSharesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            memberID = Int32.Parse(grdMembers.SelectedCells[0].Value.ToString());
+            memberID = Int32.Parse(grdMembers.SelectedCells[0].Value.ToString()); 
             fname = grdMembers.SelectedCells[1].Value.ToString();
             mname = grdMembers.SelectedCells[2].Value.ToString();
             lname = grdMembers.SelectedCells[3].Value.ToString();
-            memtype = Int32.Parse(grdMembers.SelectedCells[9].Value.ToString());
+            memtype = Int32.Parse(grdMembers.SelectedCells[22].Value.ToString());
             frmViewMemberShares ViewMemberShares = new frmViewMemberShares(conn, memberID, memtype, fname, mname, lname);
             ViewMemberShares.ShowDialog();
         }
@@ -217,36 +297,38 @@ namespace coopsys
         {
             grdMembers.DataSource = dc.fnDataTableCollection(query, conn);
             grdMembers.Columns[0].Visible = false;//memberID
-            grdMembers.Columns[2].Visible = false;//mname
-            grdMembers.Columns[5].Visible = false;//position
-            grdMembers.Columns[6].Visible = false;//sex
-            grdMembers.Columns[7].Visible = false;//birthday
-            grdMembers.Columns[8].Visible = false;//cpnum
-            grdMembers.Columns[9].Visible = false;//tin
-            grdMembers.Columns[10].Visible = false;//houseno
-            grdMembers.Columns[11].Visible = false;//street
-            grdMembers.Columns[12].Visible = false;//barangay
-            grdMembers.Columns[13].Visible = false;//municipality_city
-            grdMembers.Columns[14].Visible = false;//memfee
-            grdMembers.Columns[15].Visible = false;//memtype
-            grdMembers.Columns[16].Visible = false;//memstatus
-            grdMembers.Columns[17].Visible = false;//busname
-            grdMembers.Columns[18].Visible = false;//busplateno
-            grdMembers.Columns[19].Visible = false;//bus_bldgno
-            grdMembers.Columns[20].Visible = false;//bus_street
-            grdMembers.Columns[21].Visible = false;//bus_barangay
-            grdMembers.Columns[22].Visible = false;//bus_municipality_city
+            grdMembers.Columns[2].Visible = true;//mname
+            grdMembers.Columns[4].Visible = false;//sex
+            grdMembers.Columns[5].Visible = false;//birthday
+            grdMembers.Columns[6].Visible = false;//position
+            grdMembers.Columns[7].Visible = false;//cpnum
+            grdMembers.Columns[8].Visible = false;//tin
+            grdMembers.Columns[9].Visible = false;//houseno
+            grdMembers.Columns[10].Visible = false;//street
+            grdMembers.Columns[11].Visible = false;//barangay
+            grdMembers.Columns[12].Visible = false;//bmunicipality_city
+            grdMembers.Columns[13].Visible = false;//memfee
+
+            grdMembers.Columns[15].Visible = false;//memstatus
+            grdMembers.Columns[16].Visible = false;//busname
+            grdMembers.Columns[17].Visible = false;//busplateno
+            grdMembers.Columns[18].Visible = false;//bus_bldgno
+            grdMembers.Columns[19].Visible = false;//bus_street
+            grdMembers.Columns[20].Visible = false;//bus_barangay
+            grdMembers.Columns[21].Visible = false;//bus_municipality_city
+            grdMembers.Columns[22].Visible = false;//memtype
+            grdMembers.Columns[23].Visible = false;//account_number
 
             grdMembers.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            grdMembers.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             grdMembers.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            grdMembers.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            grdMembers.Columns[14].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             lblTotalResult.Text = "Total Records: " + grdMembers.Rows.Count.ToString();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
             OnFormLoad();
         }
 
@@ -258,20 +340,29 @@ namespace coopsys
                 fname = grdMembers.SelectedCells[1].Value.ToString();
                 mname = grdMembers.SelectedCells[2].Value.ToString();
                 lname = grdMembers.SelectedCells[3].Value.ToString();
+                sex = Int32.Parse(grdMembers.SelectedCells[4].Value.ToString());
                 bday = grdMembers.SelectedCells[5].Value.ToString();
-                age = Int32.Parse(grdMembers.SelectedCells[6].Value.ToString());
-                sex = Int32.Parse(grdMembers.SelectedCells[7].Value.ToString());
-                memfee = Int32.Parse(grdMembers.SelectedCells[8].Value.ToString());
-                memtype = Int32.Parse(grdMembers.SelectedCells[9].Value.ToString());
-                busname = grdMembers.SelectedCells[11].Value.ToString();
-                busplateno = grdMembers.SelectedCells[12].Value.ToString();
-                address = grdMembers.SelectedCells[13].Value.ToString();
-                tin = grdMembers.SelectedCells[14].Value.ToString();
-                cpnum = grdMembers.SelectedCells[15].Value.ToString();
-                stalladdress = grdMembers.SelectedCells[16].Value.ToString();
+                position = grdMembers.SelectedCells[6].Value.ToString();  
+                cpnum = grdMembers.SelectedCells[7].Value.ToString();
+                tin = grdMembers.SelectedCells[8].Value.ToString();
+                houseno = grdMembers.SelectedCells[9].Value.ToString();
+                street = grdMembers.SelectedCells[10].Value.ToString();
+                barangay = grdMembers.SelectedCells[11].Value.ToString();
+                municipality_city = grdMembers.SelectedCells[12].Value.ToString();
+                memfee = Int32.Parse(grdMembers.SelectedCells[13].Value.ToString());
+                memtype = Int32.Parse(grdMembers.SelectedCells[22].Value.ToString());
+                memstatus = Int32.Parse(grdMembers.SelectedCells[15].Value.ToString()); 
+                busname = grdMembers.SelectedCells[16].Value.ToString();
+                busplateno = grdMembers.SelectedCells[17].Value.ToString();
+                bus_bldgno = grdMembers.SelectedCells[18].Value.ToString();
+                bus_street = grdMembers.SelectedCells[19].Value.ToString();
+                bus_barangay = grdMembers.SelectedCells[20].Value.ToString();
+                bus_municipality_city = grdMembers.SelectedCells[21].Value.ToString();
+                account_number = grdMembers.SelectedCells[23].Value.ToString();
 
-                frmMember member = new frmMember(this, conn, false, memberID, fname, mname, lname, bday, age,
-                    sex, memfee, memtype, busname, busplateno, address, tin, cpnum, stalladdress, cboMemType.SelectedIndex);
+                frmMember member = new frmMember(this, conn, false, memberID, fname, mname, lname, sex, bday, position,
+                    cpnum, tin, houseno, street, barangay, municipality_city, memfee, memtype, memstatus, busname, busplateno, 
+                    bus_bldgno, bus_street, bus_barangay, bus_municipality_city, account_number, cboMemType.SelectedIndex);
                 member.ShowDialog();
             }
             else
@@ -281,19 +372,30 @@ namespace coopsys
             }
         }
 
+        private void chaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangeMemStatus changeStat = new frmChangeMemStatus(conn, this, Int32.Parse(grdMembers.SelectedCells[0].Value.ToString()), Int32.Parse(grdMembers.SelectedCells[15].Value.ToString()));
+            changeStat.ShowDialog();
+        }
+
         private void btnSearchMem_Click(object sender, EventArgs e)
         {
-            SearchMemberLoadGrid();
+            SearchMemberLoadGrid(cboMemStat.SelectedIndex);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            SearchMemberLoadGrid();
+            SearchMemberLoadGrid(cboMemStat.SelectedIndex);
         }
 
         private void cboMemType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SearchMemberLoadGrid();
+            SearchMemberLoadGrid(cboMemStat.SelectedIndex);
+        }
+
+        private void cboMemStat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SearchMemberLoadGrid(cboMemStat.SelectedIndex);
         }
 
         private void btnAddMember_Click(object sender, EventArgs e)

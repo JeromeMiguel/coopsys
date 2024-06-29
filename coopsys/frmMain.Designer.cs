@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.grdMembers = new MetroFramework.Controls.MetroGrid();
@@ -42,12 +42,17 @@
             this.btnReports = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsmiReportsMembers = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReportsDividentPatronage = new System.Windows.Forms.ToolStripMenuItem();
-            this.report3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.report4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiScheduleOfLoanReleases = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiScheduleOfCapitalShare = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleOfPastDueLoansToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleOfSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInterestOnCapitalShare = new System.Windows.Forms.ToolStripMenuItem();
+            this.finalReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblDate = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.lblTime = new System.Windows.Forms.ToolStripLabel();
-            this.btnPatronage = new System.Windows.Forms.ToolStripButton();
+            this.btnBackup = new System.Windows.Forms.ToolStripDropDownButton();
+            this.sqlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTimer = new System.Windows.Forms.Timer(this.components);
             this.tipTools = new System.Windows.Forms.ToolTip(this.components);
             this.btnSearchMem = new System.Windows.Forms.PictureBox();
@@ -59,10 +64,12 @@
             this.chaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cboMemType = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.cboMemStat = new MetroFramework.Controls.MetroComboBox();
+            this.btnAddMember = new System.Windows.Forms.Button();
             this.btnDue = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnLoan = new System.Windows.Forms.Button();
-            this.btnAddMember = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdMembers)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchMem)).BeginInit();
@@ -118,42 +125,41 @@
             this.grdMembers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdMembers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdMembers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdMembers.ColumnHeadersHeight = 29;
             this.grdMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LavenderBlush;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdMembers.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LavenderBlush;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdMembers.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdMembers.EnableHeadersVisualStyles = false;
             this.grdMembers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdMembers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdMembers.Location = new System.Drawing.Point(20, 278);
+            this.grdMembers.Location = new System.Drawing.Point(20, 270);
             this.grdMembers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grdMembers.MultiSelect = false;
             this.grdMembers.Name = "grdMembers";
             this.grdMembers.ReadOnly = true;
             this.grdMembers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdMembers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.grdMembers.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMembers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdMembers.RowHeadersWidth = 51;
             this.grdMembers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdMembers.RowTemplate.Height = 24;
@@ -163,6 +169,7 @@
             this.grdMembers.DataSourceChanged += new System.EventHandler(this.grdMembers_DataSourceChanged);
             this.grdMembers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdMembers_CellDoubleClick);
             this.grdMembers.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdMembers_CellMouseClick);
+            this.grdMembers.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdMembers_ColumnHeaderMouseClick);
             // 
             // toolStripSeparator1
             // 
@@ -186,11 +193,11 @@
             this.btnLogout,
             this.toolStripSeparator1,
             this.btnReports,
-            this.toolStripSeparator2,
             this.lblDate,
             this.toolStripSeparator3,
             this.lblTime,
-            this.btnPatronage});
+            this.toolStripSeparator2,
+            this.btnBackup});
             this.toolStrip1.Location = new System.Drawing.Point(20, 74);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 20, 1, 20);
@@ -217,8 +224,12 @@
             this.btnReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiReportsMembers,
             this.tsmiReportsDividentPatronage,
-            this.report3ToolStripMenuItem,
-            this.report4ToolStripMenuItem});
+            this.tsmiScheduleOfLoanReleases,
+            this.tsmiScheduleOfCapitalShare,
+            this.scheduleOfPastDueLoansToolStripMenuItem,
+            this.scheduleOfSalesToolStripMenuItem,
+            this.tsmInterestOnCapitalShare,
+            this.finalReportToolStripMenuItem});
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReports.Name = "btnReports";
@@ -228,28 +239,58 @@
             // tsmiReportsMembers
             // 
             this.tsmiReportsMembers.Name = "tsmiReportsMembers";
-            this.tsmiReportsMembers.Size = new System.Drawing.Size(224, 26);
+            this.tsmiReportsMembers.Size = new System.Drawing.Size(273, 26);
             this.tsmiReportsMembers.Text = "Members";
             this.tsmiReportsMembers.Click += new System.EventHandler(this.tsmiReportsMembers_Click);
             // 
             // tsmiReportsDividentPatronage
             // 
             this.tsmiReportsDividentPatronage.Name = "tsmiReportsDividentPatronage";
-            this.tsmiReportsDividentPatronage.Size = new System.Drawing.Size(224, 26);
+            this.tsmiReportsDividentPatronage.Size = new System.Drawing.Size(273, 26);
             this.tsmiReportsDividentPatronage.Text = "Divident Patronage";
             this.tsmiReportsDividentPatronage.Click += new System.EventHandler(this.tsmiReportsDividentPatronage_Click);
             // 
-            // report3ToolStripMenuItem
+            // tsmiScheduleOfLoanReleases
             // 
-            this.report3ToolStripMenuItem.Name = "report3ToolStripMenuItem";
-            this.report3ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.report3ToolStripMenuItem.Text = "Report 3";
+            this.tsmiScheduleOfLoanReleases.Name = "tsmiScheduleOfLoanReleases";
+            this.tsmiScheduleOfLoanReleases.Size = new System.Drawing.Size(273, 26);
+            this.tsmiScheduleOfLoanReleases.Text = "Schedule of Loan Releases";
+            this.tsmiScheduleOfLoanReleases.Click += new System.EventHandler(this.tsmiScheduleOfLoanReleases_Click);
             // 
-            // report4ToolStripMenuItem
+            // tsmiScheduleOfCapitalShare
             // 
-            this.report4ToolStripMenuItem.Name = "report4ToolStripMenuItem";
-            this.report4ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.report4ToolStripMenuItem.Text = "Report 4";
+            this.tsmiScheduleOfCapitalShare.Name = "tsmiScheduleOfCapitalShare";
+            this.tsmiScheduleOfCapitalShare.Size = new System.Drawing.Size(273, 26);
+            this.tsmiScheduleOfCapitalShare.Text = "Schedule of Capital Share";
+            this.tsmiScheduleOfCapitalShare.Click += new System.EventHandler(this.tsmiScheduleOfCapitalShare_Click);
+            // 
+            // scheduleOfPastDueLoansToolStripMenuItem
+            // 
+            this.scheduleOfPastDueLoansToolStripMenuItem.Name = "scheduleOfPastDueLoansToolStripMenuItem";
+            this.scheduleOfPastDueLoansToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.scheduleOfPastDueLoansToolStripMenuItem.Text = "Schedule of Past Due Loans";
+            this.scheduleOfPastDueLoansToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfPastDueLoansToolStripMenuItem_Click);
+            // 
+            // scheduleOfSalesToolStripMenuItem
+            // 
+            this.scheduleOfSalesToolStripMenuItem.Name = "scheduleOfSalesToolStripMenuItem";
+            this.scheduleOfSalesToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.scheduleOfSalesToolStripMenuItem.Text = "Schedule of Sales";
+            this.scheduleOfSalesToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfSalesToolStripMenuItem_Click);
+            // 
+            // tsmInterestOnCapitalShare
+            // 
+            this.tsmInterestOnCapitalShare.Name = "tsmInterestOnCapitalShare";
+            this.tsmInterestOnCapitalShare.Size = new System.Drawing.Size(273, 26);
+            this.tsmInterestOnCapitalShare.Text = "Interest on Capital Share";
+            this.tsmInterestOnCapitalShare.Click += new System.EventHandler(this.tsmInterestOnCapitalShare_Click);
+            // 
+            // finalReportToolStripMenuItem
+            // 
+            this.finalReportToolStripMenuItem.Name = "finalReportToolStripMenuItem";
+            this.finalReportToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.finalReportToolStripMenuItem.Text = "Final Report";
+            this.finalReportToolStripMenuItem.Click += new System.EventHandler(this.finalReportToolStripMenuItem_Click);
             // 
             // lblDate
             // 
@@ -270,15 +311,24 @@
             this.lblTime.Size = new System.Drawing.Size(41, 24);
             this.lblTime.Text = "time";
             // 
-            // btnPatronage
+            // btnBackup
             // 
-            this.btnPatronage.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnPatronage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnPatronage.Image = ((System.Drawing.Image)(resources.GetObject("btnPatronage.Image")));
-            this.btnPatronage.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnPatronage.Name = "btnPatronage";
-            this.btnPatronage.Size = new System.Drawing.Size(116, 24);
-            this.btnPatronage.Text = "Patronage Fund";
+            this.btnBackup.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnBackup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnBackup.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sqlToolStripMenuItem});
+            this.btnBackup.Image = ((System.Drawing.Image)(resources.GetObject("btnBackup.Image")));
+            this.btnBackup.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Size = new System.Drawing.Size(71, 24);
+            this.btnBackup.Text = "Backup";
+            // 
+            // sqlToolStripMenuItem
+            // 
+            this.sqlToolStripMenuItem.Name = "sqlToolStripMenuItem";
+            this.sqlToolStripMenuItem.Size = new System.Drawing.Size(118, 26);
+            this.sqlToolStripMenuItem.Text = "SQL";
+            this.sqlToolStripMenuItem.Click += new System.EventHandler(this.sqlToolStripMenuItem_Click);
             // 
             // mainTimer
             // 
@@ -320,7 +370,7 @@
             this.capitalShareToolStripMenuItem,
             this.chaToolStripMenuItem});
             this.contextMenuStripDataRow.Name = "contextMenuStripDataRow";
-            this.contextMenuStripDataRow.Size = new System.Drawing.Size(231, 52);
+            this.contextMenuStripDataRow.Size = new System.Drawing.Size(231, 80);
             // 
             // capitalShareToolStripMenuItem
             // 
@@ -334,21 +384,23 @@
             // viewSharesToolStripMenuItem
             // 
             this.viewSharesToolStripMenuItem.Name = "viewSharesToolStripMenuItem";
-            this.viewSharesToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.viewSharesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewSharesToolStripMenuItem.Text = "View shares";
             this.viewSharesToolStripMenuItem.Click += new System.EventHandler(this.viewSharesToolStripMenuItem_Click);
             // 
             // printCertificateToolStripMenuItem
             // 
             this.printCertificateToolStripMenuItem.Name = "printCertificateToolStripMenuItem";
-            this.printCertificateToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.printCertificateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.printCertificateToolStripMenuItem.Text = "Print certificate";
+            this.printCertificateToolStripMenuItem.Click += new System.EventHandler(this.printCertificateToolStripMenuItem_Click);
             // 
             // chaToolStripMenuItem
             // 
             this.chaToolStripMenuItem.Name = "chaToolStripMenuItem";
             this.chaToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
             this.chaToolStripMenuItem.Text = "Change member status";
+            this.chaToolStripMenuItem.Click += new System.EventHandler(this.chaToolStripMenuItem_Click);
             // 
             // cboMemType
             // 
@@ -377,17 +429,59 @@
             this.metroLabel4.TabIndex = 26;
             this.metroLabel4.Text = "Member Type:";
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 737);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(105, 20);
+            this.metroLabel1.TabIndex = 28;
+            this.metroLabel1.Text = "Member Status:";
+            // 
+            // cboMemStat
+            // 
+            this.cboMemStat.FormattingEnabled = true;
+            this.cboMemStat.ItemHeight = 24;
+            this.cboMemStat.Items.AddRange(new object[] {
+            "Active",
+            "Inactive",
+            "Withdrawn"});
+            this.cboMemStat.Location = new System.Drawing.Point(165, 732);
+            this.cboMemStat.Margin = new System.Windows.Forms.Padding(4);
+            this.cboMemStat.Name = "cboMemStat";
+            this.cboMemStat.Size = new System.Drawing.Size(179, 30);
+            this.cboMemStat.Style = MetroFramework.MetroColorStyle.Purple;
+            this.cboMemStat.TabIndex = 27;
+            this.cboMemStat.UseSelectable = true;
+            this.cboMemStat.SelectedIndexChanged += new System.EventHandler(this.cboMemStat_SelectedIndexChanged);
+            // 
+            // btnAddMember
+            // 
+            this.btnAddMember.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMember.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMember.Image")));
+            this.btnAddMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMember.Location = new System.Drawing.Point(1037, 155);
+            this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddMember.Name = "btnAddMember";
+            this.btnAddMember.Size = new System.Drawing.Size(144, 31);
+            this.btnAddMember.TabIndex = 6;
+            this.btnAddMember.Text = "Add Member";
+            this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddMember.UseVisualStyleBackColor = true;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
+            // 
             // btnDue
             // 
             this.btnDue.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDue.Image = global::coopsys.Properties.Resources.due;
-            this.btnDue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDue.Location = new System.Drawing.Point(211, 155);
+            this.btnDue.Image = ((System.Drawing.Image)(resources.GetObject("btnDue.Image")));
+            this.btnDue.Location = new System.Drawing.Point(260, 155);
             this.btnDue.Margin = new System.Windows.Forms.Padding(4);
             this.btnDue.Name = "btnDue";
-            this.btnDue.Size = new System.Drawing.Size(197, 31);
+            this.btnDue.Size = new System.Drawing.Size(239, 31);
             this.btnDue.TabIndex = 4;
             this.btnDue.Text = "Due for Payment";
+            this.btnDue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDue.UseVisualStyleBackColor = true;
             this.btnDue.Click += new System.EventHandler(this.btnDue_Click);
@@ -413,37 +507,23 @@
             this.btnLoan.Enabled = false;
             this.btnLoan.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoan.Image = ((System.Drawing.Image)(resources.GetObject("btnLoan.Image")));
-            this.btnLoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoan.Location = new System.Drawing.Point(20, 155);
             this.btnLoan.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoan.Name = "btnLoan";
-            this.btnLoan.Size = new System.Drawing.Size(183, 31);
+            this.btnLoan.Size = new System.Drawing.Size(213, 31);
             this.btnLoan.TabIndex = 3;
             this.btnLoan.Text = "Loans and Payment";
-            this.btnLoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoan.UseVisualStyleBackColor = true;
             this.btnLoan.Click += new System.EventHandler(this.btnLoan_Click);
-            // 
-            // btnAddMember
-            // 
-            this.btnAddMember.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMember.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMember.Image")));
-            this.btnAddMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddMember.Location = new System.Drawing.Point(1037, 155);
-            this.btnAddMember.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(144, 31);
-            this.btnAddMember.TabIndex = 6;
-            this.btnAddMember.Text = "Add Member";
-            this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddMember.UseVisualStyleBackColor = true;
-            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 785);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.cboMemStat);
             this.Controls.Add(this.btnAddMember);
             this.Controls.Add(this.btnDue);
             this.Controls.Add(this.metroLabel4);
@@ -486,8 +566,8 @@
         private System.Windows.Forms.ToolStripDropDownButton btnReports;
         private System.Windows.Forms.ToolStripMenuItem tsmiReportsMembers;
         private System.Windows.Forms.ToolStripMenuItem tsmiReportsDividentPatronage;
-        private System.Windows.Forms.ToolStripMenuItem report3ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem report4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiScheduleOfCapitalShare;
+        private System.Windows.Forms.ToolStripMenuItem tsmiScheduleOfLoanReleases;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel lblDate;
@@ -504,10 +584,17 @@
         private System.Windows.Forms.ToolStripMenuItem chaToolStripMenuItem;
         private System.Windows.Forms.Button btnLoan;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDue;
+        private System.Windows.Forms.Button btnAddMember;
         private MetroFramework.Controls.MetroComboBox cboMemType;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private System.Windows.Forms.Button btnDue;
-        private System.Windows.Forms.ToolStripButton btnPatronage;
-        private System.Windows.Forms.Button btnAddMember;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.ToolStripMenuItem tsmInterestOnCapitalShare;
+        public MetroFramework.Controls.MetroComboBox cboMemStat;
+        private System.Windows.Forms.ToolStripMenuItem scheduleOfPastDueLoansToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scheduleOfSalesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton btnBackup;
+        private System.Windows.Forms.ToolStripMenuItem sqlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem finalReportToolStripMenuItem;
     }
 }

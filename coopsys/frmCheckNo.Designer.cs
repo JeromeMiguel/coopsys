@@ -41,9 +41,9 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(277, 166);
+            this.btnSave.Location = new System.Drawing.Point(277, 176);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(135, 28);
+            this.btnSave.Size = new System.Drawing.Size(135, 30);
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "OK";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -55,9 +55,9 @@
             // 
             // 
             this.txtCheckNo.CustomButton.Image = null;
-            this.txtCheckNo.CustomButton.Location = new System.Drawing.Point(363, 1);
+            this.txtCheckNo.CustomButton.Location = new System.Drawing.Point(361, 1);
             this.txtCheckNo.CustomButton.Name = "";
-            this.txtCheckNo.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtCheckNo.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.txtCheckNo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCheckNo.CustomButton.TabIndex = 1;
             this.txtCheckNo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -65,8 +65,9 @@
             this.txtCheckNo.CustomButton.Visible = false;
             this.txtCheckNo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtCheckNo.Lines = new string[0];
-            this.txtCheckNo.Location = new System.Drawing.Point(23, 119);
+            this.txtCheckNo.Location = new System.Drawing.Point(23, 126);
             this.txtCheckNo.MaxLength = 32767;
+            this.txtCheckNo.Multiline = true;
             this.txtCheckNo.Name = "txtCheckNo";
             this.txtCheckNo.PasswordChar = '\0';
             this.txtCheckNo.PromptText = "Check Number";
@@ -75,7 +76,7 @@
             this.txtCheckNo.SelectionLength = 0;
             this.txtCheckNo.SelectionStart = 0;
             this.txtCheckNo.ShortcutsEnabled = true;
-            this.txtCheckNo.Size = new System.Drawing.Size(389, 27);
+            this.txtCheckNo.Size = new System.Drawing.Size(389, 35);
             this.txtCheckNo.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtCheckNo.TabIndex = 11;
             this.txtCheckNo.UseSelectable = true;
@@ -85,19 +86,22 @@
             // 
             // frmCheckNo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 231);
+            this.ClientSize = new System.Drawing.Size(435, 229);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCheckNo);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCheckNo";
+            this.Padding = new System.Windows.Forms.Padding(20, 64, 20, 21);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Enter Check No.";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCheckNo_FormClosing);
             this.ResumeLayout(false);
 
         }

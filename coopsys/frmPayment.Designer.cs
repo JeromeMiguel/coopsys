@@ -41,6 +41,12 @@
             this.txtDate = new MetroFramework.Controls.MetroDateTime();
             this.chkCheck = new MetroFramework.Controls.MetroCheckBox();
             this.txtCheckNo = new MetroFramework.Controls.MetroTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelPenalty = new System.Windows.Forms.Button();
+            this.btnPayPenalty = new System.Windows.Forms.Button();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.txtPenaltyPayment = new MetroFramework.Controls.MetroTextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSave
@@ -52,7 +58,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(512, 356);
+            this.btnSave.Location = new System.Drawing.Point(512, 312);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(101, 33);
@@ -78,7 +84,7 @@
             this.txtPaymentAmount.CustomButton.Visible = false;
             this.txtPaymentAmount.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtPaymentAmount.Lines = new string[0];
-            this.txtPaymentAmount.Location = new System.Drawing.Point(212, 356);
+            this.txtPaymentAmount.Location = new System.Drawing.Point(212, 312);
             this.txtPaymentAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtPaymentAmount.MaxLength = 32767;
             this.txtPaymentAmount.Name = "txtPaymentAmount";
@@ -94,11 +100,12 @@
             this.txtPaymentAmount.UseSelectable = true;
             this.txtPaymentAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPaymentAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPaymentAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaymentAmount_KeyPress);
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(41, 360);
+            this.metroLabel4.Location = new System.Drawing.Point(41, 316);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(118, 20);
@@ -190,7 +197,7 @@
             this.chkCheck.AutoSize = true;
             this.chkCheck.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
             this.chkCheck.FontWeight = MetroFramework.MetroCheckBoxWeight.Light;
-            this.chkCheck.Location = new System.Drawing.Point(41, 284);
+            this.chkCheck.Location = new System.Drawing.Point(41, 263);
             this.chkCheck.Name = "chkCheck";
             this.chkCheck.Size = new System.Drawing.Size(122, 20);
             this.chkCheck.Style = MetroFramework.MetroColorStyle.Purple;
@@ -201,6 +208,7 @@
             // 
             // txtCheckNo
             // 
+            this.txtCheckNo.BackColor = System.Drawing.Color.Gainsboro;
             // 
             // 
             // 
@@ -217,7 +225,7 @@
             this.txtCheckNo.Enabled = false;
             this.txtCheckNo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtCheckNo.Lines = new string[0];
-            this.txtCheckNo.Location = new System.Drawing.Point(212, 278);
+            this.txtCheckNo.Location = new System.Drawing.Point(212, 257);
             this.txtCheckNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCheckNo.MaxLength = 32767;
             this.txtCheckNo.Name = "txtCheckNo";
@@ -230,15 +238,110 @@
             this.txtCheckNo.Size = new System.Drawing.Size(401, 33);
             this.txtCheckNo.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtCheckNo.TabIndex = 3;
+            this.txtCheckNo.UseCustomBackColor = true;
             this.txtCheckNo.UseSelectable = true;
             this.txtCheckNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCheckNo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnCancelPenalty);
+            this.groupBox1.Controls.Add(this.btnPayPenalty);
+            this.groupBox1.Controls.Add(this.metroLabel6);
+            this.groupBox1.Controls.Add(this.txtPenaltyPayment);
+            this.groupBox1.Location = new System.Drawing.Point(23, 385);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(603, 159);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Penalty";
+            // 
+            // btnCancelPenalty
+            // 
+            this.btnCancelPenalty.BackColor = System.Drawing.Color.DarkGray;
+            this.btnCancelPenalty.FlatAppearance.BorderSize = 0;
+            this.btnCancelPenalty.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnCancelPenalty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnCancelPenalty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelPenalty.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelPenalty.ForeColor = System.Drawing.Color.White;
+            this.btnCancelPenalty.Location = new System.Drawing.Point(299, 96);
+            this.btnCancelPenalty.Name = "btnCancelPenalty";
+            this.btnCancelPenalty.Size = new System.Drawing.Size(146, 33);
+            this.btnCancelPenalty.TabIndex = 34;
+            this.btnCancelPenalty.Text = "Cancel Penalty";
+            this.btnCancelPenalty.UseVisualStyleBackColor = false;
+            this.btnCancelPenalty.Click += new System.EventHandler(this.btnCancelPenalty_Click);
+            // 
+            // btnPayPenalty
+            // 
+            this.btnPayPenalty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.btnPayPenalty.FlatAppearance.BorderSize = 0;
+            this.btnPayPenalty.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
+            this.btnPayPenalty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
+            this.btnPayPenalty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayPenalty.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayPenalty.ForeColor = System.Drawing.Color.White;
+            this.btnPayPenalty.Location = new System.Drawing.Point(459, 96);
+            this.btnPayPenalty.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPayPenalty.Name = "btnPayPenalty";
+            this.btnPayPenalty.Size = new System.Drawing.Size(134, 33);
+            this.btnPayPenalty.TabIndex = 33;
+            this.btnPayPenalty.Text = "Pay Penalty";
+            this.btnPayPenalty.UseVisualStyleBackColor = false;
+            this.btnPayPenalty.Click += new System.EventHandler(this.btnPayPenalty_Click);
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(18, 50);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(118, 20);
+            this.metroLabel6.TabIndex = 23;
+            this.metroLabel6.Text = "Payment Amount:";
+            // 
+            // txtPenaltyPayment
+            // 
+            // 
+            // 
+            // 
+            this.txtPenaltyPayment.CustomButton.Image = null;
+            this.txtPenaltyPayment.CustomButton.Location = new System.Drawing.Point(369, 1);
+            this.txtPenaltyPayment.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPenaltyPayment.CustomButton.Name = "";
+            this.txtPenaltyPayment.CustomButton.Size = new System.Drawing.Size(31, 31);
+            this.txtPenaltyPayment.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPenaltyPayment.CustomButton.TabIndex = 1;
+            this.txtPenaltyPayment.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPenaltyPayment.CustomButton.UseSelectable = true;
+            this.txtPenaltyPayment.CustomButton.Visible = false;
+            this.txtPenaltyPayment.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtPenaltyPayment.Lines = new string[0];
+            this.txtPenaltyPayment.Location = new System.Drawing.Point(189, 40);
+            this.txtPenaltyPayment.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPenaltyPayment.MaxLength = 32767;
+            this.txtPenaltyPayment.Name = "txtPenaltyPayment";
+            this.txtPenaltyPayment.PasswordChar = '\0';
+            this.txtPenaltyPayment.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPenaltyPayment.SelectedText = "";
+            this.txtPenaltyPayment.SelectionLength = 0;
+            this.txtPenaltyPayment.SelectionStart = 0;
+            this.txtPenaltyPayment.ShortcutsEnabled = true;
+            this.txtPenaltyPayment.Size = new System.Drawing.Size(401, 33);
+            this.txtPenaltyPayment.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtPenaltyPayment.TabIndex = 4;
+            this.txtPenaltyPayment.UseCustomBackColor = true;
+            this.txtPenaltyPayment.UseSelectable = true;
+            this.txtPenaltyPayment.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPenaltyPayment.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // frmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 428);
+            this.ClientSize = new System.Drawing.Size(649, 574);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtCheckNo);
             this.Controls.Add(this.chkCheck);
             this.Controls.Add(this.metroLabel5);
@@ -261,6 +364,8 @@
             this.Text = "Loan Payment";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPayment_FormClosing);
             this.Load += new System.EventHandler(this.frmPayment_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +386,10 @@
         private MetroFramework.Controls.MetroDateTime txtDate;
         private MetroFramework.Controls.MetroCheckBox chkCheck;
         private MetroFramework.Controls.MetroTextBox txtCheckNo;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnPayPenalty;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroTextBox txtPenaltyPayment;
+        private System.Windows.Forms.Button btnCancelPenalty;
     }
 }
