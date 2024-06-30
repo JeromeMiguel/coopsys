@@ -442,6 +442,12 @@
     <Compile Include="frmTestDateSeries.Designer.cs">
       <DependentUpon>frmTestDateSeries.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransaction.Designer.cs">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmViewMemberShares.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -533,6 +539,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTestDateSeries.resx">
       <DependentUpon>frmTestDateSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransaction.resx">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewMemberShares.resx">
       <DependentUpon>frmViewMemberShares.cs</DependentUpon>

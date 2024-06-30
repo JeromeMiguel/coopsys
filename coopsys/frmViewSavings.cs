@@ -19,7 +19,25 @@ namespace coopsys
     {
         private MySqlConnection conn;
         private int memberID;
-        private string fname, mname, lname, accountNum, savingsID, currentBalance, createdAt;
+        private decimal currentBalance;
+        private string fname, mname, lname, accountNum, savingsID, currentBalanceText, createdAt;
+
+        private void btnWithdraw_Click(object sender, EventArgs e)
+        {
+            // type: 1 - debit (withdraw);  2 - credit (deposit)
+            frmTransaction form = new frmTransaction(conn, savingsID, 1, currentBalance, accountNum, memberID, fname, mname, lname);
+            form.ShowDialog();
+          
+        }
+
+        private void btnDeposit_Click(object sender, EventArgs e)
+        {
+            frmTransaction form = new frmTransaction(conn, savingsID, 2, currentBalance, accountNum, memberID, fname, mname, lname);
+            form.ShowDialog();
+         
+         
+        }
+
         DataTable dtAcc = new DataTable(), dt = new DataTable();
         DataCollection dc = new DataCollection();
 
@@ -32,6 +50,7 @@ namespace coopsys
             mname = _mname;
             lname = _lname;
             memberID = _memberID;
+
             
             //Get Savings Account Info
             dtAcc = dc.fnDataTableCollection("SELECT savingsID, current_balance, created_at, account_number FROM coop.savings " +
@@ -39,17 +58,18 @@ namespace coopsys
            
 
             savingsID = dtAcc.Rows[0][0].ToString();
-            currentBalance = decimal.Parse(dtAcc.Rows[0][1].ToString()).ToString("#,##0.00");
+            currentBalance = decimal.Parse(dtAcc.Rows[0][1].ToString());
+            currentBalanceText = currentBalance.ToString("#,##0.00");
             createdAt = DateTime.Parse(dtAcc.Rows[0][2].ToString()).ToString("MM/dd/yyyy");
             accountNum = dtAcc.Rows[0][3].ToString();
 
             txtAccount.Text = accountNum;
             txtName.Text = "" + fname + " " + mname + " " + lname + "";
             txtDate.Text = createdAt;
-            lblBalance.Text = "₱ "+currentBalance+"";
+            lblBalance.Text = "₱ "+currentBalanceText+"";
 
             //Get Transaction History
-            dt = dc.fnDataTableCollection("", conn);
+            //dt = dc.fnDataTableCollection("", conn);
         }
     }
 }
