@@ -39,7 +39,7 @@ namespace coopsys
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            dc.fnExecuteQuery("INSERT INTO `coop`.`savings` (`created_at`, `memberID`) VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', " + memberID + ");", conn);
+            dc.fnExecuteQuery("INSERT INTO `coop`.`savings` (`created_at`, `memberID`) VALUES (NOW(), " + memberID + ");", conn);
 
             MessageBox.Show(this, "Savings Account for \"+fname+\" \"+mname+\" \"+lname+\" has been created successfully",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

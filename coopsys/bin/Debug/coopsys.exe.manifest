@@ -90,14 +90,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="coopsys.exe" size="606736">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="coopsys.exe" size="608272">
       <assemblyIdentity name="coopsys" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9MnVsEvHatcFGkaBVmzz2PksR1Y47LPXd3oaFqswXnw=</dsig:DigestValue>
+        <dsig:DigestValue>gL3vjF9YAnipetgLgZfQ0URr8BHP1bHmI5CyImz12bo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

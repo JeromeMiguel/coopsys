@@ -69,7 +69,14 @@ namespace coopsys
             lblBalance.Text = "₱ "+currentBalanceText+"";
 
             //Get Transaction History
-            //dt = dc.fnDataTableCollection("", conn);
+            dt = dc.fnDataTableCollection("SELECT transactionsID, type,   CASE WHEN type = 1 THEN CONCAT('- ', FORMAT(amount, 2)) ELSE CONCAT('+ ', FORMAT(amount, 2)) END AS 'Amount'," +
+                "FORMAT(balance_before, 2) AS 'Balance Before', FORMAT(balance_after, 2) AS 'Balance After',  date AS 'Date', savingsID " +
+                "FROM coop.transactions WHERE savingsID="+savingsID+"", conn);
+            grdTransactions.DataSource = dt;
+
+            grdTransactions.Columns[0].Visible = false;
+            grdTransactions.Columns[1].Visible = false;
+            grdTransactions.Columns[6].Visible = false;
         }
     }
 }

@@ -57,7 +57,7 @@ namespace coopsys
         private void btnTransaction_Click(object sender, EventArgs e)
         {
             amount = decimal.Parse(txtAmount.Text);
-            balanceAfter = balanceBefore - amount;
+            balanceAfter = type ==1 ? balanceBefore - amount : balanceBefore + amount;
             
             if (type == 1)
             {
@@ -69,6 +69,18 @@ namespace coopsys
                 //For Deposit
                 MessageBox.Show("Deposit ₱ " + amount.ToString("#,##0.00") + " to " + fname + " " + mname + " " + lname + "'s Account?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             }
+
+
+            //Insert Transaction record to Transaction Table
+            dc.fnExecuteQuery("INSERT INTO `coop`.`transactions` (`type`, `amount`, `balance_before`, `balance_after`, `date`, `savingsID`) " +
+                "VALUES ("+type+", "+amount+", "+balanceBefore+", "+balanceAfter+", "+ "NOW(), "+savingsID+");", conn);
+
+            //Update current balance at Savings Table
+            dc.fnExecuteQuery("UPDATE `coop`.`savings` SET `current_balance` = "+balanceAfter+" WHERE (`savingsID` = "+savingsID+");", conn);
+
+            MessageBox.Show("Transaction Complete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
+
             //frmViewSavings form = new frmViewSavings(conn, memberID, fname, mname, lname);
             //form.ShowDialog();
         }
