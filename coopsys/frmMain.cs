@@ -203,7 +203,7 @@ namespace coopsys
             else
             {
 
-                frmViewSavings form = new frmViewSavings(conn, memberID);
+                frmViewSavings form = new frmViewSavings(conn, memberID, fname, mname, lname);
                 form.ShowDialog();
             }
         }

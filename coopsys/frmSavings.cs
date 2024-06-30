@@ -29,7 +29,7 @@ namespace coopsys
             mname= _mname;
             lname= _lname;
             memberID = _memberID;
-            accountNum = dc.fnReturnStringValue("SELECT LAST_INSERT_ID() as 'ID';", "ID", conn);
+            accountNum = dc.fnReturnStringValue("SELECT account_number FROM coop.member WHERE memberID = "+memberID+";", "account_number", conn);
 
 
             txtAccount.Text = accountNum;

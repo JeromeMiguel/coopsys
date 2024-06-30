@@ -19,12 +19,16 @@ namespace coopsys
     {
         private MySqlConnection conn;
         private int memberID;
+        private string fname, mname, lname, accountNum;
 
-        public frmViewSavings(MySqlConnection _conn, int _memberID)
+        public frmViewSavings(MySqlConnection _conn, int _memberID, string _fname, string _mname, string _lname)
         {
             InitializeComponent();
 
             conn = _conn;
+            fname = _fname;
+            mname = _mname;
+            lname = _lname;
             memberID = _memberID;
         }
     }

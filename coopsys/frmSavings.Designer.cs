@@ -53,9 +53,11 @@
             this.groupBox1.Size = new System.Drawing.Size(726, 204);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Account Details";
             // 
             // txtAccount
             // 
+            this.txtAccount.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -84,6 +86,7 @@
             this.txtAccount.Size = new System.Drawing.Size(286, 28);
             this.txtAccount.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtAccount.TabIndex = 4;
+            this.txtAccount.UseCustomBackColor = true;
             this.txtAccount.UseSelectable = true;
             this.txtAccount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAccount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -101,6 +104,7 @@
             // 
             // txtDate
             // 
+            this.txtDate.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -129,6 +133,7 @@
             this.txtDate.Size = new System.Drawing.Size(286, 28);
             this.txtDate.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtDate.TabIndex = 6;
+            this.txtDate.UseCustomBackColor = true;
             this.txtDate.UseSelectable = true;
             this.txtDate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -146,6 +151,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -174,6 +180,7 @@
             this.txtName.Size = new System.Drawing.Size(648, 28);
             this.txtName.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtName.TabIndex = 2;
+            this.txtName.UseCustomBackColor = true;
             this.txtName.UseSelectable = true;
             this.txtName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -219,7 +226,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(223, 46);
             this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Create Account";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
