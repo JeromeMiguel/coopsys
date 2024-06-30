@@ -30,6 +30,12 @@ namespace coopsys
             mname = _mname;
             lname = _lname;
             memberID = _memberID;
+            
+
+
+            txtAccount.Text = accountNum;
+            txtName.Text = "" + fname + " " + mname + " " + lname + "";
+            txtDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
         }
     }
 }

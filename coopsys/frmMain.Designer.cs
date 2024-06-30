@@ -71,6 +71,7 @@
             this.btnDue = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnLoan = new System.Windows.Forms.Button();
+            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.grdMembers)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchMem)).BeginInit();
@@ -373,7 +374,7 @@
             this.savingsAccountToolStripMenuItem,
             this.chaToolStripMenuItem});
             this.contextMenuStripDataRow.Name = "contextMenuStripDataRow";
-            this.contextMenuStripDataRow.Size = new System.Drawing.Size(231, 104);
+            this.contextMenuStripDataRow.Size = new System.Drawing.Size(231, 76);
             // 
             // capitalShareToolStripMenuItem
             // 
@@ -387,14 +388,14 @@
             // viewSharesToolStripMenuItem
             // 
             this.viewSharesToolStripMenuItem.Name = "viewSharesToolStripMenuItem";
-            this.viewSharesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewSharesToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.viewSharesToolStripMenuItem.Text = "View shares";
             this.viewSharesToolStripMenuItem.Click += new System.EventHandler(this.viewSharesToolStripMenuItem_Click);
             // 
             // printCertificateToolStripMenuItem
             // 
             this.printCertificateToolStripMenuItem.Name = "printCertificateToolStripMenuItem";
-            this.printCertificateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.printCertificateToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.printCertificateToolStripMenuItem.Text = "Print certificate";
             this.printCertificateToolStripMenuItem.Click += new System.EventHandler(this.printCertificateToolStripMenuItem_Click);
             // 
@@ -527,6 +528,13 @@
             this.btnLoan.UseVisualStyleBackColor = true;
             this.btnLoan.Click += new System.EventHandler(this.btnLoan_Click);
             // 
+            // mySqlDataAdapter1
+            // 
+            this.mySqlDataAdapter1.DeleteCommand = null;
+            this.mySqlDataAdapter1.InsertCommand = null;
+            this.mySqlDataAdapter1.SelectCommand = null;
+            this.mySqlDataAdapter1.UpdateCommand = null;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -607,5 +615,6 @@
         private System.Windows.Forms.ToolStripMenuItem sqlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem finalReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem savingsAccountToolStripMenuItem;
+        private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
     }
 }

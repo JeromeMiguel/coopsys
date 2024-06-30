@@ -240,6 +240,8 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSavings";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Purple;
