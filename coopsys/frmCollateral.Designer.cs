@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPropLoc = new MetroFramework.Controls.MetroTextBox();
             this.txtPropArea = new MetroFramework.Controls.MetroTextBox();
@@ -42,12 +42,12 @@
             this.txtVehEngine = new MetroFramework.Controls.MetroTextBox();
             this.txtVehPlate = new MetroFramework.Controls.MetroTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtBank = new MetroFramework.Controls.MetroTextBox();
             this.txtChqAmt = new MetroFramework.Controls.MetroTextBox();
             this.txtChqNum = new MetroFramework.Controls.MetroTextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.grdView = new MetroFramework.Controls.MetroGrid();
-            this.txtBank = new MetroFramework.Controls.MetroTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -372,6 +372,41 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cheque";
             // 
+            // txtBank
+            // 
+            // 
+            // 
+            // 
+            this.txtBank.CustomButton.Image = null;
+            this.txtBank.CustomButton.Location = new System.Drawing.Point(246, 1);
+            this.txtBank.CustomButton.Name = "";
+            this.txtBank.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.txtBank.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBank.CustomButton.TabIndex = 1;
+            this.txtBank.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBank.CustomButton.UseSelectable = true;
+            this.txtBank.CustomButton.Visible = false;
+            this.txtBank.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtBank.Lines = new string[0];
+            this.txtBank.Location = new System.Drawing.Point(19, 137);
+            this.txtBank.MaxLength = 32767;
+            this.txtBank.Multiline = true;
+            this.txtBank.Name = "txtBank";
+            this.txtBank.PasswordChar = '\0';
+            this.txtBank.PromptText = "Bank";
+            this.txtBank.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBank.SelectedText = "";
+            this.txtBank.SelectionLength = 0;
+            this.txtBank.SelectionStart = 0;
+            this.txtBank.ShortcutsEnabled = true;
+            this.txtBank.Size = new System.Drawing.Size(276, 31);
+            this.txtBank.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtBank.TabIndex = 12;
+            this.txtBank.UseSelectable = true;
+            this.txtBank.WaterMark = "Bank";
+            this.txtBank.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBank.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // txtChqAmt
             // 
             // 
@@ -445,6 +480,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
@@ -483,37 +519,37 @@
             this.grdView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.grdView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdView.DefaultCellStyle = dataGridViewCellStyle11;
             this.grdView.EnableHeadersVisualStyles = false;
             this.grdView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grdView.Location = new System.Drawing.Point(195, 74);
             this.grdView.Name = "grdView";
             this.grdView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.grdView.RowHeadersWidth = 51;
             this.grdView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -521,45 +557,12 @@
             this.grdView.TabIndex = 18;
             this.grdView.Visible = false;
             // 
-            // txtBank
-            // 
-            // 
-            // 
-            // 
-            this.txtBank.CustomButton.Image = null;
-            this.txtBank.CustomButton.Location = new System.Drawing.Point(246, 1);
-            this.txtBank.CustomButton.Name = "";
-            this.txtBank.CustomButton.Size = new System.Drawing.Size(29, 29);
-            this.txtBank.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBank.CustomButton.TabIndex = 1;
-            this.txtBank.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtBank.CustomButton.UseSelectable = true;
-            this.txtBank.CustomButton.Visible = false;
-            this.txtBank.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtBank.Lines = new string[0];
-            this.txtBank.Location = new System.Drawing.Point(19, 137);
-            this.txtBank.MaxLength = 32767;
-            this.txtBank.Multiline = true;
-            this.txtBank.Name = "txtBank";
-            this.txtBank.PasswordChar = '\0';
-            this.txtBank.PromptText = "Bank";
-            this.txtBank.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBank.SelectedText = "";
-            this.txtBank.SelectionLength = 0;
-            this.txtBank.SelectionStart = 0;
-            this.txtBank.ShortcutsEnabled = true;
-            this.txtBank.Size = new System.Drawing.Size(276, 31);
-            this.txtBank.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBank.TabIndex = 12;
-            this.txtBank.UseSelectable = true;
-            this.txtBank.WaterMark = "Bank";
-            this.txtBank.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBank.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // frmCollateral
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1050, 441);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);

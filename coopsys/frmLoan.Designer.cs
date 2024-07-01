@@ -40,7 +40,7 @@
             this.txtLoanable = new MetroFramework.Controls.MetroTextBox();
             this.txtFee = new MetroFramework.Controls.MetroTextBox();
             this.txtAmount = new MetroFramework.Controls.MetroTextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.lblmemname = new MetroFramework.Controls.MetroLabel();
             this.txtTerm = new MetroFramework.Controls.MetroTextBox();
@@ -203,22 +203,22 @@
             this.txtAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
-            // btnCancel
+            // btnClear
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(166, 707);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(135, 28);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnClear.BackColor = System.Drawing.Color.DarkGray;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(166, 707);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(135, 28);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -768,6 +768,7 @@
             // 
             // frmLoan
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 750);
@@ -786,7 +787,7 @@
             this.Controls.Add(this.cboLoans);
             this.Controls.Add(this.txtTerm);
             this.Controls.Add(this.lblmemname);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtLoanable);
             this.Controls.Add(this.txtFee);
@@ -824,7 +825,7 @@
         private MetroFramework.Controls.MetroTextBox txtLoanable;
         private MetroFramework.Controls.MetroTextBox txtFee;
         private MetroFramework.Controls.MetroTextBox txtAmount;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
         private MetroFramework.Controls.MetroLabel lblmemname;
         private MetroFramework.Controls.MetroTextBox txtTerm;
