@@ -41,7 +41,7 @@ namespace coopsys
         {
             dc.fnExecuteQuery("INSERT INTO `coop`.`savings` (`created_at`, `memberID`) VALUES (NOW(), " + memberID + ");", conn);
 
-            MessageBox.Show(this, "Savings Account for \"+fname+\" \"+mname+\" \"+lname+\" has been created successfully",
+            MessageBox.Show(this, "Savings Account for "+fname+" "+mname+" "+lname+" has been created successfully",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Close();

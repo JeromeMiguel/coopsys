@@ -25,17 +25,14 @@ namespace coopsys
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
             // type: 1 - debit (withdraw);  2 - credit (deposit)
-            frmTransaction form = new frmTransaction(conn, savingsID, 1, currentBalance, accountNum, memberID, fname, mname, lname);
+            frmTransaction form = new frmTransaction(conn, savingsID, 1, currentBalance, accountNum, memberID, fname, mname, lname, this);
             form.ShowDialog();
-          
         }
 
         private void btnDeposit_Click(object sender, EventArgs e)
         {
-            frmTransaction form = new frmTransaction(conn, savingsID, 2, currentBalance, accountNum, memberID, fname, mname, lname);
+            frmTransaction form = new frmTransaction(conn, savingsID, 2, currentBalance, accountNum, memberID, fname, mname, lname, this);
             form.ShowDialog();
-         
-         
         }
 
         DataTable dtAcc = new DataTable(), dt = new DataTable();
@@ -51,11 +48,19 @@ namespace coopsys
             lname = _lname;
             memberID = _memberID;
 
-            
             //Get Savings Account Info
-            dtAcc = dc.fnDataTableCollection("SELECT savingsID, current_balance, created_at, account_number FROM coop.savings " +
-                "INNER JOIN coop.member ON coop.member.memberID = coop.savings.memberID WHERE coop.savings.memberID = "+memberID+";", conn);
+            getAccInfo();
+
+            //Get Transaction History
+            getTransactions();
            
+        }
+
+        public void getAccInfo()
+        {
+            dtAcc = dc.fnDataTableCollection("SELECT savingsID, current_balance, created_at, account_number FROM coop.savings " +
+              "INNER JOIN coop.member ON coop.member.memberID = coop.savings.memberID WHERE coop.savings.memberID = " + memberID + ";", conn);
+
 
             savingsID = dtAcc.Rows[0][0].ToString();
             currentBalance = decimal.Parse(dtAcc.Rows[0][1].ToString());
@@ -63,15 +68,18 @@ namespace coopsys
             createdAt = DateTime.Parse(dtAcc.Rows[0][2].ToString()).ToString("MM/dd/yyyy");
             accountNum = dtAcc.Rows[0][3].ToString();
 
+
             txtAccount.Text = accountNum;
             txtName.Text = "" + fname + " " + mname + " " + lname + "";
             txtDate.Text = createdAt;
-            lblBalance.Text = "₱ "+currentBalanceText+"";
+            lblBalance.Text = "₱ " + currentBalanceText + "";
+        }
 
-            //Get Transaction History
+        public void getTransactions()
+        {
             dt = dc.fnDataTableCollection("SELECT transactionsID, type,   CASE WHEN type = 1 THEN CONCAT('- ', FORMAT(amount, 2)) ELSE CONCAT('+ ', FORMAT(amount, 2)) END AS 'Amount'," +
-                "FORMAT(balance_before, 2) AS 'Balance Before', FORMAT(balance_after, 2) AS 'Balance After',  date AS 'Date', savingsID " +
-                "FROM coop.transactions WHERE savingsID="+savingsID+"", conn);
+               "FORMAT(balance_before, 2) AS 'Balance Before', FORMAT(balance_after, 2) AS 'Balance After',  date AS 'Date', savingsID " +
+               "FROM coop.transactions WHERE savingsID=" + savingsID + "", conn);
             grdTransactions.DataSource = dt;
 
             grdTransactions.Columns[0].Visible = false;

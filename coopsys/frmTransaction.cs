@@ -26,7 +26,7 @@ namespace coopsys
 
 
         public frmTransaction(MySqlConnection _conn, string _savingsID, int _type, decimal _balanceBefore, string _accountNum, 
-            int _memberID, string _fname, string _mname, string _lname)
+            int _memberID, string _fname, string _mname, string _lname, frmViewSavings parentForm)
         {
 
             InitializeComponent();
@@ -51,7 +51,8 @@ namespace coopsys
             this.Text = type == 1 ? "Withdraw" : "Deposit";
             btnTransaction.Text =  type == 1 ? "Withdraw" : "Deposit";
 
-
+            // Reload frmViewSavings on close
+            this.FormClosing += delegate { parentForm.getAccInfo(); parentForm.getTransactions(); };
         }
 
         private void btnTransaction_Click(object sender, EventArgs e)
@@ -80,9 +81,6 @@ namespace coopsys
 
             MessageBox.Show("Transaction Complete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
-
-            //frmViewSavings form = new frmViewSavings(conn, memberID, fname, mname, lname);
-            //form.ShowDialog();
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
