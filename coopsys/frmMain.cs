@@ -310,8 +310,17 @@ namespace coopsys
         {
             if (e.Button == MouseButtons.Right)
             {
-                grdMembers.Rows[e.RowIndex].Selected = true;
-                contextMenuStripDataRow.Show(MousePosition.X, MousePosition.Y);
+                try
+                {
+                    grdMembers.Rows[e.RowIndex].Selected = true;
+                    contextMenuStripDataRow.Show(MousePosition.X, MousePosition.Y);
+                }
+                catch (ArgumentOutOfRangeException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+
+               
             }
         }
 
