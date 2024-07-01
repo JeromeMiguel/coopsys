@@ -86,10 +86,10 @@
             // 
             // 
             this.txtAmount.CustomButton.Image = null;
-            this.txtAmount.CustomButton.Location = new System.Drawing.Point(601, 2);
+            this.txtAmount.CustomButton.Location = new System.Drawing.Point(451, 2);
             this.txtAmount.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAmount.CustomButton.Name = "";
-            this.txtAmount.CustomButton.Size = new System.Drawing.Size(44, 41);
+            this.txtAmount.CustomButton.Size = new System.Drawing.Size(33, 33);
             this.txtAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtAmount.CustomButton.TabIndex = 1;
             this.txtAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -140,7 +140,7 @@
             this.lblWarning.Location = new System.Drawing.Point(20, 71);
             this.lblWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(398, 21);
+            this.lblWarning.Size = new System.Drawing.Size(318, 17);
             this.lblWarning.TabIndex = 21;
             this.lblWarning.Text = "⚠️ Amount does not meet the minimum requirement";
             this.lblWarning.UseCustomForeColor = true;
@@ -200,6 +200,7 @@
             this.Name = "frmTransaction";
             this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Transaction";
             this.groupBox2.ResumeLayout(false);

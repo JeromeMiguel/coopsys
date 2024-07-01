@@ -18,7 +18,7 @@ using System.Threading;
 
 namespace coopsys
 {
-    public partial class frmBackupSql : Form
+    public partial class frmBackupSql : MetroFramework.Forms.MetroForm
     {
         DataTable dt = new DataTable();
         DataCollection dc = new DataCollection();

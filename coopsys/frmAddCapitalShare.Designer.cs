@@ -140,6 +140,7 @@
             this.chkUnclaimed.Location = new System.Drawing.Point(152, 266);
             this.chkUnclaimed.Name = "chkUnclaimed";
             this.chkUnclaimed.Size = new System.Drawing.Size(96, 20);
+            this.chkUnclaimed.Style = MetroFramework.MetroColorStyle.Purple;
             this.chkUnclaimed.TabIndex = 19;
             this.chkUnclaimed.Text = "Unclaimed";
             this.chkUnclaimed.UseSelectable = true;

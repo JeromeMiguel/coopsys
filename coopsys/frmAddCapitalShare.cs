@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using calypso;
 using calypso.DataAccess;
+using MetroFramework.Controls;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -131,6 +132,12 @@ namespace coopsys
         private void txtCapitalShare_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as MetroTextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }

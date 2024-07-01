@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblmemname = new MetroFramework.Controls.MetroLabel();
-            this.lbltotalshares = new MetroFramework.Controls.MetroLabel();
+            this.lblTotalSharesYear = new MetroFramework.Controls.MetroLabel();
             this.grdShares = new MetroFramework.Controls.MetroGrid();
             this.cboMonth = new MetroFramework.Controls.MetroComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -46,6 +46,8 @@
             this.contextMenuStripDataRow = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editCapitalShareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCapitalShareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblMemType = new MetroFramework.Controls.MetroLabel();
+            this.lblTotalShares = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdShares)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.contextMenuStripDataRow.SuspendLayout();
@@ -54,22 +56,23 @@
             // lblmemname
             // 
             this.lblmemname.AutoSize = true;
-            this.lblmemname.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblmemname.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblmemname.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblmemname.Location = new System.Drawing.Point(24, 86);
             this.lblmemname.Name = "lblmemname";
-            this.lblmemname.Size = new System.Drawing.Size(71, 20);
+            this.lblmemname.Size = new System.Drawing.Size(92, 25);
             this.lblmemname.TabIndex = 3;
             this.lblmemname.Text = "full name";
             // 
-            // lbltotalshares
+            // lblTotalSharesYear
             // 
-            this.lbltotalshares.AutoSize = true;
-            this.lbltotalshares.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbltotalshares.Location = new System.Drawing.Point(24, 308);
-            this.lbltotalshares.Name = "lbltotalshares";
-            this.lbltotalshares.Size = new System.Drawing.Size(54, 20);
-            this.lbltotalshares.TabIndex = 4;
-            this.lbltotalshares.Text = "shares";
+            this.lblTotalSharesYear.AutoSize = true;
+            this.lblTotalSharesYear.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblTotalSharesYear.Location = new System.Drawing.Point(24, 304);
+            this.lblTotalSharesYear.Name = "lblTotalSharesYear";
+            this.lblTotalSharesYear.Size = new System.Drawing.Size(161, 20);
+            this.lblTotalSharesYear.TabIndex = 4;
+            this.lblTotalSharesYear.Text = "Total Shares as of 0000";
             // 
             // grdShares
             // 
@@ -82,41 +85,41 @@
             this.grdShares.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdShares.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdShares.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdShares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdShares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdShares.ColumnHeadersHeight = 29;
             this.grdShares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LavenderBlush;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdShares.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LavenderBlush;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdShares.DefaultCellStyle = dataGridViewCellStyle5;
             this.grdShares.EnableHeadersVisualStyles = false;
             this.grdShares.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdShares.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdShares.Location = new System.Drawing.Point(24, 350);
+            this.grdShares.Location = new System.Drawing.Point(24, 339);
             this.grdShares.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grdShares.MultiSelect = false;
             this.grdShares.Name = "grdShares";
             this.grdShares.ReadOnly = true;
             this.grdShares.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkViolet;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkViolet;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdShares.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdShares.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grdShares.RowHeadersWidth = 51;
             this.grdShares.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdShares.RowTemplate.Height = 24;
@@ -160,7 +163,7 @@
             this.groupBox1.Controls.Add(this.cboYear);
             this.groupBox1.Controls.Add(this.cboMonth);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Variable Display", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 178);
+            this.groupBox1.Location = new System.Drawing.Point(24, 162);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -246,7 +249,7 @@
             this.btnAddShare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddShare.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddShare.ForeColor = System.Drawing.Color.White;
-            this.btnAddShare.Location = new System.Drawing.Point(24, 751);
+            this.btnAddShare.Location = new System.Drawing.Point(574, 752);
             this.btnAddShare.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddShare.Name = "btnAddShare";
             this.btnAddShare.Size = new System.Drawing.Size(127, 46);
@@ -278,15 +281,38 @@
             this.deleteCapitalShareToolStripMenuItem.Text = "Delete capital share";
             this.deleteCapitalShareToolStripMenuItem.Click += new System.EventHandler(this.deleteCapitalShareToolStripMenuItem_Click);
             // 
+            // lblMemType
+            // 
+            this.lblMemType.AutoSize = true;
+            this.lblMemType.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.lblMemType.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblMemType.Location = new System.Drawing.Point(25, 116);
+            this.lblMemType.Name = "lblMemType";
+            this.lblMemType.Size = new System.Drawing.Size(61, 17);
+            this.lblMemType.TabIndex = 23;
+            this.lblMemType.Text = "full name";
+            // 
+            // lblTotalShares
+            // 
+            this.lblTotalShares.AutoSize = true;
+            this.lblTotalShares.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblTotalShares.Location = new System.Drawing.Point(219, 304);
+            this.lblTotalShares.Name = "lblTotalShares";
+            this.lblTotalShares.Size = new System.Drawing.Size(54, 20);
+            this.lblTotalShares.TabIndex = 24;
+            this.lblTotalShares.Text = "shares";
+            // 
             // frmViewMemberShares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 820);
+            this.Controls.Add(this.lblTotalShares);
+            this.Controls.Add(this.lblMemType);
             this.Controls.Add(this.btnAddShare);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grdShares);
-            this.Controls.Add(this.lbltotalshares);
+            this.Controls.Add(this.lblTotalSharesYear);
             this.Controls.Add(this.lblmemname);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -311,7 +337,7 @@
 
         #endregion
         private MetroFramework.Controls.MetroLabel lblmemname;
-        private MetroFramework.Controls.MetroLabel lbltotalshares;
+        private MetroFramework.Controls.MetroLabel lblTotalSharesYear;
         private MetroFramework.Controls.MetroGrid grdShares;
         private MetroFramework.Controls.MetroComboBox cboMonth;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -324,5 +350,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripDataRow;
         private System.Windows.Forms.ToolStripMenuItem editCapitalShareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteCapitalShareToolStripMenuItem;
+        private MetroFramework.Controls.MetroLabel lblMemType;
+        private MetroFramework.Controls.MetroLabel lblTotalShares;
     }
 }

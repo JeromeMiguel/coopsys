@@ -21,7 +21,7 @@ namespace coopsys
         DataTable dt = new DataTable();
         DataTable totalShare = new DataTable();
         DataCollection dc = new DataCollection();
-        private int memberID, capitalShareID, remarks;
+        private int memberID, capitalShareID, remarks, memberType;
         private double capitalShareAmount;
         private string date, orNum;
 
@@ -35,16 +35,10 @@ namespace coopsys
             InitializeComponent();
             conn = _conn;
             memberID = _memberID;
-            if (_memberType == 1)
-            {
-                lblmemname.Text = "" + _lname + ", " + " " + _fname + " " + _mname.Substring(0, 1) + ".\nAssociate Member";
+            memberType = _memberType;
 
-            }
-            else
-            {
-                lblmemname.Text = "" + _lname + ", " + " " + _fname + " " + _mname.Substring(0, 1) + ".\nRegular Member";
-
-            }
+            lblmemname.Text = "" + _lname + "," + " " + _fname + " " + _mname.Substring(0, 1)+".";
+            lblMemType.Text = memberType == 1 ? "Associate Member" : "Regular Member";
 
             grdShares.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dt = dc.fnDataTableCollection("select distinct year from capitalshare;", conn);
@@ -84,7 +78,8 @@ namespace coopsys
                 dt = dc.fnDataTableCollection("select distinct year from capitalshare;", conn);
                 totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
                 "from capitalshare where memberID=" + memberID + " and year=" + cboYear.Text + ";");
-                lbltotalshares.Text = "Total share as of " + cboYear.Text + ": ₱" + totalShare.Rows[0][0].ToString();
+                lblTotalSharesYear.Text = "Total share as of " + cboYear.Text + ": ";
+                lblTotalShares.Text = "₱ " + (totalShare.Rows[0][0].ToString() == "" ? "0.00" : totalShare.Rows[0][0].ToString());
                 cboYear.DataSource = dt;
                 cboYear.DisplayMember = "year";
                 if (cboYear.Items.Count > 0)
@@ -142,7 +137,7 @@ namespace coopsys
                 dt = dc.fnDataTableCollection("select distinct year from capitalshare;", conn);
                 totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
                 "from capitalshare where memberID=" + memberID + " and year=" + cboYear.Text + ";");
-                lbltotalshares.Text = "Total share as of " + cboYear.Text + ": ₱" + totalShare.Rows[0][0].ToString();
+                lblTotalSharesYear.Text = "Total share as of " + cboYear.Text + ": ₱" + totalShare.Rows[0][0].ToString();
                 cboYear.DataSource = dt;
                 cboYear.DisplayMember = "year";
                 if (cboYear.Items.Count > 0)
