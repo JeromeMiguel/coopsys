@@ -23,11 +23,13 @@ namespace coopsys
         MySqlConnection conn;
         DataCollection dc = new DataCollection();
         clsDefaults defaults = new clsDefaults();
+        DataTable dtDistinct;
         string fname, mname, lname, shareCount, shareAmt, certNum, documentsPath, path;
         int memberID;
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            // Set Path where document will be saved
             documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             path = documentsPath + "/Certificates";
 
@@ -36,13 +38,16 @@ namespace coopsys
                 Directory.CreateDirectory(path);
             }
 
-            DataTable dtDistinct;
-
+            // Checks if certificate is already issued
+            // ( Find if there is duplicate record in db )
             dtDistinct = dc.fnDataTableCollection("select distinct if(certificate.total_share_amount = " + double.Parse(shareAmt) + " and certificate.total_share_count = " + int.Parse(shareCount) + ", 'true', 'false' ) as 'Existing', cert_num " +
                 "from certificate where memberid = "+memberID+" and certificate.total_share_amount = " + double.Parse(shareAmt) + " and certificate.total_share_count = " + int.Parse(shareCount) + "",conn);
 
+            // Checks First if dtDistinct has rows to avoid index out of bounds
+            // ( This solves an error that occurs when db has no records)
             if (dtDistinct.Rows.Count != 0)
             {
+                // Creates Word File
                 if (dtDistinct.Rows[0][0].ToString() != "true")
                 {
                     createWordFile();
@@ -55,6 +60,7 @@ namespace coopsys
 
                     if (result == DialogResult.OK)
                     {
+                        // Opens Existing File
                         string openPath = path + "\\" + fname + " " + lname + " Certificate - " + certNum + ".docx";
                         Process.Start(openPath);                    }
                 }
