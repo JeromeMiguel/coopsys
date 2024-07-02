@@ -104,8 +104,12 @@ namespace coopsys
         {
             if (e.Button == MouseButtons.Right)
             {
-                grdShares.Rows[e.RowIndex].Selected = true;
-                contextMenuStripDataRow.Show(MousePosition.X, MousePosition.Y);
+                try
+                {
+                    grdShares.Rows[e.RowIndex].Selected = true;
+                    contextMenuStripDataRow.Show(MousePosition.X, MousePosition.Y);
+                }
+                catch { }
             }
         }
 
