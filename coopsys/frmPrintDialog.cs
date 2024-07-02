@@ -23,20 +23,25 @@ namespace coopsys
         MySqlConnection conn;
         DataCollection dc = new DataCollection();
         clsDefaults defaults = new clsDefaults();
-        string fname, mname, lname, shareCount, shareAmt, certNum, desktopPath;
+        string fname, mname, lname, shareCount, shareAmt, certNum, documentsPath, path;
         int memberID;
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            
+            documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            path = documentsPath + "/Certificates";
+
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
             DataTable dtDistinct;
 
             dtDistinct = dc.fnDataTableCollection("select distinct if(certificate.total_share_amount = " + double.Parse(shareAmt) + " and certificate.total_share_count = " + int.Parse(shareCount) + ", 'true', 'false' ) as 'Existing', cert_num " +
-                "from certificate where memberid = 1 and certificate.total_share_amount = " + double.Parse(shareAmt) + " and certificate.total_share_count = " + int.Parse(shareCount) + "",conn);
+                "from certificate where memberid = "+memberID+" and certificate.total_share_amount = " + double.Parse(shareAmt) + " and certificate.total_share_count = " + int.Parse(shareCount) + "",conn);
 
-            //if (dc.fnReturnStringValue("select distinct if (certificate.total_share_amount = " + double.Parse(shareAmt) + " and certificate.total_share_count = " + int.Parse(shareCount) + ", 'true', 'false' ) as 'Existing' from certificate where memberid = " + memberID + " ", "Existing", conn) != "true")
-            try
+            if (dtDistinct.Rows.Count != 0)
             {
                 if (dtDistinct.Rows[0][0].ToString() != "true")
                 {
@@ -46,15 +51,15 @@ namespace coopsys
                 else
                 {
                     certNum = dtDistinct.Rows[0][1].ToString();
-                    DialogResult result = MessageBox.Show("Certificate " + certNum + " already issued. Click OK to view the document", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if ((result == DialogResult.Yes))
+                    DialogResult result = MessageBox.Show("Certificate " + certNum + " already issued. Click OK to view the document", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.OK)
                     {
-                        string openPath = desktopPath + "\\" + fname + " " + lname + " Certificate - " + certNum + ".docx";
-                        Process.Start(openPath);
-                    }
+                        string openPath = path + "\\" + fname + " " + lname + " Certificate - " + certNum + ".docx";
+                        Process.Start(openPath);                    }
                 }
             }
-            catch {
+           else {
                 createWordFile();
             }
 
@@ -80,7 +85,7 @@ namespace coopsys
         public void createWordFile ()
         {
             //Duplicate Master Word Document (Certificate)
-            string savePath = desktopPath + "\\" + fname + " " + lname + " Certificate - " + string.Format("{0:000000}", defaults.certificateTotal + 1) + ".docx";
+            string savePath = path + "\\" + fname + " " + lname + " Certificate - " + string.Format("{0:000000}", defaults.certificateTotal + 1) + ".docx";
             System.IO.File.Copy(@"C:\MTMC-Cert.docx", savePath, true);
 
             //Replace Keywords in Document
