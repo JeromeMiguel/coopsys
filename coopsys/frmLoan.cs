@@ -318,8 +318,12 @@ namespace coopsys
         {
             if (e.Button == MouseButtons.Right)
             {
-                grdLoans.Rows[e.RowIndex].Selected = true;
-                contextMenuStripDataRow.Show(MousePosition.X, MousePosition.Y);
+                try
+                {
+                    grdLoans.Rows[e.RowIndex].Selected = true;
+                    contextMenuStripDataRow.Show(MousePosition.X, MousePosition.Y);
+                }
+                catch { }
             }
         }
 

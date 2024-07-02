@@ -316,10 +316,7 @@ namespace coopsys
                     grdMembers.Rows[e.RowIndex].Selected = true;
                     contextMenuStripDataRow.Show(MousePosition.X, MousePosition.Y);
                 }
-                catch (ArgumentOutOfRangeException ex)
-                {
-                    Console.WriteLine(ex);
-                }
+                catch { }
 
                
             }
