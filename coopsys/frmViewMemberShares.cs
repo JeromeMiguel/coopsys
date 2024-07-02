@@ -147,6 +147,12 @@ namespace coopsys
             }
             catch { }
             grdShares.Columns[0].Visible = false;
+
+            foreach (DataGridViewRow row in grdShares.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+            }
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)

@@ -120,7 +120,7 @@ namespace coopsys
             string query = "select loan.loanid as 'LID', concat(if(loanmonth<10,concat(0,loanmonth),loanmonth),'/', if(loanday<10,concat(0,loanday),loanday), '/', loanyear) as 'LOAN DATE', " +
                 "format(loanamount,2) as 'AMOUNT', format(balance,2) as 'BALANCE', duedate as 'MATURITY DATE', format(interestAmount,2) as 'INTEREST', format(loanfee,2) as 'SERVICE FEE', " +
                 "format(loaninsurance,2) as 'INSURANCE', ifnull(format(csamount,2), 0.00) as 'SHARE CAPITAL', ifnull(format(penaltyamount,2), 0.00) as 'PENALTY' " +
-                "from loan left join penalty on penalty.loanid = loan.loanid " +
+                "from coop.loan left join penalty on penalty.loanid = loan.loanid " +
                 "left join capitalshare on loan.loanid=capitalshare.loanid " +
                 "where loan.memberid = " + _memberID + "";
 
