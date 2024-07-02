@@ -97,6 +97,8 @@ namespace coopsys
                        "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
                        "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memtype=1 and memstatus = " + _memStatVal+";");
                 }
+
+                setRowHeadNumber();
             }
             else
             {
@@ -124,6 +126,8 @@ namespace coopsys
                        "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where lastname like '%" + txtSearch.Text + "%' and memstatus = "+_memStatVal+" " +
                         "and memtype = 1;");
                 }
+
+                setRowHeadNumber();
                 grdMembers.ClearSelection();
             }
         }
@@ -231,10 +235,7 @@ namespace coopsys
             cboMemStat.SelectedIndex = 0;
             grdMembers.ClearSelection();
 
-            foreach (DataGridViewRow row in grdMembers.Rows)
-            {
-                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
-            }
+            setRowHeadNumber();
         }
 
         private void OpenLoanForm()
@@ -367,6 +368,7 @@ namespace coopsys
             grdMembers.Columns[14].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             lblTotalResult.Text = "Total Records: " + grdMembers.Rows.Count.ToString();
+            setRowHeadNumber();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -463,6 +465,14 @@ namespace coopsys
 
             date = DateTime.Today;
             lblDate.Text = date.ToLongDateString();
+        }
+
+        private void setRowHeadNumber()
+        {
+            foreach (DataGridViewRow row in grdMembers.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+            }
         }
     }
 }
