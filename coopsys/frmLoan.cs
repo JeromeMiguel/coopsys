@@ -67,6 +67,8 @@ namespace coopsys
             cboLoans.SelectedIndex = 1;
             LoadLoanList(cboLoans.SelectedIndex, memberID);
             txtInterest.Text = 1.ToString();
+
+            lblLoanType.Text = "( " + cboLoans.Text + " )";
         }
 
         private void ComputeLoanableAmount()
@@ -242,6 +244,11 @@ namespace coopsys
             {
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
             }
+        }
+
+        private void cboLoans_TextChanged(object sender, EventArgs e)
+        {
+            lblLoanType.Text = "( "+cboLoans.Text+" )";
         }
 
         private void txtCapitalShare_KeyPress(object sender, KeyPressEventArgs e)
