@@ -436,6 +436,12 @@
     <Compile Include="frmSetPenalty.Designer.cs">
       <DependentUpon>frmSetPenalty.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTestDateSeries.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -51,6 +51,7 @@ namespace coopsys
                 if (dtDistinct.Rows[0][0].ToString() != "true")
                 {
                     createWordFile();
+
                 }
 
                 else
@@ -86,6 +87,9 @@ namespace coopsys
             lblName.Text = ""+lname+", "+fname+" "+mname+"";
             lblShareCount.Text = shareCount;
             lblShareAmt.Text = "₱ " + shareAmt;
+
+            getPrevCerts();
+
         }
 
         public void createWordFile ()
@@ -131,10 +135,11 @@ namespace coopsys
 
                 }
             }
+      
             MessageBox.Show("Certificate generated at: " + savePath + "", "Success ", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Process.Start(savePath);
 
-            //Update certificate number (db and defaults)
+            //Insert certificate number (db and defaults)
             dc.fnExecuteQuery("INSERT INTO `coop`.`certificate` (`cert_num`, `issued_date`, `total_share_amount`, `total_share_count`, " +
                 "`memberid`) VALUES ('" + certNum + "', '" + DateTime.Today.ToString("yyyy-MM-dd") + "', " + double.Parse(shareAmt) + ", " +
                 "" + int.Parse(shareCount) + ", " + memberID + ");", conn);
@@ -142,6 +147,21 @@ namespace coopsys
             dc.fnExecuteQuery("UPDATE `coop`.`defaults` SET `cert_count` = " + int.Parse(certNum) + " WHERE (`id` = " + memberID + ");", conn);
 
             defaults.certificateTotal = int.Parse(certNum);
+
+            //Reload grdCertificates
+            getPrevCerts();
+        }
+        
+        public void getPrevCerts ()
+        {
+            grdCertificates.DataSource =  dc.fnDataViewCollection("SELECT cert_num AS 'Certificate No.', issued_date AS 'Date Issued', total_share_amount AS " +
+                "'Share Amount', total_share_count AS 'Share Count' FROM coop.certificate WHERE memberid = "+memberID+"", conn);
+
+            foreach (DataGridViewRow row in grdCertificates.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+            }
+
         }
 
     }

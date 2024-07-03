@@ -99,17 +99,17 @@
             this.grdCertificates.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdCertificates.RowTemplate.Height = 24;
             this.grdCertificates.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdCertificates.Size = new System.Drawing.Size(637, 315);
+            this.grdCertificates.Size = new System.Drawing.Size(807, 315);
             this.grdCertificates.TabIndex = 6;
             // 
             // btnSearchMem
             // 
             this.btnSearchMem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearchMem.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchMem.Image")));
-            this.btnSearchMem.Location = new System.Drawing.Point(624, 265);
+            this.btnSearchMem.Location = new System.Drawing.Point(784, 265);
             this.btnSearchMem.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchMem.Name = "btnSearchMem";
-            this.btnSearchMem.Size = new System.Drawing.Size(36, 33);
+            this.btnSearchMem.Size = new System.Drawing.Size(37, 34);
             this.btnSearchMem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSearchMem.TabIndex = 18;
             this.btnSearchMem.TabStop = false;
@@ -120,7 +120,7 @@
             // 
             // 
             this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(314, 1);
             this.txtSearch.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.CustomButton.Name = "";
             this.txtSearch.CustomButton.Size = new System.Drawing.Size(31, 31);
@@ -131,7 +131,7 @@
             this.txtSearch.CustomButton.Visible = false;
             this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(272, 265);
+            this.txtSearch.Location = new System.Drawing.Point(432, 265);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Name = "txtSearch";
@@ -142,7 +142,7 @@
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(345, 33);
+            this.txtSearch.Size = new System.Drawing.Size(346, 33);
             this.txtSearch.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtSearch.TabIndex = 17;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -226,7 +226,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(401, 89);
+            this.btnPrint.Location = new System.Drawing.Point(561, 86);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(214, 38);
@@ -257,7 +257,7 @@
             this.groupBox1.Controls.Add(this.lblShareCount);
             this.groupBox1.Location = new System.Drawing.Point(26, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(634, 144);
+            this.groupBox1.Size = new System.Drawing.Size(795, 144);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             // 
@@ -265,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 658);
+            this.ClientSize = new System.Drawing.Size(853, 658);
             this.Controls.Add(this.lblTotalResult);
             this.Controls.Add(this.btnSearchMem);
             this.Controls.Add(this.grdCertificates);
