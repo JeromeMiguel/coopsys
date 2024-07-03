@@ -25,6 +25,12 @@ namespace coopsys
         clsDefaults defaults = new clsDefaults();
         DataTable dtDistinct;
         string fname, mname, lname, shareCount, shareAmt, certNum, documentsPath, path;
+
+        private void frmPrintDialog_Load(object sender, EventArgs e)
+        {
+            getPrevCerts();
+        }
+
         int memberID;
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -51,6 +57,7 @@ namespace coopsys
                 if (dtDistinct.Rows[0][0].ToString() != "true")
                 {
                     createWordFile();
+                    getPrevCerts();
 
                 }
 
@@ -68,6 +75,7 @@ namespace coopsys
             }
            else {
                 createWordFile();
+                getPrevCerts();
             }
 
         }
@@ -87,8 +95,6 @@ namespace coopsys
             lblName.Text = ""+lname+", "+fname+" "+mname+"";
             lblShareCount.Text = shareCount;
             lblShareAmt.Text = "₱ " + shareAmt;
-
-            getPrevCerts();
 
         }
 

@@ -278,6 +278,7 @@
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Print Certificate";
+            this.Load += new System.EventHandler(this.frmPrintDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdCertificates)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchMem)).EndInit();
             this.groupBox1.ResumeLayout(false);
