@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using calypso;
 using calypso.DataAccess;
 using MetroFramework.Controls;
+using System.Collections;
 
 namespace coopsys
 {
@@ -18,6 +19,7 @@ namespace coopsys
     {
         DataCollection dc = new DataCollection();
         MySqlConnection conn;
+        DataTable dt = new DataTable();
 
         public frmSettings(MySqlConnection _conn)
         {
@@ -34,6 +36,7 @@ namespace coopsys
         private void frmSettings_Load(object sender, EventArgs e)
         {
             disabledForm();
+            loadDefaultData();
         }
 
         private void btnAction_Click(object sender, EventArgs e)
@@ -46,6 +49,8 @@ namespace coopsys
 
             else
             {
+                loadDefaultData();
+
                 btnAction.Text = "Edit";
                 disabledForm();
             }
@@ -79,6 +84,9 @@ namespace coopsys
             txtMemberLoanRate.Enabled = false;
             txtSaveCertificates.Enabled = false;
             txtSaveReports.Enabled = false;
+
+            btnReset.Visible = false;
+            btnCancel.Visible = false;  
         }
 
         private void enabledForm ()
@@ -89,15 +97,15 @@ namespace coopsys
             txtInterestCSRate.BackColor = Color.FromArgb(255, 255, 255);
             txtLoanPenalty.BackColor = Color.FromArgb(255, 255, 255);
             txtMemberLoanRate.BackColor = Color.FromArgb(255, 255, 255);
-            txtSaveCertificates.BackColor = Color.FromArgb(255, 255, 255);
-            txtSaveReports.BackColor = Color.FromArgb(255, 255, 255);
+            //txtSaveCertificates.BackColor = Color.FromArgb(255, 255, 255);
+            //txtSaveReports.BackColor = Color.FromArgb(255, 255, 255);
 
             lblPercent1.BackColor = Color.FromArgb(255, 255, 255);
             lblPercent2.BackColor = Color.FromArgb(255, 255, 255);
             lblPercent3.BackColor = Color.FromArgb(255, 255, 255);
 
-            btnBrowseReports.Enabled = true;
-            btnBrowseCertificates.Enabled = true;
+            //btnBrowseReports.Enabled = true;
+            //btnBrowseCertificates.Enabled = true;
 
             lblEditStatus.Text = "( Editing )";
 
@@ -109,6 +117,9 @@ namespace coopsys
             txtMemberLoanRate.Enabled = true;
             txtSaveCertificates.Enabled = true;
             txtSaveReports.Enabled = true;
+
+            btnReset.Visible = true;
+            btnCancel.Visible = true;
         }
 
         private void percent_KeyPress(object sender, KeyPressEventArgs e)
@@ -132,6 +143,30 @@ namespace coopsys
             {
                 e.Handled = true;
             }
+        }
+
+        private void loadDefaultData ()
+        {
+            dt = dc.fnDataTableCollection("SELECT * FROM coop.defaults;", conn);
+
+            txtMemberLoanRate.Text = dt.Rows[0][4].ToString();
+            txtLoanPenalty.Text = decimal.Parse(dt.Rows[0][5].ToString()).ToString("G29");
+            txtDvidendRate.Text = decimal.Parse(dt.Rows[0][6].ToString()).ToString("G29");
+            txtInterestCSRate.Text = decimal.Parse(dt.Rows[0][7].ToString()).ToString("G29");
+            txtFinalPercentage1.Text = dt.Rows[0][8].ToString();
+            txtFinalPercentage2.Text = dt.Rows[0][9].ToString();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnAction.Text = "Edit";
+            disabledForm();
+            loadDefaultData();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+             loadDefaultData ();
         }
     }
 }

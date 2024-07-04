@@ -50,6 +50,7 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnBrowseCertificates = new System.Windows.Forms.Button();
             this.txtSaveCertificates = new MetroFramework.Controls.MetroTextBox();
             this.txtSaveReports = new MetroFramework.Controls.MetroTextBox();
@@ -63,6 +64,8 @@
             this.btnBrowseReports = new System.Windows.Forms.Button();
             this.btnAction = new System.Windows.Forms.Button();
             this.lblEditStatus = new MetroFramework.Controls.MetroLabel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -465,6 +468,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.metroLabel1);
             this.groupBox3.Controls.Add(this.btnBrowseCertificates);
             this.groupBox3.Controls.Add(this.txtSaveCertificates);
             this.groupBox3.Controls.Add(this.txtSaveReports);
@@ -476,6 +480,19 @@
             this.groupBox3.Size = new System.Drawing.Size(687, 213);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.metroLabel1.Location = new System.Drawing.Point(149, 17);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(127, 20);
+            this.metroLabel1.TabIndex = 41;
+            this.metroLabel1.Text = "( Available Soon )";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel1.UseCustomForeColor = true;
             // 
             // btnBrowseCertificates
             // 
@@ -701,11 +718,49 @@
             this.lblEditStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblEditStatus.UseCustomForeColor = true;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(376, 69);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(98, 40);
+            this.btnCancel.TabIndex = 48;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.DarkGray;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(485, 69);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(98, 40);
+            this.btnReset.TabIndex = 49;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 846);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblEditStatus);
             this.Controls.Add(this.btnAction);
             this.Controls.Add(this.btnBrowseReports);
@@ -773,5 +828,8 @@
         private System.Windows.Forms.Button btnBrowseCertificates;
         private System.Windows.Forms.Button btnAction;
         private MetroFramework.Controls.MetroLabel lblEditStatus;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnReset;
     }
 }
