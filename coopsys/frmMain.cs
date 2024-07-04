@@ -223,6 +223,12 @@ namespace coopsys
             print.ShowDialog();
         }
 
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            frmSettings form = new frmSettings(conn);
+            form.ShowDialog();
+        }
+
         public void OnFormLoad()
         {
             string query = "SELECT COUNT(loan.loanID) " +

@@ -130,6 +130,7 @@
             this.MinimizeBox = false;
             this.Name = "frmBackupSql";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Create Backup";

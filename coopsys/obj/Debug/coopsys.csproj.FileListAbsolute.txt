@@ -593,3 +593,4 @@ C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmSavings.resources
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmViewSavings.resources
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmTransaction.resources
+C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmSettings.resources

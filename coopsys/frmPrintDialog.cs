@@ -57,8 +57,6 @@ namespace coopsys
                 if (dtDistinct.Rows[0][0].ToString() != "true")
                 {
                     createWordFile();
-                    getPrevCerts();
-
                 }
 
                 else
@@ -72,6 +70,8 @@ namespace coopsys
                         string openPath = path + "\\" + fname + " " + lname + " Certificate - " + certNum + ".docx";
                         Process.Start(openPath);                    }
                 }
+
+                getPrevCerts();
             }
            else {
                 createWordFile();

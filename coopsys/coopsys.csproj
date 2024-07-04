@@ -543,6 +543,9 @@
     <EmbeddedResource Include="frmReportMembers.resx">
       <DependentUpon>frmReportMembers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTestDateSeries.resx">
       <DependentUpon>frmTestDateSeries.cs</DependentUpon>
     </EmbeddedResource>

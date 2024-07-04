@@ -34,7 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrintDialog));
             this.grdCertificates = new MetroFramework.Controls.MetroGrid();
             this.btnSearchMem = new System.Windows.Forms.PictureBox();
-            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.lblTotalResult = new MetroFramework.Controls.MetroLabel();
             this.lblName = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -44,6 +43,7 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.lblShareAmt = new MetroFramework.Controls.MetroLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdCertificates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchMem)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -113,43 +113,6 @@
             this.btnSearchMem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSearchMem.TabIndex = 18;
             this.btnSearchMem.TabStop = false;
-            // 
-            // txtSearch
-            // 
-            // 
-            // 
-            // 
-            this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(314, 1);
-            this.txtSearch.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearch.CustomButton.Name = "";
-            this.txtSearch.CustomButton.Size = new System.Drawing.Size(31, 31);
-            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSearch.CustomButton.TabIndex = 1;
-            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSearch.CustomButton.UseSelectable = true;
-            this.txtSearch.CustomButton.Visible = false;
-            this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(432, 265);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearch.MaxLength = 32767;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PromptText = "Find a Certificate...";
-            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.SelectionLength = 0;
-            this.txtSearch.SelectionStart = 0;
-            this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(346, 33);
-            this.txtSearch.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtSearch.TabIndex = 17;
-            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSearch.UseSelectable = true;
-            this.txtSearch.WaterMark = "Find a Certificate...";
-            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // lblTotalResult
             // 
@@ -261,6 +224,43 @@
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             // 
+            // txtSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtSearch.CustomButton.Image = null;
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(314, 1);
+            this.txtSearch.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.CustomButton.Name = "";
+            this.txtSearch.CustomButton.Size = new System.Drawing.Size(31, 31);
+            this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSearch.CustomButton.TabIndex = 1;
+            this.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSearch.CustomButton.UseSelectable = true;
+            this.txtSearch.CustomButton.Visible = false;
+            this.txtSearch.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtSearch.Lines = new string[0];
+            this.txtSearch.Location = new System.Drawing.Point(432, 265);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.MaxLength = 32767;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PromptText = "Find a Certificate...";
+            this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.SelectionLength = 0;
+            this.txtSearch.SelectionStart = 0;
+            this.txtSearch.ShortcutsEnabled = true;
+            this.txtSearch.Size = new System.Drawing.Size(346, 33);
+            this.txtSearch.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtSearch.TabIndex = 17;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.UseSelectable = true;
+            this.txtSearch.WaterMark = "Find a Certificate...";
+            this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // frmPrintDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,7 +291,6 @@
         #endregion
         private MetroFramework.Controls.MetroGrid grdCertificates;
         private System.Windows.Forms.PictureBox btnSearchMem;
-        private MetroFramework.Controls.MetroTextBox txtSearch;
         private MetroFramework.Controls.MetroLabel lblTotalResult;
         private MetroFramework.Controls.MetroLabel lblName;
         private MetroFramework.Controls.MetroLabel metroLabel4;
@@ -301,5 +300,6 @@
         private System.Windows.Forms.Button btnPrint;
         private MetroFramework.Controls.MetroLabel lblShareAmt;
         private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroTextBox txtSearch;
     }
 }
