@@ -30,16 +30,16 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLoanPenalty = new MetroFramework.Controls.MetroTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPercent1 = new System.Windows.Forms.Label();
             this.txtMemberLoanRate = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblDefaults = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPercent3 = new System.Windows.Forms.Label();
+            this.lblPercent2 = new System.Windows.Forms.Label();
             this.txtFinalPercentage2 = new MetroFramework.Controls.MetroTextBox();
             this.txtFinalPercentage1 = new MetroFramework.Controls.MetroTextBox();
             this.txtInterestCSRate = new MetroFramework.Controls.MetroTextBox();
@@ -50,6 +50,7 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnBrowseCertificates = new System.Windows.Forms.Button();
             this.txtSaveCertificates = new MetroFramework.Controls.MetroTextBox();
             this.txtSaveReports = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
@@ -60,7 +61,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnBackup = new System.Windows.Forms.Button();
             this.btnBrowseReports = new System.Windows.Forms.Button();
-            this.btnBrowseCertificates = new System.Windows.Forms.Button();
+            this.btnAction = new System.Windows.Forms.Button();
+            this.lblEditStatus = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,7 +72,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtLoanPenalty);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblPercent1);
             this.groupBox1.Controls.Add(this.txtMemberLoanRate);
             this.groupBox1.Controls.Add(this.metroLabel4);
             this.groupBox1.Controls.Add(this.metroLabel3);
@@ -83,6 +85,7 @@
             // 
             // txtLoanPenalty
             // 
+            this.txtLoanPenalty.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -110,21 +113,24 @@
             this.txtLoanPenalty.Size = new System.Drawing.Size(268, 31);
             this.txtLoanPenalty.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtLoanPenalty.TabIndex = 34;
+            this.txtLoanPenalty.UseCustomBackColor = true;
             this.txtLoanPenalty.UseSelectable = true;
             this.txtLoanPenalty.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtLoanPenalty.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // label1
+            // lblPercent1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(278, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 16);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "%";
+            this.lblPercent1.AutoSize = true;
+            this.lblPercent1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPercent1.Location = new System.Drawing.Point(278, 84);
+            this.lblPercent1.Name = "lblPercent1";
+            this.lblPercent1.Size = new System.Drawing.Size(19, 16);
+            this.lblPercent1.TabIndex = 29;
+            this.lblPercent1.Text = "%";
             // 
             // txtMemberLoanRate
             // 
+            this.txtMemberLoanRate.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -152,6 +158,7 @@
             this.txtMemberLoanRate.Size = new System.Drawing.Size(268, 31);
             this.txtMemberLoanRate.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtMemberLoanRate.TabIndex = 33;
+            this.txtMemberLoanRate.UseCustomBackColor = true;
             this.txtMemberLoanRate.UseSelectable = true;
             this.txtMemberLoanRate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMemberLoanRate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -195,21 +202,21 @@
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroLabel2.UseCustomForeColor = true;
             // 
-            // metroLabel1
+            // lblDefaults
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(33, 85);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(68, 20);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Defaults";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDefaults.AutoSize = true;
+            this.lblDefaults.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblDefaults.Location = new System.Drawing.Point(33, 85);
+            this.lblDefaults.Name = "lblDefaults";
+            this.lblDefaults.Size = new System.Drawing.Size(68, 20);
+            this.lblDefaults.TabIndex = 0;
+            this.lblDefaults.Text = "Defaults";
+            this.lblDefaults.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.lblPercent3);
+            this.groupBox2.Controls.Add(this.lblPercent2);
             this.groupBox2.Controls.Add(this.txtFinalPercentage2);
             this.groupBox2.Controls.Add(this.txtFinalPercentage1);
             this.groupBox2.Controls.Add(this.txtInterestCSRate);
@@ -225,26 +232,29 @@
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             // 
-            // label3
+            // lblPercent3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(622, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 16);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "%";
+            this.lblPercent3.AutoSize = true;
+            this.lblPercent3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPercent3.Location = new System.Drawing.Point(622, 159);
+            this.lblPercent3.Name = "lblPercent3";
+            this.lblPercent3.Size = new System.Drawing.Size(19, 16);
+            this.lblPercent3.TabIndex = 41;
+            this.lblPercent3.Text = "%";
             // 
-            // label2
+            // lblPercent2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(278, 159);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 16);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "%";
+            this.lblPercent2.AutoSize = true;
+            this.lblPercent2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblPercent2.Location = new System.Drawing.Point(278, 159);
+            this.lblPercent2.Name = "lblPercent2";
+            this.lblPercent2.Size = new System.Drawing.Size(19, 16);
+            this.lblPercent2.TabIndex = 40;
+            this.lblPercent2.Text = "%";
             // 
             // txtFinalPercentage2
             // 
+            this.txtFinalPercentage2.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -272,12 +282,14 @@
             this.txtFinalPercentage2.Size = new System.Drawing.Size(268, 31);
             this.txtFinalPercentage2.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtFinalPercentage2.TabIndex = 39;
+            this.txtFinalPercentage2.UseCustomBackColor = true;
             this.txtFinalPercentage2.UseSelectable = true;
             this.txtFinalPercentage2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFinalPercentage2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtFinalPercentage1
             // 
+            this.txtFinalPercentage1.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -305,12 +317,14 @@
             this.txtFinalPercentage1.Size = new System.Drawing.Size(268, 31);
             this.txtFinalPercentage1.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtFinalPercentage1.TabIndex = 38;
+            this.txtFinalPercentage1.UseCustomBackColor = true;
             this.txtFinalPercentage1.UseSelectable = true;
             this.txtFinalPercentage1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFinalPercentage1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtInterestCSRate
             // 
+            this.txtInterestCSRate.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -338,12 +352,14 @@
             this.txtInterestCSRate.Size = new System.Drawing.Size(268, 31);
             this.txtInterestCSRate.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtInterestCSRate.TabIndex = 37;
+            this.txtInterestCSRate.UseCustomBackColor = true;
             this.txtInterestCSRate.UseSelectable = true;
             this.txtInterestCSRate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtInterestCSRate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtDvidendRate
             // 
+            this.txtDvidendRate.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -371,6 +387,7 @@
             this.txtDvidendRate.Size = new System.Drawing.Size(268, 31);
             this.txtDvidendRate.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtDvidendRate.TabIndex = 36;
+            this.txtDvidendRate.UseCustomBackColor = true;
             this.txtDvidendRate.UseSelectable = true;
             this.txtDvidendRate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDvidendRate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -454,8 +471,25 @@
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             // 
+            // btnBrowseCertificates
+            // 
+            this.btnBrowseCertificates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.btnBrowseCertificates.FlatAppearance.BorderSize = 0;
+            this.btnBrowseCertificates.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
+            this.btnBrowseCertificates.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
+            this.btnBrowseCertificates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowseCertificates.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowseCertificates.ForeColor = System.Drawing.Color.White;
+            this.btnBrowseCertificates.Location = new System.Drawing.Point(565, 152);
+            this.btnBrowseCertificates.Name = "btnBrowseCertificates";
+            this.btnBrowseCertificates.Size = new System.Drawing.Size(90, 31);
+            this.btnBrowseCertificates.TabIndex = 40;
+            this.btnBrowseCertificates.Text = "Browse";
+            this.btnBrowseCertificates.UseVisualStyleBackColor = false;
+            // 
             // txtSaveCertificates
             // 
+            this.txtSaveCertificates.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -483,12 +517,14 @@
             this.txtSaveCertificates.Size = new System.Drawing.Size(502, 31);
             this.txtSaveCertificates.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtSaveCertificates.TabIndex = 38;
+            this.txtSaveCertificates.UseCustomBackColor = true;
             this.txtSaveCertificates.UseSelectable = true;
             this.txtSaveCertificates.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSaveCertificates.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtSaveReports
             // 
+            this.txtSaveReports.BackColor = System.Drawing.SystemColors.ButtonFace;
             // 
             // 
             // 
@@ -516,6 +552,7 @@
             this.txtSaveReports.Size = new System.Drawing.Size(502, 31);
             this.txtSaveReports.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtSaveReports.TabIndex = 37;
+            this.txtSaveReports.UseCustomBackColor = true;
             this.txtSaveReports.UseSelectable = true;
             this.txtSaveReports.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSaveReports.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -627,33 +664,50 @@
             this.btnBrowseReports.Text = "Browse";
             this.btnBrowseReports.UseVisualStyleBackColor = false;
             // 
-            // btnBrowseCertificates
+            // btnAction
             // 
-            this.btnBrowseCertificates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            this.btnBrowseCertificates.FlatAppearance.BorderSize = 0;
-            this.btnBrowseCertificates.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
-            this.btnBrowseCertificates.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
-            this.btnBrowseCertificates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowseCertificates.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowseCertificates.ForeColor = System.Drawing.Color.White;
-            this.btnBrowseCertificates.Location = new System.Drawing.Point(565, 152);
-            this.btnBrowseCertificates.Name = "btnBrowseCertificates";
-            this.btnBrowseCertificates.Size = new System.Drawing.Size(90, 31);
-            this.btnBrowseCertificates.TabIndex = 40;
-            this.btnBrowseCertificates.Text = "Browse";
-            this.btnBrowseCertificates.UseVisualStyleBackColor = false;
+            this.btnAction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.btnAction.FlatAppearance.BorderSize = 0;
+            this.btnAction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
+            this.btnAction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
+            this.btnAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAction.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAction.ForeColor = System.Drawing.Color.White;
+            this.btnAction.Location = new System.Drawing.Point(595, 69);
+            this.btnAction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAction.Name = "btnAction";
+            this.btnAction.Size = new System.Drawing.Size(125, 40);
+            this.btnAction.TabIndex = 40;
+            this.btnAction.Text = "Edit";
+            this.btnAction.UseVisualStyleBackColor = false;
+            this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
+            // 
+            // lblEditStatus
+            // 
+            this.lblEditStatus.AutoSize = true;
+            this.lblEditStatus.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblEditStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.lblEditStatus.Location = new System.Drawing.Point(115, 85);
+            this.lblEditStatus.Name = "lblEditStatus";
+            this.lblEditStatus.Size = new System.Drawing.Size(104, 20);
+            this.lblEditStatus.TabIndex = 41;
+            this.lblEditStatus.Text = "( Edit Status )";
+            this.lblEditStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEditStatus.UseCustomForeColor = true;
             // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 846);
+            this.Controls.Add(this.lblEditStatus);
+            this.Controls.Add(this.btnAction);
             this.Controls.Add(this.btnBrowseReports);
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.lblDefaults);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -662,6 +716,7 @@
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Settings";
+            this.Load += new System.EventHandler(this.frmSettings_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -680,10 +735,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblDefaults;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPercent1;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel9;
@@ -706,9 +761,11 @@
         private MetroFramework.Controls.MetroTextBox txtDvidendRate;
         private MetroFramework.Controls.MetroTextBox txtSaveReports;
         private MetroFramework.Controls.MetroTextBox txtSaveCertificates;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPercent3;
+        private System.Windows.Forms.Label lblPercent2;
         private System.Windows.Forms.Button btnBrowseReports;
         private System.Windows.Forms.Button btnBrowseCertificates;
+        private System.Windows.Forms.Button btnAction;
+        private MetroFramework.Controls.MetroLabel lblEditStatus;
     }
 }
