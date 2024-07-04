@@ -101,7 +101,7 @@
             this.txtLoanPenalty.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtLoanPenalty.Lines = new string[0];
             this.txtLoanPenalty.Location = new System.Drawing.Point(381, 76);
-            this.txtLoanPenalty.MaxLength = 32767;
+            this.txtLoanPenalty.MaxLength = 10;
             this.txtLoanPenalty.Multiline = true;
             this.txtLoanPenalty.Name = "txtLoanPenalty";
             this.txtLoanPenalty.PasswordChar = '\0';
@@ -117,6 +117,7 @@
             this.txtLoanPenalty.UseSelectable = true;
             this.txtLoanPenalty.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtLoanPenalty.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtLoanPenalty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
             // 
             // lblPercent1
             // 
@@ -146,7 +147,7 @@
             this.txtMemberLoanRate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtMemberLoanRate.Lines = new string[0];
             this.txtMemberLoanRate.Location = new System.Drawing.Point(38, 76);
-            this.txtMemberLoanRate.MaxLength = 32767;
+            this.txtMemberLoanRate.MaxLength = 3;
             this.txtMemberLoanRate.Multiline = true;
             this.txtMemberLoanRate.Name = "txtMemberLoanRate";
             this.txtMemberLoanRate.PasswordChar = '\0';
@@ -162,6 +163,7 @@
             this.txtMemberLoanRate.UseSelectable = true;
             this.txtMemberLoanRate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMemberLoanRate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMemberLoanRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.percent_KeyPress);
             // 
             // metroLabel4
             // 
@@ -270,7 +272,7 @@
             this.txtFinalPercentage2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtFinalPercentage2.Lines = new string[0];
             this.txtFinalPercentage2.Location = new System.Drawing.Point(381, 151);
-            this.txtFinalPercentage2.MaxLength = 32767;
+            this.txtFinalPercentage2.MaxLength = 3;
             this.txtFinalPercentage2.Multiline = true;
             this.txtFinalPercentage2.Name = "txtFinalPercentage2";
             this.txtFinalPercentage2.PasswordChar = '\0';
@@ -286,6 +288,7 @@
             this.txtFinalPercentage2.UseSelectable = true;
             this.txtFinalPercentage2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFinalPercentage2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFinalPercentage2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.percent_KeyPress);
             // 
             // txtFinalPercentage1
             // 
@@ -305,7 +308,7 @@
             this.txtFinalPercentage1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtFinalPercentage1.Lines = new string[0];
             this.txtFinalPercentage1.Location = new System.Drawing.Point(38, 151);
-            this.txtFinalPercentage1.MaxLength = 32767;
+            this.txtFinalPercentage1.MaxLength = 3;
             this.txtFinalPercentage1.Multiline = true;
             this.txtFinalPercentage1.Name = "txtFinalPercentage1";
             this.txtFinalPercentage1.PasswordChar = '\0';
@@ -321,6 +324,7 @@
             this.txtFinalPercentage1.UseSelectable = true;
             this.txtFinalPercentage1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFinalPercentage1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFinalPercentage1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.percent_KeyPress);
             // 
             // txtInterestCSRate
             // 
@@ -340,7 +344,7 @@
             this.txtInterestCSRate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtInterestCSRate.Lines = new string[0];
             this.txtInterestCSRate.Location = new System.Drawing.Point(381, 77);
-            this.txtInterestCSRate.MaxLength = 32767;
+            this.txtInterestCSRate.MaxLength = 10;
             this.txtInterestCSRate.Multiline = true;
             this.txtInterestCSRate.Name = "txtInterestCSRate";
             this.txtInterestCSRate.PasswordChar = '\0';
@@ -356,6 +360,7 @@
             this.txtInterestCSRate.UseSelectable = true;
             this.txtInterestCSRate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtInterestCSRate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtInterestCSRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
             // 
             // txtDvidendRate
             // 
@@ -375,7 +380,7 @@
             this.txtDvidendRate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtDvidendRate.Lines = new string[0];
             this.txtDvidendRate.Location = new System.Drawing.Point(38, 77);
-            this.txtDvidendRate.MaxLength = 32767;
+            this.txtDvidendRate.MaxLength = 10;
             this.txtDvidendRate.Multiline = true;
             this.txtDvidendRate.Name = "txtDvidendRate";
             this.txtDvidendRate.PasswordChar = '\0';
@@ -391,6 +396,7 @@
             this.txtDvidendRate.UseSelectable = true;
             this.txtDvidendRate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDvidendRate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDvidendRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
             // 
             // metroLabel8
             // 

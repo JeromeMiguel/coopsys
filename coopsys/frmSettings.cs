@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using calypso;
 using calypso.DataAccess;
+using MetroFramework.Controls;
 
 namespace coopsys
 {
@@ -108,6 +109,29 @@ namespace coopsys
             txtMemberLoanRate.Enabled = true;
             txtSaveCertificates.Enabled = true;
             txtSaveReports.Enabled = true;
+        }
+
+        private void percent_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Allow whole number only
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void decimal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as MetroTextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
