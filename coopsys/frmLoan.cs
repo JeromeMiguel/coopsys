@@ -81,15 +81,12 @@ namespace coopsys
                 addFee1 = double.Parse(string.IsNullOrWhiteSpace(txtAddFee1.Text) ? "0":txtAddFee1.Text);
                 addFee2 = double.Parse(string.IsNullOrWhiteSpace(txtAddFee2.Text) ? "0":txtAddFee2.Text);
 
-                if(!string.IsNullOrEmpty(txtCapitalShare.Text))
-                {
-                    totaldeduction = interestTerms + serviceFee + insurance + double.Parse(txtCapitalShare.Text) + addFee1 + addFee2;
-                }
-                else
-                {
-                    totaldeduction = interestTerms + serviceFee + insurance + addFee1 + addFee2;
-                }
-                
+
+                // Compute Net Proceeds 
+                // ( Checks if capital share is null)
+                // ( Checks if savings is null) - SOON
+                totaldeduction = interestTerms + serviceFee + insurance + (!string.IsNullOrEmpty(txtCapitalShare.Text) ? double.Parse(txtCapitalShare.Text) : 0) + addFee1 + addFee2;
+
                 if (!string.IsNullOrWhiteSpace(txtAmount.Text) && 
                     !string.IsNullOrWhiteSpace(txtFee.Text) && 
                     !string.IsNullOrWhiteSpace(txtTerm.Text) && 
@@ -151,31 +148,27 @@ namespace coopsys
             }
         }
 
+        private void frmLoan_Load(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in grdLoans.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+            }
+
+            txtInterest.Text = dc.fnReturnStringValue("SELECT loan_member_rate AS 'loanRate' FROM coop.defaults;", "loanRate", conn);
+            lblWarning.Visible = false;
+
+        }
+
         #region Textbox KeyPress Events
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
-            {
-                e.Handled = true;
-            }
+            decimalKeyPress(sender, e);
         }
 
         private void txtFee_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
-            {
-                e.Handled = true;
-            }
+            decimalKeyPress(sender, e);
         }
 
         private void txtTerm_KeyPress(object sender, KeyPressEventArgs e)
@@ -188,41 +181,22 @@ namespace coopsys
 
         private void txtInsurance_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
-            {
-                e.Handled = true;
-            }
+            decimalKeyPress(sender, e);
         }
 
-        private void frmLoan_Load(object sender, EventArgs e)
+        private void txtCapitalShare_KeyPress(object sender, KeyPressEventArgs e)
         {
-            foreach (DataGridViewRow row in grdLoans.Rows)
-            {
-                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
-            }
-
-            txtInterest.Text = dc.fnReturnStringValue("SELECT loan_member_rate AS 'loanRate' FROM coop.defaults;", "loanRate", conn);
-            
+            decimalKeyPress(sender, e);
         }
 
 
         private void txtInterest_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.' ) )
-            {
-                e.Handled = true;
-            }
-
-            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
-            {
-                e.Handled = true;
-            }
+            decimalKeyPress(sender, e);
         }
+
+        #endregion
+
 
         private void grdLoans_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -242,22 +216,8 @@ namespace coopsys
 
         private void cboLoans_TextChanged(object sender, EventArgs e)
         {
-            lblLoanType.Text = "( "+cboLoans.Text+" )";
+            lblLoanType.Text = "( " + cboLoans.Text + " )";
         }
-
-        private void txtCapitalShare_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
-            {
-                e.Handled = true;
-            }
-        }
-        #endregion
 
         private void viewEditCollateralToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -308,6 +268,11 @@ namespace coopsys
             }
         }
 
+        private void txtAmount_TextChanged(object sender, EventArgs e)
+        {
+            amtCSTextChange();
+        }
+
         private void grdLoans_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -319,6 +284,11 @@ namespace coopsys
                 }
                 catch { }
             }
+        }
+
+        private void txtCapitalShare_TextChanged(object sender, EventArgs e)
+        {
+            amtCSTextChange();
         }
 
         private void cboLoans_SelectedIndexChanged(object sender, EventArgs e)
@@ -421,6 +391,8 @@ namespace coopsys
             txtFee.Clear();
             txtInsurance.Clear();
             txtCapitalShare.Clear();
+
+            lblWarning.Visible = false;
         }
 
         private void deleteLoanRecordToolStripMenuItem_Click(object sender, EventArgs e)
@@ -462,6 +434,36 @@ namespace coopsys
         {
             frmCollateral collateral = new frmCollateral(this);
             collateral.ShowDialog();
+        }
+
+        private void decimalKeyPress(object sender, KeyPressEventArgs e) {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void amtCSTextChange()
+        {
+            if (!string.IsNullOrEmpty(txtAmount.Text) && !string.IsNullOrEmpty(txtCapitalShare.Text))
+            {
+                try
+                {
+                    decimal capitalShare = decimal.Parse(txtCapitalShare.Text.ToString());
+                    decimal amt = decimal.Parse(txtAmount.Text.ToString());
+
+                    lblWarning.Visible = capitalShare >= amt;
+                    btnSave.Enabled = capitalShare < amt;
+                }
+                catch { }
+
+            }
         }
     }
 }

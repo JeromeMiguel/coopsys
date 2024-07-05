@@ -142,6 +142,7 @@ namespace coopsys
 
                     if (text.Text.Contains("000-000-000-000"))
                     {
+                        certNum = string.Format("{0:000000}", defaults.certificateTotal + 1);
                         text.Text = text.Text.Replace("000-000-000-000", tin);
                     }
 
@@ -156,7 +157,7 @@ namespace coopsys
                 "`memberid`) VALUES ('" + certNum + "', '" + DateTime.Today.ToString("yyyy-MM-dd") + "', " + double.Parse(shareAmt) + ", " +
                 "" + int.Parse(shareCount) + ", " + memberID + ");", conn);
 
-            dc.fnExecuteQuery("UPDATE `coop`.`defaults` SET `cert_count` = " + int.Parse(certNum) + " WHERE (`id` = " + memberID + ");", conn);
+            dc.fnExecuteQuery("UPDATE `coop`.`defaults` SET `cert_count` = " + int.Parse(certNum) + " WHERE (`id` = 1);", conn);
 
             defaults.certificateTotal = int.Parse(certNum);
 

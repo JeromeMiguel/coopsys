@@ -70,6 +70,7 @@
             this.txtAddFee1 = new MetroFramework.Controls.MetroTextBox();
             this.btnAddCollateral = new System.Windows.Forms.LinkLabel();
             this.lblLoanType = new MetroFramework.Controls.MetroLabel();
+            this.lblWarning = new MetroFramework.Controls.MetroLabel();
             this.contextMenuStripDataRow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdPayment)).BeginInit();
             this.panel1.SuspendLayout();
@@ -115,7 +116,7 @@
             this.txtLoanable.Enabled = false;
             this.txtLoanable.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtLoanable.Lines = new string[0];
-            this.txtLoanable.Location = new System.Drawing.Point(23, 322);
+            this.txtLoanable.Location = new System.Drawing.Point(23, 347);
             this.txtLoanable.MaxLength = 32767;
             this.txtLoanable.Name = "txtLoanable";
             this.txtLoanable.PasswordChar = '\0';
@@ -202,6 +203,7 @@
             this.txtAmount.WaterMark = "Amount";
             this.txtAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // btnClear
@@ -213,7 +215,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(166, 707);
+            this.btnClear.Location = new System.Drawing.Point(166, 711);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 28);
             this.btnClear.TabIndex = 11;
@@ -230,7 +232,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(23, 707);
+            this.btnSave.Location = new System.Drawing.Point(23, 711);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(135, 28);
             this.btnSave.TabIndex = 10;
@@ -433,6 +435,7 @@
             this.txtCapitalShare.WaterMark = "Capital Share (optional)";
             this.txtCapitalShare.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCapitalShare.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCapitalShare.TextChanged += new System.EventHandler(this.txtCapitalShare_TextChanged);
             this.txtCapitalShare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCapitalShare_KeyPress);
             // 
             // grdPayment
@@ -644,7 +647,7 @@
             this.groupBox1.Controls.Add(this.txtRemarks);
             this.groupBox1.Controls.Add(this.txtAddFee2);
             this.groupBox1.Controls.Add(this.txtAddFee1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 369);
+            this.groupBox1.Location = new System.Drawing.Point(23, 384);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(276, 188);
             this.groupBox1.TabIndex = 30;
@@ -759,7 +762,7 @@
             this.btnAddCollateral.ActiveLinkColor = System.Drawing.Color.Black;
             this.btnAddCollateral.AutoSize = true;
             this.btnAddCollateral.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnAddCollateral.Location = new System.Drawing.Point(21, 561);
+            this.btnAddCollateral.Location = new System.Drawing.Point(21, 576);
             this.btnAddCollateral.Name = "btnAddCollateral";
             this.btnAddCollateral.Size = new System.Drawing.Size(124, 19);
             this.btnAddCollateral.TabIndex = 31;
@@ -780,12 +783,27 @@
             this.lblLoanType.Text = "(Loan Type)";
             this.lblLoanType.UseCustomForeColor = true;
             // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.lblWarning.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lblWarning.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblWarning.Location = new System.Drawing.Point(23, 307);
+            this.lblWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(272, 17);
+            this.lblWarning.TabIndex = 34;
+            this.lblWarning.Text = "⚠️ Capital Share Must be lower than amount";
+            this.lblWarning.UseCustomForeColor = true;
+            // 
             // frmLoan
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 750);
+            this.ClientSize = new System.Drawing.Size(1084, 761);
+            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.lblLoanType);
             this.Controls.Add(this.btnAddCollateral);
             this.Controls.Add(this.groupBox1);
@@ -870,5 +888,6 @@
         private System.Windows.Forms.LinkLabel btnAddCollateral;
         private System.Windows.Forms.ToolStripMenuItem viewEditCollateralToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel lblLoanType;
+        private MetroFramework.Controls.MetroLabel lblWarning;
     }
 }

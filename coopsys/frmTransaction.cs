@@ -74,7 +74,7 @@ namespace coopsys
 
             //Insert Transaction record to Transaction Table
             dc.fnExecuteQuery("INSERT INTO `coop`.`transactions` (`type`, `amount`, `balance_before`, `balance_after`, `date`, `savingsID`) " +
-                "VALUES ("+type+", "+amount+", "+balanceBefore+", "+balanceAfter+", "+ "NOW(), "+savingsID+");", conn);
+                "VALUES ("+type+", "+amount+", "+balanceBefore+", "+balanceAfter+", NOW(), "+savingsID+");", conn);
 
             //Update current balance at Savings Table
             dc.fnExecuteQuery("UPDATE `coop`.`savings` SET `current_balance` = "+balanceAfter+" WHERE (`savingsID` = "+savingsID+");", conn);
