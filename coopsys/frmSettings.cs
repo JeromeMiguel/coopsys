@@ -49,6 +49,12 @@ namespace coopsys
 
             else
             {
+                // Update Database
+                // TODO: replace id = 1 with userID after login integration
+                dc.fnExecuteQuery("UPDATE `coop`.`defaults` SET `loan_member_rate` = "+txtMemberLoanRate.Text+", `loan_penalty` = "+txtLoanPenalty.Text+", " +
+                    "`rep_dividend_rate` = "+txtDvidendRate.Text+", `rep_interest_capital_share` = "+txtInterestCSRate.Text+", `rep_final_1` = "+txtFinalPercentage1.Text+", " +
+                    "`rep_final_2` = "+txtFinalPercentage2.Text+", `save_reports` = NULL, `save_certificates` = NULL WHERE (`id` = 1);", conn);
+
                 loadDefaultData();
 
                 btnAction.Text = "Edit";
