@@ -24,7 +24,7 @@ namespace coopsys
         DataCollection dc = new DataCollection();
         clsDefaults defaults = new clsDefaults();
         DataTable dtDistinct;
-        string fname, mname, lname, shareCount, shareAmt, certNum, documentsPath, path;
+        string fname, mname, lname, shareCount, shareAmt, certNum, tin, documentsPath, path;
 
         private void frmPrintDialog_Load(object sender, EventArgs e)
         {
@@ -92,6 +92,7 @@ namespace coopsys
 
             shareCount = dc.fnReturnStringValue("select count(csID) as \"Total Share Count\" FROM coop.capitalshare WHERE memberID=" + memberID + ";", "Total Share Count", conn);
             shareAmt = dc.fnReturnStringValue("select format(sum(csamount),2) as \"Total Share Amount\" FROM coop.capitalshare WHERE memberID=" + memberID + ";", "Total Share Amount", conn);
+            tin = dc.fnReturnStringValue("SELECT tin From coop.member WHERE memberID = "+memberID+";", "tin", conn);
             lblName.Text = ""+lname+", "+fname+" "+mname+"";
             lblShareCount.Text = shareCount;
             lblShareAmt.Text = "₱ " + shareAmt;
@@ -137,6 +138,11 @@ namespace coopsys
                     {
                         certNum = string.Format("{0:000000}", defaults.certificateTotal + 1);
                         text.Text = text.Text.Replace("DATE", DateTime.Today.ToString("MMMM dd, yyyy"));
+                    }
+
+                    if (text.Text.Contains("000-000-000-000"))
+                    {
+                        text.Text = text.Text.Replace("000-000-000-000", tin);
                     }
 
                 }
