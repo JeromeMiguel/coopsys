@@ -280,6 +280,11 @@ namespace coopsys
             #endregion
         }
 
+        private void frmReportOnScheduleOfSales_Load(object sender, EventArgs e)
+        {
+            btnExportExcel.Enabled = false; 
+        }
+
         private void bgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progress.Value = e.ProgressPercentage;

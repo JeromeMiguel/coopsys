@@ -178,6 +178,7 @@ namespace coopsys
         private void btnGenerateReport_Click(object sender, EventArgs e)
         {
             LoadRecords();
+            btnExportExcel.Enabled = true;
         }
 
         private void btnExportExcel_Click(object sender, EventArgs e)
@@ -294,6 +295,13 @@ namespace coopsys
 
             txtPercent1.Text = percent1;
             txtPercent2.Text = percent2;
+
+            btnExportExcel.Enabled = false;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            btnExportExcel.Enabled = false;
         }
 
         private void bgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)

@@ -42,6 +42,7 @@ namespace coopsys
         private void frmReportOnScheduleOfShareCapital_Load(object sender, EventArgs e)
         {
             cboYear.SelectedIndex = 0;
+            btnExportExcel.Enabled = false;
         }
 
         private void btnGenerateReport_Click(object sender, EventArgs e)
