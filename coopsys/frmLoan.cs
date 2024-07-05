@@ -19,12 +19,9 @@ namespace coopsys
     public partial class frmLoan : MetroFramework.Forms.MetroForm
     {
         MySqlConnection conn;
-        DataTable dt = new DataTable();
-        DataTable totalShare = new DataTable();
         DataCollection dc = new DataCollection();
-        DataRelation relation;
         frmMain main;
-        private int memberID, day, month, year, loanID;
+        private int memberID, loanID;
         private double penaltyAmt, balance, addFee1, addFee2;
         private string duedate;
 
@@ -66,7 +63,6 @@ namespace coopsys
             memberID = _memberID;
             cboLoans.SelectedIndex = 1;
             LoadLoanList(cboLoans.SelectedIndex, memberID);
-            txtInterest.Text = 1.ToString();
 
             lblLoanType.Text = "( " + cboLoans.Text + " )";
         }
@@ -209,11 +205,9 @@ namespace coopsys
             {
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
             }
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            txtInterest.Text = dc.fnReturnStringValue("SELECT loan_member_rate AS 'loanRate' FROM coop.defaults;", "loanRate", conn);
+            
         }
 
 

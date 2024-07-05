@@ -18,7 +18,7 @@ namespace coopsys
         System.Data.DataTable dt = new System.Data.DataTable();
         DataCollection dc = new DataCollection();
         MySqlConnection conn;
-        string query;
+        string query, defaultInterest;
         bool retry = true;
         public int year;
 
@@ -43,8 +43,11 @@ namespace coopsys
 
         private void frmReportInterestOnCapitalShare_Load(object sender, EventArgs e)
         {
+            //Set Default Interest Rate and format to remove trailing zeroes
+            defaultInterest = decimal.Parse(dc.fnReturnStringValue("SELECT rep_interest_capital_share AS 'interestCS' FROM coop.defaults;", "interestCS", conn)).ToString("G29");
+
             btnExportExcel.Enabled = false;
-            txtRate.Text = "0.11916";
+            txtRate.Text = defaultInterest;
             foreach (DataGridViewRow row in grdReportInterestOnShareCapital.Rows)
             {
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
@@ -56,7 +59,7 @@ namespace coopsys
             grdReportInterestOnShareCapital.DataSource = null;
             btnExportExcel.Enabled = false;
             cboYear.SelectedIndex = 0;
-            txtRate.Text = "0.11916";
+            txtRate.Text = defaultInterest;
         }
 
         private void btnGenerateReport_Click(object sender, EventArgs e)

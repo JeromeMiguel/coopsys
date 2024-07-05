@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using calypso;
 using calypso.DataAccess;
+using Google.Protobuf.WellKnownTypes;
 using MetroFramework.Controls;
 using MySql.Data;
 using MySql.Data.MySqlClient;
@@ -65,7 +66,8 @@ namespace coopsys
 
         private void frmPenalty_Load(object sender, EventArgs e)
         {
-            txtPenalty.Text = penaltyAmt.ToString();
+            txtPenalty.Text = penaltyAmt == 0 ? 
+               double.Parse(dc.fnReturnStringValue("SELECT loan_penalty AS 'loanPenalty' FROM coop.defaults;", "loanPenalty", conn)).ToString("G29") : penaltyAmt.ToString();
         }
 
         private void txtPenalty_KeyPress(object sender, KeyPressEventArgs e)

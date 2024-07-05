@@ -537,7 +537,6 @@
             this.label1.Size = new System.Drawing.Size(20, 19);
             this.label1.TabIndex = 28;
             this.label1.Text = "%";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtInterest
             // 

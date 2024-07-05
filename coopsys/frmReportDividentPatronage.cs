@@ -15,8 +15,8 @@ namespace coopsys
         System.Data.DataTable dt = new System.Data.DataTable();
         DataCollection dc = new DataCollection();
         MySqlConnection conn;
-        public double defaultDividentPercentage = 0.10, dividentPercentage;
-        public string query, path;
+        public double  dividentPercentage;
+        public string query, path, defaultDividentPercentage;
         bool retry = true;
         public string year;
 
@@ -41,7 +41,9 @@ namespace coopsys
 
         private void frmReportDividentPatronage_Load(object sender, EventArgs e)
         {
-            txtDivident.Text = defaultDividentPercentage.ToString();
+            //Set default dividend percentage and format to remove trailing zeroes
+            defaultDividentPercentage = decimal.Parse(dc.fnReturnStringValue("SELECT rep_dividend_rate AS 'divRate' FROM coop.defaults;", "divRate", conn)).ToString("G29");
+            txtDivident.Text = defaultDividentPercentage;
             btnExportExcel.Enabled = false;
         }
 
@@ -110,7 +112,7 @@ namespace coopsys
         private void btnReset_Click(object sender, EventArgs e)
         {
             grdReportDividentPatronage.DataSource = "";
-            txtDivident.Text = defaultDividentPercentage.ToString();
+            txtDivident.Text = defaultDividentPercentage;
             btnExportExcel.Enabled = false;
             cboYear.SelectedIndex = 0;
         }

@@ -31,7 +31,7 @@ namespace coopsys
         DataCollection dc = new DataCollection();
         DataGridTableStyle tableStyle = new DataGridTableStyle();
         bool retry = true;
-        public string year;
+        public string year, percent1, percent2;
 
         System.Data.DataTable dtPatronage = new System.Data.DataTable();
         System.Data.DataTable dtDivident = new System.Data.DataTable();
@@ -284,6 +284,16 @@ namespace coopsys
             wBook.CalculateMode = XLCalculateMode.Auto;
 
             wBook.SaveAs(saveFileDialog1.FileName);
+        }
+
+        private void frmFinalReport_Load(object sender, EventArgs e)
+        {
+            // Set default values from defaults table
+            percent1 = dc.fnReturnStringValue("SELECT rep_final_1 AS 'f1' FROM coop.defaults;", "f1", conn);
+            percent2 = dc.fnReturnStringValue("SELECT rep_final_2 AS 'f2' FROM coop.defaults;", "f2", conn);
+
+            txtPercent1.Text = percent1;
+            txtPercent2.Text = percent2;
         }
 
         private void bgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
