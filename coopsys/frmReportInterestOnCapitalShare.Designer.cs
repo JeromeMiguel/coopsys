@@ -55,16 +55,15 @@
             // 
             // btnReset
             // 
-            this.btnReset.BackColor = System.Drawing.Color.Transparent;
-            this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            this.btnReset.FlatAppearance.BorderSize = 2;
-            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
-            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
+            this.btnReset.BackColor = System.Drawing.Color.DarkGray;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.Location = new System.Drawing.Point(705, 98);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(100, 38);
             this.btnReset.TabIndex = 50;
@@ -107,7 +106,7 @@
             this.btnGenerateReport.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
             this.btnGenerateReport.Location = new System.Drawing.Point(467, 100);
-            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(231, 38);
             this.btnGenerateReport.TabIndex = 46;
@@ -173,7 +172,7 @@
             this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
             this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExportExcel.Location = new System.Drawing.Point(599, 607);
-            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(205, 48);
             this.btnExportExcel.TabIndex = 47;
@@ -197,10 +196,10 @@
             // 
             // 
             this.txtRate.CustomButton.Image = null;
-            this.txtRate.CustomButton.Location = new System.Drawing.Point(103, 2);
-            this.txtRate.CustomButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRate.CustomButton.Location = new System.Drawing.Point(77, 2);
+            this.txtRate.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtRate.CustomButton.Name = "";
-            this.txtRate.CustomButton.Size = new System.Drawing.Size(39, 36);
+            this.txtRate.CustomButton.Size = new System.Drawing.Size(29, 29);
             this.txtRate.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtRate.CustomButton.TabIndex = 1;
             this.txtRate.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -209,7 +208,7 @@
             this.txtRate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtRate.Lines = new string[0];
             this.txtRate.Location = new System.Drawing.Point(85, 103);
-            this.txtRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRate.Margin = new System.Windows.Forms.Padding(4);
             this.txtRate.MaxLength = 10;
             this.txtRate.Name = "txtRate";
             this.txtRate.PasswordChar = '\0';
@@ -288,7 +287,7 @@
             // 
             this.cboxOpenFile.AutoSize = true;
             this.cboxOpenFile.Location = new System.Drawing.Point(423, 622);
-            this.cboxOpenFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboxOpenFile.Margin = new System.Windows.Forms.Padding(4);
             this.cboxOpenFile.Name = "cboxOpenFile";
             this.cboxOpenFile.Size = new System.Drawing.Size(140, 20);
             this.cboxOpenFile.TabIndex = 54;

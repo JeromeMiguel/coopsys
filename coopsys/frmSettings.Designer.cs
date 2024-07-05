@@ -638,7 +638,7 @@
             this.metroLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
             this.metroLabel16.Location = new System.Drawing.Point(35, 28);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(348, 21);
+            this.metroLabel16.Size = new System.Drawing.Size(278, 17);
             this.metroLabel16.TabIndex = 0;
             this.metroLabel16.Text = "Create an SQL Backup the entire system\'s data";
             this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
