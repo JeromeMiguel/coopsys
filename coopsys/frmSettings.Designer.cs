@@ -150,7 +150,7 @@
             this.txtMemberLoanRate.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtMemberLoanRate.Lines = new string[0];
             this.txtMemberLoanRate.Location = new System.Drawing.Point(38, 76);
-            this.txtMemberLoanRate.MaxLength = 3;
+            this.txtMemberLoanRate.MaxLength = 6;
             this.txtMemberLoanRate.Multiline = true;
             this.txtMemberLoanRate.Name = "txtMemberLoanRate";
             this.txtMemberLoanRate.PasswordChar = '\0';
@@ -275,7 +275,7 @@
             this.txtFinalPercentage2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtFinalPercentage2.Lines = new string[0];
             this.txtFinalPercentage2.Location = new System.Drawing.Point(381, 151);
-            this.txtFinalPercentage2.MaxLength = 3;
+            this.txtFinalPercentage2.MaxLength = 6;
             this.txtFinalPercentage2.Multiline = true;
             this.txtFinalPercentage2.Name = "txtFinalPercentage2";
             this.txtFinalPercentage2.PasswordChar = '\0';
@@ -311,7 +311,7 @@
             this.txtFinalPercentage1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtFinalPercentage1.Lines = new string[0];
             this.txtFinalPercentage1.Location = new System.Drawing.Point(38, 151);
-            this.txtFinalPercentage1.MaxLength = 3;
+            this.txtFinalPercentage1.MaxLength = 6;
             this.txtFinalPercentage1.Multiline = true;
             this.txtFinalPercentage1.Name = "txtFinalPercentage1";
             this.txtFinalPercentage1.PasswordChar = '\0';

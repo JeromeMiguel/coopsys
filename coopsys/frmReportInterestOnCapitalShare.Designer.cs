@@ -105,7 +105,7 @@
             this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateReport.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateReport.Location = new System.Drawing.Point(467, 100);
+            this.btnGenerateReport.Location = new System.Drawing.Point(467, 98);
             this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerateReport.Name = "btnGenerateReport";
             this.btnGenerateReport.Size = new System.Drawing.Size(231, 38);
@@ -209,7 +209,7 @@
             this.txtRate.Lines = new string[0];
             this.txtRate.Location = new System.Drawing.Point(85, 103);
             this.txtRate.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRate.MaxLength = 10;
+            this.txtRate.MaxLength = 6;
             this.txtRate.Name = "txtRate";
             this.txtRate.PasswordChar = '\0';
             this.txtRate.ScrollBars = System.Windows.Forms.ScrollBars.None;
