@@ -128,15 +128,6 @@ namespace coopsys
             btnCancel.Visible = true;
         }
 
-        private void percent_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //Allow whole number only
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void decimal_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -144,7 +135,6 @@ namespace coopsys
                 e.Handled = true;
             }
 
-            // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as MetroTextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;

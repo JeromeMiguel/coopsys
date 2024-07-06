@@ -21,6 +21,7 @@ using DocumentFormat.OpenXml.Bibliography;
 using System.Threading;
 using DocumentFormat.OpenXml.Vml.Office;
 using System.Diagnostics;
+using MetroFramework.Controls;
 
 namespace coopsys
 {
@@ -302,6 +303,32 @@ namespace coopsys
         private void btnReset_Click(object sender, EventArgs e)
         {
             btnExportExcel.Enabled = false;
+        }
+
+        private void txtPercent1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPercent2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
         }
 
         private void bgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)

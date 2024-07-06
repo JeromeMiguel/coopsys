@@ -166,7 +166,7 @@
             this.txtMemberLoanRate.UseSelectable = true;
             this.txtMemberLoanRate.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMemberLoanRate.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtMemberLoanRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.percent_KeyPress);
+            this.txtMemberLoanRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
             // 
             // metroLabel4
             // 
@@ -291,7 +291,7 @@
             this.txtFinalPercentage2.UseSelectable = true;
             this.txtFinalPercentage2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFinalPercentage2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtFinalPercentage2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.percent_KeyPress);
+            this.txtFinalPercentage2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
             // 
             // txtFinalPercentage1
             // 
@@ -327,7 +327,7 @@
             this.txtFinalPercentage1.UseSelectable = true;
             this.txtFinalPercentage1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFinalPercentage1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtFinalPercentage1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.percent_KeyPress);
+            this.txtFinalPercentage1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
             // 
             // txtInterestCSRate
             // 
