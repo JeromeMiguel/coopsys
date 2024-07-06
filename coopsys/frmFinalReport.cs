@@ -291,8 +291,8 @@ namespace coopsys
         private void frmFinalReport_Load(object sender, EventArgs e)
         {
             // Set default values from defaults table
-            percent1 = dc.fnReturnStringValue("SELECT rep_final_1 AS 'f1' FROM coop.defaults;", "f1", conn);
-            percent2 = dc.fnReturnStringValue("SELECT rep_final_2 AS 'f2' FROM coop.defaults;", "f2", conn);
+            percent1 = decimal.Parse(dc.fnReturnStringValue("SELECT rep_final_1 AS 'f1' FROM coop.defaults;", "f1", conn)).ToString("G29");
+            percent2 = decimal.Parse(dc.fnReturnStringValue("SELECT rep_final_2 AS 'f2' FROM coop.defaults;", "f2", conn)).ToString("G29");
 
             txtPercent1.Text = percent1;
             txtPercent2.Text = percent2;

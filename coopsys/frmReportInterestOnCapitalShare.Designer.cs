@@ -209,7 +209,7 @@
             this.txtRate.Lines = new string[0];
             this.txtRate.Location = new System.Drawing.Point(85, 103);
             this.txtRate.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRate.MaxLength = 6;
+            this.txtRate.MaxLength = 10;
             this.txtRate.Name = "txtRate";
             this.txtRate.PasswordChar = '\0';
             this.txtRate.ScrollBars = System.Windows.Forms.ScrollBars.None;

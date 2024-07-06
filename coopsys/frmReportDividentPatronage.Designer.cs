@@ -49,7 +49,6 @@
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cboxOpenFile = new System.Windows.Forms.CheckBox();
-            this.lblPercent1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdReportDividentPatronage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -296,22 +295,11 @@
             this.cboxOpenFile.Text = "Open file on export";
             this.cboxOpenFile.UseVisualStyleBackColor = true;
             // 
-            // lblPercent1
-            // 
-            this.lblPercent1.AutoSize = true;
-            this.lblPercent1.BackColor = System.Drawing.Color.Transparent;
-            this.lblPercent1.Location = new System.Drawing.Point(210, 104);
-            this.lblPercent1.Name = "lblPercent1";
-            this.lblPercent1.Size = new System.Drawing.Size(19, 16);
-            this.lblPercent1.TabIndex = 60;
-            this.lblPercent1.Text = "%";
-            // 
             // frmReportDividentPatronage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1464, 674);
-            this.Controls.Add(this.lblPercent1);
             this.Controls.Add(this.cboxOpenFile);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnReset);
@@ -358,6 +346,5 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.CheckBox cboxOpenFile;
-        private System.Windows.Forms.Label lblPercent1;
     }
 }
