@@ -558,7 +558,7 @@
             this.txtInterest.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtInterest.Lines = new string[0];
             this.txtInterest.Location = new System.Drawing.Point(166, 134);
-            this.txtInterest.MaxLength = 32767;
+            this.txtInterest.MaxLength = 6;
             this.txtInterest.Name = "txtInterest";
             this.txtInterest.PasswordChar = '\0';
             this.txtInterest.PromptText = "Enter Rate";

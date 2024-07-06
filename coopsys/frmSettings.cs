@@ -145,12 +145,12 @@ namespace coopsys
         {
             dt = dc.fnDataTableCollection("SELECT * FROM coop.defaults;", conn);
 
-            txtMemberLoanRate.Text = dt.Rows[0][4].ToString();
+            txtMemberLoanRate.Text = decimal.Parse(dt.Rows[0][4].ToString()).ToString("G29");
             txtLoanPenalty.Text = decimal.Parse(dt.Rows[0][5].ToString()).ToString("G29");
             txtDvidendRate.Text = decimal.Parse(dt.Rows[0][6].ToString()).ToString("G29");
             txtInterestCSRate.Text = decimal.Parse(dt.Rows[0][7].ToString()).ToString("G29");
-            txtFinalPercentage1.Text = dt.Rows[0][8].ToString();
-            txtFinalPercentage2.Text = dt.Rows[0][9].ToString();
+            txtFinalPercentage1.Text = decimal.Parse(dt.Rows[0][8].ToString()).ToString("G29");
+            txtFinalPercentage2.Text = decimal.Parse(dt.Rows[0][9].ToString()).ToString("G29");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
