@@ -1,5 +1,6 @@
 ﻿using calypso.DataAccess;
 using ClosedXML.Excel;
+using MetroFramework.Controls;
 using MySql.Data.MySqlClient;
 using System;
 using System.ComponentModel;
@@ -103,7 +104,12 @@ namespace coopsys
 
         private void txtDivident_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == '.' && (sender as MetroTextBox).Text.IndexOf('.') > -1)
             {
                 e.Handled = true;
             }
