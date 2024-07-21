@@ -50,6 +50,13 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtDay4 = new MetroFramework.Controls.MetroTextBox();
+            this.btnEditDay4 = new System.Windows.Forms.Button();
+            this.txtDay3 = new MetroFramework.Controls.MetroTextBox();
+            this.btnEditDay3 = new System.Windows.Forms.Button();
+            this.txtDay2 = new MetroFramework.Controls.MetroTextBox();
+            this.btnEditDay2 = new System.Windows.Forms.Button();
+            this.txtDay1 = new MetroFramework.Controls.MetroTextBox();
             this.btnEditDay1 = new System.Windows.Forms.Button();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
@@ -64,13 +71,10 @@
             this.lblEditStatus = new MetroFramework.Controls.MetroLabel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.txtDay1 = new MetroFramework.Controls.MetroTextBox();
-            this.txtDay2 = new MetroFramework.Controls.MetroTextBox();
-            this.btnEditDay2 = new System.Windows.Forms.Button();
-            this.txtDay3 = new MetroFramework.Controls.MetroTextBox();
-            this.btnEditDay3 = new System.Windows.Forms.Button();
-            this.txtDay4 = new MetroFramework.Controls.MetroTextBox();
-            this.btnEditDay4 = new System.Windows.Forms.Button();
+            this.btnClearDay1 = new System.Windows.Forms.Button();
+            this.btnClearDay3 = new System.Windows.Forms.Button();
+            this.btnClearDay2 = new System.Windows.Forms.Button();
+            this.btnClearDay4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -473,6 +477,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnClearDay4);
+            this.groupBox3.Controls.Add(this.btnClearDay2);
+            this.groupBox3.Controls.Add(this.btnClearDay3);
+            this.groupBox3.Controls.Add(this.btnClearDay1);
             this.groupBox3.Controls.Add(this.txtDay4);
             this.groupBox3.Controls.Add(this.btnEditDay4);
             this.groupBox3.Controls.Add(this.txtDay3);
@@ -492,6 +500,200 @@
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             // 
+            // txtDay4
+            // 
+            this.txtDay4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            // 
+            // 
+            // 
+            this.txtDay4.CustomButton.Image = null;
+            this.txtDay4.CustomButton.Location = new System.Drawing.Point(96, 2);
+            this.txtDay4.CustomButton.Name = "";
+            this.txtDay4.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtDay4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDay4.CustomButton.TabIndex = 1;
+            this.txtDay4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDay4.CustomButton.UseSelectable = true;
+            this.txtDay4.CustomButton.Visible = false;
+            this.txtDay4.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtDay4.Lines = new string[0];
+            this.txtDay4.Location = new System.Drawing.Point(382, 157);
+            this.txtDay4.MaxLength = 10;
+            this.txtDay4.Multiline = true;
+            this.txtDay4.Name = "txtDay4";
+            this.txtDay4.PasswordChar = '\0';
+            this.txtDay4.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDay4.SelectedText = "";
+            this.txtDay4.SelectionLength = 0;
+            this.txtDay4.SelectionStart = 0;
+            this.txtDay4.ShortcutsEnabled = true;
+            this.txtDay4.Size = new System.Drawing.Size(124, 30);
+            this.txtDay4.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtDay4.TabIndex = 56;
+            this.txtDay4.UseCustomBackColor = true;
+            this.txtDay4.UseSelectable = true;
+            this.txtDay4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDay4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnEditDay4
+            // 
+            this.btnEditDay4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.btnEditDay4.FlatAppearance.BorderSize = 0;
+            this.btnEditDay4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
+            this.btnEditDay4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
+            this.btnEditDay4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditDay4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditDay4.ForeColor = System.Drawing.Color.White;
+            this.btnEditDay4.Location = new System.Drawing.Point(581, 157);
+            this.btnEditDay4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditDay4.Name = "btnEditDay4";
+            this.btnEditDay4.Size = new System.Drawing.Size(69, 30);
+            this.btnEditDay4.TabIndex = 55;
+            this.btnEditDay4.Text = "Edit";
+            this.btnEditDay4.UseVisualStyleBackColor = false;
+            this.btnEditDay4.Click += new System.EventHandler(this.btnEditDay4_Click);
+            // 
+            // txtDay3
+            // 
+            this.txtDay3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            // 
+            // 
+            // 
+            this.txtDay3.CustomButton.Image = null;
+            this.txtDay3.CustomButton.Location = new System.Drawing.Point(98, 2);
+            this.txtDay3.CustomButton.Name = "";
+            this.txtDay3.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtDay3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDay3.CustomButton.TabIndex = 1;
+            this.txtDay3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDay3.CustomButton.UseSelectable = true;
+            this.txtDay3.CustomButton.Visible = false;
+            this.txtDay3.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtDay3.Lines = new string[0];
+            this.txtDay3.Location = new System.Drawing.Point(36, 157);
+            this.txtDay3.MaxLength = 10;
+            this.txtDay3.Multiline = true;
+            this.txtDay3.Name = "txtDay3";
+            this.txtDay3.PasswordChar = '\0';
+            this.txtDay3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDay3.SelectedText = "";
+            this.txtDay3.SelectionLength = 0;
+            this.txtDay3.SelectionStart = 0;
+            this.txtDay3.ShortcutsEnabled = true;
+            this.txtDay3.Size = new System.Drawing.Size(126, 30);
+            this.txtDay3.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtDay3.TabIndex = 54;
+            this.txtDay3.UseCustomBackColor = true;
+            this.txtDay3.UseSelectable = true;
+            this.txtDay3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDay3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnEditDay3
+            // 
+            this.btnEditDay3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.btnEditDay3.FlatAppearance.BorderSize = 0;
+            this.btnEditDay3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
+            this.btnEditDay3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
+            this.btnEditDay3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditDay3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditDay3.ForeColor = System.Drawing.Color.White;
+            this.btnEditDay3.Location = new System.Drawing.Point(235, 157);
+            this.btnEditDay3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditDay3.Name = "btnEditDay3";
+            this.btnEditDay3.Size = new System.Drawing.Size(69, 30);
+            this.btnEditDay3.TabIndex = 53;
+            this.btnEditDay3.Text = "Edit";
+            this.btnEditDay3.UseVisualStyleBackColor = false;
+            this.btnEditDay3.Click += new System.EventHandler(this.btnEditDay3_Click);
+            // 
+            // txtDay2
+            // 
+            this.txtDay2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            // 
+            // 
+            // 
+            this.txtDay2.CustomButton.Image = null;
+            this.txtDay2.CustomButton.Location = new System.Drawing.Point(96, 2);
+            this.txtDay2.CustomButton.Name = "";
+            this.txtDay2.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtDay2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDay2.CustomButton.TabIndex = 1;
+            this.txtDay2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDay2.CustomButton.UseSelectable = true;
+            this.txtDay2.CustomButton.Visible = false;
+            this.txtDay2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtDay2.Lines = new string[0];
+            this.txtDay2.Location = new System.Drawing.Point(382, 83);
+            this.txtDay2.MaxLength = 10;
+            this.txtDay2.Multiline = true;
+            this.txtDay2.Name = "txtDay2";
+            this.txtDay2.PasswordChar = '\0';
+            this.txtDay2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDay2.SelectedText = "";
+            this.txtDay2.SelectionLength = 0;
+            this.txtDay2.SelectionStart = 0;
+            this.txtDay2.ShortcutsEnabled = true;
+            this.txtDay2.Size = new System.Drawing.Size(124, 30);
+            this.txtDay2.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtDay2.TabIndex = 52;
+            this.txtDay2.UseCustomBackColor = true;
+            this.txtDay2.UseSelectable = true;
+            this.txtDay2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDay2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnEditDay2
+            // 
+            this.btnEditDay2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.btnEditDay2.FlatAppearance.BorderSize = 0;
+            this.btnEditDay2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
+            this.btnEditDay2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
+            this.btnEditDay2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditDay2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditDay2.ForeColor = System.Drawing.Color.White;
+            this.btnEditDay2.Location = new System.Drawing.Point(581, 83);
+            this.btnEditDay2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditDay2.Name = "btnEditDay2";
+            this.btnEditDay2.Size = new System.Drawing.Size(69, 30);
+            this.btnEditDay2.TabIndex = 51;
+            this.btnEditDay2.Text = "Edit";
+            this.btnEditDay2.UseVisualStyleBackColor = false;
+            this.btnEditDay2.Click += new System.EventHandler(this.btnEditDay2_Click);
+            // 
+            // txtDay1
+            // 
+            this.txtDay1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            // 
+            // 
+            // 
+            this.txtDay1.CustomButton.Image = null;
+            this.txtDay1.CustomButton.Location = new System.Drawing.Point(96, 2);
+            this.txtDay1.CustomButton.Name = "";
+            this.txtDay1.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtDay1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDay1.CustomButton.TabIndex = 1;
+            this.txtDay1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDay1.CustomButton.UseSelectable = true;
+            this.txtDay1.CustomButton.Visible = false;
+            this.txtDay1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtDay1.Lines = new string[0];
+            this.txtDay1.Location = new System.Drawing.Point(38, 83);
+            this.txtDay1.MaxLength = 10;
+            this.txtDay1.Multiline = true;
+            this.txtDay1.Name = "txtDay1";
+            this.txtDay1.PasswordChar = '\0';
+            this.txtDay1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDay1.SelectedText = "";
+            this.txtDay1.SelectionLength = 0;
+            this.txtDay1.SelectionStart = 0;
+            this.txtDay1.ShortcutsEnabled = true;
+            this.txtDay1.Size = new System.Drawing.Size(124, 30);
+            this.txtDay1.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtDay1.TabIndex = 50;
+            this.txtDay1.UseCustomBackColor = true;
+            this.txtDay1.UseSelectable = true;
+            this.txtDay1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDay1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // btnEditDay1
             // 
             this.btnEditDay1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
@@ -508,6 +710,7 @@
             this.btnEditDay1.TabIndex = 49;
             this.btnEditDay1.Text = "Edit";
             this.btnEditDay1.UseVisualStyleBackColor = false;
+            this.btnEditDay1.Click += new System.EventHandler(this.btnEditDay1_Click);
             // 
             // metroLabel12
             // 
@@ -693,196 +896,77 @@
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // txtDay1
+            // btnClearDay1
             // 
-            this.txtDay1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClearDay1.BackColor = System.Drawing.Color.DarkGray;
+            this.btnClearDay1.FlatAppearance.BorderSize = 0;
+            this.btnClearDay1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnClearDay1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnClearDay1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDay1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearDay1.ForeColor = System.Drawing.Color.White;
+            this.btnClearDay1.Location = new System.Drawing.Point(168, 83);
+            this.btnClearDay1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClearDay1.Name = "btnClearDay1";
+            this.btnClearDay1.Size = new System.Drawing.Size(63, 30);
+            this.btnClearDay1.TabIndex = 50;
+            this.btnClearDay1.Text = "Clear";
+            this.btnClearDay1.UseVisualStyleBackColor = false;
+            this.btnClearDay1.Click += new System.EventHandler(this.btnClearDay1_Click);
             // 
+            // btnClearDay3
             // 
+            this.btnClearDay3.BackColor = System.Drawing.Color.DarkGray;
+            this.btnClearDay3.FlatAppearance.BorderSize = 0;
+            this.btnClearDay3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnClearDay3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnClearDay3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDay3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearDay3.ForeColor = System.Drawing.Color.White;
+            this.btnClearDay3.Location = new System.Drawing.Point(168, 157);
+            this.btnClearDay3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClearDay3.Name = "btnClearDay3";
+            this.btnClearDay3.Size = new System.Drawing.Size(63, 30);
+            this.btnClearDay3.TabIndex = 57;
+            this.btnClearDay3.Text = "Clear";
+            this.btnClearDay3.UseVisualStyleBackColor = false;
+            this.btnClearDay3.Click += new System.EventHandler(this.btnClearDay3_Click);
             // 
-            this.txtDay1.CustomButton.Image = null;
-            this.txtDay1.CustomButton.Location = new System.Drawing.Point(158, 2);
-            this.txtDay1.CustomButton.Name = "";
-            this.txtDay1.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtDay1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDay1.CustomButton.TabIndex = 1;
-            this.txtDay1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDay1.CustomButton.UseSelectable = true;
-            this.txtDay1.CustomButton.Visible = false;
-            this.txtDay1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtDay1.Lines = new string[0];
-            this.txtDay1.Location = new System.Drawing.Point(38, 83);
-            this.txtDay1.MaxLength = 10;
-            this.txtDay1.Multiline = true;
-            this.txtDay1.Name = "txtDay1";
-            this.txtDay1.PasswordChar = '\0';
-            this.txtDay1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDay1.SelectedText = "";
-            this.txtDay1.SelectionLength = 0;
-            this.txtDay1.SelectionStart = 0;
-            this.txtDay1.ShortcutsEnabled = true;
-            this.txtDay1.Size = new System.Drawing.Size(186, 30);
-            this.txtDay1.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtDay1.TabIndex = 50;
-            this.txtDay1.UseCustomBackColor = true;
-            this.txtDay1.UseSelectable = true;
-            this.txtDay1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDay1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // btnClearDay2
             // 
-            // txtDay2
+            this.btnClearDay2.BackColor = System.Drawing.Color.DarkGray;
+            this.btnClearDay2.FlatAppearance.BorderSize = 0;
+            this.btnClearDay2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnClearDay2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnClearDay2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDay2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearDay2.ForeColor = System.Drawing.Color.White;
+            this.btnClearDay2.Location = new System.Drawing.Point(512, 83);
+            this.btnClearDay2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClearDay2.Name = "btnClearDay2";
+            this.btnClearDay2.Size = new System.Drawing.Size(63, 30);
+            this.btnClearDay2.TabIndex = 58;
+            this.btnClearDay2.Text = "Clear";
+            this.btnClearDay2.UseVisualStyleBackColor = false;
+            this.btnClearDay2.Click += new System.EventHandler(this.btnClearDay2_Click);
             // 
-            this.txtDay2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            // btnClearDay4
             // 
-            // 
-            // 
-            this.txtDay2.CustomButton.Image = null;
-            this.txtDay2.CustomButton.Location = new System.Drawing.Point(158, 2);
-            this.txtDay2.CustomButton.Name = "";
-            this.txtDay2.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtDay2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDay2.CustomButton.TabIndex = 1;
-            this.txtDay2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDay2.CustomButton.UseSelectable = true;
-            this.txtDay2.CustomButton.Visible = false;
-            this.txtDay2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtDay2.Lines = new string[0];
-            this.txtDay2.Location = new System.Drawing.Point(382, 83);
-            this.txtDay2.MaxLength = 10;
-            this.txtDay2.Multiline = true;
-            this.txtDay2.Name = "txtDay2";
-            this.txtDay2.PasswordChar = '\0';
-            this.txtDay2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDay2.SelectedText = "";
-            this.txtDay2.SelectionLength = 0;
-            this.txtDay2.SelectionStart = 0;
-            this.txtDay2.ShortcutsEnabled = true;
-            this.txtDay2.Size = new System.Drawing.Size(186, 30);
-            this.txtDay2.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtDay2.TabIndex = 52;
-            this.txtDay2.UseCustomBackColor = true;
-            this.txtDay2.UseSelectable = true;
-            this.txtDay2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDay2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btnEditDay2
-            // 
-            this.btnEditDay2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            this.btnEditDay2.FlatAppearance.BorderSize = 0;
-            this.btnEditDay2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
-            this.btnEditDay2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
-            this.btnEditDay2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditDay2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDay2.ForeColor = System.Drawing.Color.White;
-            this.btnEditDay2.Location = new System.Drawing.Point(581, 83);
-            this.btnEditDay2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEditDay2.Name = "btnEditDay2";
-            this.btnEditDay2.Size = new System.Drawing.Size(69, 30);
-            this.btnEditDay2.TabIndex = 51;
-            this.btnEditDay2.Text = "Edit";
-            this.btnEditDay2.UseVisualStyleBackColor = false;
-            // 
-            // txtDay3
-            // 
-            this.txtDay3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            // 
-            // 
-            // 
-            this.txtDay3.CustomButton.Image = null;
-            this.txtDay3.CustomButton.Location = new System.Drawing.Point(158, 2);
-            this.txtDay3.CustomButton.Name = "";
-            this.txtDay3.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtDay3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDay3.CustomButton.TabIndex = 1;
-            this.txtDay3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDay3.CustomButton.UseSelectable = true;
-            this.txtDay3.CustomButton.Visible = false;
-            this.txtDay3.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtDay3.Lines = new string[0];
-            this.txtDay3.Location = new System.Drawing.Point(36, 157);
-            this.txtDay3.MaxLength = 10;
-            this.txtDay3.Multiline = true;
-            this.txtDay3.Name = "txtDay3";
-            this.txtDay3.PasswordChar = '\0';
-            this.txtDay3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDay3.SelectedText = "";
-            this.txtDay3.SelectionLength = 0;
-            this.txtDay3.SelectionStart = 0;
-            this.txtDay3.ShortcutsEnabled = true;
-            this.txtDay3.Size = new System.Drawing.Size(186, 30);
-            this.txtDay3.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtDay3.TabIndex = 54;
-            this.txtDay3.UseCustomBackColor = true;
-            this.txtDay3.UseSelectable = true;
-            this.txtDay3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDay3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btnEditDay3
-            // 
-            this.btnEditDay3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            this.btnEditDay3.FlatAppearance.BorderSize = 0;
-            this.btnEditDay3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
-            this.btnEditDay3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
-            this.btnEditDay3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditDay3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDay3.ForeColor = System.Drawing.Color.White;
-            this.btnEditDay3.Location = new System.Drawing.Point(235, 157);
-            this.btnEditDay3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEditDay3.Name = "btnEditDay3";
-            this.btnEditDay3.Size = new System.Drawing.Size(69, 30);
-            this.btnEditDay3.TabIndex = 53;
-            this.btnEditDay3.Text = "Edit";
-            this.btnEditDay3.UseVisualStyleBackColor = false;
-            // 
-            // txtDay4
-            // 
-            this.txtDay4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            // 
-            // 
-            // 
-            this.txtDay4.CustomButton.Image = null;
-            this.txtDay4.CustomButton.Location = new System.Drawing.Point(158, 2);
-            this.txtDay4.CustomButton.Name = "";
-            this.txtDay4.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.txtDay4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDay4.CustomButton.TabIndex = 1;
-            this.txtDay4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDay4.CustomButton.UseSelectable = true;
-            this.txtDay4.CustomButton.Visible = false;
-            this.txtDay4.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtDay4.Lines = new string[0];
-            this.txtDay4.Location = new System.Drawing.Point(382, 157);
-            this.txtDay4.MaxLength = 10;
-            this.txtDay4.Multiline = true;
-            this.txtDay4.Name = "txtDay4";
-            this.txtDay4.PasswordChar = '\0';
-            this.txtDay4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDay4.SelectedText = "";
-            this.txtDay4.SelectionLength = 0;
-            this.txtDay4.SelectionStart = 0;
-            this.txtDay4.ShortcutsEnabled = true;
-            this.txtDay4.Size = new System.Drawing.Size(186, 30);
-            this.txtDay4.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtDay4.TabIndex = 56;
-            this.txtDay4.UseCustomBackColor = true;
-            this.txtDay4.UseSelectable = true;
-            this.txtDay4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDay4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // btnEditDay4
-            // 
-            this.btnEditDay4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            this.btnEditDay4.FlatAppearance.BorderSize = 0;
-            this.btnEditDay4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
-            this.btnEditDay4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
-            this.btnEditDay4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditDay4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDay4.ForeColor = System.Drawing.Color.White;
-            this.btnEditDay4.Location = new System.Drawing.Point(581, 157);
-            this.btnEditDay4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEditDay4.Name = "btnEditDay4";
-            this.btnEditDay4.Size = new System.Drawing.Size(69, 30);
-            this.btnEditDay4.TabIndex = 55;
-            this.btnEditDay4.Text = "Edit";
-            this.btnEditDay4.UseVisualStyleBackColor = false;
+            this.btnClearDay4.BackColor = System.Drawing.Color.DarkGray;
+            this.btnClearDay4.FlatAppearance.BorderSize = 0;
+            this.btnClearDay4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnClearDay4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnClearDay4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearDay4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearDay4.ForeColor = System.Drawing.Color.White;
+            this.btnClearDay4.Location = new System.Drawing.Point(512, 157);
+            this.btnClearDay4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClearDay4.Name = "btnClearDay4";
+            this.btnClearDay4.Size = new System.Drawing.Size(63, 30);
+            this.btnClearDay4.TabIndex = 59;
+            this.btnClearDay4.Text = "Clear";
+            this.btnClearDay4.UseVisualStyleBackColor = false;
+            this.btnClearDay4.Click += new System.EventHandler(this.btnClearDay4_Click);
             // 
             // frmSettings
             // 
@@ -965,5 +1049,9 @@
         private System.Windows.Forms.Button btnEditDay3;
         private MetroFramework.Controls.MetroTextBox txtDay4;
         private System.Windows.Forms.Button btnEditDay4;
+        private System.Windows.Forms.Button btnClearDay1;
+        private System.Windows.Forms.Button btnClearDay2;
+        private System.Windows.Forms.Button btnClearDay3;
+        private System.Windows.Forms.Button btnClearDay4;
     }
 }

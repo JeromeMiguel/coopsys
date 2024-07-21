@@ -20,7 +20,7 @@ namespace coopsys
         DataCollection dc = new DataCollection();
         MySqlConnection conn;
         DataTable dt = new DataTable();
-        string date1, date2, date3, date4;
+        public string date1, date2, date3, date4;
 
         public frmSettings(MySqlConnection _conn)
         {
@@ -55,11 +55,19 @@ namespace coopsys
 
             else
             {
+                string day1, day2, day3, day4;
+
+                day1 = txtDay1.Text == "" ? "NULL" : "'" + DateTime.Parse(txtDay1.Text).ToString("yyyy-MM-dd") + "'";
+                day2 = txtDay2.Text == "" ? "NULL" : "'" + DateTime.Parse(txtDay2.Text).ToString("yyyy-MM-dd") + "'";
+                day3 = txtDay3.Text == "" ? "NULL" : "'" + DateTime.Parse(txtDay3.Text).ToString("yyyy-MM-dd") + "'";
+                day4 = txtDay4.Text == "" ? "NULL" : "'" + DateTime.Parse(txtDay4.Text).ToString("yyyy-MM-dd") + "'";
+
                 // Update Database
                 // TODO: replace id = 1 with userID after login integration
                 dc.fnExecuteQuery("UPDATE `coop`.`defaults` SET `loan_member_rate` = "+txtMemberLoanRate.Text+", `loan_penalty` = "+txtLoanPenalty.Text+", " +
                     "`rep_dividend_rate` = "+txtDvidendRate.Text+", `rep_interest_capital_share` = "+txtInterestCSRate.Text+", `rep_final_1` = "+txtFinalPercentage1.Text+", " +
-                    "`rep_final_2` = "+txtFinalPercentage2.Text+", `save_reports` = NULL, `save_certificates` = NULL WHERE (`id` = 1);", conn);
+                    "`rep_final_2` = "+txtFinalPercentage2.Text+", `save_reports` = NULL, `save_certificates` = NULL, " + "`cut_date_1` = " +day1 +
+                    ", `cut_date_2` = " + day2+ ", `cut_date_3` = " + day3 + ", `cut_date_4` = " + day4 +" WHERE (`id` = 1);", conn);
 
                 loadDefaultData();
 
@@ -97,6 +105,10 @@ namespace coopsys
             btnEditDay2.Enabled = false;
             btnEditDay3.Enabled = false;
             btnEditDay4.Enabled = false;
+            btnClearDay1.Enabled = false;
+            btnClearDay2.Enabled = false;
+            btnClearDay3.Enabled = false;
+            btnClearDay4.Enabled = false;
             //txtSaveCertificates.Enabled = false;
             //txtSaveReports.Enabled = false;
 
@@ -104,16 +116,6 @@ namespace coopsys
 
             btnReset.Visible = false;
             btnCancel.Visible = false;
-
-            //Set Date Values
-            //try
-            //{
-            //    txtDate1.Value = DateTime.Parse(date1);
-            //    txtDate2.Value = DateTime.Parse(date2);
-            //    txtDate3.Value = DateTime.Parse(date3);
-            //    txtDate4.Value = DateTime.Parse(date4);
-            //}
-            //catch { }
 
         }
 
@@ -147,6 +149,10 @@ namespace coopsys
             btnEditDay2.Enabled = true;
             btnEditDay3.Enabled = true;
             btnEditDay4.Enabled = true;
+            btnClearDay1.Enabled = true;
+            btnClearDay2.Enabled = true;
+            btnClearDay3.Enabled = true;
+            btnClearDay4.Enabled = true;
             //txtSaveCertificates.Enabled = true;
             //txtSaveReports.Enabled = true;
 
@@ -168,6 +174,8 @@ namespace coopsys
                 e.Handled = true;
             }
         }
+
+
 
         private void loadDefaultData ()
         {
@@ -198,9 +206,61 @@ namespace coopsys
             loadDefaultData();
         }
 
+
         private void btnReset_Click(object sender, EventArgs e)
         {
              loadDefaultData ();
+        }
+
+        private void btnEditDay1_Click(object sender, EventArgs e)
+        {
+            openDateEditor("1", date1);
+        }
+
+        private void btnEditDay2_Click(object sender, EventArgs e)
+        {
+            openDateEditor("2", date2);
+        }
+
+        private void btnEditDay3_Click(object sender, EventArgs e)
+        {
+            openDateEditor("3", date3);
+        }
+
+        private void btnEditDay4_Click(object sender, EventArgs e)
+        {
+            openDateEditor("4", date4);
+        }
+
+        private void openDateEditor (string dateNo, string dateVal)
+        {
+            frmEditCutoffDate form = new frmEditCutoffDate(this, dateNo, dateVal);
+            form.ShowDialog();
+
+            txtDay1.Text = date1;
+            txtDay2.Text = date2;
+            txtDay3.Text = date3;
+            txtDay4.Text = date4;
+        }
+
+        private void btnClearDay1_Click(object sender, EventArgs e)
+        {
+            txtDay1.Text = "";
+        }
+
+        private void btnClearDay2_Click(object sender, EventArgs e)
+        {
+            txtDay2.Text = "";
+        }
+
+        private void btnClearDay3_Click(object sender, EventArgs e)
+        {
+            txtDay3.Text = "";
+        }
+
+        private void btnClearDay4_Click(object sender, EventArgs e)
+        {
+            txtDay4.Text = "";
         }
     }
 }

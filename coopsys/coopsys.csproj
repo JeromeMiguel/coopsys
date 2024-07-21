@@ -316,6 +316,12 @@
     <Compile Include="frmCollateral.Designer.cs">
       <DependentUpon>frmCollateral.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditCutoffDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditCutoffDate.Designer.cs">
+      <DependentUpon>frmEditCutoffDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFinalReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -491,6 +497,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDueForPayment.resx">
       <DependentUpon>frmDueForPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditCutoffDate.resx">
+      <DependentUpon>frmEditCutoffDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFinalReport.resx">
       <DependentUpon>frmFinalReport.cs</DependentUpon>
