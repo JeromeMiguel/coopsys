@@ -20,6 +20,7 @@ namespace coopsys
         DataCollection dc = new DataCollection();
         MySqlConnection conn;
         DataTable dt = new DataTable();
+        string date1, date2, date3, date4;
 
         public frmSettings(MySqlConnection _conn)
         {
@@ -35,8 +36,13 @@ namespace coopsys
 
         private void frmSettings_Load(object sender, EventArgs e)
         {
-            disabledForm();
             loadDefaultData();
+            disabledForm();
+
+            txtDay1.Enabled = false;
+            txtDay2.Enabled = false;
+            txtDay3.Enabled = false;
+            txtDay4.Enabled = false;
         }
 
         private void btnAction_Click(object sender, EventArgs e)
@@ -70,15 +76,14 @@ namespace coopsys
             txtInterestCSRate.BackColor = SystemColors.ButtonFace;
             txtLoanPenalty.BackColor = SystemColors.ButtonFace;
             txtMemberLoanRate.BackColor = SystemColors.ButtonFace;
-            txtSaveCertificates.BackColor = SystemColors.ButtonFace;
-            txtSaveReports.BackColor = SystemColors.ButtonFace;
+
 
             lblPercent1.BackColor = SystemColors.ButtonFace;
             lblPercent2.BackColor = SystemColors.ButtonFace;
             lblPercent3.BackColor = SystemColors.ButtonFace;
 
-            btnBrowseReports.Enabled = false;
-            btnBrowseCertificates.Enabled = false;
+            //btnBrowseReports.Enabled = false;
+            //btnBrowseCertificates.Enabled = false;
 
             lblEditStatus.Text = string.Empty;
 
@@ -88,11 +93,28 @@ namespace coopsys
             txtInterestCSRate.Enabled = false;
             txtLoanPenalty.Enabled = false;
             txtMemberLoanRate.Enabled = false;
-            txtSaveCertificates.Enabled = false;
-            txtSaveReports.Enabled = false;
+            btnEditDay1.Enabled = false;
+            btnEditDay2.Enabled = false;
+            btnEditDay3.Enabled = false;
+            btnEditDay4.Enabled = false;
+            //txtSaveCertificates.Enabled = false;
+            //txtSaveReports.Enabled = false;
+
+
 
             btnReset.Visible = false;
-            btnCancel.Visible = false;  
+            btnCancel.Visible = false;
+
+            //Set Date Values
+            //try
+            //{
+            //    txtDate1.Value = DateTime.Parse(date1);
+            //    txtDate2.Value = DateTime.Parse(date2);
+            //    txtDate3.Value = DateTime.Parse(date3);
+            //    txtDate4.Value = DateTime.Parse(date4);
+            //}
+            //catch { }
+
         }
 
         private void enabledForm ()
@@ -121,11 +143,17 @@ namespace coopsys
             txtInterestCSRate.Enabled = true;
             txtLoanPenalty.Enabled = true;
             txtMemberLoanRate.Enabled = true;
-            txtSaveCertificates.Enabled = true;
-            txtSaveReports.Enabled = true;
+            btnEditDay1.Enabled = true;
+            btnEditDay2.Enabled = true;
+            btnEditDay3.Enabled = true;
+            btnEditDay4.Enabled = true;
+            //txtSaveCertificates.Enabled = true;
+            //txtSaveReports.Enabled = true;
 
             btnReset.Visible = true;
             btnCancel.Visible = true;
+
+          
         }
 
         private void decimal_KeyPress(object sender, KeyPressEventArgs e)
@@ -151,6 +179,16 @@ namespace coopsys
             txtInterestCSRate.Text = decimal.Parse(dt.Rows[0][7].ToString()).ToString("G29");
             txtFinalPercentage1.Text = decimal.Parse(dt.Rows[0][8].ToString()).ToString("G29");
             txtFinalPercentage2.Text = decimal.Parse(dt.Rows[0][9].ToString()).ToString("G29");
+
+            date1 = dt.Rows[0][10].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][10].ToString()).ToString("MM/dd/yyyy");
+            date2 = dt.Rows[0][11].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][11].ToString()).ToString("MM/dd/yyyy");
+            date3 = dt.Rows[0][12].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][12].ToString()).ToString("MM/dd/yyyy");
+            date4 = dt.Rows[0][13].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][13].ToString()).ToString("MM/dd/yyyy");
+
+            txtDay1.Text = date1;
+            txtDay2.Text = date2;
+            txtDay3.Text = date3;
+            txtDay4.Text = date4;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
