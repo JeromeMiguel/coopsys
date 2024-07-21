@@ -105,10 +105,6 @@ namespace coopsys
             btnEditDay2.Enabled = false;
             btnEditDay3.Enabled = false;
             btnEditDay4.Enabled = false;
-            btnClearDay1.Enabled = false;
-            btnClearDay2.Enabled = false;
-            btnClearDay3.Enabled = false;
-            btnClearDay4.Enabled = false;
             //txtSaveCertificates.Enabled = false;
             //txtSaveReports.Enabled = false;
 
@@ -149,10 +145,6 @@ namespace coopsys
             btnEditDay2.Enabled = true;
             btnEditDay3.Enabled = true;
             btnEditDay4.Enabled = true;
-            btnClearDay1.Enabled = true;
-            btnClearDay2.Enabled = true;
-            btnClearDay3.Enabled = true;
-            btnClearDay4.Enabled = true;
             //txtSaveCertificates.Enabled = true;
             //txtSaveReports.Enabled = true;
 
@@ -241,26 +233,6 @@ namespace coopsys
             txtDay2.Text = date2;
             txtDay3.Text = date3;
             txtDay4.Text = date4;
-        }
-
-        private void btnClearDay1_Click(object sender, EventArgs e)
-        {
-            txtDay1.Text = "";
-        }
-
-        private void btnClearDay2_Click(object sender, EventArgs e)
-        {
-            txtDay2.Text = "";
-        }
-
-        private void btnClearDay3_Click(object sender, EventArgs e)
-        {
-            txtDay3.Text = "";
-        }
-
-        private void btnClearDay4_Click(object sender, EventArgs e)
-        {
-            txtDay4.Text = "";
         }
     }
 }

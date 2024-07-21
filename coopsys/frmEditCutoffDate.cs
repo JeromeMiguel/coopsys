@@ -56,5 +56,28 @@ namespace coopsys
         {
             this.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            
+            if (DateNo == "1")
+            {
+                Form.date1 = "";
+            }
+            else if (DateNo == "2")
+            {
+                Form.date2 = "";
+            }
+            else if (DateNo == "3")
+            {
+                Form.date3 = "";
+            }
+            else if (DateNo == "4")
+            {
+                Form.date4 = "";
+            }
+
+            this.Close();
+        }
     }
 }
