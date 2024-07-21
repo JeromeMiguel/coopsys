@@ -42,7 +42,7 @@
             this.lblDay.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblDay.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            this.lblDay.Location = new System.Drawing.Point(36, 84);
+            this.lblDay.Location = new System.Drawing.Point(31, 87);
             this.lblDay.Name = "lblDay";
             this.lblDay.Size = new System.Drawing.Size(80, 17);
             this.lblDay.TabIndex = 43;
@@ -53,7 +53,7 @@
             // 
             this.txtDay.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.txtDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtDay.Location = new System.Drawing.Point(39, 108);
+            this.txtDay.Location = new System.Drawing.Point(34, 111);
             this.txtDay.MinimumSize = new System.Drawing.Size(0, 30);
             this.txtDay.Name = "txtDay";
             this.txtDay.Size = new System.Drawing.Size(442, 30);
@@ -70,7 +70,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(133, 215);
+            this.btnCancel.Location = new System.Drawing.Point(128, 215);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(98, 40);
@@ -88,7 +88,7 @@
             this.btnSetDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetDate.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetDate.ForeColor = System.Drawing.Color.White;
-            this.btnSetDate.Location = new System.Drawing.Point(356, 215);
+            this.btnSetDate.Location = new System.Drawing.Point(351, 215);
             this.btnSetDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSetDate.Name = "btnSetDate";
             this.btnSetDate.Size = new System.Drawing.Size(125, 40);
@@ -103,7 +103,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
-            this.metroLabel1.Location = new System.Drawing.Point(39, 159);
+            this.metroLabel1.Location = new System.Drawing.Point(34, 162);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(314, 17);
             this.metroLabel1.TabIndex = 51;
@@ -121,7 +121,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(237, 215);
+            this.btnClear.Location = new System.Drawing.Point(232, 215);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(113, 40);
