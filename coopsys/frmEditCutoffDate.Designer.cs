@@ -33,6 +33,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSetDate = new System.Windows.Forms.Button();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDay
@@ -69,7 +70,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(252, 215);
+            this.btnCancel.Location = new System.Drawing.Point(133, 215);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(98, 40);
@@ -110,6 +111,25 @@
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroLabel1.UseCustomForeColor = true;
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(237, 215);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(113, 40);
+            this.btnClear.TabIndex = 52;
+            this.btnClear.Text = "Clear Date";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // frmEditCutoffDate
             // 
             this.AcceptButton = this.btnSetDate;
@@ -117,6 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(504, 277);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSetDate);
@@ -141,5 +162,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSetDate;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Button btnClear;
     }
 }
