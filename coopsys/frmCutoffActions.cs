@@ -17,6 +17,10 @@ namespace coopsys
         MySqlConnection conn;
         public bool passedConfirmation = false;
         DataCollection dc = new DataCollection();
+        //for updating interest
+        DataTable dtDistinctID, dtGetPrevTrans;
+        double interestRate = 0.5, interestAmount;
+        int dateDiffValue;
 
         public frmCutoffActions(MySqlConnection _conn)
         {
@@ -42,7 +46,8 @@ namespace coopsys
 
                 if (passedConfirmation)
                 {
-                    //Add logic here
+                    // Add Interest Logic
+                    updateInterest();
 
                     // Update latest cutoff date
                     // TODO: Replace userID later after login integration
@@ -67,6 +72,46 @@ namespace coopsys
             lblConfirmationStatus.ForeColor = Color.LimeGreen;
             btnConfirm.Enabled = false;
             btnConfirm.BackColor = Color.LightGray;
+        }
+
+        private void updateInterest ()
+        {
+            dtDistinctID = dc.fnDataTableCollection("SELECT distinct(savingsID) FROM coop.transactions");
+
+            for (int a = 0; a < dtDistinctID.Rows.Count; a++)
+            {
+                dtGetPrevTrans = dc.fnDataTableCollection("select * from transactions where " +
+                "savingsID = " + dtDistinctID.Rows[a][0].ToString() + " order by date desc limit 2;");
+
+                if (dtGetPrevTrans.Rows.Count >= 2 && (dtGetPrevTrans.Rows[0][5].ToString() != dtGetPrevTrans.Rows[1][5].ToString()))
+                {
+                    var date1 = DateTime.Parse(dtGetPrevTrans.Rows[0][5].ToString());//date of latest transaction
+                    var date2 = DateTime.Parse(dtGetPrevTrans.Rows[1][5].ToString());//date of previous transaction
+                    var dateDiff = date1 - date2;//compute the days between date1 and date2
+                    dateDiffValue = int.Parse(dateDiff.Days.ToString());
+
+                    interestAmount = (double.Parse(dtGetPrevTrans.Rows[0][4].ToString()) * interestRate * dateDiffValue) / 360;
+                }
+                else if (dtGetPrevTrans.Rows.Count >= 2 && (dtGetPrevTrans.Rows[0][5].ToString() == dtGetPrevTrans.Rows[1][5].ToString()))
+                {
+                    var date1 = DateTime.Parse(dtGetPrevTrans.Rows[0][5].ToString());
+                    var dateDiff = DateTime.Now - date1;
+                    dateDiffValue = int.Parse(dateDiff.Days.ToString());
+
+                    interestAmount = (double.Parse(dtGetPrevTrans.Rows[0][4].ToString()) * interestRate * dateDiffValue) / 360;
+                }
+                else if (dtGetPrevTrans.Rows.Count == 1)
+                {
+                    var date1 = DateTime.Parse(dtGetPrevTrans.Rows[0][5].ToString());
+                    var dateDiff = DateTime.Now - date1;
+                    dateDiffValue = int.Parse(dateDiff.Days.ToString());
+
+                    interestAmount = (double.Parse(dtGetPrevTrans.Rows[0][4].ToString()) * interestRate * dateDiffValue) / 360;
+                }
+                dc.fnExecuteQuery("Update savings set current_balance = " +
+                    "((select current_balance where savingsID = " + dtDistinctID.Rows[a][0].ToString() + ") + " + interestAmount.ToString() + ") " +
+                    "where savingsID = " + dtDistinctID.Rows[a][0].ToString() + ";", conn);
+            }
         }
     }
 }
