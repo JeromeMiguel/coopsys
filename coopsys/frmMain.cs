@@ -227,6 +227,8 @@ namespace coopsys
         {
             frmSettings form = new frmSettings(conn);
             form.ShowDialog();
+
+            checkIfCutoff();
         }
 
         public void OnFormLoad()
@@ -242,6 +244,17 @@ namespace coopsys
             grdMembers.ClearSelection();
 
             setRowHeadNumber();
+
+            checkIfCutoff();
+
+        }
+
+        private void linkCutoff_Click(object sender, EventArgs e)
+        {
+            frmCutoffActions form = new frmCutoffActions(conn);
+            form.ShowDialog();
+
+            checkIfCutoff() ;
         }
 
         private void OpenLoanForm()
@@ -477,5 +490,21 @@ namespace coopsys
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
             }
         }
+
+        private void checkIfCutoff() {
+            DataTable dt;
+            string date1, date2, date3, date4, today = DateTime.Now.ToString("yyyy-MM-dd");
+            dt = dc.fnDataTableCollection("SELECT cut_date_1, cut_date_2, cut_date_3, cut_date_4 FROM coop.defaults WHERE userID=1;", conn);
+
+            date1 = dt.Rows[0][0].ToString() == "" ?  "" : DateTime.Parse(dt.Rows[0][0].ToString()).ToString("yyyy-MM-dd");
+            date2 = dt.Rows[0][1].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][1].ToString()).ToString("yyyy-MM-dd");
+            date3 = dt.Rows[0][2].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][2].ToString()).ToString("yyyy-MM-dd");
+            date4 = dt.Rows[0][3].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][3].ToString()).ToString("yyyy-MM-dd");
+
+            bool isCutoffDate = (today == date1) || (today == date2) || (today == date3) || (today == date4);
+            linkCutoff.Visible = isCutoffDate;
+        }
+
+
     }
 }

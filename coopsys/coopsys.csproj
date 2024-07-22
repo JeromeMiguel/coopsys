@@ -316,6 +316,18 @@
     <Compile Include="frmCollateral.Designer.cs">
       <DependentUpon>frmCollateral.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmation.Designer.cs">
+      <DependentUpon>frmConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCutoffActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCutoffActions.Designer.cs">
+      <DependentUpon>frmCutoffActions.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditCutoffDate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -494,6 +506,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCollateral.resx">
       <DependentUpon>frmCollateral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmation.resx">
+      <DependentUpon>frmConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCutoffActions.resx">
+      <DependentUpon>frmCutoffActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDueForPayment.resx">
       <DependentUpon>frmDueForPayment.cs</DependentUpon>
