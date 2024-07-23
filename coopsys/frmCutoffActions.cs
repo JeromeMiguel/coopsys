@@ -19,7 +19,7 @@ namespace coopsys
         DataCollection dc = new DataCollection();
         //for updating interest
         DataTable dtDistinctID, dtGetPrevTrans;
-        double interestRate = 0.5, interestAmount;
+        double interestRate = 0.5, interestAmount, balance_after;
         int dateDiffValue;
 
         public frmCutoffActions(MySqlConnection _conn)
@@ -108,9 +108,14 @@ namespace coopsys
 
                     interestAmount = (double.Parse(dtGetPrevTrans.Rows[0][4].ToString()) * interestRate * dateDiffValue) / 360;
                 }
+
+                balance_after = double.Parse(dtGetPrevTrans.Rows[0][4].ToString()) + interestAmount;
                 dc.fnExecuteQuery("Update savings set current_balance = " +
                     "((select current_balance where savingsID = " + dtDistinctID.Rows[a][0].ToString() + ") + " + interestAmount.ToString() + ") " +
                     "where savingsID = " + dtDistinctID.Rows[a][0].ToString() + ";", conn);
+
+                dc.fnExecuteQuery("insert into transactions(type, amount, balance_before, balance_after, date, savingsID) " +
+                    "values(2, "+Math.Round(interestAmount,2)+","+ Math.Round(decimal.Parse(dtGetPrevTrans.Rows[0][4].ToString()),2) + ","+Math.Round(balance_after,2) +",NOW(),"+ dtDistinctID.Rows[a][0].ToString() + ")", conn);
             }
         }
     }

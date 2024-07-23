@@ -77,19 +77,19 @@ namespace coopsys
                     "sum(january+february+march+april+may+june+july+august+september+october+november)+" +
                     "sum(january+february+march+april+may+june+july+august+september+october+november+december),2) as 'Patronage'" +
                     "from(select m.memberid as memberIDLoan, upper(concat(lastname, ', ', firstname)) as 'NAMES'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=1 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'January'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=2 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'February'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=3 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'March'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=4 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'April'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=5 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'May'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=6 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'June'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=7 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'July'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=8 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'August'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=9 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'September'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=10 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'October'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=11 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'November'," +
-                    "(select ifnull(sum(interestAmount),0) from loan left join member on loan.memberid = member.memberid where (loanmonth=12 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'December'" +
-                    "from loan left join member m on loan.memberid = m.memberid where memstatus=0 group by m.memberid order by lastname asc) t group by memberIDLoan;", conn);
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=1 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'January'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=2 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'February'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=3 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'March'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=4 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'April'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=5 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'May'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=6 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'June'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=7 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'July'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=8 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'August'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=9 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'September'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=10 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'October'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=11 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'November'," +
+                    "(select ifnull(sum(interestAmount),0) from loan right join member on loan.memberid = member.memberid where (loanmonth=12 and loanyear = " + cboYear.Text + ") and member.memberID=m.memberID) as 'December'" +
+                    "from loan right join member m on loan.memberid = m.memberid where memstatus=0 group by m.memberid order by lastname asc) t group by memberIDLoan;", conn);
 
             dtDivident = dc.fnDataTableCollection("select memberIDShareCap, NAMES," +
                 "format(sum(total+january)+" +
@@ -106,19 +106,19 @@ namespace coopsys
                 "sum(total+january+february+march+april+may+june+july+august+september+october+november+december),2) as 'Divident'" +
                 "from (select m.memberid as memberIDShareCap, upper(concat(lastname, ', ', firstname)) as 'NAMES'," +
                 "(select format(ifnull(sum(csamount),0),2) from capitalshare inner join member on capitalshare.memberid = member.memberid where year< " + cboYear.Text + " and member.memberID=m.memberID) as 'TOTAL'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=1 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'January'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=2 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'February'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=3 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'March'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=4 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'April'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=5 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'May'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=6 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'June'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=7 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'July'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=8 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'August'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=9 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'September'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=10 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'October'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=11 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'November'," +
-                "(select ifnull(sum(csamount),0) from capitalshare inner join member on capitalshare.memberid = member.memberid where (month=12 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'December'" +
-                "from capitalshare inner join member m on capitalshare.memberid = m.memberid where memstatus=0 group by m.memberID order by lastname asc) t group by memberIDShareCap;");
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=1 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'January'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=2 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'February'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=3 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'March'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=4 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'April'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=5 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'May'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=6 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'June'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=7 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'July'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=8 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'August'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=9 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'September'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=10 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'October'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=11 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'November'," +
+                "(select ifnull(sum(csamount),0) from capitalshare right join member on capitalshare.memberid = member.memberid where (month=12 and year= " + cboYear.Text + ") and member.memberID=m.memberID) as 'December'" +
+                "from capitalshare right join member m on capitalshare.memberid = m.memberid where memstatus=0 group by m.memberID order by lastname asc) t group by memberIDShareCap;", conn);
 
             #endregion
 
