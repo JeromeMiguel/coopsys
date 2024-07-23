@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.lblConfirmationStatus = new MetroFramework.Controls.MetroLabel();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.lblConfirmationStatus = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -54,27 +54,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // metroLabel1
+            // lblConfirmationStatus
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 32);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(152, 20);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Confirm Cutoff Date";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 57);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(349, 17);
-            this.metroLabel2.TabIndex = 3;
-            this.metroLabel2.Text = "Interest will be added to all members with savings account";
-            this.metroLabel2.WrapToLine = true;
+            this.lblConfirmationStatus.AutoSize = true;
+            this.lblConfirmationStatus.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblConfirmationStatus.ForeColor = System.Drawing.Color.Silver;
+            this.lblConfirmationStatus.Location = new System.Drawing.Point(210, 31);
+            this.lblConfirmationStatus.Name = "lblConfirmationStatus";
+            this.lblConfirmationStatus.Size = new System.Drawing.Size(76, 20);
+            this.lblConfirmationStatus.TabIndex = 42;
+            this.lblConfirmationStatus.Text = "• Pending";
+            this.lblConfirmationStatus.UseCustomForeColor = true;
             // 
             // btnConfirm
             // 
@@ -95,6 +85,28 @@
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.Location = new System.Drawing.Point(23, 57);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(349, 17);
+            this.metroLabel2.TabIndex = 3;
+            this.metroLabel2.Text = "Interest will be added to all members with savings account";
+            this.metroLabel2.WrapToLine = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 32);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(152, 20);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Confirm Cutoff Date";
             // 
             // groupBox2
             // 
@@ -134,7 +146,7 @@
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel3.Location = new System.Drawing.Point(23, 57);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(335, 21);
+            this.metroLabel3.Size = new System.Drawing.Size(268, 17);
             this.metroLabel3.TabIndex = 3;
             this.metroLabel3.Text = "Wrong date? Change cutoff dates in settings";
             this.metroLabel3.WrapToLine = true;
@@ -145,27 +157,15 @@
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel4.Location = new System.Drawing.Point(23, 32);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(153, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(122, 20);
             this.metroLabel4.TabIndex = 2;
             this.metroLabel4.Text = "Edit Cutoff Date";
-            // 
-            // lblConfirmationStatus
-            // 
-            this.lblConfirmationStatus.AutoSize = true;
-            this.lblConfirmationStatus.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblConfirmationStatus.ForeColor = System.Drawing.Color.Silver;
-            this.lblConfirmationStatus.Location = new System.Drawing.Point(210, 31);
-            this.lblConfirmationStatus.Name = "lblConfirmationStatus";
-            this.lblConfirmationStatus.Size = new System.Drawing.Size(76, 20);
-            this.lblConfirmationStatus.TabIndex = 42;
-            this.lblConfirmationStatus.Text = "• Pending";
-            this.lblConfirmationStatus.UseCustomForeColor = true;
             // 
             // frmCutoffActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 360);
+            this.ClientSize = new System.Drawing.Size(748, 324);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;

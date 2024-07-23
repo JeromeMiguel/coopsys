@@ -79,7 +79,7 @@ namespace coopsys
         {
             dt = dc.fnDataTableCollection("SELECT transactionsID, type,   CASE WHEN type = 1 THEN CONCAT('- ', FORMAT(amount, 2)) ELSE CONCAT('+ ', FORMAT(amount, 2)) END AS 'Amount'," +
                "FORMAT(balance_before, 2) AS 'Balance Before', FORMAT(balance_after, 2) AS 'Balance After',  date AS 'Date', savingsID " +
-               "FROM coop.transactions WHERE savingsID=" + savingsID + "", conn);
+               "FROM coop.transactions WHERE savingsID=" + savingsID + " order by transactionsID desc;", conn);
             grdTransactions.DataSource = dt;
 
             grdTransactions.Columns[0].Visible = false;
