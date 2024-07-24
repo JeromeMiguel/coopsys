@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace coopsys
 {
     public partial class frmReportScheduleOfTransactions : MetroFramework.Forms.MetroForm
     {
-        public frmReportScheduleOfTransactions()
+        MySqlConnection conn;
+        public frmReportScheduleOfTransactions(MySqlConnection _conn)
         {
             InitializeComponent();
+
+            conn = _conn;
         }
     }
 }
