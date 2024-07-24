@@ -46,7 +46,7 @@
             this.cboxOpenFile = new System.Windows.Forms.CheckBox();
             this.btnExportExcel = new System.Windows.Forms.Button();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.cboType = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdReportTrans)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,33 +60,37 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(672, 73);
+            this.btnReset.Location = new System.Drawing.Point(896, 90);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(74, 31);
+            this.btnReset.Size = new System.Drawing.Size(99, 38);
             this.btnReset.TabIndex = 70;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(21, 79);
+            this.metroLabel1.Location = new System.Drawing.Point(28, 97);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(34, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(35, 20);
             this.metroLabel1.TabIndex = 69;
             this.metroLabel1.Text = "Year";
             // 
             // cboYear
             // 
             this.cboYear.FormattingEnabled = true;
-            this.cboYear.ItemHeight = 23;
-            this.cboYear.Location = new System.Drawing.Point(65, 75);
-            this.cboYear.Margin = new System.Windows.Forms.Padding(2);
+            this.cboYear.ItemHeight = 24;
+            this.cboYear.Location = new System.Drawing.Point(87, 92);
+            this.cboYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboYear.Name = "cboYear";
-            this.cboYear.Size = new System.Drawing.Size(110, 29);
+            this.cboYear.Size = new System.Drawing.Size(145, 30);
             this.cboYear.Style = MetroFramework.MetroColorStyle.Purple;
             this.cboYear.TabIndex = 68;
             this.cboYear.UseSelectable = true;
+            this.cboYear.SelectedIndexChanged += new System.EventHandler(this.cboYear_SelectedIndexChanged);
             // 
             // btnGenerateReport
             // 
@@ -98,12 +102,14 @@
             this.btnGenerateReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateReport.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateReport.Location = new System.Drawing.Point(489, 73);
+            this.btnGenerateReport.Location = new System.Drawing.Point(652, 90);
+            this.btnGenerateReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(177, 31);
+            this.btnGenerateReport.Size = new System.Drawing.Size(236, 38);
             this.btnGenerateReport.TabIndex = 66;
             this.btnGenerateReport.Text = "Generate Report";
             this.btnGenerateReport.UseVisualStyleBackColor = false;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
             // grdReportTrans
             // 
@@ -111,7 +117,6 @@
             this.grdReportTrans.AllowUserToDeleteRows = false;
             this.grdReportTrans.AllowUserToResizeColumns = false;
             this.grdReportTrans.AllowUserToResizeRows = false;
-            this.grdReportTrans.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdReportTrans.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grdReportTrans.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdReportTrans.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -137,8 +142,8 @@
             this.grdReportTrans.EnableHeadersVisualStyles = false;
             this.grdReportTrans.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdReportTrans.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdReportTrans.Location = new System.Drawing.Point(21, 119);
-            this.grdReportTrans.Margin = new System.Windows.Forms.Padding(2);
+            this.grdReportTrans.Location = new System.Drawing.Point(28, 146);
+            this.grdReportTrans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grdReportTrans.MultiSelect = false;
             this.grdReportTrans.Name = "grdReportTrans";
             this.grdReportTrans.ReadOnly = true;
@@ -155,7 +160,7 @@
             this.grdReportTrans.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdReportTrans.RowTemplate.Height = 24;
             this.grdReportTrans.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdReportTrans.Size = new System.Drawing.Size(725, 353);
+            this.grdReportTrans.Size = new System.Drawing.Size(967, 434);
             this.grdReportTrans.TabIndex = 65;
             // 
             // saveFileDialog1
@@ -178,46 +183,47 @@
             this.panel1.Controls.Add(this.lblStatus);
             this.panel1.Controls.Add(this.lblWait);
             this.panel1.Controls.Add(this.progress);
-            this.panel1.Location = new System.Drawing.Point(127, 220);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(169, 271);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 122);
+            this.panel1.Size = new System.Drawing.Size(487, 150);
             this.panel1.TabIndex = 71;
             this.panel1.Visible = false;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(31, 97);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatus.Location = new System.Drawing.Point(41, 119);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(40, 13);
+            this.lblStatus.Size = new System.Drawing.Size(47, 16);
             this.lblStatus.TabIndex = 40;
             this.lblStatus.Text = "Status:";
             // 
             // lblWait
             // 
             this.lblWait.AutoSize = true;
-            this.lblWait.Location = new System.Drawing.Point(149, 37);
+            this.lblWait.Location = new System.Drawing.Point(199, 46);
+            this.lblWait.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWait.Name = "lblWait";
-            this.lblWait.Size = new System.Drawing.Size(82, 19);
+            this.lblWait.Size = new System.Drawing.Size(86, 20);
             this.lblWait.TabIndex = 38;
             this.lblWait.Text = "Please wait...";
             // 
             // progress
             // 
-            this.progress.Location = new System.Drawing.Point(33, 65);
-            this.progress.Margin = new System.Windows.Forms.Padding(2);
+            this.progress.Location = new System.Drawing.Point(44, 80);
+            this.progress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(299, 28);
+            this.progress.Size = new System.Drawing.Size(399, 34);
             this.progress.TabIndex = 0;
             // 
             // cboxOpenFile
             // 
             this.cboxOpenFile.AutoSize = true;
-            this.cboxOpenFile.Location = new System.Drawing.Point(465, 498);
+            this.cboxOpenFile.Location = new System.Drawing.Point(620, 613);
+            this.cboxOpenFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboxOpenFile.Name = "cboxOpenFile";
-            this.cboxOpenFile.Size = new System.Drawing.Size(115, 17);
+            this.cboxOpenFile.Size = new System.Drawing.Size(140, 20);
             this.cboxOpenFile.TabIndex = 72;
             this.cboxOpenFile.Text = "Open file on export";
             this.cboxOpenFile.UseVisualStyleBackColor = true;
@@ -227,46 +233,50 @@
             this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
             this.btnExportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportExcel.Location = new System.Drawing.Point(592, 485);
+            this.btnExportExcel.Location = new System.Drawing.Point(789, 597);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(154, 39);
+            this.btnExportExcel.Size = new System.Drawing.Size(205, 48);
             this.btnExportExcel.TabIndex = 67;
             this.btnExportExcel.Text = "Export To Excel (.xlxs)";
             this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(233, 79);
+            this.metroLabel2.Location = new System.Drawing.Point(311, 97);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(39, 20);
             this.metroLabel2.TabIndex = 74;
             this.metroLabel2.Text = "Type";
             // 
-            // metroComboBox1
+            // cboType
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
+            this.cboType.FormattingEnabled = true;
+            this.cboType.ItemHeight = 24;
+            this.cboType.Items.AddRange(new object[] {
             "--Transaction type--",
             "Deposit",
             "Withdrawal"});
-            this.metroComboBox1.Location = new System.Drawing.Point(277, 75);
-            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(146, 29);
-            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Purple;
-            this.metroComboBox1.TabIndex = 73;
-            this.metroComboBox1.UseSelectable = true;
+            this.cboType.Location = new System.Drawing.Point(369, 92);
+            this.cboType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboType.Name = "cboType";
+            this.cboType.Size = new System.Drawing.Size(193, 30);
+            this.cboType.Style = MetroFramework.MetroColorStyle.Purple;
+            this.cboType.TabIndex = 73;
+            this.cboType.UseSelectable = true;
+            this.cboType.SelectedIndexChanged += new System.EventHandler(this.cboType_SelectedIndexChanged);
             // 
             // frmReportScheduleOfTransactions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 547);
+            this.ClientSize = new System.Drawing.Size(1017, 673);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.cboType);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.cboYear);
@@ -275,12 +285,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cboxOpenFile);
             this.Controls.Add(this.btnExportExcel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmReportScheduleOfTransactions";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Schedule of Transactions";
+            this.Load += new System.EventHandler(this.frmReportScheduleOfTransactions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdReportTrans)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -305,6 +318,6 @@
         private System.Windows.Forms.CheckBox cboxOpenFile;
         private System.Windows.Forms.Button btnExportExcel;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cboType;
     }
 }
