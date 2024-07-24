@@ -454,7 +454,6 @@ C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\coopsys.pdb
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\BitMiracle.LibTiff.NET.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\calypso.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ClosedXML.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ExcelNumberFormat.dll
@@ -747,3 +746,5 @@ C:\Users\Jerome Miguel\Documents\Projects\Metro Tuguegarao Cooperative\coopsys\c
 C:\Users\Jerome Miguel\Documents\Projects\Metro Tuguegarao Cooperative\coopsys\coopsys\obj\Debug\coopsys.exe.manifest
 C:\Users\Jerome Miguel\Documents\Projects\Metro Tuguegarao Cooperative\coopsys\coopsys\obj\Debug\coopsys.application
 C:\Users\Jerome Miguel\Documents\Projects\Metro Tuguegarao Cooperative\coopsys\coopsys\obj\Debug\coopsys.csproj.Up2Date
+C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportOnScheduleOfSavings.resources
+C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportScheduleOfTransactions.resources

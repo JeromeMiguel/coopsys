@@ -257,6 +257,18 @@ namespace coopsys
             checkIfCutoff() ;
         }
 
+        private void scheduleOfTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportScheduleOfTransactions form = new frmReportScheduleOfTransactions(conn);
+            form.ShowDialog();
+        }
+
+        private void scheduleOfSavingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportOnScheduleOfSavings form = new frmReportOnScheduleOfSavings(conn);
+            form.ShowDialog();
+        }
+
         private void OpenLoanForm()
         {
             if (!(grdMembers.SelectedRows.Count == 0))
