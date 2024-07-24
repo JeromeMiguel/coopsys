@@ -74,7 +74,7 @@
     </Reference>
     <Reference Include="calypso, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Library\calypso\calypso\bin\Debug\calypso.dll</HintPath>
+      <HintPath>..\..\..\Calypso Library\calypso\bin\Debug\calypso.dll</HintPath>
     </Reference>
     <Reference Include="ClosedXML, Version=0.102.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.102.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
@@ -430,6 +430,12 @@
     <Compile Include="frmReportOnScheduleOfSales.Designer.cs">
       <DependentUpon>frmReportOnScheduleOfSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportOnScheduleOfSavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportOnScheduleOfSavings.Designer.cs">
+      <DependentUpon>frmReportOnScheduleOfSavings.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportOnScheduleOfShareCapital.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +447,12 @@
     </Compile>
     <Compile Include="frmReportPastDueLoan.Designer.cs">
       <DependentUpon>frmReportPastDueLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportScheduleOfTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportScheduleOfTransactions.Designer.cs">
+      <DependentUpon>frmReportScheduleOfTransactions.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSavings.cs">
       <SubType>Form</SubType>
@@ -552,11 +564,17 @@
     <EmbeddedResource Include="frmReportOnScheduleOfSales.resx">
       <DependentUpon>frmReportOnScheduleOfSales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportOnScheduleOfSavings.resx">
+      <DependentUpon>frmReportOnScheduleOfSavings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReportOnScheduleOfShareCapital.resx">
       <DependentUpon>frmReportOnScheduleOfShareCapital.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportPastDueLoan.resx">
       <DependentUpon>frmReportPastDueLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportScheduleOfTransactions.resx">
+      <DependentUpon>frmReportScheduleOfTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSavings.resx">
       <DependentUpon>frmSavings.cs</DependentUpon>
