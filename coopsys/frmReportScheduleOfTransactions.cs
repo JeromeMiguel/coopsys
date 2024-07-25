@@ -32,6 +32,10 @@ namespace coopsys
             {
                 cboYear.SelectedIndex = 0;
             }
+            if (cboType.Items.Count > 0) 
+            { 
+                cboType.SelectedIndex = 0; 
+            }
         }
 
         private void btnGenerateReport_Click(object sender, EventArgs e)
