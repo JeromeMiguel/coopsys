@@ -96,6 +96,10 @@ namespace coopsys
             lblShareCount.Text = shareCount;
             lblShareAmt.Text = "₱ " + shareAmt;
 
+            if (double.Parse(shareCount) > 0)
+            {
+                btnPrint.Enabled = true;
+            }
         }
 
         public void createWordFile ()
@@ -167,7 +171,6 @@ namespace coopsys
             {
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
             }
-
         }
 
     }

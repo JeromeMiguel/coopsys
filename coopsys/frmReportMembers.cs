@@ -45,11 +45,18 @@ namespace coopsys
 
             grdReportMembers.DataSource = dt;
 
-            foreach (DataGridViewRow row in grdReportMembers.Rows)
+            if (grdReportMembers.Rows.Count != 0)
             {
-                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+                foreach (DataGridViewRow row in grdReportMembers.Rows)
+                {
+                    row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+                }
+                saveFileDialog1.FileName = "Members " + System.DateTime.Now.ToString("MMddyyyyhhmmsstt") + ".xlsx";
             }
-            saveFileDialog1.FileName = "Members " + System.DateTime.Now.ToString("MMddyyyyhhmmsstt") + ".xlsx";
+            else
+            {
+                btnExportExcel.Enabled = false;
+            }
         }
 
         private void btnExportExcel_Click(object sender, EventArgs e)
@@ -63,7 +70,6 @@ namespace coopsys
                 bgWorker.RunWorkerAsync();
             }
             else { retry = false; }
-
         }
 
         private void bgWorker_DoWork(object sender, DoWorkEventArgs e)

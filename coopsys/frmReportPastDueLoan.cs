@@ -35,13 +35,17 @@ namespace coopsys
             conn = _conn;
 
             dt = dc.fnDataTableCollection("select distinct loanyear from loan order by loanyear desc;", conn);
-            btnGenerateReport.Enabled = false;
             btnExportExcel.Enabled = false;
             cboYear.DataSource = dt;
             cboYear.DisplayMember = "loanyear";
             if (cboYear.Items.Count > 0)
             {
                 cboYear.SelectedIndex = 0;
+            }
+            else
+            {
+                btnGenerateReport.Enabled = false;
+                btnReset.Enabled = false;
             }
             cboMonth.SelectedIndex = 0;
             saveFileDialog1.FileName = "Schedule of Past Due Loans " + System.DateTime.Now.ToString("MMddyyyyhhmmsstt") + ".xlsx";
@@ -92,6 +96,7 @@ namespace coopsys
             if (cboYear.SelectedIndex >= 0)
             {
                 btnGenerateReport.Enabled = true;
+                btnReset.Enabled = true;
             }
         }
 

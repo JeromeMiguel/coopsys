@@ -62,11 +62,21 @@ namespace coopsys
                 day3 = txtDay3.Text == "" ? "NULL" : "'" + DateTime.Parse(txtDay3.Text).ToString("yyyy-MM-dd") + "'";
                 day4 = txtDay4.Text == "" ? "NULL" : "'" + DateTime.Parse(txtDay4.Text).ToString("yyyy-MM-dd") + "'";
 
+                string loan_member_rate, loan_penalty, rep_dividend_rate, rep_interest_capital_share, rep_final_1, rep_final_2;
+
+                loan_member_rate = txtMemberLoanRate.Text=="" ? "0" : txtMemberLoanRate.Text;
+                loan_penalty = txtLoanPenalty.Text == "" ? "0" : txtLoanPenalty.Text;
+                rep_dividend_rate = txtDvidendRate.Text == "" ? "0" : txtDvidendRate.Text;
+                rep_interest_capital_share = txtInterestCSRate.Text == "" ? "0" : txtInterestCSRate.Text;
+                rep_final_1 = txtFinalPercentage1.Text == "" ? "0" : txtFinalPercentage1.Text;
+                rep_final_2 = txtFinalPercentage2.Text == "" ? "0" : txtFinalPercentage2.Text;
+
+
                 // Update Database
                 // TODO: replace id = 1 with userID after login integration
-                dc.fnExecuteQuery("UPDATE `coop`.`defaults` SET `loan_member_rate` = "+txtMemberLoanRate.Text+", `loan_penalty` = "+txtLoanPenalty.Text+", " +
-                    "`rep_dividend_rate` = "+txtDvidendRate.Text+", `rep_interest_capital_share` = "+txtInterestCSRate.Text+", `rep_final_1` = "+txtFinalPercentage1.Text+", " +
-                    "`rep_final_2` = "+txtFinalPercentage2.Text+", `save_reports` = NULL, `save_certificates` = NULL, " + "`cut_date_1` = " +day1 +
+                dc.fnExecuteQuery("UPDATE `coop`.`defaults` SET `loan_member_rate` = "+loan_member_rate+", `loan_penalty` = "+loan_penalty+", " +
+                    "`rep_dividend_rate` = "+rep_dividend_rate+", `rep_interest_capital_share` = "+rep_interest_capital_share+", `rep_final_1` = "+rep_final_1+", " +
+                    "`rep_final_2` = "+rep_final_2+", `save_reports` = NULL, `save_certificates` = NULL, " + "`cut_date_1` = " +day1 +
                     ", `cut_date_2` = " + day2+ ", `cut_date_3` = " + day3 + ", `cut_date_4` = " + day4 +" WHERE (`id` = 1);", conn);
 
                 loadDefaultData();
@@ -173,12 +183,12 @@ namespace coopsys
         {
             dt = dc.fnDataTableCollection("SELECT * FROM coop.defaults;", conn);
 
-            txtMemberLoanRate.Text = decimal.Parse(dt.Rows[0][4].ToString()).ToString("G29");
-            txtLoanPenalty.Text = decimal.Parse(dt.Rows[0][5].ToString()).ToString("G29");
-            txtDvidendRate.Text = decimal.Parse(dt.Rows[0][6].ToString()).ToString("G29");
-            txtInterestCSRate.Text = decimal.Parse(dt.Rows[0][7].ToString()).ToString("G29");
-            txtFinalPercentage1.Text = decimal.Parse(dt.Rows[0][8].ToString()).ToString("G29");
-            txtFinalPercentage2.Text = decimal.Parse(dt.Rows[0][9].ToString()).ToString("G29");
+            txtMemberLoanRate.Text = dt.Rows[0][4].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][4].ToString()).ToString("G29");
+            txtLoanPenalty.Text = dt.Rows[0][5].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][5].ToString()).ToString("G29");
+            txtDvidendRate.Text = dt.Rows[0][6].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][6].ToString()).ToString("G29");
+            txtInterestCSRate.Text = dt.Rows[0][7].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][7].ToString()).ToString("G29");
+            txtFinalPercentage1.Text = dt.Rows[0][8].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][8].ToString()).ToString("G29");
+            txtFinalPercentage2.Text = dt.Rows[0][9].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][9].ToString()).ToString("G29");
 
             date1 = dt.Rows[0][10].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][10].ToString()).ToString("MM/dd/yyyy");
             date2 = dt.Rows[0][11].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][11].ToString()).ToString("MM/dd/yyyy");

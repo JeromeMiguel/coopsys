@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             this.grdMembers = new MetroFramework.Controls.MetroGrid();
@@ -53,6 +53,7 @@
             this.tsmInterestOnCapitalShare = new System.Windows.Forms.ToolStripMenuItem();
             this.finalReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleOfTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleOfSavingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTimer = new System.Windows.Forms.Timer(this.components);
             this.tipTools = new System.Windows.Forms.ToolTip(this.components);
             this.btnSearchMem = new System.Windows.Forms.PictureBox();
@@ -73,7 +74,6 @@
             this.btnDue = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnLoan = new System.Windows.Forms.Button();
-            this.scheduleOfSavingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdMembers)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchMem)).BeginInit();
@@ -129,24 +129,24 @@
             this.grdMembers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdMembers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdMembers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdMembers.ColumnHeadersHeight = 29;
             this.grdMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LavenderBlush;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdMembers.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LavenderBlush;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdMembers.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdMembers.EnableHeadersVisualStyles = false;
             this.grdMembers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdMembers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -156,14 +156,14 @@
             this.grdMembers.Name = "grdMembers";
             this.grdMembers.ReadOnly = true;
             this.grdMembers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.DarkViolet;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkViolet;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdMembers.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkViolet;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdMembers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdMembers.RowHeadersWidth = 51;
             this.grdMembers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdMembers.RowTemplate.Height = 24;
@@ -262,11 +262,11 @@
             this.tsmiScheduleOfLoanReleases,
             this.tsmiScheduleOfCapitalShare,
             this.scheduleOfPastDueLoansToolStripMenuItem,
-            this.scheduleOfSalesToolStripMenuItem,
-            this.tsmInterestOnCapitalShare,
-            this.finalReportToolStripMenuItem,
             this.scheduleOfTransactionsToolStripMenuItem,
-            this.scheduleOfSavingsToolStripMenuItem});
+            this.scheduleOfSalesToolStripMenuItem,
+            this.scheduleOfSavingsToolStripMenuItem,
+            this.tsmInterestOnCapitalShare,
+            this.finalReportToolStripMenuItem});
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReports.Name = "btnReports";
@@ -335,6 +335,13 @@
             this.scheduleOfTransactionsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
             this.scheduleOfTransactionsToolStripMenuItem.Text = "Schedule of Transactions";
             this.scheduleOfTransactionsToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfTransactionsToolStripMenuItem_Click);
+            // 
+            // scheduleOfSavingsToolStripMenuItem
+            // 
+            this.scheduleOfSavingsToolStripMenuItem.Name = "scheduleOfSavingsToolStripMenuItem";
+            this.scheduleOfSavingsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.scheduleOfSavingsToolStripMenuItem.Text = "Schedule of Savings";
+            this.scheduleOfSavingsToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfSavingsToolStripMenuItem_Click);
             // 
             // mainTimer
             // 
@@ -552,13 +559,6 @@
             this.btnLoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoan.UseVisualStyleBackColor = true;
             this.btnLoan.Click += new System.EventHandler(this.btnLoan_Click);
-            // 
-            // scheduleOfSavingsToolStripMenuItem
-            // 
-            this.scheduleOfSavingsToolStripMenuItem.Name = "scheduleOfSavingsToolStripMenuItem";
-            this.scheduleOfSavingsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
-            this.scheduleOfSavingsToolStripMenuItem.Text = "Schedule of Savings";
-            this.scheduleOfSavingsToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfSavingsToolStripMenuItem_Click);
             // 
             // frmMain
             // 

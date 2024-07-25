@@ -154,10 +154,10 @@ namespace coopsys
             {
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
             }
-
+            
             txtInterest.Text = decimal.Parse(dc.fnReturnStringValue("SELECT loan_member_rate AS 'loanRate' FROM coop.defaults;", "loanRate", conn)).ToString("G29");
+            
             lblWarning.Visible = false;
-
         }
 
         #region Textbox KeyPress Events

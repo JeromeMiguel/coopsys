@@ -44,6 +44,7 @@ namespace coopsys
             {
                 cboYear.SelectedIndex = 0;
             }
+
         }
 
         private void cboYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,6 +52,7 @@ namespace coopsys
             if (cboYear.SelectedIndex >= 0)
             {
                 btnGenerateReport.Enabled = true;
+                btnReset.Enabled = true;
             }
         }
 

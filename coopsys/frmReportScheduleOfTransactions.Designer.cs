@@ -56,6 +56,7 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.DarkGray;
+            this.btnReset.Enabled = false;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;

@@ -277,6 +277,7 @@ namespace coopsys
                 fname = grdMembers.SelectedCells[1].Value.ToString();
                 mname = grdMembers.SelectedCells[2].Value.ToString();
                 lname = grdMembers.SelectedCells[3].Value.ToString();
+                
                 frmLoan loan = new frmLoan(this, conn, memberID, fname, mname, lname);
                 loan.ShowDialog();
             }
@@ -348,8 +349,6 @@ namespace coopsys
                     contextMenuStripDataRow.Show(MousePosition.X, MousePosition.Y);
                 }
                 catch { }
-
-               
             }
         }
 

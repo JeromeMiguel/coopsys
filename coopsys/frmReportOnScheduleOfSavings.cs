@@ -48,6 +48,7 @@ namespace coopsys
             if (cboYear.SelectedIndex >= 0)
             {
                 btnGenerateReport.Enabled = true;
+                btnReset.Enabled = true;
             }
         }
 
@@ -60,25 +61,25 @@ namespace coopsys
                 "format(ifnull(april,0),2) as 'APR', " +
                 "format(ifnull(may,0),2) as 'MAY', " +
                 "format(ifnull(june,0),2) as 'JUN', " +
-                "format(ifnull(june,0),2) as 'JUL', " +
+                "format(ifnull(july,0),2) as 'JUL', " +
                 "format(ifnull(august,0),2) as 'AUG', " +
                 "format(ifnull(september,0),2) as 'SEP', " +
                 "format(ifnull(october,0),2) as 'OCT', " +
                 "format(ifnull(november,0),2) as 'NOV', " +
                 "format(ifnull(december,0),2) as 'DEC' " +
                 "from (select m.memberid, concat(lastname, ', ', firstname) as 'NAMES', " +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=1 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'January'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=2 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'February'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=3 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'March'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=4 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'April'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=5 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'May'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=6 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'June'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=7 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'July'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=8 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'August'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=9 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'September'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=10 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'October'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=11 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'November'," +
-                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=12 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by date desc limit 1) as 'December'" +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=1 and year(t.date)="+cboYear.Text+") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'January'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=2 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'February'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=3 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'March'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=4 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'April'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=5 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'May'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=6 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'June'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=7 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'July'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=8 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'August'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=9 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'September'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=10 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'October'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=11 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'November'," +
+                "(select ifnull(balance_after,0) from transactions t inner join savings s on s.savingsID = t.savingsID inner join member on member.memberID = s.memberID where (month(t.date)=12 and year(t.date)="+cboYear.Text+ ") and member.memberID=m.memberID order by transactionsID desc limit 1) as 'December'" +
                 "from savings inner join member m on savings.memberid = m.memberid where memstatus=0 group by m.memberID order by lastname asc) t group by memberID;";
 
             dt = dc.fnDataTableCollection(query);

@@ -43,8 +43,17 @@ namespace coopsys
         private void frmReportDividentPatronage_Load(object sender, EventArgs e)
         {
             //Set default dividend percentage and format to remove trailing zeroes
-            defaultDividentPercentage = decimal.Parse(dc.fnReturnStringValue("SELECT rep_dividend_rate AS 'divRate' FROM coop.defaults;", "divRate", conn)).ToString("G29");
-            txtDivident.Text = defaultDividentPercentage;
+            try
+            {
+                defaultDividentPercentage = decimal.Parse(dc.fnReturnStringValue("SELECT rep_dividend_rate AS 'divRate' FROM coop.defaults;", "divRate", conn)).ToString("G29");
+                txtDivident.Text = defaultDividentPercentage;
+            }
+            catch 
+            {
+                txtDivident.Text = "";
+                btnGenerateReport.Enabled = false;
+                btnReset.Enabled = false;
+            }
             btnExportExcel.Enabled = false;
         }
 

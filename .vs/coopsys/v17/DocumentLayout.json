@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|c:\\users\\jerome miguel\\documents\\projects\\metro tuguegarao cooperative\\coopsys\\coopsys\\frmreportscheduleoftransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|solutionrelative:coopsys\\frmreportscheduleoftransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|c:\\users\\jerome miguel\\documents\\projects\\metro tuguegarao cooperative\\coopsys\\coopsys\\frmreportonscheduleofsavings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|solutionrelative:coopsys\\frmreportonscheduleofsavings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|c:\\users\\jerome miguel\\documents\\projects\\metro tuguegarao cooperative\\coopsys\\coopsys\\frmreportonscheduleofsavings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmreportonscheduleofsavings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|solutionrelative:coopsys\\frmreportonscheduleofsavings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|c:\\users\\jerome miguel\\documents\\projects\\metro tuguegarao cooperative\\coopsys\\coopsys\\frmreportonscheduleofsavings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|solutionrelative:coopsys\\frmreportonscheduleofsavings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmreportscheduleoftransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|solutionrelative:coopsys\\frmreportscheduleoftransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmreportscheduleoftransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|solutionrelative:coopsys\\frmreportscheduleoftransactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmprintdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|solutionrelative:coopsys\\frmprintdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmprintdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF27ADAD-6B18-40B6-863E-93C1C07868D9}|coopsys\\coopsys.csproj|solutionrelative:coopsys\\frmprintdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,28 +45,24 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmReportScheduleOfTransactions.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportScheduleOfTransactions.cs",
-              "RelativeDocumentMoniker": "coopsys\\frmReportScheduleOfTransactions.cs",
-              "ToolTip": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportScheduleOfTransactions.cs [Design]",
-              "RelativeToolTip": "coopsys\\frmReportScheduleOfTransactions.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T02:56:25.546Z",
-              "EditorCaption": " [Design]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "frmReportOnScheduleOfSavings.cs",
               "DocumentMoniker": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportOnScheduleOfSavings.cs",
               "RelativeDocumentMoniker": "coopsys\\frmReportOnScheduleOfSavings.cs",
               "ToolTip": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportOnScheduleOfSavings.cs",
               "RelativeToolTip": "coopsys\\frmReportOnScheduleOfSavings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAiAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAgwEgAAAAhAQAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T02:46:14.57Z",
+              "WhenOpened": "2024-07-25T07:19:21.639Z",
               "EditorCaption": ""
             },
             {
@@ -66,8 +74,53 @@
               "ToolTip": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportOnScheduleOfSavings.cs [Design]",
               "RelativeToolTip": "coopsys\\frmReportOnScheduleOfSavings.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T02:45:45.654Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-25T07:19:20.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmReportScheduleOfTransactions.cs",
+              "DocumentMoniker": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportScheduleOfTransactions.cs",
+              "RelativeDocumentMoniker": "coopsys\\frmReportScheduleOfTransactions.cs",
+              "ToolTip": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportScheduleOfTransactions.cs",
+              "RelativeToolTip": "coopsys\\frmReportScheduleOfTransactions.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAEwF4AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T07:11:03.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmReportScheduleOfTransactions.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportScheduleOfTransactions.cs",
+              "RelativeDocumentMoniker": "coopsys\\frmReportScheduleOfTransactions.cs",
+              "ToolTip": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmReportScheduleOfTransactions.cs [Design]",
+              "RelativeToolTip": "coopsys\\frmReportScheduleOfTransactions.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T07:11:02.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmPrintDialog.cs",
+              "DocumentMoniker": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmPrintDialog.cs",
+              "RelativeDocumentMoniker": "coopsys\\frmPrintDialog.cs",
+              "ToolTip": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmPrintDialog.cs",
+              "RelativeToolTip": "coopsys\\frmPrintDialog.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF0AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T06:44:14.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmPrintDialog.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmPrintDialog.cs",
+              "RelativeDocumentMoniker": "coopsys\\frmPrintDialog.cs",
+              "ToolTip": "C:\\Users\\Jerome Miguel\\Documents\\Projects\\Metro Tuguegarao Cooperative\\coopsys\\coopsys\\frmPrintDialog.cs [Design]",
+              "RelativeToolTip": "coopsys\\frmPrintDialog.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T06:44:42.178Z"
             }
           ]
         }

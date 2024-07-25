@@ -44,6 +44,11 @@ namespace coopsys
             {
                 cboYear.SelectedIndex = 0;
             }
+            else
+            {
+                btnGenerateReport.Enabled = false;
+                btnReset.Enabled = false;
+            }
             cboType.SelectedIndex = 0;
             saveFileDialog1.FileName = "Loan Releases " + System.DateTime.Now.ToString("MMddyyyyhhmmsstt") + ".xlsx";
         }

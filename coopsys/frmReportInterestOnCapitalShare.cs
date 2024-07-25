@@ -44,13 +44,22 @@ namespace coopsys
         private void frmReportInterestOnCapitalShare_Load(object sender, EventArgs e)
         {
             //Set Default Interest Rate and format to remove trailing zeroes
-            defaultInterest = decimal.Parse(dc.fnReturnStringValue("SELECT rep_interest_capital_share AS 'interestCS' FROM coop.defaults;", "interestCS", conn)).ToString("G29");
-
-            btnExportExcel.Enabled = false;
-            txtRate.Text = defaultInterest;
-            foreach (DataGridViewRow row in grdReportInterestOnShareCapital.Rows)
+            try
             {
-                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+                defaultInterest = decimal.Parse(dc.fnReturnStringValue("SELECT rep_interest_capital_share AS 'interestCS' FROM coop.defaults;", "interestCS", conn)).ToString("G29");
+
+                btnExportExcel.Enabled = false;
+                txtRate.Text = defaultInterest;
+                foreach (DataGridViewRow row in grdReportInterestOnShareCapital.Rows)
+                {
+                    row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+                }
+            }
+            catch
+            {
+                btnGenerateReport.Enabled = false;
+                btnReset.Enabled = false;
+                btnExportExcel.Enabled = false;
             }
         }
 

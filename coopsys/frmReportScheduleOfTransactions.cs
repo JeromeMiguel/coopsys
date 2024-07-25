@@ -92,6 +92,7 @@ namespace coopsys
             if (grdReportTrans.Rows.Count > 0)
             {
                 btnExportExcel.Enabled = true;
+                btnReset.Enabled = true;
             }
 
             foreach (DataGridViewRow row in grdReportTrans.Rows)
@@ -131,6 +132,7 @@ namespace coopsys
             if (cboYear.SelectedIndex >= 0 && cboType.SelectedIndex >= 0)
             {
                 btnGenerateReport.Enabled = true;
+                btnReset.Enabled = true;
             }
         }
 

@@ -97,7 +97,12 @@ namespace coopsys
 
         private void frmViewMemberShares_Load(object sender, EventArgs e)
         {
-                LoadCapitalShares();
+            LoadCapitalShares();
+            if (cboYear.Items.Count != 0)
+            {
+                btnFilter.Enabled = true;
+                btnReset.Enabled = true;
+            }
         }
 
         private void grdShares_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

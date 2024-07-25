@@ -37,11 +37,15 @@ namespace coopsys
             {
                 cboYear.SelectedIndex = 0;
             }
+            else
+            {
+                btnGenerateReport.Enabled = false;
+                btnReset.Enabled = false;
+            }
         }
 
         private void frmReportOnScheduleOfShareCapital_Load(object sender, EventArgs e)
         {
-            cboYear.SelectedIndex = 0;
             btnExportExcel.Enabled = false;
         }
 
