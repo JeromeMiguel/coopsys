@@ -259,7 +259,7 @@ namespace coopsys
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
             year = cboYear.Text;
-            saveFileDialog1.FileName = "SchedShareCapital " + System.DateTime.Now.ToString("MMddyyyyhhmmsstt") + ".xlsx";
+            saveFileDialog1.FileName = "SchedSavings " + System.DateTime.Now.ToString("MMddyyyyhhmmsstt") + ".xlsx";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 panel1.Visible = true;
