@@ -115,7 +115,7 @@ namespace coopsys
                     "where savingsID = " + dtDistinctID.Rows[a][0].ToString() + ";", conn);
 
                 dc.fnExecuteQuery("insert into transactions(type, amount, balance_before, balance_after, date, savingsID) " +
-                    "values(2, "+Math.Round(interestAmount,2)+","+ Math.Round(decimal.Parse(dtGetPrevTrans.Rows[0][4].ToString()),2) + ","+Math.Round(balance_after,2) +",NOW(),"+ dtDistinctID.Rows[a][0].ToString() + ")", conn);
+                    "values(3, "+Math.Round(interestAmount,2)+","+ Math.Round(decimal.Parse(dtGetPrevTrans.Rows[0][4].ToString()),2) + ","+Math.Round(balance_after,2) +",NOW(),"+ dtDistinctID.Rows[a][0].ToString() + ")", conn);
             }
         }
     }

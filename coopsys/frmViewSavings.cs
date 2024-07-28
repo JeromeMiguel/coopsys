@@ -11,6 +11,10 @@ using System.Windows.Forms;
 using calypso;
 using calypso.DataAccess;
 using MetroFramework.Controls;
+using DocumentFormat.OpenXml.Drawing.Charts;
+using DocumentFormat.OpenXml.Math;
+using Microsoft.Office.Core;
+using System.Security.Cryptography;
 
 namespace coopsys
 {
@@ -35,7 +39,12 @@ namespace coopsys
             form.ShowDialog();
         }
 
-        DataTable dtAcc = new DataTable(), dt = new DataTable();
+        private void grdTransactions_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            setRowHeadNumber();
+        }
+
+        System.Data.DataTable dtAcc = new System.Data.DataTable(), dt = new System.Data.DataTable();
         DataCollection dc = new DataCollection();
 
         public frmViewSavings(MySqlConnection _conn, int _memberID, string _fname, string _mname, string _lname)
@@ -53,7 +62,7 @@ namespace coopsys
 
             //Get Transaction History
             getTransactions();
-           
+
         }
 
         public void getAccInfo()
@@ -77,14 +86,25 @@ namespace coopsys
 
         public void getTransactions()
         {
-            dt = dc.fnDataTableCollection("SELECT transactionsID, type,   CASE WHEN type = 1 THEN CONCAT('- ', FORMAT(amount, 2)) ELSE CONCAT('+ ', FORMAT(amount, 2)) END AS 'Amount'," +
-               "FORMAT(balance_before, 2) AS 'Balance Before', FORMAT(balance_after, 2) AS 'Balance After',  date AS 'Date', savingsID " +
-               "FROM coop.transactions WHERE savingsID=" + savingsID + " order by transactionsID desc;", conn);
+            dt = dc.fnDataTableCollection("SELECT transactionsID, " +
+                "CASE WHEN type = 1 THEN 'Withdraw' WHEN type = 2 THEN 'Deposit' ELSE 'Interest' END AS 'Type',   date AS 'Date', " +
+                "CASE WHEN type = 1 THEN FORMAT(amount, 2) END AS 'Amt Withdrawn', " +
+                "CASE WHEN type = 2 THEN FORMAT(amount, 2) END AS 'Amt Deposit', " +
+                "CASE WHEN type = 3 THEN FORMAT(amount, 2) END AS 'Amt Interest', " +
+                "FORMAT(balance_after, 2) AS 'Balance' FROM coop.transactions " +
+                "WHERE savingsID = " + savingsID + " order by transactionsID desc;", conn);
             grdTransactions.DataSource = dt;
 
             grdTransactions.Columns[0].Visible = false;
-            grdTransactions.Columns[1].Visible = false;
-            grdTransactions.Columns[6].Visible = false;
+      
+        }
+
+        private void setRowHeadNumber()
+        {
+            foreach (DataGridViewRow row in grdTransactions.Rows)
+            {
+                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
+            }
         }
     }
 }
