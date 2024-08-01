@@ -20,6 +20,7 @@ namespace coopsys
         Database db = new Database();
         DataCollection dc = new DataCollection();
         MySqlConnection conn;
+        string userID;
 
         public frmLogin()
         {
@@ -37,9 +38,10 @@ namespace coopsys
         {
             conn.Open();
             conn.Close();
-            frmMain main = new frmMain(conn);
-            main.Show();
-            this.Hide();
+            fnLogin();
+            //frmMain main = new frmMain(conn, );
+            //main.Show();
+            //this.Hide();
             //try
             //{
             //    conn.Open();
@@ -64,8 +66,9 @@ namespace coopsys
             string query = "select * from useraccounts where username = '" + txtUname.Text + "' and password = '" + txtPassword.Text + "'";
             if(dc.fnCheckRecord(query, conn))
             {
-                //frmMain main = new frmMain();
-                //main.Show();
+                userID = dc.fnReturnStringValue(query, "id", conn);
+                frmMain main = new frmMain(conn, userID);
+                main.Show();
                 this.Hide();
             }
             else

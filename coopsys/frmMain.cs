@@ -26,14 +26,16 @@ namespace coopsys
         MySqlConnection conn;
 
         DateTime date, time;
-        private int memberID, sex, memfee, memtype, memstatus;
-        private string fname, mname, lname, bday, position, busname, busplateno, address, tin, cpnum, stalladdress, 
+        private int  memberID, sex, memfee, memtype, memstatus;
+        private string userID, fname, mname, lname, bday, position, busname, busplateno, address, tin, cpnum, stalladdress, 
             houseno, street, barangay, municipality_city, bus_bldgno, bus_street, bus_barangay, bus_municipality_city, account_number;
 
-        public frmMain(MySqlConnection _conn)
+        public frmMain(MySqlConnection _conn, string _userID)
         {
             InitializeComponent();
             conn = _conn;
+
+            userID = _userID;
 
             string cert_total = "0", member_total = "0";
 
@@ -63,10 +65,10 @@ namespace coopsys
             else
             {
                 dc.fnExecuteQuery("INSERT INTO `coop`.`defaults`" +
-                    "(`year`,`cert_count`,`member_count`)" +
+                    "(`year`,`cert_count`,`member_count`, `userID`)" +
                     "VALUES(" + System.DateTime.Today.Year + "," +
                     ""+cert_total+"," +
-                    ""+member_total+");", conn);
+                    ""+member_total+","+userID+");", conn);
             }
             defaults.year = int.Parse(dc.fnReturnStringValue("select year from defaults", "year", conn));
         }
