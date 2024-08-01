@@ -68,9 +68,10 @@ namespace coopsys
             }
 
             string queryUpdateMain = "select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memstatus = 0";
+                      "sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, memfee," +
+                      "if(memtype=0, 'Associate', 'Regular') as 'memtype',  memstatus, busname, busplateno, bus_bldgno, bus_street, bus_barangay, bus_municipality_city, " +
+                      "memtype, account_number as 'ACCOUNT NUMBER', CONCAT(lastname, ', ', firstname,' ', middlename) AS 'NAME', " +
+                      "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE'from coop.member where memstatus = 0;";
             main.SearchResult(queryUpdateMain);
             main.cboMemStat.SelectedIndex = 0;
             DialogResult dr = MessageBox.Show(this, "Member status changed.", "Success", 

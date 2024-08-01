@@ -270,6 +270,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
+            this.metroLabel5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroLabel5.Location = new System.Drawing.Point(627, 33);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(30, 20);
@@ -335,7 +336,7 @@
             this.txtPosition.ShortcutsEnabled = true;
             this.txtPosition.Size = new System.Drawing.Size(122, 28);
             this.txtPosition.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtPosition.TabIndex = 12;
+            this.txtPosition.TabIndex = 14;
             this.txtPosition.UseSelectable = true;
             this.txtPosition.WaterMark = "Position";
             this.txtPosition.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -369,7 +370,7 @@
             this.txtBusPlateNo.ShortcutsEnabled = true;
             this.txtBusPlateNo.Size = new System.Drawing.Size(278, 28);
             this.txtBusPlateNo.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBusPlateNo.TabIndex = 11;
+            this.txtBusPlateNo.TabIndex = 17;
             this.txtBusPlateNo.UseSelectable = true;
             this.txtBusPlateNo.WaterMark = "Business Plate Number";
             this.txtBusPlateNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -403,7 +404,7 @@
             this.txtBusName.ShortcutsEnabled = true;
             this.txtBusName.Size = new System.Drawing.Size(278, 28);
             this.txtBusName.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBusName.TabIndex = 11;
+            this.txtBusName.TabIndex = 16;
             this.txtBusName.UseSelectable = true;
             this.txtBusName.WaterMark = "Business Name";
             this.txtBusName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -416,7 +417,7 @@
             this.chkFee.Name = "chkFee";
             this.chkFee.Size = new System.Drawing.Size(148, 17);
             this.chkFee.Style = MetroFramework.MetroColorStyle.Purple;
-            this.chkFee.TabIndex = 10;
+            this.chkFee.TabIndex = 15;
             this.chkFee.Text = "Paid membership fee";
             this.chkFee.UseSelectable = true;
             // 
@@ -440,7 +441,7 @@
             this.cboMemType.Name = "cboMemType";
             this.cboMemType.Size = new System.Drawing.Size(135, 30);
             this.cboMemType.Style = MetroFramework.MetroColorStyle.Purple;
-            this.cboMemType.TabIndex = 9;
+            this.cboMemType.TabIndex = 13;
             this.cboMemType.UseSelectable = true;
             this.cboMemType.SelectedIndexChanged += new System.EventHandler(this.cboMemType_SelectedIndexChanged);
             // 
@@ -456,7 +457,7 @@
             this.btnSave.Location = new System.Drawing.Point(590, 759);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(223, 46);
-            this.btnSave.TabIndex = 13;
+            this.btnSave.TabIndex = 23;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -473,7 +474,7 @@
             this.btnCancel.Location = new System.Drawing.Point(439, 759);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(133, 46);
-            this.btnCancel.TabIndex = 14;
+            this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -521,7 +522,7 @@
             this.txtBusMunicipalityCity.ShortcutsEnabled = true;
             this.txtBusMunicipalityCity.Size = new System.Drawing.Size(278, 28);
             this.txtBusMunicipalityCity.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBusMunicipalityCity.TabIndex = 14;
+            this.txtBusMunicipalityCity.TabIndex = 21;
             this.txtBusMunicipalityCity.UseSelectable = true;
             this.txtBusMunicipalityCity.WaterMark = "Municipality / City";
             this.txtBusMunicipalityCity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -555,7 +556,7 @@
             this.txtBusBldgNo.ShortcutsEnabled = true;
             this.txtBusBldgNo.Size = new System.Drawing.Size(278, 28);
             this.txtBusBldgNo.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBusBldgNo.TabIndex = 11;
+            this.txtBusBldgNo.TabIndex = 18;
             this.txtBusBldgNo.UseSelectable = true;
             this.txtBusBldgNo.WaterMark = "Building Number";
             this.txtBusBldgNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -589,7 +590,7 @@
             this.txtBusBarangay.ShortcutsEnabled = true;
             this.txtBusBarangay.Size = new System.Drawing.Size(278, 28);
             this.txtBusBarangay.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBusBarangay.TabIndex = 12;
+            this.txtBusBarangay.TabIndex = 20;
             this.txtBusBarangay.UseSelectable = true;
             this.txtBusBarangay.WaterMark = "Barangay";
             this.txtBusBarangay.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -623,7 +624,7 @@
             this.txtBusStreet.ShortcutsEnabled = true;
             this.txtBusStreet.Size = new System.Drawing.Size(278, 28);
             this.txtBusStreet.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtBusStreet.TabIndex = 11;
+            this.txtBusStreet.TabIndex = 19;
             this.txtBusStreet.UseSelectable = true;
             this.txtBusStreet.WaterMark = "Street";
             this.txtBusStreet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -657,7 +658,7 @@
             this.txtStreet.ShortcutsEnabled = true;
             this.txtStreet.Size = new System.Drawing.Size(278, 28);
             this.txtStreet.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtStreet.TabIndex = 11;
+            this.txtStreet.TabIndex = 10;
             this.txtStreet.UseSelectable = true;
             this.txtStreet.WaterMark = "Street";
             this.txtStreet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -691,7 +692,7 @@
             this.txtHouseNo.ShortcutsEnabled = true;
             this.txtHouseNo.Size = new System.Drawing.Size(278, 28);
             this.txtHouseNo.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtHouseNo.TabIndex = 13;
+            this.txtHouseNo.TabIndex = 9;
             this.txtHouseNo.UseSelectable = true;
             this.txtHouseNo.WaterMark = "House Number";
             this.txtHouseNo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -726,7 +727,7 @@
             this.txtMunicipalityCity.ShortcutsEnabled = true;
             this.txtMunicipalityCity.Size = new System.Drawing.Size(278, 28);
             this.txtMunicipalityCity.Style = MetroFramework.MetroColorStyle.Purple;
-            this.txtMunicipalityCity.TabIndex = 14;
+            this.txtMunicipalityCity.TabIndex = 12;
             this.txtMunicipalityCity.UseSelectable = true;
             this.txtMunicipalityCity.WaterMark = "Municipality / City";
             this.txtMunicipalityCity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -808,7 +809,7 @@
             this.cboBarangay.Name = "cboBarangay";
             this.cboBarangay.Size = new System.Drawing.Size(278, 30);
             this.cboBarangay.Style = MetroFramework.MetroColorStyle.Purple;
-            this.cboBarangay.TabIndex = 15;
+            this.cboBarangay.TabIndex = 11;
             this.cboBarangay.UseSelectable = true;
             // 
             // txtAccountNumber

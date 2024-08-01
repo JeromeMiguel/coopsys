@@ -49,11 +49,11 @@
             this.tsmiScheduleOfLoanReleases = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiScheduleOfCapitalShare = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleOfPastDueLoansToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleOfTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleOfSalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scheduleOfSavingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInterestOnCapitalShare = new System.Windows.Forms.ToolStripMenuItem();
             this.finalReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleOfTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scheduleOfSavingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainTimer = new System.Windows.Forms.Timer(this.components);
             this.tipTools = new System.Windows.Forms.ToolTip(this.components);
             this.btnSearchMem = new System.Windows.Forms.PictureBox();
@@ -129,7 +129,7 @@
             this.grdMembers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdMembers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdMembers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
@@ -308,12 +308,26 @@
             this.scheduleOfPastDueLoansToolStripMenuItem.Text = "Schedule of Past Due Loans";
             this.scheduleOfPastDueLoansToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfPastDueLoansToolStripMenuItem_Click);
             // 
+            // scheduleOfTransactionsToolStripMenuItem
+            // 
+            this.scheduleOfTransactionsToolStripMenuItem.Name = "scheduleOfTransactionsToolStripMenuItem";
+            this.scheduleOfTransactionsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.scheduleOfTransactionsToolStripMenuItem.Text = "Schedule of Transactions";
+            this.scheduleOfTransactionsToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfTransactionsToolStripMenuItem_Click);
+            // 
             // scheduleOfSalesToolStripMenuItem
             // 
             this.scheduleOfSalesToolStripMenuItem.Name = "scheduleOfSalesToolStripMenuItem";
             this.scheduleOfSalesToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
             this.scheduleOfSalesToolStripMenuItem.Text = "Schedule of Sales";
             this.scheduleOfSalesToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfSalesToolStripMenuItem_Click);
+            // 
+            // scheduleOfSavingsToolStripMenuItem
+            // 
+            this.scheduleOfSavingsToolStripMenuItem.Name = "scheduleOfSavingsToolStripMenuItem";
+            this.scheduleOfSavingsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.scheduleOfSavingsToolStripMenuItem.Text = "Schedule of Savings";
+            this.scheduleOfSavingsToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfSavingsToolStripMenuItem_Click);
             // 
             // tsmInterestOnCapitalShare
             // 
@@ -328,20 +342,6 @@
             this.finalReportToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
             this.finalReportToolStripMenuItem.Text = "Final Report";
             this.finalReportToolStripMenuItem.Click += new System.EventHandler(this.finalReportToolStripMenuItem_Click);
-            // 
-            // scheduleOfTransactionsToolStripMenuItem
-            // 
-            this.scheduleOfTransactionsToolStripMenuItem.Name = "scheduleOfTransactionsToolStripMenuItem";
-            this.scheduleOfTransactionsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
-            this.scheduleOfTransactionsToolStripMenuItem.Text = "Schedule of Transactions";
-            this.scheduleOfTransactionsToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfTransactionsToolStripMenuItem_Click);
-            // 
-            // scheduleOfSavingsToolStripMenuItem
-            // 
-            this.scheduleOfSavingsToolStripMenuItem.Name = "scheduleOfSavingsToolStripMenuItem";
-            this.scheduleOfSavingsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
-            this.scheduleOfSavingsToolStripMenuItem.Text = "Schedule of Savings";
-            this.scheduleOfSavingsToolStripMenuItem.Click += new System.EventHandler(this.scheduleOfSavingsToolStripMenuItem_Click);
             // 
             // mainTimer
             // 

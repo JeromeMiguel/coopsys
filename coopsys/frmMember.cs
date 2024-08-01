@@ -25,7 +25,7 @@ namespace coopsys
         MySqlConnection conn;
         private bool register;
         private int age, sex, memfee, memtype, memstatus, memberID, cboMemTypeMain;
-        private string bday, busname, busplateno, tin, account_number;
+        private string bday, busname, busplateno, tin, account_number, city;
 
         private void txtCpNum_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -76,6 +76,8 @@ namespace coopsys
                 mtxtTin.Mask = "000-000-000-000";
                 mtxtTin.PromptChar = ' ';
             }
+
+            txtMunicipalityCity.Text = city == null ? "Tuguegarao City" : city;
         }
 
         public DateTime today = DateTime.Today;
@@ -122,13 +124,15 @@ namespace coopsys
             txtHouseNo.Text = _houseno; 
             txtStreet.Text = _street;
             cboBarangay.Text = _barangay;
-            txtMunicipalityCity.Text = _municipality_city;
+            txtMunicipalityCity.Text = city == null ? "Tuguegarao City" : _municipality_city ;
             txtPosition.Text = _position;
             txtBusBldgNo.Text = _bus_bldgno;
             txtBusStreet.Text = _bus_street;
             txtBusBarangay.Text = _bus_barangay;
             txtBusMunicipalityCity.Text = _bus_municipality_city;
             txtAccountNumber.Text = _account_number;
+
+            city = _municipality_city;
         }
 
         private void RegisterMember()
