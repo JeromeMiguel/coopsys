@@ -73,65 +73,22 @@ namespace coopsys
             defaults.year = int.Parse(dc.fnReturnStringValue("select year from defaults", "year", conn));
         }
 
-        private void SearchMemberLoadGrid(int _memStatVal)
+        private void SearchMemberLoadGrid(int _memStatVal, int _memTypeVal)
         {
-            if (string.IsNullOrWhiteSpace(txtSearch.Text))
-            {
-                //control statement without search key
-                if (cboMemType.SelectedIndex == 0)
-                {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memstatus = "+_memStatVal+";");
-                }
-                else if (cboMemType.SelectedIndex == 1)
-                {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memtype=0 and memstatus = " + _memStatVal+";");
-                }
-                else if (cboMemType.SelectedIndex == 2)
-                {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memtype=1 and memstatus = " + _memStatVal+";");
-                }
+            //control statement
+            string memTypeStatement = cboMemType.SelectedIndex==0 ? "" : "memtype=" + (cboMemType.SelectedIndex - 1) + " AND ";
+            string searchStatement = string.IsNullOrWhiteSpace(txtSearch.Text) ? "" : 
+                " (CONCAT(lastname, ', ', firstname,' ', middlename) like '%" + txtSearch.Text + "%' " +
+                "OR account_number like '%" + txtSearch.Text + "%') AND ";
 
-                setRowHeadNumber();
-            }
-            else
-            {
-                //control statement with search key
-                if (cboMemType.SelectedIndex == 0)
-                {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where lastname like '%" + txtSearch.Text + "%' and memstatus = "+_memStatVal+" ");
-                }
-                else if (cboMemType.SelectedIndex == 1)
-                {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where lastname like '%" + txtSearch.Text + "%' and memstatus = "+_memStatVal+" " +
-                        "and memtype = 0;");
-                }
-                else if (cboMemType.SelectedIndex == 2)
-                {
-                    SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where lastname like '%" + txtSearch.Text + "%' and memstatus = "+_memStatVal+" " +
-                        "and memtype = 1;");
-                }
+            SearchResult("select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
+               "sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, memfee," +
+               "if(memtype=0, 'Associate', 'Regular') as 'memtype',  memstatus, busname, busplateno, bus_bldgno, bus_street, bus_barangay, bus_municipality_city, " +
+               "memtype, account_number as 'ACCOUNT NUMBER', CONCAT(lastname, ', ', firstname,' ', middlename) AS 'NAME', " +
+               "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE'from coop.member where " + memTypeStatement + searchStatement + "memstatus = " + _memStatVal + ";");
 
-                setRowHeadNumber();
-                grdMembers.ClearSelection();
-            }
+            setRowHeadNumber();
+            grdMembers.ClearSelection();
         }
 
         private void tsmiScheduleOfCapitalShare_Click(object sender, EventArgs e)
@@ -369,7 +326,11 @@ namespace coopsys
         {
             grdMembers.DataSource = dc.fnDataTableCollection(query, conn);
             grdMembers.Columns[0].Visible = false;//memberID
-            grdMembers.Columns[2].Visible = true;//mname
+
+            grdMembers.Columns[1].Visible = false;//fname
+            grdMembers.Columns[2].Visible = false;//mname
+            grdMembers.Columns[3].Visible = false;//lname
+
             grdMembers.Columns[4].Visible = false;//sex
             grdMembers.Columns[5].Visible = false;//birthday
             grdMembers.Columns[6].Visible = false;//position
@@ -381,6 +342,8 @@ namespace coopsys
             grdMembers.Columns[12].Visible = false;//bmunicipality_city
             grdMembers.Columns[13].Visible = false;//memfee
 
+            grdMembers.Columns[14].Visible = false;//memberType
+
             grdMembers.Columns[15].Visible = false;//memstatus
             grdMembers.Columns[16].Visible = false;//busname
             grdMembers.Columns[17].Visible = false;//busplateno
@@ -389,7 +352,11 @@ namespace coopsys
             grdMembers.Columns[20].Visible = false;//bus_barangay
             grdMembers.Columns[21].Visible = false;//bus_municipality_city
             grdMembers.Columns[22].Visible = false;//memtype
-            grdMembers.Columns[23].Visible = false;//account_number
+
+            grdMembers.Columns[23].Visible = true;//account_number
+            grdMembers.Columns[24].Visible = true;//name
+            grdMembers.Columns[25]. Visible = true;//member type (for display)
+
 
             grdMembers.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             grdMembers.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -453,22 +420,23 @@ namespace coopsys
 
         private void btnSearchMem_Click(object sender, EventArgs e)
         {
-            SearchMemberLoadGrid(cboMemStat.SelectedIndex);
+            SearchMemberLoadGrid(cboMemStat.SelectedIndex, cboMemType.SelectedIndex);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            SearchMemberLoadGrid(cboMemStat.SelectedIndex);
+            SearchMemberLoadGrid(cboMemStat.SelectedIndex, cboMemType.SelectedIndex);
         }
 
         private void cboMemType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SearchMemberLoadGrid(cboMemStat.SelectedIndex);
+            SearchMemberLoadGrid(cboMemStat.SelectedIndex, cboMemType.SelectedIndex);
         }
 
         private void cboMemStat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SearchMemberLoadGrid(cboMemStat.SelectedIndex);
+            SearchMemberLoadGrid(cboMemStat.SelectedIndex, cboMemType.SelectedIndex);
+            Console.WriteLine(cboMemStat.SelectedIndex);
         }
 
         private void btnAddMember_Click(object sender, EventArgs e)
