@@ -245,9 +245,10 @@ namespace coopsys
         private void btnSave_Click(object sender, EventArgs e)
         {
             string query = "select memberID, firstname as 'FIRST NAME', middlename as 'MIDDLE NAME', lastname as 'LAST NAME', " +
-                       " sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, " +
-                       "memfee,if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE',  memstatus, busname, busplateno, bus_bldgno, bus_street, " +
-                       "bus_barangay, bus_municipality_city, memtype, account_number from coop.member where memstatus = 0";
+                      "sex, birthday, position, cpnum, tin, houseno, street, barangay, municipality_city, memfee," +
+                      "if(memtype=0, 'Associate', 'Regular') as 'memtype',  memstatus, busname, busplateno, bus_bldgno, bus_street, bus_barangay, bus_municipality_city, " +
+                      "memtype, account_number as 'ACCOUNT NUMBER', CONCAT(lastname, ', ', firstname,' ', middlename) AS 'NAME', " +
+                      "if(memtype=0, 'Associate', 'Regular') as 'MEMBER TYPE'from coop.member where memstatus = 0;";
 
             if (string.IsNullOrWhiteSpace(txtFname.Text) || string.IsNullOrWhiteSpace(txtMname.Text) ||
                 string.IsNullOrWhiteSpace(txtLname.Text) || string.IsNullOrWhiteSpace(cboSex.Text) || cboBarangay.SelectedIndex == 0)
