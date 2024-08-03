@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Controls;
-using IronXL;
 using MySql.Data.MySqlClient;
 using calypso.DataAccess;
 using ClosedXML.Excel;

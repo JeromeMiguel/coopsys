@@ -125,8 +125,7 @@
             this.txtPercent1.CustomButton.UseSelectable = true;
             this.txtPercent1.CustomButton.Visible = false;
             this.txtPercent1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtPercent1.Lines = new string[] {
-        "70"};
+            this.txtPercent1.Lines = new string[0];
             this.txtPercent1.Location = new System.Drawing.Point(139, 92);
             this.txtPercent1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPercent1.MaxLength = 6;
@@ -140,7 +139,6 @@
             this.txtPercent1.Size = new System.Drawing.Size(143, 34);
             this.txtPercent1.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtPercent1.TabIndex = 39;
-            this.txtPercent1.Text = "70";
             this.txtPercent1.UseSelectable = true;
             this.txtPercent1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPercent1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -172,9 +170,8 @@
             this.txtPercent2.CustomButton.UseSelectable = true;
             this.txtPercent2.CustomButton.Visible = false;
             this.txtPercent2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtPercent2.Lines = new string[] {
-        "30"};
-            this.txtPercent2.Location = new System.Drawing.Point(468, 92);
+            this.txtPercent2.Lines = new string[0];
+            this.txtPercent2.Location = new System.Drawing.Point(468, 98);
             this.txtPercent2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPercent2.MaxLength = 6;
             this.txtPercent2.Name = "txtPercent2";
@@ -187,7 +184,6 @@
             this.txtPercent2.Size = new System.Drawing.Size(143, 34);
             this.txtPercent2.Style = MetroFramework.MetroColorStyle.Purple;
             this.txtPercent2.TabIndex = 41;
-            this.txtPercent2.Text = "30";
             this.txtPercent2.UseSelectable = true;
             this.txtPercent2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPercent2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

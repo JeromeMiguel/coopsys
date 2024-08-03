@@ -425,7 +425,7 @@ namespace coopsys
         private void removePenaltyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loanID = Int32.Parse(grdLoans.SelectedCells[0].Value.ToString());
-            dc.fnExecuteQuery("UPDATE `coop`.`loan` SET `loanpenalty` = NULL WHERE(`loanID` = " + loanID + " and `memberid` = " + memberID + ");", conn);
+            dc.fnExecuteQuery("UPDATE `coop`.`penalty` SET `penaltyamount` = 0 WHERE `loanID` = " + loanID + ";", conn);
             MessageBox.Show(this, "Penalty for this loan was successfully removed.\nClick OK to continue.", "Penalty", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadLoanList(1, memberID);
         }

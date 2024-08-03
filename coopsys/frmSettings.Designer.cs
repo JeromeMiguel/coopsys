@@ -110,7 +110,6 @@
             this.txtLoanPenalty.Lines = new string[0];
             this.txtLoanPenalty.Location = new System.Drawing.Point(381, 76);
             this.txtLoanPenalty.MaxLength = 10;
-            this.txtLoanPenalty.Multiline = true;
             this.txtLoanPenalty.Name = "txtLoanPenalty";
             this.txtLoanPenalty.PasswordChar = '\0';
             this.txtLoanPenalty.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -156,7 +155,6 @@
             this.txtMemberLoanRate.Lines = new string[0];
             this.txtMemberLoanRate.Location = new System.Drawing.Point(38, 76);
             this.txtMemberLoanRate.MaxLength = 6;
-            this.txtMemberLoanRate.Multiline = true;
             this.txtMemberLoanRate.Name = "txtMemberLoanRate";
             this.txtMemberLoanRate.PasswordChar = '\0';
             this.txtMemberLoanRate.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -281,7 +279,6 @@
             this.txtFinalPercentage2.Lines = new string[0];
             this.txtFinalPercentage2.Location = new System.Drawing.Point(381, 151);
             this.txtFinalPercentage2.MaxLength = 6;
-            this.txtFinalPercentage2.Multiline = true;
             this.txtFinalPercentage2.Name = "txtFinalPercentage2";
             this.txtFinalPercentage2.PasswordChar = '\0';
             this.txtFinalPercentage2.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -317,7 +314,6 @@
             this.txtFinalPercentage1.Lines = new string[0];
             this.txtFinalPercentage1.Location = new System.Drawing.Point(38, 151);
             this.txtFinalPercentage1.MaxLength = 6;
-            this.txtFinalPercentage1.Multiline = true;
             this.txtFinalPercentage1.Name = "txtFinalPercentage1";
             this.txtFinalPercentage1.PasswordChar = '\0';
             this.txtFinalPercentage1.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -353,7 +349,6 @@
             this.txtInterestCSRate.Lines = new string[0];
             this.txtInterestCSRate.Location = new System.Drawing.Point(381, 77);
             this.txtInterestCSRate.MaxLength = 10;
-            this.txtInterestCSRate.Multiline = true;
             this.txtInterestCSRate.Name = "txtInterestCSRate";
             this.txtInterestCSRate.PasswordChar = '\0';
             this.txtInterestCSRate.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -389,7 +384,6 @@
             this.txtDvidendRate.Lines = new string[0];
             this.txtDvidendRate.Location = new System.Drawing.Point(38, 77);
             this.txtDvidendRate.MaxLength = 10;
-            this.txtDvidendRate.Multiline = true;
             this.txtDvidendRate.Name = "txtDvidendRate";
             this.txtDvidendRate.PasswordChar = '\0';
             this.txtDvidendRate.ScrollBars = System.Windows.Forms.ScrollBars.None;

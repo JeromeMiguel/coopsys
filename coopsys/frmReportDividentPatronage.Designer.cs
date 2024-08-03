@@ -120,6 +120,7 @@
             // btnGenerateReport
             // 
             this.btnGenerateReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.btnGenerateReport.Enabled = false;
             this.btnGenerateReport.FlatAppearance.BorderSize = 0;
             this.btnGenerateReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(123)))), ((int)(((byte)(199)))));
             this.btnGenerateReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(41)))), ((int)(((byte)(97)))));
@@ -206,6 +207,7 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.DarkGray;
+            this.btnReset.Enabled = false;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
