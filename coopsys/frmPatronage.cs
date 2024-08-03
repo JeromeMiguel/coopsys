@@ -11,8 +11,6 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using calypso;
 using calypso.DataAccess;
-using IronXL;
-using IronXL.Styles;
 using System.Windows.Forms.VisualStyles;
 using System.Collections;
 

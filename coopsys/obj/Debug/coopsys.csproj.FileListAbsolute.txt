@@ -458,11 +458,6 @@ C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ExcelNumberFormat.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Google.Protobuf.dll
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Abstractions.dll
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Drawing.Common.dll
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Logger.dll
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Shared.dll
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronXL.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Irony.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Compression.LZ4.Streams.dll
@@ -506,20 +501,11 @@ C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ZstdSharp.dll
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\BitMiracle.LibTiff.NET.xml
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\BouncyCastle.Crypto.xml
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\calypso.pdb
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\calypso.dll.config
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ClosedXML.xml
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\ExcelNumberFormat.xml
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Google.Protobuf.pdb
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\Google.Protobuf.xml
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Abstractions.pdb
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Drawing.Common.pdb
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Drawing.Common.xml
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Logger.pdb
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronSoftware.Shared.pdb
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronXL.xml
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\IronXL.dll.config
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Compression.LZ4.xml
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Compression.LZ4.Streams.xml
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\K4os.Hash.xxHash.xml
@@ -567,7 +553,6 @@ C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmLogin.resources
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmMain.resources
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmMember.resources
-C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPatronage.resources
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPayment.resources
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmPrintDialog.resources
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportInterestOnCapitalShare.resources
@@ -750,3 +735,4 @@ C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\
 C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\obj\Debug\coopsys.frmReportScheduleOfTransactions.resources
 C:\Users\Jerome Miguel\Documents\Projects\Metro Tuguegarao Cooperative\coopsys\coopsys\obj\Debug\coopsys.frmReportOnScheduleOfSavings.resources
 C:\Users\Jerome Miguel\Documents\Projects\Metro Tuguegarao Cooperative\coopsys\coopsys\obj\Debug\coopsys.frmReportScheduleOfTransactions.resources
+C:\Users\Jerard\Desktop\C# Projects\Coop\Coop - Copy\coopsystem\coopsys\coopsys\bin\Debug\calypso.dll

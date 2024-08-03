@@ -15,7 +15,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Jerome Miguel\Desktop\pub\</PublishUrl>
+    <PublishUrl>C:\Users\Jerard\Desktop\C# Projects\Coop Build\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -25,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -74,7 +74,7 @@
     </Reference>
     <Reference Include="calypso, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Calypso Library\calypso\bin\Debug\calypso.dll</HintPath>
+      <HintPath>..\..\..\Library\calypso.dll</HintPath>
     </Reference>
     <Reference Include="ClosedXML, Version=0.102.2.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.102.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
@@ -87,21 +87,6 @@
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="IronSoftware.Abstractions, Version=2023.11.0.12, Culture=neutral, PublicKeyToken=212d70e9efeae4c7, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronSoftware.Common.2023.11.12\lib\netstandard2.0\IronSoftware.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="IronSoftware.Drawing.Common, Version=2023.12.0.1, Culture=neutral, PublicKeyToken=8d7e55c97b3e9835, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronSoftware.System.Drawing.2023.12.1\lib\netstandard2.0\IronSoftware.Drawing.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="IronSoftware.Logger, Version=2023.11.0.12, Culture=neutral, PublicKeyToken=212d70e9efeae4c7, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronSoftware.Common.2023.11.12\lib\netstandard2.0\IronSoftware.Logger.dll</HintPath>
-    </Reference>
-    <Reference Include="IronSoftware.Shared, Version=2023.11.0.12, Culture=neutral, PublicKeyToken=212d70e9efeae4c7, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronSoftware.Common.2023.11.12\lib\netstandard2.0\IronSoftware.Shared.dll</HintPath>
-    </Reference>
-    <Reference Include="IronXL, Version=2023.12.19.0, Culture=neutral, PublicKeyToken=0f5804b6690bad1e, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronXL.Excel.2023.12.19\lib\netstandard2.0\IronXL.dll</HintPath>
     </Reference>
     <Reference Include="Irony, Version=1.0.11.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
       <HintPath>..\packages\Irony.NetCore.1.0.11\lib\net461\Irony.dll</HintPath>
@@ -412,12 +397,6 @@
     <Compile Include="frmMember.Designer.cs">
       <DependentUpon>frmMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPatronage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPatronage.Designer.cs">
-      <DependentUpon>frmPatronage.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPayment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -545,9 +524,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMember.resx">
       <DependentUpon>frmMember.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPatronage.resx">
-      <DependentUpon>frmPatronage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPayment.resx">
       <DependentUpon>frmPayment.cs</DependentUpon>
