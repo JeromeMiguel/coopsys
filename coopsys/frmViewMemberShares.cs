@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Xml.Linq;
 using calypso;
 using calypso.DataAccess;
+using DocumentFormat.OpenXml.Bibliography;
 using MySql.Data.MySqlClient;
 
 namespace coopsys
@@ -41,19 +42,13 @@ namespace coopsys
             lblMemType.Text = memberType == 1 ? "Associate Member" : "Regular Member";
 
             grdShares.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dt = dc.fnDataTableCollection("select distinct year from capitalshare;", conn);
-            
-            cboYear.DataSource = dt;
-            cboYear.DisplayMember = "year";
-            if (cboYear.Items.Count > 0)
-            {
-                cboYear.SelectedIndex = 0;
-            }
-            cboMonth.SelectedIndex = 0;
         }
 
         public void LoadCapitalShares()
         {
+            var monthWhere = cboMonth.SelectedIndex >=1 ? " and month = " + (cboMonth.SelectedIndex) +" " : "";
+            var yearWhere = cboYear.SelectedIndex >= 0 ? " and year = " + Int32.Parse(cboYear.Text)+" " : "";
+
             grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, format(csamount,2) as 'AMOUNT', " +
                 "concat(CASE month " +
                     "WHEN 1 then '01' " +
@@ -70,22 +65,21 @@ namespace coopsys
                     "ELSE '12' " +
                     "END, '/', if(day<10,concat(0,day),day), '/', year) as 'DATE', if(unclaimed=1, 'Unclaimed','') as 'REMARKS', " +
                     "cs_or_num as 'OR No.' " +
-                "from capitalshare " +
-                "where memberID=" + memberID + " order by year desc, month desc, day desc;", conn);
+                    "from capitalshare " +
+                    "where memberID=" + memberID + monthWhere + yearWhere + 
+                    " order by year desc, month desc, day desc;", conn);
 
             try
             {
-                dt = dc.fnDataTableCollection("select distinct year from capitalshare;", conn);
                 totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
-                "from capitalshare where memberID=" + memberID + " and year=" + cboYear.Text + ";");
-                lblTotalSharesYear.Text = "Total share as of " + cboYear.Text + ": ";
+                    "from capitalshare where memberID=" + memberID + monthWhere + yearWhere + ";");
+
+                lblTotalSharesYear.Text = cboMonth.SelectedIndex == 0 ?  "Total shares in " + cboYear.Text + ": " : 
+                    cboMonth.SelectedIndex>=1 ? "Total shares in " + cboMonth.Text + " "+ cboYear.Text + ": " : 
+                    "Total Lifetime Shares: ";
+
                 lblTotalShares.Text = "₱ " + (totalShare.Rows[0][0].ToString() == "" ? "0.00" : totalShare.Rows[0][0].ToString());
-                cboYear.DataSource = dt;
-                cboYear.DisplayMember = "year";
-                if (cboYear.Items.Count > 0)
-                {
-                    cboYear.SelectedIndex = 0;
-                }
+
             }
             catch { }
             grdShares.Columns[0].Visible = false;
@@ -97,13 +91,13 @@ namespace coopsys
 
         private void frmViewMemberShares_Load(object sender, EventArgs e)
         {
-            LoadCapitalShares();
-            if (cboYear.Items.Count != 0)
-            {
-                btnFilter.Enabled = true;
-                btnReset.Enabled = true;
-            }
+            dt = dc.fnDataTableCollection("select distinct year from capitalshare where memberID=" + memberID + ";", conn);
+            cboYear.DataSource = dt;
+            cboYear.DisplayMember = "year";
+
+            ResetAndLoadShares();
         }
+
 
         private void grdShares_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -121,52 +115,30 @@ namespace coopsys
         private void btnFilter_Click(object sender, EventArgs e)
         {
             grdShares.DataSource = null;
-            grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, format(csamount,2) as 'AMOUNT'," +
-                "concat(CASE month " +
-                    "WHEN 1 then '01' " +
-                    "WHEN 2 then '02' " +
-                    "WHEN 3 then '03' " +
-                    "WHEN 4 then '04' " +
-                    "WHEN 5 then '05' " +
-                    "WHEN 6 then '06' " +
-                    "WHEN 7 then '07' " +
-                    "WHEN 8 then '08' " +
-                    "WHEN 9 then '09' " +
-                    "WHEN 10 then '10' " +
-                    "WHEN 11 then '11' " +
-                    "ELSE '12' " +
-                    "END, '/', if(day<10,concat(0,day),day), '/', year) as 'DATE', if(unclaimed=1, 'Unclaimed','') as 'REMARKS', " +
-                    "cs_or_num as 'OR No.' " +
-                "from capitalshare " +
-                "where memberID=" + memberID + " and month=" + (cboMonth.SelectedIndex + 1) + " and year=" + Int32.Parse(cboYear.Text) + " " +
-                "order by year desc, month desc, day desc;", conn);
+            LoadCapitalShares();
+        }
 
-            try
-            {
-                dt = dc.fnDataTableCollection("select distinct year from capitalshare;", conn);
-                totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
-                "from capitalshare where memberID=" + memberID + " and year=" + cboYear.Text + ";");
-                lblTotalSharesYear.Text = "Total share as of " + cboYear.Text + ": ₱" + totalShare.Rows[0][0].ToString();
-                cboYear.DataSource = dt;
-                cboYear.DisplayMember = "year";
-                if (cboYear.Items.Count > 0)
-                {
-                    cboYear.SelectedIndex = 0;
-                }
-            }
-            catch { }
-            grdShares.Columns[0].Visible = false;
+        private void ResetAndLoadShares ()
+        {
+            // Reset Filter Combo Boxes Selected Index on form load 
+            // Combo Boxes will have nothing selected initially
+            cboMonth.ResetText();
+            cboMonth.SelectedIndex = -1;
+            cboYear.ResetText();
+            cboYear.SelectedIndex = -1;
 
-            foreach (DataGridViewRow row in grdShares.Rows)
-            {
-                row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
-            }
+            btnFilter.Enabled = false;
+            btnReset.Enabled = false;
 
+            LoadCapitalShares();
+
+            cboYear.ResetText();
+            cboYear.SelectedIndex = -1;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            LoadCapitalShares();
+            ResetAndLoadShares();
         }
 
         private void btnAddShare_Click(object sender, EventArgs e)
@@ -174,6 +146,24 @@ namespace coopsys
             frmAddCapitalShare addCapitalShare = new frmAddCapitalShare(this, conn, memberID, true);
             addCapitalShare.ShowDialog();
         }
+
+        private void cboMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckSelectedFilter();
+        }
+
+        private void cboYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckSelectedFilter();
+        }
+
+        private void CheckSelectedFilter()
+        {
+            btnFilter.Enabled = cboMonth.SelectedIndex >= 0 && cboYear.SelectedIndex >= 0;
+            btnReset.Enabled = cboMonth.SelectedIndex >= 0 && cboYear.SelectedIndex >= 0;
+        }
+
+       
 
         private void editCapitalShareToolStripMenuItem_Click(object sender, EventArgs e)
         {
