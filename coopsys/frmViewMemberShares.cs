@@ -44,10 +44,39 @@ namespace coopsys
             grdShares.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
+        private void frmViewMemberShares_Load(object sender, EventArgs e)
+        {
+            dt = dc.fnDataTableCollection("select distinct year from capitalshare where memberID=" + memberID + ";", conn);
+            cboYear.DataSource = dt;
+            cboYear.DisplayMember = "year";
+
+            ResetAndLoadShares();
+
+            // check if member has null total capital share
+            // Purpose: this is included for previously entered members before "total_capital_share
+            //          was added to member table;
+            //          To avoid having to reset database and add members again
+            // if null: run query to get sum of capital share and update total capital share
+            //          in member table
+            string CurrentTotalCapitalShare = dc.fnReturnStringValue("SELECT total_capital_share FROM coop.member WHERE (`memberID` = " + memberID + ") ;", "total_capital_share", conn);
+            if (CurrentTotalCapitalShare == "")
+            {
+                GetTotalShares();
+                if (totalShare.Rows[0][0].ToString() != "") { 
+                    double SumCapitalShare = double.Parse(totalShare.Rows[0][0].ToString());
+
+                    // Update total_capital_share
+                    dc.fnExecuteQuery("UPDATE `coop`.`member` SET `total_capital_share` = '"+SumCapitalShare+"' WHERE (`memberID` = "+memberID+");", conn);
+                 
+                }
+            }
+
+        }
+
         public void LoadCapitalShares()
         {
-            var monthWhere = cboMonth.SelectedIndex >=1 ? " and month = " + (cboMonth.SelectedIndex) +" " : "";
-            var yearWhere = cboYear.SelectedIndex >= 0 ? " and year = " + Int32.Parse(cboYear.Text)+" " : "";
+            string monthWhere = cboMonth.SelectedIndex >=1 ? " and month = " + (cboMonth.SelectedIndex) +" " : "";
+            string yearWhere = cboYear.SelectedIndex >= 0 ? " and year = " + Int32.Parse(cboYear.Text)+" " : "";
 
             grdShares.DataSource = dc.fnDataViewCollection("use coop;\r\nselect csID, format(csamount,2) as 'AMOUNT', " +
                 "concat(CASE month " +
@@ -70,9 +99,8 @@ namespace coopsys
                     " order by year desc, month desc, day desc;", conn);
 
             try
-            {
-                totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
-                    "from capitalshare where memberID=" + memberID + monthWhere + yearWhere + ";");
+            { 
+                GetTotalShares(monthWhere, yearWhere);
 
                 lblTotalSharesYear.Text = cboMonth.SelectedIndex == 0 ?  "Total shares in " + cboYear.Text + ": " : 
                     cboMonth.SelectedIndex>=1 ? "Total shares in " + cboMonth.Text + " "+ cboYear.Text + ": " : 
@@ -89,14 +117,13 @@ namespace coopsys
             }
         }
 
-        private void frmViewMemberShares_Load(object sender, EventArgs e)
+        public void GetTotalShares(string monthWhere = "", string yearWhere = "" )
         {
-            dt = dc.fnDataTableCollection("select distinct year from capitalshare where memberID=" + memberID + ";", conn);
-            cboYear.DataSource = dt;
-            cboYear.DisplayMember = "year";
-
-            ResetAndLoadShares();
+            totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
+                   "from capitalshare where memberID=" + memberID + monthWhere + yearWhere + ";");
         }
+
+
 
 
         private void grdShares_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
