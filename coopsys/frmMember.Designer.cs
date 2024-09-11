@@ -40,6 +40,7 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.cboSex = new MetroFramework.Controls.MetroComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtMemFee = new MetroFramework.Controls.MetroTextBox();
             this.txtPosition = new MetroFramework.Controls.MetroTextBox();
             this.txtBusPlateNo = new MetroFramework.Controls.MetroTextBox();
             this.txtBusName = new MetroFramework.Controls.MetroTextBox();
@@ -294,6 +295,7 @@
             // groupBox2
             // 
             this.groupBox2.AutoSize = true;
+            this.groupBox2.Controls.Add(this.txtMemFee);
             this.groupBox2.Controls.Add(this.txtPosition);
             this.groupBox2.Controls.Add(this.txtBusPlateNo);
             this.groupBox2.Controls.Add(this.txtBusName);
@@ -307,6 +309,42 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Membership";
+            // 
+            // txtMemFee
+            // 
+            // 
+            // 
+            // 
+            this.txtMemFee.CustomButton.Image = null;
+            this.txtMemFee.CustomButton.Location = new System.Drawing.Point(96, 2);
+            this.txtMemFee.CustomButton.Name = "";
+            this.txtMemFee.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtMemFee.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMemFee.CustomButton.TabIndex = 1;
+            this.txtMemFee.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMemFee.CustomButton.UseSelectable = true;
+            this.txtMemFee.CustomButton.Visible = false;
+            this.txtMemFee.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtMemFee.Lines = new string[0];
+            this.txtMemFee.Location = new System.Drawing.Point(195, 98);
+            this.txtMemFee.MaxLength = 32767;
+            this.txtMemFee.Name = "txtMemFee";
+            this.txtMemFee.PasswordChar = '\0';
+            this.txtMemFee.PromptText = "Membership Fee";
+            this.txtMemFee.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMemFee.SelectedText = "";
+            this.txtMemFee.SelectionLength = 0;
+            this.txtMemFee.SelectionStart = 0;
+            this.txtMemFee.ShortcutsEnabled = true;
+            this.txtMemFee.Size = new System.Drawing.Size(122, 28);
+            this.txtMemFee.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtMemFee.TabIndex = 18;
+            this.txtMemFee.UseCustomBackColor = true;
+            this.txtMemFee.UseSelectable = true;
+            this.txtMemFee.WaterMark = "Membership Fee";
+            this.txtMemFee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMemFee.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMemFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
             // 
             // txtPosition
             // 
@@ -358,7 +396,7 @@
             this.txtBusPlateNo.CustomButton.Visible = false;
             this.txtBusPlateNo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtBusPlateNo.Lines = new string[0];
-            this.txtBusPlateNo.Location = new System.Drawing.Point(39, 186);
+            this.txtBusPlateNo.Location = new System.Drawing.Point(39, 197);
             this.txtBusPlateNo.MaxLength = 32767;
             this.txtBusPlateNo.Name = "txtBusPlateNo";
             this.txtBusPlateNo.PasswordChar = '\0';
@@ -392,7 +430,7 @@
             this.txtBusName.CustomButton.Visible = false;
             this.txtBusName.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtBusName.Lines = new string[0];
-            this.txtBusName.Location = new System.Drawing.Point(39, 134);
+            this.txtBusName.Location = new System.Drawing.Point(39, 145);
             this.txtBusName.MaxLength = 32767;
             this.txtBusName.Name = "txtBusName";
             this.txtBusName.PasswordChar = '\0';
@@ -413,13 +451,14 @@
             // chkFee
             // 
             this.chkFee.AutoSize = true;
-            this.chkFee.Location = new System.Drawing.Point(39, 99);
+            this.chkFee.Location = new System.Drawing.Point(37, 103);
             this.chkFee.Name = "chkFee";
             this.chkFee.Size = new System.Drawing.Size(148, 17);
             this.chkFee.Style = MetroFramework.MetroColorStyle.Purple;
             this.chkFee.TabIndex = 15;
             this.chkFee.Text = "Paid membership fee";
             this.chkFee.UseSelectable = true;
+            this.chkFee.CheckedChanged += new System.EventHandler(this.chkFee_CheckedChanged);
             // 
             // metroLabel3
             // 
@@ -915,5 +954,6 @@
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroComboBox cboBarangay;
         private MetroFramework.Controls.MetroTextBox txtAccountNumber;
+        private MetroFramework.Controls.MetroTextBox txtMemFee;
     }
 }
