@@ -55,6 +55,33 @@ namespace coopsys
             }
         }
 
+        private void chkFee_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkFee.Checked)
+            {
+                txtMemFee.BackColor = Color.FromArgb(255, 255, 255);
+                txtMemFee.Enabled = true;
+            }
+            else
+            {
+                txtMemFee.BackColor = SystemColors.ButtonFace;
+                txtMemFee.Enabled = false;
+            }
+        }
+
+        private void decimal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as MetroTextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void mtxtTin_Click(object sender, EventArgs e)
         {
             if (mtxtTin.Text == "TIN")
@@ -78,6 +105,22 @@ namespace coopsys
             }
 
             txtMunicipalityCity.Text = city == null ? "Tuguegarao City" : city;
+
+            string defaultMemFee = dc.fnReturnStringValue("SELECT membership_fee FROM coop.defaults WHERE userID = 1;", "membership_fee", conn);
+            string userMemFee = dc.fnReturnStringValue("SELECT member_fee_amount FROM coop.member WHERE memberID = "+memberID+";", "member_fee_amount", conn);
+            txtMemFee.Text = register ? defaultMemFee : userMemFee != "" ? Double.Parse(userMemFee).ToString("F2") : "";
+            if (memfee == 1)
+            {
+                chkFee.Checked = true;
+                txtMemFee.BackColor = Color.FromArgb(255, 255, 255);
+                txtMemFee.Enabled = true;
+            }
+            else
+            {
+                chkFee.Checked = false;
+                txtMemFee.BackColor = SystemColors.ButtonFace;
+                txtMemFee.Enabled = false;
+            }
         }
 
         public DateTime today = DateTime.Today;
@@ -115,8 +158,16 @@ namespace coopsys
             cboSex.SelectedIndex = _sex;
             cboMemType.SelectedIndex = _memtype;
             memfee = _memfee;
-            if (memfee == 1) { chkFee.Checked = true; }
-            else { chkFee.Checked = false; };
+
+            if (memfee == 1) 
+            { 
+                chkFee.Checked = true;  
+            }
+            else 
+            { 
+                chkFee.Checked = false;
+            }
+
             txtBusName.Text = _busname;
             txtBusPlateNo.Text = _busplateno;
             mtxtTin.Text = _tin;
@@ -157,11 +208,11 @@ namespace coopsys
                 
                 dc.fnExecuteQuery("INSERT INTO `coop`.`member` (`firstname`, `middlename`, `lastname`, `sex`, " +
                     "`birthday`, `position`, `cpnum`, `tin`, `houseno`, `street`, `barangay`, `municipality_city`, `memfee`, `memtype`, `memstatus`, `busname`, " +
-                    "`busplateno`, `bus_bldgno`, `bus_street`, `bus_barangay`, `bus_municipality_city`, `account_number`) " +
+                    "`busplateno`, `bus_bldgno`, `bus_street`, `bus_barangay`, `bus_municipality_city`, `account_number`, `member_fee_amount`) " +
                     "VALUES ('" + txtFname.Text + "', '" + txtMname.Text + "', '" + txtLname.Text + "', " + sex + ",'" + txtBday.Value.ToString("yyyy-MM-dd") + "'," +
                     " '"+txtPosition.Text+"', '" + txtCpNum.Text + "', '" + mtxtTin.Text + "', '" + txtHouseNo.Text + "', '" + txtStreet.Text + "', '" + cboBarangay.Text + "', " +
                     "'" + txtMunicipalityCity.Text + "', " + memfee + ", " + memtype + ", " + memstatus + ", '" + txtBusName.Text + "', '" + txtBusPlateNo.Text + "', " +
-                    "'" + txtBusBldgNo.Text + "', '" + txtBusStreet.Text + "', '" + txtBusBarangay.Text + "', '" + txtBusMunicipalityCity.Text + "', '"+txtAccountNumber.Text+"');", conn);
+                    "'" + txtBusBldgNo.Text + "', '" + txtBusStreet.Text + "', '" + txtBusBarangay.Text + "', '" + txtBusMunicipalityCity.Text + "', '"+txtAccountNumber.Text+ "' , '"+txtMemFee.Text+"');", conn);
 
 
                 DialogResult savingsDialog = MessageBox.Show(this, "Member has been successfully added.\nDo you want to create a Savings Account?",
@@ -231,7 +282,7 @@ namespace coopsys
                     " `tin` = '" + mtxtTin.Text + "', `houseno` =  '" + txtHouseNo.Text + "', `street` =  '" + txtStreet.Text + "', `barangay` =  '" + cboBarangay.Text + "', " +
                     " `municipality_city` = '" + txtMunicipalityCity.Text + "', `memfee` =  " + memfee + ", `memtype` =  " + memtype + ", " +
                     " `busname` =  '" + txtBusName.Text + "', `busplateno` =  '" + txtBusPlateNo.Text + "', `bus_bldgno` = '" + txtBusBldgNo.Text + "'," +
-                    " `bus_street` =  '" + txtBusStreet.Text + "', `bus_barangay` = '" + txtBusBarangay.Text + "', `bus_municipality_city` = '" + txtBusMunicipalityCity.Text + "' " +
+                    " `bus_street` =  '" + txtBusStreet.Text + "', `bus_barangay` = '" + txtBusBarangay.Text + "', `bus_municipality_city` = '" + txtBusMunicipalityCity.Text + "' , `member_fee_amount` = '" + txtMemFee.Text + "' " +
                     " WHERE (`memberID` = " + memberID + ");", conn);
 
 

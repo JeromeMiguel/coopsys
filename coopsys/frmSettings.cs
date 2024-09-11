@@ -62,7 +62,7 @@ namespace coopsys
                 day3 = txtDay3.Text == "" ? "NULL" : "'" + DateTime.Parse(txtDay3.Text).ToString("yyyy-MM-dd") + "'";
                 day4 = txtDay4.Text == "" ? "NULL" : "'" + DateTime.Parse(txtDay4.Text).ToString("yyyy-MM-dd") + "'";
 
-                string loan_member_rate, loan_penalty, rep_dividend_rate, rep_interest_capital_share, rep_final_1, rep_final_2;
+                string loan_member_rate, loan_penalty, rep_dividend_rate, rep_interest_capital_share, rep_final_1, rep_final_2, membership_fee;
 
                 loan_member_rate = txtMemberLoanRate.Text=="" ? "0" : txtMemberLoanRate.Text;
                 loan_penalty = txtLoanPenalty.Text == "" ? "0" : txtLoanPenalty.Text;
@@ -70,6 +70,7 @@ namespace coopsys
                 rep_interest_capital_share = txtInterestCSRate.Text == "" ? "0" : txtInterestCSRate.Text;
                 rep_final_1 = txtFinalPercentage1.Text == "" ? "0" : txtFinalPercentage1.Text;
                 rep_final_2 = txtFinalPercentage2.Text == "" ? "0" : txtFinalPercentage2.Text;
+                membership_fee = txtMemFee.Text == "" ? "0" : txtMemFee.Text;
 
 
                 // Update Database
@@ -77,7 +78,8 @@ namespace coopsys
                 dc.fnExecuteQuery("UPDATE `coop`.`defaults` SET `loan_member_rate` = "+loan_member_rate+", `loan_penalty` = "+loan_penalty+", " +
                     "`rep_dividend_rate` = "+rep_dividend_rate+", `rep_interest_capital_share` = "+rep_interest_capital_share+", `rep_final_1` = "+rep_final_1+", " +
                     "`rep_final_2` = "+rep_final_2+", `save_reports` = NULL, `save_certificates` = NULL, " + "`cut_date_1` = " +day1 +
-                    ", `cut_date_2` = " + day2+ ", `cut_date_3` = " + day3 + ", `cut_date_4` = " + day4 +" WHERE (`id` = 1);", conn);
+                    ", `cut_date_2` = " + day2+ ", `cut_date_3` = " + day3 + ", `cut_date_4` = " + day4 + " , `membership_fee` = " + membership_fee +
+                    " WHERE (`id` = 1);", conn);
 
                 loadDefaultData();
 
@@ -94,6 +96,7 @@ namespace coopsys
             txtInterestCSRate.BackColor = SystemColors.ButtonFace;
             txtLoanPenalty.BackColor = SystemColors.ButtonFace;
             txtMemberLoanRate.BackColor = SystemColors.ButtonFace;
+            txtMemFee.BackColor = SystemColors.ButtonFace;
 
 
             lblPercent1.BackColor = SystemColors.ButtonFace;
@@ -111,6 +114,7 @@ namespace coopsys
             txtInterestCSRate.Enabled = false;
             txtLoanPenalty.Enabled = false;
             txtMemberLoanRate.Enabled = false;
+            txtMemFee.Enabled = false;
             btnEditDay1.Enabled = false;
             btnEditDay2.Enabled = false;
             btnEditDay3.Enabled = false;
@@ -133,6 +137,7 @@ namespace coopsys
             txtInterestCSRate.BackColor = Color.FromArgb(255, 255, 255);
             txtLoanPenalty.BackColor = Color.FromArgb(255, 255, 255);
             txtMemberLoanRate.BackColor = Color.FromArgb(255, 255, 255);
+            txtMemFee.BackColor = Color.FromArgb(255,255,255);
             //txtSaveCertificates.BackColor = Color.FromArgb(255, 255, 255);
             //txtSaveReports.BackColor = Color.FromArgb(255, 255, 255);
 
@@ -151,6 +156,7 @@ namespace coopsys
             txtInterestCSRate.Enabled = true;
             txtLoanPenalty.Enabled = true;
             txtMemberLoanRate.Enabled = true;
+            txtMemFee.Enabled = true;
             btnEditDay1.Enabled = true;
             btnEditDay2.Enabled = true;
             btnEditDay3.Enabled = true;
@@ -189,6 +195,7 @@ namespace coopsys
             txtInterestCSRate.Text = dt.Rows[0][7].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][7].ToString()).ToString("G29");
             txtFinalPercentage1.Text = dt.Rows[0][8].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][8].ToString()).ToString("G29");
             txtFinalPercentage2.Text = dt.Rows[0][9].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][9].ToString()).ToString("G29");
+            txtMemFee.Text = dt.Rows[0][15].ToString() == "" ? "" : decimal.Parse(dt.Rows[0][15].ToString()).ToString("G29");
 
             date1 = dt.Rows[0][10].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][10].ToString()).ToString("MM/dd/yyyy");
             date2 = dt.Rows[0][11].ToString() == "" ? "" : DateTime.Parse(dt.Rows[0][11].ToString()).ToString("MM/dd/yyyy");

@@ -71,10 +71,14 @@
             this.lblEditStatus = new MetroFramework.Controls.MetroLabel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtMemFee = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -234,7 +238,7 @@
             this.groupBox2.Controls.Add(this.metroLabel5);
             this.groupBox2.Controls.Add(this.metroLabel6);
             this.groupBox2.Controls.Add(this.metroLabel7);
-            this.groupBox2.Location = new System.Drawing.Point(33, 260);
+            this.groupBox2.Location = new System.Drawing.Point(33, 364);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(687, 210);
             this.groupBox2.TabIndex = 32;
@@ -480,7 +484,7 @@
             this.groupBox3.Controls.Add(this.metroLabel11);
             this.groupBox3.Controls.Add(this.metroLabel1);
             this.groupBox3.Controls.Add(this.metroLabel14);
-            this.groupBox3.Location = new System.Drawing.Point(33, 486);
+            this.groupBox3.Location = new System.Drawing.Point(33, 590);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(687, 213);
             this.groupBox3.TabIndex = 36;
@@ -767,7 +771,7 @@
             // 
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.Location = new System.Drawing.Point(33, 723);
+            this.metroLabel10.Location = new System.Drawing.Point(33, 827);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(60, 20);
             this.metroLabel10.TabIndex = 32;
@@ -791,7 +795,7 @@
             // 
             this.groupBox4.Controls.Add(this.btnBackup);
             this.groupBox4.Controls.Add(this.metroLabel16);
-            this.groupBox4.Location = new System.Drawing.Point(33, 751);
+            this.groupBox4.Location = new System.Drawing.Point(33, 855);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(687, 68);
             this.groupBox4.TabIndex = 33;
@@ -882,11 +886,70 @@
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txtMemFee);
+            this.groupBox5.Controls.Add(this.metroLabel18);
+            this.groupBox5.Location = new System.Drawing.Point(33, 250);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(687, 108);
+            this.groupBox5.TabIndex = 35;
+            this.groupBox5.TabStop = false;
+            // 
+            // txtMemFee
+            // 
+            this.txtMemFee.BackColor = System.Drawing.SystemColors.ButtonFace;
+            // 
+            // 
+            // 
+            this.txtMemFee.CustomButton.Image = null;
+            this.txtMemFee.CustomButton.Location = new System.Drawing.Point(241, 1);
+            this.txtMemFee.CustomButton.Name = "";
+            this.txtMemFee.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.txtMemFee.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMemFee.CustomButton.TabIndex = 1;
+            this.txtMemFee.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMemFee.CustomButton.UseSelectable = true;
+            this.txtMemFee.CustomButton.Visible = false;
+            this.txtMemFee.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtMemFee.Lines = new string[0];
+            this.txtMemFee.Location = new System.Drawing.Point(35, 54);
+            this.txtMemFee.MaxLength = 10;
+            this.txtMemFee.Name = "txtMemFee";
+            this.txtMemFee.PasswordChar = '\0';
+            this.txtMemFee.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMemFee.SelectedText = "";
+            this.txtMemFee.SelectionLength = 0;
+            this.txtMemFee.SelectionStart = 0;
+            this.txtMemFee.ShortcutsEnabled = true;
+            this.txtMemFee.Size = new System.Drawing.Size(271, 31);
+            this.txtMemFee.Style = MetroFramework.MetroColorStyle.Purple;
+            this.txtMemFee.TabIndex = 34;
+            this.txtMemFee.UseCustomBackColor = true;
+            this.txtMemFee.UseSelectable = true;
+            this.txtMemFee.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMemFee.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMemFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.decimal_KeyPress);
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(65)))), ((int)(((byte)(153)))));
+            this.metroLabel18.Location = new System.Drawing.Point(16, 15);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(163, 20);
+            this.metroLabel18.TabIndex = 0;
+            this.metroLabel18.Text = "Membership Fee  ( ₱ )";
+            this.metroLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLabel18.UseCustomForeColor = true;
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 846);
+            this.ClientSize = new System.Drawing.Size(757, 951);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblEditStatus);
@@ -913,6 +976,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -963,5 +1028,8 @@
         private System.Windows.Forms.Button btnEditDay3;
         private MetroFramework.Controls.MetroTextBox txtDay4;
         private System.Windows.Forms.Button btnEditDay4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private MetroFramework.Controls.MetroTextBox txtMemFee;
+        private MetroFramework.Controls.MetroLabel metroLabel18;
     }
 }
