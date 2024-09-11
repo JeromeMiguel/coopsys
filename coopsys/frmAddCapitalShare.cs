@@ -54,79 +54,48 @@ namespace coopsys
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(addShare)
+
+            if (!string.IsNullOrWhiteSpace(txtCapitalShare.Text) || !string.IsNullOrWhiteSpace(txtOrNum.Text))
             {
-                if (!string.IsNullOrWhiteSpace(txtCapitalShare.Text) || !string.IsNullOrWhiteSpace(txtOrNum.Text))
+                // Add Capital Share
+                if (addShare)
                 {
-                    if(!string.IsNullOrWhiteSpace(txtOrNum.Text))
+                    if (!string.IsNullOrWhiteSpace(txtOrNum.Text))
                     {
-                        if (chkUnclaimed.Checked)
-                        {
-                            dc.fnExecuteQuery("INSERT INTO `coop`.`capitalshare` (`csamount`, `day`, `month`, `year`, `cs_or_num`, `memberID`, `unclaimed`) " +
+                        dc.fnExecuteQuery("INSERT INTO `coop`.`capitalshare` (`csamount`, `day`, `month`, `year`, `cs_or_num`, `memberID`, `unclaimed`) " +
                             "VALUES (" + double.Parse(txtCapitalShare.Text) + ", " + Int32.Parse(txtDate.Value.Day.ToString()) + ", " +
                             "" + Int32.Parse(txtDate.Value.Month.ToString()) + ", " + Int32.Parse(txtDate.Value.Year.ToString()) + ", " +
-                            "'" + txtOrNum.Text + "', " + memberID + ", 1);", conn);
-                            MessageBox.Show(this, "Record added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            viewMemberShares.LoadCapitalShares();
-                            this.Dispose();
-                        }
-                        else
-                        {
-                            dc.fnExecuteQuery("INSERT INTO `coop`.`capitalshare` (`csamount`, `day`, `month`, `year`, `cs_or_num`, `memberID`, `unclaimed`) " +
-                            "VALUES (" + double.Parse(txtCapitalShare.Text) + ", " + Int32.Parse(txtDate.Value.Day.ToString()) + ", " +
-                            "" + Int32.Parse(txtDate.Value.Month.ToString()) + ", " + Int32.Parse(txtDate.Value.Year.ToString()) + ", " +
-                            "'" + txtOrNum.Text + "', " + memberID + ", 0);", conn);
-                            MessageBox.Show(this, "Record added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            viewMemberShares.LoadCapitalShares();
-                            this.Dispose();
-                        }
+                            "'" + txtOrNum.Text + "', " + memberID + ", "+ chkUnclaimed.Checked + ");", conn);
+                        MessageBox.Show(this, "Record added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        viewMemberShares.LoadCapitalShares();
+                        this.Dispose();
                     }
                     else
                     {
                         tipRequired.Show("Please enter the OR number.", txtOrNum, 2000);
                     }
                 }
+
+                // Edit Capital Share
                 else
                 {
-                    tipRequired.Show("Please enter the capital share amount.", txtCapitalShare, 2000);
+                    dc.fnExecuteQuery("UPDATE `coop`.`capitalshare` SET `csamount` = " + double.Parse(txtCapitalShare.Text) + ", " +
+                     "`day` = " + Int32.Parse(txtDate.Value.Day.ToString()) + ", " +
+                     "`month` = " + Int32.Parse(txtDate.Value.Month.ToString()) + ", " +
+                     "`year` = " + Int32.Parse(txtDate.Value.Year.ToString()) + ", " +
+                     "`cs_or_num` = '" + txtOrNum.Text + "', " +
+                     "`unclaimed` = "+ chkUnclaimed.Checked +" " +
+                     "WHERE (`csID` = " + capitalShareID + ");", conn);
+                    MessageBox.Show(this, "Record udpated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    viewMemberShares.LoadCapitalShares();
+                    this.Dispose();
                 }
             }
             else
             {
-                if (!string.IsNullOrWhiteSpace(txtCapitalShare.Text) || !string.IsNullOrWhiteSpace(txtOrNum.Text))
-                {
-                    if(chkUnclaimed.Checked)
-                    {
-                        dc.fnExecuteQuery("UPDATE `coop`.`capitalshare` SET `csamount` = " + Int32.Parse(txtCapitalShare.Text) + ", " +
-                        "`day` = " + Int32.Parse(txtDate.Value.Day.ToString()) + ", " +
-                        "`month` = " + Int32.Parse(txtDate.Value.Month.ToString()) + ", " +
-                        "`year` = " + Int32.Parse(txtDate.Value.Year.ToString()) + ", " +
-                        "`cs_or_num` = '" + txtOrNum.Text + "', " +
-                        "`unclaimed` = 1 " +
-                        "WHERE (`csID` = " + capitalShareID + ");", conn);
-                        MessageBox.Show(this, "Record udpated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        viewMemberShares.LoadCapitalShares();
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        dc.fnExecuteQuery("UPDATE `coop`.`capitalshare` SET `csamount` = " + Int32.Parse(txtCapitalShare.Text) + ", " +
-                        "`day` = " + Int32.Parse(txtDate.Value.Day.ToString()) + ", " +
-                        "`month` = " + Int32.Parse(txtDate.Value.Month.ToString()) + ", " +
-                        "`year` = " + Int32.Parse(txtDate.Value.Year.ToString()) + ", " +
-                        "`cs_or_num` = '" + txtOrNum.Text + "', " +
-                        "`unclaimed` = 0 " +
-                        "WHERE (`csID` = " + capitalShareID + ");", conn);
-                        MessageBox.Show(this, "Record udpated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        viewMemberShares.LoadCapitalShares();
-                        this.Dispose();
-                    }
-                }
-                else
-                {
-                    tipRequired.Show("Please enter the capital share amount.", txtCapitalShare, 2000);
-                }
+                tipRequired.Show("Please enter the capital share amount.", txtCapitalShare, 2000);
             }
+
         }
 
         private void txtCapitalShare_KeyPress(object sender, KeyPressEventArgs e)
