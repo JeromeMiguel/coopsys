@@ -20,11 +20,10 @@ namespace coopsys
     {
         MySqlConnection conn;
         DataTable dt = new DataTable();
-        DataTable totalShare = new DataTable();
         DataCollection dc = new DataCollection();
         private int memberID, capitalShareID, remarks, memberType;
         private double capitalShareAmount;
-        private string date, orNum;
+        private string date, orNum, CurrentTotalCapitalShare, totalShare;
 
         public frmViewMemberShares()
         {
@@ -50,26 +49,28 @@ namespace coopsys
             cboYear.DataSource = dt;
             cboYear.DisplayMember = "year";
 
-            ResetAndLoadShares();
-
             // check if member has null total capital share
             // Purpose: this is included for previously entered members before "total_capital_share
             //          was added to member table;
             //          To avoid having to reset database and add members again
             // if null: run query to get sum of capital share and update total capital share
             //          in member table
-            string CurrentTotalCapitalShare = dc.fnReturnStringValue("SELECT total_capital_share FROM coop.member WHERE (`memberID` = " + memberID + ") ;", "total_capital_share", conn);
+            CurrentTotalCapitalShare = dc.fnReturnStringValue("SELECT total_capital_share FROM coop.member WHERE (`memberID` = " + memberID + ") ;", "total_capital_share", conn);
             if (CurrentTotalCapitalShare == "")
             {
                 GetTotalShares();
-                if (totalShare.Rows[0][0].ToString() != "") { 
-                    double SumCapitalShare = double.Parse(totalShare.Rows[0][0].ToString());
+                if (totalShare != "") { 
+                    double SumCapitalShare = double.Parse(totalShare);
 
                     // Update total_capital_share
                     dc.fnExecuteQuery("UPDATE `coop`.`member` SET `total_capital_share` = '"+SumCapitalShare+"' WHERE (`memberID` = "+memberID+");", conn);
-                 
+
+                    // Set latest value
+                    CurrentTotalCapitalShare = SumCapitalShare.ToString();
                 }
             }
+
+            ResetAndLoadShares();
 
         }
 
@@ -99,14 +100,23 @@ namespace coopsys
                     " order by year desc, month desc, day desc;", conn);
 
             try
-            { 
-                GetTotalShares(monthWhere, yearWhere);
+            {
+                // Execute Get total shares query if filters are set
+                // Display CurrentTotalCapitalShare by default if no filters are set
+                if (cboMonth.SelectedIndex >= 0 && cboYear.SelectedIndex >= 0)
+                {
+                    GetTotalShares(monthWhere, yearWhere);
+                }
+                else
+                {
+                    totalShare = CurrentTotalCapitalShare;
+                }
 
                 lblTotalSharesYear.Text = cboMonth.SelectedIndex == 0 ?  "Total shares in " + cboYear.Text + ": " : 
                     cboMonth.SelectedIndex>=1 ? "Total shares in " + cboMonth.Text + " "+ cboYear.Text + ": " : 
                     "Total Lifetime Shares: ";
 
-                lblTotalShares.Text = "₱ " + (totalShare.Rows[0][0].ToString() == "" ? "0.00" : totalShare.Rows[0][0].ToString());
+                lblTotalShares.Text = "₱ " + (totalShare == "" ? "0.00" : double.Parse(totalShare).ToString("F2")) ;
 
             }
             catch { }
@@ -119,8 +129,8 @@ namespace coopsys
 
         public void GetTotalShares(string monthWhere = "", string yearWhere = "" )
         {
-            totalShare = dc.fnDataTableCollection("select format(sum(csamount),2) as 'total' " +
-                   "from capitalshare where memberID=" + memberID + monthWhere + yearWhere + ";");
+            totalShare = dc.fnReturnStringValue("select format(sum(csamount),2) as 'total' " +
+                   "from capitalshare where memberID=" + memberID + monthWhere + yearWhere + ";", "total", conn);
         }
 
 
