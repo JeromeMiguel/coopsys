@@ -213,6 +213,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Capital Share";
+            this.Load += new System.EventHandler(this.frmAddCapitalShare_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
