@@ -47,8 +47,14 @@ namespace coopsys
         {
             dt = dc.fnDataTableCollection("select distinct year from capitalshare where memberID=" + memberID + ";", conn);
             cboYear.DataSource = dt;
-            cboYear.DisplayMember = "year";
+            cboYear.DisplayMember = "year";   
 
+            ResetAndLoadShares();
+
+        }
+
+        public void LoadCapitalShares()
+        {
             // check if member has null total capital share
             // Purpose: this is included for previously entered members before "total_capital_share
             //          was added to member table;
@@ -59,23 +65,18 @@ namespace coopsys
             if (CurrentTotalCapitalShare == "")
             {
                 GetTotalShares();
-                if (totalShare != "") { 
+                if (totalShare != "")
+                {
                     double SumCapitalShare = double.Parse(totalShare);
 
                     // Update total_capital_share
-                    dc.fnExecuteQuery("UPDATE `coop`.`member` SET `total_capital_share` = '"+SumCapitalShare+"' WHERE (`memberID` = "+memberID+");", conn);
+                    dc.fnExecuteQuery("UPDATE `coop`.`member` SET `total_capital_share` = '" + SumCapitalShare + "' WHERE (`memberID` = " + memberID + ");", conn);
 
                     // Set latest value
                     CurrentTotalCapitalShare = SumCapitalShare.ToString();
                 }
             }
 
-            ResetAndLoadShares();
-
-        }
-
-        public void LoadCapitalShares()
-        {
             string monthWhere = cboMonth.SelectedIndex >=1 ? " and month = " + (cboMonth.SelectedIndex) +" " : "";
             string yearWhere = cboYear.SelectedIndex >= 0 ? " and year = " + Int32.Parse(cboYear.Text)+" " : "";
 
@@ -218,9 +219,18 @@ namespace coopsys
             capitalShareID = Int32.Parse(grdShares.SelectedCells[0].Value.ToString());
             DialogResult dialog = MessageBox.Show(this, "Delete selected capital share record?\nThis process is irreversible.", "Delete",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
             if(dialog == DialogResult.Yes)
             {
+                // for current total_capital_share computation
+                double deletedValue = double.Parse(dc.fnReturnStringValue("SELECT csamount FROM coop.capitalshare WHERE csID = '"+capitalShareID+"'; ", "csamount", conn));
+                double newTotalCapitalShare = double.Parse(CurrentTotalCapitalShare) - deletedValue;
+
+                // delete record
                 dc.fnExecuteQuery("delete from capitalshare where csID=" + capitalShareID + "", conn);
+                // update total_capital_share
+                dc.fnExecuteQuery("UPDATE `coop`.`member` SET `total_capital_share` = '" + newTotalCapitalShare + "' WHERE (`memberID` = '" + memberID + "');", conn);
+
                 LoadCapitalShares();
             }
         }
